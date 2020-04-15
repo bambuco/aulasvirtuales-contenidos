@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Poppins Regular'), local('Poppins-Regular'), 
+        url(fonts/Poppins/Poppins-Regular.ttf) format('truetype')
+}
+
+.far,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin: 0 0 30px 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg.png);
+    background-size: 100%;
+}
+
+#body {
+    max-width: 968px;
+    margin: auto;
+}
+
+header {
+    position: relative;
+    padding: 100px 70px 10px 70px;
+    background-size: 100% 100%;
+    width: 90%;
+}
+
+header img.logo {
+    top: -40px;
+    right: 90px;
+    position: absolute;
+    width: 250px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 33px;
+  color: #22B573;
+  bottom: 0;
+  position: relative;
+}
+
+h2:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 0;
+    bottom: -15px;
+    border-top: 1px solid #ccc;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 0 15px;
+}
+
+h3 { 
+    font-weight: bold;
+    font-size: 20px;
+    color: #434343;
+    padding-left: 5px;
+}
+
+h4 {
+    color: #8f9593;
+}
+
+pre {
+    background:#F8F8FF;
+    border: #000 dashed 1px;
+    padding: 6px;
+    overflow: auto;
+}
+
+em {
+    color: #b24926;
+}
+
+ol li {
+    padding-bottom: 10px;
+}
+
+ul.data_list {
+    list-style: none;
+}
+
+ul.data_list li {
+    padding-bottom: 10px;
+}
+
+ul.data_list li:before {
+    content: "\f109";
+    font-family: "Ionicons";
+    position: relative;
+    left: -5px;
+    color: #44c5d0;
+    font-weight: bold;
+}
+
+ol.ol_counter li {
+    padding-bottom: 10px;
+}
+
+button.general{
+    background: linear-gradient(to right, #808080 50%, #22b573 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow : 3.95px 3.95px 0px rgba(0, 0, 0, 0.15);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px;
+    color: #FFFFFF;
+    text-align:center;
+}
+
+button.general:hover{
+    background-position: left bottom;
+}
+
+#content {
+    position: relative;
+    padding: 0 0 15px 70px;
+}
+
+#presentacion {
+    display: flex;
+}
+
+#presentacion .level span {
+    background-color: #374051;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 30px;
+    margin: 5px;
+}
+
+#presentacion .level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#presentacion .presentacion {
+    background-color: #76c4d0;
+    color: #fff;
+    padding: 40px;
+    margin: 10px 0 10px 50px;
+}
+
+#duracion {
+    color: #109a4c;
+    font-size: 22px;
+}
+
+#play_scorm {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.ui-state-error, .ui-state-highlight {
+    padding: 10px;
+}
+
+@media (max-width:750px) {
+    #play_scorm {
+        max-width: 100%;
+    }
+
+    header img.portada {
+        position: unset;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    header img.logo {
+        margin: 0;
+    }
+
+    header {
+        padding: 20px 20px 0;
+        min-height: unset;
+        background-size: 100% 100%;
+    }
+
+    #content {
+        padding: 10px;
+    }
+
+    h2.subtitle1 {
+        font-size: 20px;
+    }
+
+    h2.subtitle2 {
+        font-size: 26px;
+        height: 14px;
+        width: 120px;
+        margin-top: 14px;
+    }
+
+    h3,
+    #duracion {
+        font-size: 20px;
+    }
+
+    #presentacion .level span {
+        font-size: 20px;
+    }
+}
+
+.subtitulo {
+    display: flex;
+    align-items: center;
+}
+
+.fa-objetivo:before {
+    content: "\f06e";
+    color: #434343;
+    font-size: 20px;
+}
+
+.fa-duracion:before {
+    content: "\f073";
+    color: #434343;
+    font-size: 20px;
+}
+
+.fa-modalidad:before {
+    content: "\f0e8";
+    color: #434343;
+    font-size: 20px;
+}
+
+.img_horizontal {
+    width: 300px;
+    height: auto;
+    float: right;
+    margin: 0 20px;
+}
+
+
+.img_vertical {
+    width: auto;
+    height: 300px;
+    float: right;
+    margin: 0 20px;
+}
