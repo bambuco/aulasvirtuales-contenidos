@@ -3,11 +3,10 @@
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="img/icon.svg">
-    <link rel="stylesheet" href="css/fonts/fontawesome/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Ejemplo de elementos para los cursos</title>
     <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
-    <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
     <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
     <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
@@ -82,23 +81,23 @@
     </style>
 
 </head>
-<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+<body class="loading" data-debug="true" data-model="page" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
     <div id="body" class="not_print">
         <div id="not_scorm_msg" style="display: none;"></div>
 
         <nav label="Características globales" class="globals">
             <menu>
                 <menuitem data-global-id="return">
-                    <i title="Maximizar" class="ion-arrow-expand maximize"></i>
-                    <i title="Minimizar" class="ion-arrow-shrink minimize"></i>
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
                 </menuitem>
-                <menuitem data-global-id="close_all"><i title="Regresar" class="ion-close-circled"></i></menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
             </menu>
         </nav>
 
         <header>
             <div>
-                <h1>Programación ABAP</h1>
+                <h1>Ejemplo de elementos para los cursos</h1>
                 <nav label="Principal" class="horizontal main" data-offset="true">
                     <menu>
                         <menuitem label="Presentación" data-page="pag-inicio"></menuitem>
@@ -240,7 +239,7 @@
 
                 <div class="subpage">
                     <h3>Importante</h3>
-                    <div class="box-text important" label="Importante <span class='far fa-important'></span>">
+                    <div class="box-text important" label="Importante">
                         <p>Se utiliza la clase <em>important</em> y es para los párrafos que requieren un énfasis. Ejemplo:</p>
                         <pre>
 &lt;div class="box-text important" label="Importante"&gt;
@@ -254,7 +253,7 @@
 
                 <div class="subpage">
                     <h3>Ejemplos</h3>
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
                         <p>Se utiliza la clase <em>example</em> y es para los párrafos que muestran un ejemplo. Ejemplo:</p>
                         <pre>
 &lt;div class="box-text example" label="Ejemplo"&gt;
@@ -268,7 +267,7 @@
 
                 <div class="subpage">
                     <h3>Anotaciones</h3>
-                    <div class="box-text note" label="Nota <span class='far fa-note'></span>">
+                    <div class="box-text note" label="Nota">
                         <p>Se utiliza la clase <em>note</em> y es para hacer anotaciones. Ejemplo:</p>
                         <pre>
 &lt;div class="box-text note" label="Nota"&gt;
@@ -282,7 +281,7 @@
 
                 <div class="subpage">
                     <h3>Enlaces</h3>
-                    <div class="box-text link" label="Enlace <span class='far fa-link'></span>">
+                    <div class="box-text link" label="Enlace">
                         <p>Se utiliza la clase <em>link</em> y es para referencias a páginas web o sitios en internet. Ejemplo:</p>
                         <pre>
 &lt;div class="box-text link" label="Enlace"&gt;
@@ -337,7 +336,7 @@
                         <li><strong>none</strong>: para eliminar la indicación de tipo de instrucción.</li>
                         <li>No indique el tipo para las instrucciones que sean de ayuda ya que son las utilizadas por defecto.</li>
                     </ul>
-                    <div class="box-text example" label="Ejemplos <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplos">
 <pre>
 &lt;div class="instruction"&gt;
   Una instrucción por defecto (ayuda).
@@ -367,7 +366,7 @@
 
                     <p>Para elementos que no son "a" y deben abrir un enlace, utilizar la clase <em>open-url</em> y colocar el atributo <em>data-url</em> para especificar la dirección. Siempre abre en ventana nueva.</p>
 
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
 <pre>
 &lt;button class="open-url" data-url="http://google.com"&gt;
   Clic para ir a Google
@@ -383,7 +382,7 @@
 
                     <p>Para abrir contenidos en ventanas modales dentro del mismo objeto. Se agrega la clase <em>w-content-controler</em> al elemento que debe abrir la ventana (origen), por defecto con el evento clic. No tiene que ser botón o enlace, puede ser cualquier elemento. Se debe establecer el atributo <em>data-content</em> con la ruta CSS del elemento que se convertirá en ventana (destino). El elemento que se abre como ventana debe tener la clase <em>w-content</em>. Se puede utilizar el atributo <em>data-property-width</em>, tanto en el origen como en el destino, para definir el ancho de la ventana modal y <em>data-property-height</em> para definir el alto, ambos valores pueden indicarse en porcentaje con un valor como: <em>80%</em>. También se puede asignar una clase al destino mediante el atributo <em>data-cssclass</em> en el elemento destino.</p>
 
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
 <pre>&lt;button class="w-content-controler general" data-content="#ventana_textos_modal"&gt;
   Abrir ventana modal
 &lt;/button&gt;
@@ -409,7 +408,7 @@
                         Por defecto, la ventana se posiciona en el lugar donde se encuentra en el contenido. Si se desea posicionar en otro eje se debe hacer mediante estilos CSS, asignando a la clase <em>.wf-content</em> la posición con los atributos: <em>top</em>, <em>bottom</em>, <em>left</em> y/o <em>right</em>.
                     </p>
 
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
 <pre>&lt;button class="wf-content-controler general" data-content="#ventana_textos_flotante"&gt;
   Abrir ventana flotante
 &lt;/button&gt;
@@ -429,7 +428,7 @@
                         Como se ve en el ejemplo anterior, el tamaño de la ventana por defecto solamente ocupa el espacio requerido por el contenido. Si se quiere ajustar al tamaño del contenedor se pueden usar dos clases: <em>autox</em> y <em>autoy</em>; según se quiera que la ventana se ajuste horizontal o verticalmente. El <strong>contenedor</strong> que se tiene en cuenta es el primer elemento superior con posición relativa o absoluta.
                     </p>
 
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
 <pre>&lt;button class="wf-content-controler general" data-content="#ventana_textos_flotante2"&gt;
   Abrir ventana flotante
 &lt;/button&gt;
@@ -474,295 +473,144 @@
                 <div class="subpage" id="pag-textos-iconografia">
                     <h3>Iconografía</h3>
 
-                    <p>Los íconos sirven para representar, marcar, dar ideas visuales de elementos, entre otros. Para ello se incluye una etiqueta <em>&lt;i&gt;</em> con la clase correspondiente (mouse sobre el ícono para conocer la clase). Está basado en <em>ionicons</em> por lo que se puede utilizar cualquiera de los elementos que dicha librería incluye (ver listado oficial en <a href="http://www.ionicons.com" target="_blank">www.ionicons.com</a>). A continuación algunos ejemplos:</p>
+                    <p>Los íconos sirven para representar, marcar, dar ideas visuales de elementos, entre otros. Para ello se incluye una etiqueta <em>&lt;i&gt;</em> con la clase correspondiente. Está basado en <em>Font Awesome</em> por lo que se pueden utilizar los elementos libres que dicha librería incluye (ver listado oficial en <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">https://fontawesome.com/icons</a>). A continuación algunos ejemplos:</p>
 
                     <p class="lista_iconos">
-                        <i title="ion-arrow-up-a" class="ion-arrow-up-a" ></i>
-                        <i title="ion-arrow-right-a" class="ion-arrow-right-a" ></i>
-                        <i title="ion-arrow-down-a" class="ion-arrow-down-a" ></i>
-                        <i title="ion-arrow-left-a" class="ion-arrow-left-a" ></i>
-                        <i title="ion-arrow-up-b" class="ion-arrow-up-b" ></i>
-                        <i title="ion-arrow-right-b" class="ion-arrow-right-b" ></i>
-                        <i title="ion-arrow-down-b" class="ion-arrow-down-b" ></i>
-                        <i title="ion-arrow-left-b" class="ion-arrow-left-b" ></i>
-                        <i title="ion-arrow-up-c" class="ion-arrow-up-c" ></i>
-                        <i title="ion-arrow-right-c" class="ion-arrow-right-c" ></i>
-                        <i title="ion-arrow-down-c" class="ion-arrow-down-c" ></i>
-                        <i title="ion-arrow-left-c" class="ion-arrow-left-c" ></i>
-                        <i title="ion-arrow-return-right" class="ion-arrow-return-right" ></i>
-                        <i title="ion-arrow-return-left" class="ion-arrow-return-left" ></i>
-                        <i title="ion-arrow-swap" class="ion-arrow-swap" ></i>
-                        <i title="ion-arrow-shrink" class="ion-arrow-shrink" ></i>
-                        <i title="ion-arrow-expand" class="ion-arrow-expand" ></i>
-                        <i title="ion-arrow-move" class="ion-arrow-move" ></i>
-                        <i title="ion-arrow-resize" class="ion-arrow-resize" ></i>
-                        <i title="ion-chevron-up" class="ion-chevron-up" ></i>
-                        <i title="ion-chevron-right" class="ion-chevron-right" ></i>
-                        <i title="ion-chevron-down" class="ion-chevron-down" ></i>
-                        <i title="ion-chevron-left" class="ion-chevron-left" ></i>
-                        <i title="ion-navicon-round" class="ion-navicon-round" ></i>
-                        <i title="ion-navicon" class="ion-navicon" ></i>
-                        <i title="ion-drag" class="ion-drag" ></i>
-                        <i title="ion-log-in" class="ion-log-in" ></i>
-                        <i title="ion-log-out" class="ion-log-out" ></i>
-                        <i title="ion-checkmark-round" class="ion-checkmark-round" ></i>
-                        <i title="ion-checkmark" class="ion-checkmark" ></i>
-                        <i title="ion-checkmark-circled" class="ion-checkmark-circled" ></i>
-                        <i title="ion-close-round" class="ion-close-round" ></i>
-                        <i title="ion-close" class="ion-close" ></i>
-                        <i title="ion-close-circled" class="ion-close-circled" ></i>
-                        <i title="ion-plus-round" class="ion-plus-round" ></i>
-                        <i title="ion-plus" class="ion-plus" ></i>
-                        <i title="ion-plus-circled" class="ion-plus-circled" ></i>
-                        <i title="ion-minus-round" class="ion-minus-round" ></i>
-                        <i title="ion-minus" class="ion-minus" ></i>
-                        <i title="ion-minus-circled" class="ion-minus-circled" ></i>
-                        <i title="ion-information" class="ion-information" ></i>
-                        <i title="ion-information-circled active" class="ion-information-circled active" ></i>
-                        <i title="ion-help" class="ion-help" ></i>
-                        <i title="ion-help-circled" class="ion-help-circled" ></i>
-                        <i title="ion-backspace-outline" class="ion-backspace-outline" ></i>
-                        <i title="ion-backspace" class="ion-backspace" ></i>
-                        <i title="ion-help-buoy" class="ion-help-buoy" ></i>
-                        <i title="ion-asterisk" class="ion-asterisk" ></i>
-                        <i title="ion-alert" class="ion-alert" ></i>
-                        <i title="ion-alert-circled" class="ion-alert-circled" ></i>
-                        <i title="ion-refresh" class="ion-refresh" ></i>
-                        <i title="ion-loop" class="ion-loop" ></i>
-                        <i title="ion-shuffle" class="ion-shuffle" ></i>
-                        <i title="ion-home" class="ion-home" ></i>
-                        <i title="ion-search" class="ion-search" ></i>
-                        <i title="ion-flag" class="ion-flag" ></i>
-                        <i title="ion-star" class="ion-star" ></i>
-                        <i title="ion-heart" class="ion-heart" ></i>
-                        <i title="ion-heart-broken" class="ion-heart-broken" ></i>
-                        <i title="ion-gear-a" class="ion-gear-a" ></i>
-                        <i title="ion-gear-b" class="ion-gear-b" ></i>
-                        <i title="ion-toggle-filled" class="ion-toggle-filled" ></i>
-                        <i title="ion-toggle" class="ion-toggle" ></i>
-                        <i title="ion-settings" class="ion-settings" ></i>
-                        <i title="ion-wrench" class="ion-wrench" ></i>
-                        <i title="ion-hammer" class="ion-hammer" ></i>
-                        <i title="ion-edit" class="ion-edit" ></i>
-                        <i title="ion-trash-a" class="ion-trash-a" ></i>
-                        <i title="ion-trash-b" class="ion-trash-b" ></i>
-                        <i title="ion-document" class="ion-document" ></i>
-                        <i title="ion-document-text" class="ion-document-text" ></i>
-                        <i title="ion-clipboard" class="ion-clipboard" ></i>
-                        <i title="ion-scissors" class="ion-scissors" ></i>
-                        <i title="ion-funnel" class="ion-funnel" ></i>
-                        <i title="ion-bookmark" class="ion-bookmark" ></i>
-                        <i title="ion-email" class="ion-email" ></i>
-                        <i title="ion-email-unread" class="ion-email-unread" ></i>
-                        <i title="ion-folder" class="ion-folder" ></i>
-                        <i title="ion-filing" class="ion-filing" ></i>
-                        <i title="ion-archive" class="ion-archive" ></i>
-                        <i title="ion-reply" class="ion-reply" ></i>
-                        <i title="ion-reply-all" class="ion-reply-all" ></i>
-                        <i title="ion-forward" class="ion-forward" ></i>
-                        <i title="ion-share" class="ion-share" ></i>
-                        <i title="ion-paper-airplane" class="ion-paper-airplane" ></i>
-                        <i title="ion-link" class="ion-link" ></i>
-                        <i title="ion-paperclip" class="ion-paperclip" ></i>
-                        <i title="ion-compose" class="ion-compose" ></i>
-                        <i title="ion-briefcase" class="ion-briefcase" ></i>
-                        <i title="ion-medkit" class="ion-medkit" ></i>
-                        <i title="ion-at" class="ion-at" ></i>
-                        <i title="ion-pound" class="ion-pound" ></i>
-                        <i title="ion-quote" class="ion-quote" ></i>
-                        <i title="ion-cloud" class="ion-cloud" ></i>
-                        <i title="ion-upload" class="ion-upload" ></i>
-                        <i title="ion-more" class="ion-more" ></i>
-                        <i title="ion-grid" class="ion-grid" ></i>
-                        <i title="ion-calendar" class="ion-calendar" ></i>
-                        <i title="ion-clock" class="ion-clock" ></i>
-                        <i title="ion-compass" class="ion-compass" ></i>
-                        <i title="ion-pinpoint" class="ion-pinpoint" ></i>
-                        <i title="ion-pin" class="ion-pin" ></i>
-                        <i title="ion-navigate" class="ion-navigate" ></i>
-                        <i title="ion-location" class="ion-location" ></i>
-                        <i title="ion-map" class="ion-map" ></i>
-                        <i title="ion-lock-combination" class="ion-lock-combination" ></i>
-                        <i title="ion-locked" class="ion-locked" ></i>
-                        <i title="ion-unlocked" class="ion-unlocked" ></i>
-                        <i title="ion-key" class="ion-key" ></i>
-                        <i title="ion-arrow-graph-up-right" class="ion-arrow-graph-up-right" ></i>
-                        <i title="ion-arrow-graph-down-right" class="ion-arrow-graph-down-right" ></i>
-                        <i title="ion-arrow-graph-up-left" class="ion-arrow-graph-up-left" ></i>
-                        <i title="ion-arrow-graph-down-left" class="ion-arrow-graph-down-left" ></i>
-                        <i title="ion-stats-bars" class="ion-stats-bars" ></i>
-                        <i title="ion-connection-bars" class="ion-connection-bars" ></i>
-                        <i title="ion-pie-graph" class="ion-pie-graph" ></i>
-                        <i title="ion-chatbubble" class="ion-chatbubble" ></i>
-                        <i title="ion-chatbubble-working" class="ion-chatbubble-working" ></i>
-                        <i title="ion-chatbubbles" class="ion-chatbubbles" ></i>
-                        <i title="ion-chatbox" class="ion-chatbox" ></i>
-                        <i title="ion-chatbox-working" class="ion-chatbox-working" ></i>
-                        <i title="ion-chatboxes" class="ion-chatboxes" ></i>
-                        <i title="ion-person" class="ion-person" ></i>
-                        <i title="ion-person-add" class="ion-person-add" ></i>
-                        <i title="ion-person-stalker" class="ion-person-stalker" ></i>
-                        <i title="ion-woman" class="ion-woman" ></i>
-                        <i title="ion-man" class="ion-man" ></i>
-                        <i title="ion-female" class="ion-female" ></i>
-                        <i title="ion-male" class="ion-male" ></i>
-                        <i title="ion-transgender" class="ion-transgender" ></i>
-                        <i title="ion-fork" class="ion-fork" ></i>
-                        <i title="ion-knife" class="ion-knife" ></i>
-                        <i title="ion-spoon" class="ion-spoon" ></i>
-                        <i title="ion-soup-can-outline" class="ion-soup-can-outline" ></i>
-                        <i title="ion-soup-can" class="ion-soup-can" ></i>
-                        <i title="ion-beer" class="ion-beer" ></i>
-                        <i title="ion-wineglass" class="ion-wineglass" ></i>
-                        <i title="ion-coffee" class="ion-coffee" ></i>
-                        <i title="ion-icecream" class="ion-icecream" ></i>
-                        <i title="ion-pizza" class="ion-pizza" ></i>
-                        <i title="ion-power" class="ion-power" ></i>
-                        <i title="ion-mouse" class="ion-mouse" ></i>
-                        <i title="ion-battery-full" class="ion-battery-full" ></i>
-                        <i title="ion-battery-half" class="ion-battery-half" ></i>
-                        <i title="ion-battery-low" class="ion-battery-low" ></i>
-                        <i title="ion-battery-empty" class="ion-battery-empty" ></i>
-                        <i title="ion-battery-charging" class="ion-battery-charging" ></i>
-                        <i title="ion-wifi" class="ion-wifi" ></i>
-                        <i title="ion-bluetooth" class="ion-bluetooth" ></i>
-                        <i title="ion-calculator" class="ion-calculator" ></i>
-                        <i title="ion-camera" class="ion-camera" ></i>
-                        <i title="ion-eye" class="ion-eye" ></i>
-                        <i title="ion-eye-disabled" class="ion-eye-disabled" ></i>
-                        <i title="ion-flash" class="ion-flash" ></i>
-                        <i title="ion-flash-off" class="ion-flash-off" ></i>
-                        <i title="ion-qr-scanner" class="ion-qr-scanner" ></i>
-                        <i title="ion-image" class="ion-image" ></i>
-                        <i title="ion-images" class="ion-images" ></i>
-                        <i title="ion-wand" class="ion-wand" ></i>
-                        <i title="ion-contrast" class="ion-contrast" ></i>
-                        <i title="ion-aperture" class="ion-aperture" ></i>
-                        <i title="ion-crop" class="ion-crop" ></i>
-                        <i title="ion-easel" class="ion-easel" ></i>
-                        <i title="ion-paintbrush" class="ion-paintbrush" ></i>
-                        <i title="ion-paintbucket" class="ion-paintbucket" ></i>
-                        <i title="ion-monitor" class="ion-monitor" ></i>
-                        <i title="ion-laptop" class="ion-laptop" ></i>
-                        <i title="ion-ipad" class="ion-ipad" ></i>
-                        <i title="ion-iphone" class="ion-iphone" ></i>
-                        <i title="ion-ipod" class="ion-ipod" ></i>
-                        <i title="ion-printer" class="ion-printer" ></i>
-                        <i title="ion-usb" class="ion-usb" ></i>
-                        <i title="ion-outlet" class="ion-outlet" ></i>
-                        <i title="ion-bug" class="ion-bug" ></i>
-                        <i title="ion-code" class="ion-code" ></i>
-                        <i title="ion-code-working" class="ion-code-working" ></i>
-                        <i title="ion-code-download" class="ion-code-download" ></i>
-                        <i title="ion-fork-repo" class="ion-fork-repo" ></i>
-                        <i title="ion-network" class="ion-network" ></i>
-                        <i title="ion-pull-request" class="ion-pull-request" ></i>
-                        <i title="ion-merge" class="ion-merge" ></i>
-                        <i title="ion-xbox" class="ion-xbox" ></i>
-                        <i title="ion-playstation" class="ion-playstation" ></i>
-                        <i title="ion-steam" class="ion-steam" ></i>
-                        <i title="ion-closed-captioning" class="ion-closed-captioning" ></i>
-                        <i title="ion-videocamera" class="ion-videocamera" ></i>
-                        <i title="ion-film-marker" class="ion-film-marker" ></i>
-                        <i title="ion-disc" class="ion-disc" ></i>
-                        <i title="ion-headphone" class="ion-headphone" ></i>
-                        <i title="ion-music-note" class="ion-music-note" ></i>
-                        <i title="ion-radio-waves" class="ion-radio-waves" ></i>
-                        <i title="ion-speakerphone" class="ion-speakerphone" ></i>
-                        <i title="ion-mic-a" class="ion-mic-a" ></i>
-                        <i title="ion-mic-b" class="ion-mic-b" ></i>
-                        <i title="ion-mic-c" class="ion-mic-c" ></i>
-                        <i title="ion-volume-high" class="ion-volume-high" ></i>
-                        <i title="ion-volume-medium" class="ion-volume-medium" ></i>
-                        <i title="ion-volume-low" class="ion-volume-low" ></i>
-                        <i title="ion-volume-mute" class="ion-volume-mute" ></i>
-                        <i title="ion-levels" class="ion-levels" ></i>
-                        <i title="ion-play" class="ion-play" ></i>
-                        <i title="ion-pause" class="ion-pause" ></i>
-                        <i title="ion-stop" class="ion-stop" ></i>
-                        <i title="ion-record" class="ion-record" ></i>
-                        <i title="ion-skip-forward" class="ion-skip-forward" ></i>
-                        <i title="ion-skip-backward" class="ion-skip-backward" ></i>
-                        <i title="ion-eject" class="ion-eject" ></i>
-                        <i title="ion-bag" class="ion-bag" ></i>
-                        <i title="ion-card" class="ion-card" ></i>
-                        <i title="ion-cash" class="ion-cash" ></i>
-                        <i title="ion-pricetag" class="ion-pricetag" ></i>
-                        <i title="ion-pricetags" class="ion-pricetags" ></i>
-                        <i title="ion-thumbsup" class="ion-thumbsup" ></i>
-                        <i title="ion-thumbsdown" class="ion-thumbsdown" ></i>
-                        <i title="ion-happy-outline" class="ion-happy-outline" ></i>
-                        <i title="ion-happy" class="ion-happy" ></i>
-                        <i title="ion-sad-outline" class="ion-sad-outline" ></i>
-                        <i title="ion-sad" class="ion-sad" ></i>
-                        <i title="ion-bowtie" class="ion-bowtie" ></i>
-                        <i title="ion-tshirt-outline" class="ion-tshirt-outline" ></i>
-                        <i title="ion-tshirt" class="ion-tshirt" ></i>
-                        <i title="ion-trophy" class="ion-trophy" ></i>
-                        <i title="ion-podium" class="ion-podium" ></i>
-                        <i title="ion-ribbon-a" class="ion-ribbon-a" ></i>
-                        <i title="ion-ribbon-b" class="ion-ribbon-b" ></i>
-                        <i title="ion-university" class="ion-university" ></i>
-                        <i title="ion-magnet" class="ion-magnet" ></i>
-                        <i title="ion-beaker" class="ion-beaker" ></i>
-                        <i title="ion-erlenmeyer-flask" class="ion-erlenmeyer-flask" ></i>
-                        <i title="ion-egg" class="ion-egg" ></i>
-                        <i title="ion-earth" class="ion-earth" ></i>
-                        <i title="ion-planet" class="ion-planet" ></i>
-                        <i title="ion-lightbulb" class="ion-lightbulb" ></i>
-                        <i title="ion-cube" class="ion-cube" ></i>
-                        <i title="ion-leaf" class="ion-leaf" ></i>
-                        <i title="ion-waterdrop" class="ion-waterdrop" ></i>
-                        <i title="ion-flame" class="ion-flame" ></i>
-                        <i title="ion-fireball" class="ion-fireball" ></i>
-                        <i title="ion-bonfire" class="ion-bonfire" ></i>
-                        <i title="ion-umbrella" class="ion-umbrella" ></i>
-                        <i title="ion-nuclear" class="ion-nuclear" ></i>
-                        <i title="ion-no-smoking" class="ion-no-smoking" ></i>
-                        <i title="ion-thermometer" class="ion-thermometer" ></i>
-                        <i title="ion-speedometer" class="ion-speedometer" ></i>
-                        <i title="ion-model-s" class="ion-model-s" ></i>
-                        <i title="ion-plane" class="ion-plane" ></i>
-                        <i title="ion-jet" class="ion-jet" ></i>
-                        <i title="ion-load-a" class="ion-load-a" ></i>
-                        <i title="ion-load-b" class="ion-load-b" ></i>
-                        <i title="ion-load-c" class="ion-load-c" ></i>
-                        <i title="ion-load-d" class="ion-load-d" ></i>
+                        <i class="fas fa-closed-captioning"></i>
+                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-cloud-download-alt"></i>
+                        <i class="fas fa-cloud-meatball"></i>
+                        <i class="fas fa-cloud-moon"></i>
+                        <i class="fas fa-cloud-moon-rain"></i>
+                        <i class="fas fa-cloud-rain"></i>
+                        <i class="fas fa-cloud-showers-heavy"></i>
+                        <i class="fas fa-cloud-sun"></i>
+                        <i class="fas fa-cloud-sun-rain"></i>
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <i class="fas fa-cocktail"></i>
+                        <i class="fas fa-code"></i>
+                        <i class="fas fa-code-branch"></i>
+                        <i class="fas fa-coffee"></i>
+                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-coins"></i>
+                        <i class="fas fa-columns"></i>
+                        <i class="fas fa-comment"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-comment-dollar"></i>
+                        <i class="fas fa-comment-dots"></i>
+                        <i class="fas fa-comment-medical"></i>
+                        <i class="fas fa-comment-slash"></i>
+                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-comments-dollar"></i>
+                        <i class="fas fa-compact-disc"></i>
+                        <i class="fas fa-compass"></i>
+                        <i class="fas fa-compress"></i>
+                        <i class="fas fa-compress-alt"></i>
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <i class="fas fa-concierge-bell"></i>
+                        <i class="fas fa-cookie"></i>
+                        <i class="fas fa-cookie-bite"></i>
+                        <i class="fas fa-copy"></i>
+                        <i class="fas fa-copyright"></i>
+                        <i class="fas fa-couch"></i>
+                        <i class="fas fa-credit-card"></i>
+                        <i class="fas fa-crop"></i>
+                        <i class="fas fa-crop-alt"></i>
+                        <i class="fas fa-cross"></i>
+                        <i class="fas fa-crosshairs"></i>
+                        <i class="fas fa-crow"></i>
+                        <i class="fas fa-crown"></i>
+                        <i class="fas fa-crutch"></i>
+                        <i class="fas fa-cube"></i>
+                        <i class="fas fa-cubes"></i>
+                        <i class="fas fa-cut"></i>
+                        <i class="fas fa-dailymotion"></i>
+                        <i class="fas fa-database"></i>
+                        <i class="fas fa-deaf"></i>
+                        <i class="fas fa-democrat"></i>
+                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-dharmachakra"></i>
+                        <i class="fas fa-diagnoses"></i>
+                        <i class="fas fa-dice"></i>
+                        <i class="fas fa-dice-d20"></i>
+                        <i class="fas fa-dice-d6"></i>
+                        <i class="fas fa-dice-five"></i>
+                        <i class="fas fa-dice-four"></i>
+                        <i class="fas fa-dice-one"></i>
+                        <i class="fas fa-dice-six"></i>
+                        <i class="fas fa-dice-three"></i>
+                        <i class="fas fa-dice-two"></i>
+                        <i class="fas fa-directions"></i>
+                        <i class="fas fa-disease"></i>
+                        <i class="fas fa-divide"></i>
+                        <i class="fas fa-dizzy"></i>
+                        <i class="fas fa-dna"></i>
+                        <i class="fas fa-dog"></i>
+                        <i class="fas fa-dollar-sign"></i>
+                        <i class="fas fa-dolly"></i>
+                        <i class="fas fa-dolly-flatbed"></i>
+                        <i class="fas fa-donate"></i>
+                        <i class="fas fa-door-closed"></i>
+                        <i class="fas fa-door-open"></i>
+                        <i class="fas fa-dot-circle"></i>
+                        <i class="fas fa-dove"></i>
+                        <i class="fas fa-download"></i>
+                        <i class="fas fa-drafting-compass"></i>
+                        <i class="fas fa-dragon"></i>
+                        <i class="fas fa-draw-polygon"></i>
+                        <i class="fas fa-drum"></i>
+                        <i class="fas fa-drum-steelpan"></i>
+                        <i class="fas fa-drumstick-bite"></i>
+                        <i class="fas fa-dumbbell"></i>
+                        <i class="fas fa-dumpster"></i>
+                        <i class="fas fa-dumpster-fire"></i>
+                        <i class="fas fa-dungeon"></i>
+                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-egg"></i>
+                        <i class="fas fa-eject"></i>
+                        <i class="fas fa-ellipsis-h"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                        <i class="fas fa-ember"></i>
+                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope-open"></i>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <i class="fas fa-envelope-square"></i>
                     </p>
 
                     <p>Dado que los iconos se basan en fuentes se puede hacer algunas alteraciones de tamaño, color, efectos, entre otros.</p>
 
-                    <div class="box-text example" label="Ejemplo: Transformando íconos <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo: Transformando íconos">
                         <ul class="data_list">
                             <li class="little">Más pequeño:
-                                    <i class="ion-arrow-down-a" ></i>
-                                    <i class="ion-checkmark-circled" ></i>
-                                    <i class="ion-happy-outline" ></i>
-                                    <i class="ion-erlenmeyer-flask" ></i>
+                                    <i class="far fa-surprise"></i>
+                                    <i class="far fa-dizzy"></i>
+                                    <i class="far fa-grin-tongue"></i>
+                                    <i class="far fa-grimace"></i>
                                 </li>
                             <li class="large">Más grande:
-                                    <i class="ion-arrow-down-a" ></i>
-                                    <i class="ion-checkmark-circled" ></i>
-                                    <i class="ion-happy-outline" ></i>
-                                    <i class="ion-erlenmeyer-flask" ></i>
+                                    <i class="far fa-surprise"></i>
+                                    <i class="far fa-dizzy"></i>
+                                    <i class="far fa-grin-tongue"></i>
+                                    <i class="far fa-grimace"></i>
                             </li>
                             <li class="color">Otros colores:
-                                    <i class="ion-arrow-down-a a" ></i>
-                                    <i class="ion-checkmark-circled b" ></i>
-                                    <i class="ion-happy-outline c" ></i>
-                                    <i class="ion-erlenmeyer-flask d" ></i>
+                                    <i class="far fa-surprise a"></i>
+                                    <i class="far fa-dizzy b"></i>
+                                    <i class="far fa-grin-tongue c"></i>
+                                    <i class="far fa-grimace d"></i>
                             </li>
                             <li class="link">Como enlaces:
-                                    <a href="#"><i class="ion-arrow-down-a" ></i></a>
-                                    <a href="#"><i class="ion-checkmark-circled" ></i></a>
-                                    <a href="#"><i class="ion-happy-outline" ></i></a>
-                                    <a href="#"><i class="ion-erlenmeyer-flask" ></i></a>
+                                    <a href="#"><i class="far fa-surprise"></i></a>
+                                    <a href="#"><i class="far fa-dizzy"></i></a>
+                                    <a href="#"><i class="far fa-grin-tongue"></i></a>
+                                    <a href="#"><i class="far fa-grimace"></i></a>
                             </li>
                             <li class="effects">Sombra:
-                                    <i class="ion-arrow-down-a a" ></i>
-                                    <i class="ion-checkmark-circled b" ></i>
-                                    <i class="ion-happy-outline c" ></i>
-                                    <i class="ion-erlenmeyer-flask d" ></i>
+                                    <i class="far fa-surprise a"></i>
+                                    <i class="far fa-dizzy b"></i>
+                                    <i class="far fa-grin-tongue c"></i>
+                                    <i class="far fa-grimace d"></i>
                             </li>
                         </ul>
                     </div>
@@ -772,7 +620,7 @@
                     <h3>Notas emergentes - Tooltips</h3>
 
                     <p>Para las notas emergentes se utiliza la clase <em>tooltip</em>, normalmente en un elemento <em>sup</em> y el texto a mostrar en el tooltip se define en el atributo <em>label</em>. El contenido puede ser texto plano o HTML. Un uso frecuente de los tooltip es reemplazar las "notas al pie" de los documentos tradicionales.</p>
-                    <div class="box-text example" label="Ejemplo de tooltip <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de tooltip">
 <pre>
 &lt;sup class="tooltip" title="Mensaje a &lt;em&gt;desplegar&lt;/em&gt; en el tooltip"&gt;[1]&lt;/sup&gt;
 </pre>
@@ -803,7 +651,7 @@
                 <div class="subpage" id="pag-textos-mouseover1">
                     <h3>Mouse "sobre"</h3>
                     <p>Para desplegar contenido pasando el mouse por un elemento, se utiliza la clase <em>mouse-over-one</em> en un contenedor con elementos que tengan la clase CSS <em>button</em> y adicionan el atributo <em>data-ref</em>, el cual debe contener la ruta CSS del elemento que se muestra al pasar el mouse. Se mantiene visible el último elemento mostrado.</p>
-                    <div class="box-text important" label="Importante <span class='far fa-important'></span>">
+                    <div class="box-text important" label="Importante">
                         <p>No se controla la visualización inicial por lo que se deben ocultar los elementos explícitamente y mantener visible solamente el inicial. Además, marcar el elemento de control del elemento visible con la clase <em>current</em>.</p>
                     </div>
 
@@ -830,7 +678,7 @@
                     <h3>Mouse "sobre" un elemento</h3>
                     <p>Para desplegar contenido pasando el mouse por un elemento, se utiliza la clase <em>mouse-over</em> en un elemento que debe tener el atributo <em>data-ref</em>, el cual debe contener la ruta CSS del elemento que se muestra al pasar el mouse. Al quitar el mouse el elemento se vuelve a ocultar.</p>
 
-                    <div class="box-text important" label="Importante <span class='far fa-important'></span>">
+                    <div class="box-text important" label="Importante">
                         <p>No se controla la visualización inicial por lo que se debe ocultar explícitamente el elemento al inicio.</p>
                     </div>
 
@@ -850,7 +698,7 @@
 
                     <p>Para definir el efecto que se utiliza al momento de ocultar/mostrar se utiliza el atributo <em>data-effect</em> con uno de los siguientes posibles valores: <em>blind</em>, <em>bounce</em>, <em>clip</em>, <em>drop</em>, <em>explode</em>, <em>fade</em>, <em>fold</em>, <em>highlight</em>, <em>puff</em>, <em>pulsate</em>, <em>shake</em>, <em>slide</em>, <em>scale</em>, <em>size</em></p>
 
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
                         <div class="instruction"><span class="onlymobile">Toque</span><span class="notmobile">De clic en</span> el <span class="icon_more button"></span> para ampliar la información</div>
 
                         <div class="more-less viewless" data-ref="#pag-textos-ocultarmostrar .contenido" data-effect="explode">
@@ -875,7 +723,7 @@
                         </div>
                     </div>
 
-                    <div class="box-text important" label="Importante <span class='far fa-important'></span>">
+                    <div class="box-text important" label="Importante">
                         <p>La visualización inicial se debe definir directamente en el estilo del elemento destino. Además, el estado inicial del controlador se puede definir con las clases <em>viewmore</em> cuando inicia desplegado o <em>viewless</em> cuando incia contraido.</p>
                     </div>
 
@@ -887,12 +735,12 @@
                         <div class="col-2">
                             <p>Permite separar el contenido en dos columnas cuando el ancho del dispositivo es muy grande y se acomoda a una sola columna si no lo es.</p>
                             <p>Para utilizarlo, se crea un <em>div</em> con la clase <em>row</em> y dentro de él dos <em>div</em> con la clase <em>col-2</em>. Dentro de cada uno de estos últimos <em>div</em> irá el contenido de cada columna.</p>
-                            <div class="box-text note" label="Tip <span class='far fa-note'></span>">
+                            <div class="box-text note" label="Tip">
                                 <p>Cabe anotar que dentro de cada columna puede haber nuevamente un contenido "a dos columnas" en el caso que se requiera.</p>
                             </div>
                         </div>
                         <div class="col-2">
-                            <div class="box-text example" label="Ejemplo de texto a dos columnas <span class='far fa-example'></span>">
+                            <div class="box-text example" label="Ejemplo de texto a dos columnas">
 <pre>
 &lt;div class="row"&gt;
     &lt;div class="col-2"&gt;
@@ -919,7 +767,7 @@
                         Los audios pueden ser cargados desde cualquier elemento HTML utilizando el atributo <em>data-sound</em>, el cual contiene la ruta compuesta por el nombre del archivo y, si está dentro de una carpeta, el nombre de la carpeta. Todos los audios deben ir en la carpeta <strong>content/sounds/</strong>. Se recomienda utilizar un botón con clase <em>iconsound</em> al cual además se le puede agregar la clase <em>button</em> para el efecto "sobre".
                     </p>
 
-                    <div class="box-text example" label="Ejemplo de audio simple <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de audio simple">
                         <pre>&lt;button class="iconsound button" data-sound="beep09.ogg">&lt;/button&gt;</pre>
 
                         <p>
@@ -932,7 +780,7 @@
                         Si lo que se desea es un audio en un reproductor con controles, entonces se debe utilizar la etiqueta estandar de HMTL5: <em>audio</em>, con las opciones que se definen para ella. Para ver información al respecto visite <a href="https://www.w3schools.com/html/html5_audio.asp" target="_blank">https://www.w3schools.com/html/html5_audio.asp</a>. En este caso, la ruta del orígen del archivo se debe definir completamente, aunque se recomienda que se almacenen tambien en la carpeta <strong>content/sounds/</strong>. Cabe anotar que la apariencia del reproductor estará determinada en su gran mayoría por el navegador.
                     </p>
 
-                    <div class="box-text example" label="Ejemplo de audio con controles <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de audio con controles">
 <pre>
 &lt;audio controls&gt;
   &lt;source src="content/sounds/constantspectrummelody.ogg" type="audio/ogg"&gt;
@@ -964,7 +812,7 @@
                     <p>
                         Si el video lleva subtítulos, se recomienda que estén incluidos en el atributo <em>src</em> como texto en base64, para que no haya problema si el objeto se reproduce localmente. El formato recomendado de los subtítulos es <strong>vtt</strong> y se aconseja mantener el archivo <strong>.vtt</strong> en la misma carpeta que los videos aunque se incluya como texto en base64.
                     </p>
-                    <div class="box-text example" label="Ejemplo de video utilizando el reproductor del navegador <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de video utilizando el reproductor del navegador">
 <pre>
 &lt;div class="videobox"&gt;
   &lt;video controls&gt;
@@ -1000,7 +848,7 @@
                         </p>
                     </div>
 
-                    <div class="box-text example" label="Ejemplo de video utilizando el reproductor externo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de video utilizando el reproductor externo">
 <pre>
 &lt;div class="videobox"&gt;
   &lt;video controls class="mejs__player"&gt;
@@ -1033,7 +881,7 @@
                         <div class="instruction" type="info">Video <a href="https://commons.wikimedia.org/wiki/File:Eta_porketo.webm" target="_blank">Eta porketo</a>, tomado de Wikimedia commons. By Marion Bélisle.</div>
                     </div>
 
-                    <div class="box-text note" label="Tip: piense en el ancho/alto del video <span class='far fa-note'></span>">
+                    <div class="box-text note" label="Tip: piense en el ancho/alto del video">
                         <p>Utilice medidas porcentuales para videos anchos con el fin de que se ajusten al ancho de la pantalla o del contenedor. Por ejemplo: <strong> width="100%"</strong> directamente en la etiqueta <em>video</em>, o por CSS: <strong> width: 100%;</strong>. Es especialmente útil para que el video se ajuste en dispositivos con pantallas pequeñas como celulares.</p>
                     </div>
                 </div>
@@ -1043,7 +891,7 @@
 
                     <p>Las imágenes que sean animadas deben llevar la clase CSS <em>animation</em>. Por accesibilidad, toda imágen debe tener el atributo <em>title</em> con una breve descripción de la imagen.</p>
 
-                    <div class="box-text example" label="Ejemplo de animación <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de animación">
 <pre>
 &lt;img src="content/cinemagraph.expert.gif"
   class="animation"
@@ -1059,7 +907,7 @@
 
                     <p>Las imágenes que sean animadas pero que deban iniciar por la acción del usuario deben tener otra imagen (controlador) para definir el inicio. El controlador debe llevar la clase CSS <em>play-animation</em> y un atributo <em>data-animation</em> con la ruta de la animación.</p>
 
-                    <div class="box-text example" label="Ejemplo de animación controlada <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de animación controlada">
 <pre>
 &lt;img src="content/prev_cinemagraph.expert.png"
   class="play-animation"
@@ -1074,7 +922,7 @@
                         </p>
                     </div>
 
-                    <div class="box-text note" label="Tip: alinear animaciones <span class='far fa-note'></span>">
+                    <div class="box-text note" label="Tip: alinear animaciones">
                         <p>Las animaciones son rodeadas automáticamente por un contenedor con la clase CSS <em>animation_image</em> por lo que la alineación se puede definir en esa clase. Los ejemplos arriba están centrador directamente utilizando dicha clase.</p>
                     </div>
                 </div>
@@ -1096,10 +944,10 @@
                     <div class="movi">
                         <div class="movi_1" data-movi-type="stop">
                             <div class="movi_2" data-movi-type="move" data-movi-base="example_moveright" style="position: absolute;">
-                                <i class="ion-arrow-right-a"></i>
+                                <i class="fas fa-long-arrow-alt-right"></i>
                                 <div class="movi_3" data-movi-type="show" data-duration="1000" data-effect="shake">
                                     <div class="movi_4" data-movi-type="move" data-movi-base="example_movedown" style="position: absolute;" data-event-on-end="show_restart">
-                                        <i class="ion-arrow-down-a"></i>
+                                        <i class="fas fa-long-arrow-alt-down"></i>
                                     </div>
                                 </div>
                             </div>
@@ -1136,7 +984,7 @@
 
                     <p>Para permitir hacer zoom sobre imágenes de manera interactiva, por ejemplo en mapas conceptuales, agregar a la imagen la clase <em>pit-resources-zoom</em>. Se puede manipular el alcance del zoom con el atributo <em>data-magnification</em> (un entero) y el tamaño de la "lupa" con el atributo <em>data-magnifier-size</em>.</p>
 
-                    <div class="box-text example" label="Zoom en una imagen <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Zoom en una imagen">
 <pre>
 &lt;img src="content/pagina.jpg"
  class="jpit-resources-zoom"
@@ -1162,7 +1010,7 @@
                         <span class="about">Este componente está basado en <a href="http://zurb.com/playground/twentytwenty" target="_blank">http://zurb.com/playground/twentytwenty</a>.</span>
                     </p>
 
-                    <div class="box-text example" label="Ejemplo comparando dos imágenes <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo comparando dos imágenes">
 <pre>
 &lt;div class="after-before"&gt;
     &lt;img src="content/pagina_2.jpg" /&gt;
@@ -1180,7 +1028,7 @@
                     </div>
 
                     <p>También se puede ver vertical, agregando el atributo <em>data-orientation="vertical"</em> y se puede definir cuanto de la imagen "Antes" se ve al iniciar, por defecto se muestra el 50% (0.5) pero se puede cambiar definiendo el atributo <em>data-offset</em> con un valor entre 0 y 1. Finalmente, para definir los textos que van en ambos lados ("Antes" y "Después"), debe agregarse los atributos: <em>data-before-label</em> y <em>data-after-label</em>.</p>
-                    <div class="box-text example" label="Ejemplo comparando verticalmente <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo comparando verticalmente">
 <pre>
 &lt;div class="after-before" data-orientation="vertical" data-offset="0.2"
   data-before-label="Con filtro" data-after-label="Mejorada"&gt;
@@ -1637,7 +1485,7 @@
                     <h3>Imagenes con contenido de texto</h3>
                     <p>Este formato es útil para desplegar contenido explicativo, que será mostrado sobre una imagen al pasar el mouse sobre ella. Para utilizarlo agregue la clase <em>view-first</em> a un contenedor, usualmente un <em>div</em>, al interior agregue una imagen y otro contenedor con la clase <em>view-content</em> en el cual debe ir el contenido que se muestra con la interacción.</p>
 
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
 <pre>
 &lt;div class="view-first"&gt;
     &lt;img src="content/primavera.png" /&gt;
@@ -1723,7 +1571,7 @@
                     <p>
                         Si el contenedor tiene un atributo <em>title</em>, dicho valor se asigna a la ventana como título.
                     </p>
-                    <div class="box-text example" label="Ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo">
 <pre>
 &lt;div class="expand-image" data-src="content/ojo.jpg" title="Ojo de reptil"&gt;&lt;/div&gt;
 </pre>
@@ -1742,7 +1590,7 @@
                     <p>
                         No son un control nuevo sino una mezcla de otros controles con el objetivo de señalar información al interior de una imagen.
                     </p>
-                    <div class="box-text example" label="Ejemplo de apuntadores en una imagen <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Ejemplo de apuntadores en una imagen">
                     <p>
                          En el ejemplo siguiente se muestra el uso de los <strong>apuntadores</strong> mezclados con los <strong>tooltip</strong> para mostrar contenido según las partes de la imagen. Las posiciones de los apuntadores deben ser establecidas manualmente en los estilos personalizados.
                     </p>
@@ -3428,7 +3276,7 @@
                         </dl>
                     </div>
 
-                    <div class="box-text note" label="Nota <span class='far fa-note'></span>">
+                    <div class="box-text note" label="Nota">
                         Este segundo tipo de marcas no se resaltan antes de ser seleccionadas ni tienen efecto con el "mouse sobre" fuera del cambio en el cursor del mouse.
                     </div>
                 </div>
@@ -3726,8 +3574,8 @@
                                             </p>
                                             <p>
                                                 Decisión:
-                                                <input type="radio" name="decision" ftitle="Decisión" value="Sí" />
-                                                <input type="radio" name="decision" ftitle="Decisión" value="No" />
+                                                <input type="radio" name="decision" ftitle="Decisión" value="Sí" />Sí
+                                                <input type="radio" name="decision" ftitle="Decisión" value="No" />No
                                             </p>
                                         </div>
                                     </div>
@@ -3847,7 +3695,7 @@
                     <p>
                         Lo siguiente es una guía sugerida para referenciar recursos digitales como imágenes, videos y otros elementos utilizados como parte del contenido en el montaje del documento hipermedial. El contenedor de la referencia debe tener la clase <em>about</em>, además se recomienda que el recurso y su referencia estén en un contenedor con la clase <em>box_media</em>.
                     </p>
-                    <div class="box-text example" label="Código de ejemplo <span class='far fa-example'></span>">
+                    <div class="box-text example" label="Código de ejemplo">
 <pre>
 &lt;div class="box_media"&gt;
     &lt;img src="content/el_beso_udea.png" /&gt;
@@ -3915,7 +3763,7 @@
             <!--Maquetación-->
             <section id="pag-maquetacion" ptitle="Maquetación">
                 <div class="subpage">
-                    <div class="box-text important" label="Caso especial <span class='far fa-important'></span>">
+                    <div class="box-text important" label="Caso especial">
                         <p>
                             Esta plantilla dispone de una condición especial para reducir el espacio en caso de que se tengan actividades de una sola página. Para ello se debe agregar la clase <em>single</em> a la etiqueta <em>html</em> del contenido.
                         </p>

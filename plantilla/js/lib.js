@@ -1414,24 +1414,24 @@ dhbgApp.standard.start = function() {
     // ==============================================================================================
     $('.instruction').each(function(){
         var $this = $(this);
-        var cssclass = 'ion-help-circled';
+        var cssclass = 'fa-question-circle';
         if ($this.attr('type')) {
             switch($this.attr('type')) {
                 case 'info':
-                    cssclass = 'ion-information-circled';
+                    cssclass = 'fa-info-circle';
                     break;
                 case 'danger':
-                    cssclass = 'ion-nuclear';
+                    cssclass = 'fa-radiation-alt';
                     break;
                 case 'alert':
-                    cssclass = 'ion-alert-circled';
+                    cssclass = 'fa-exclamation-triangle';
                     break;
                 case 'none':
                     // Not add icon.
                     return;
             }
         }
-        $this.prepend('<i class="' + cssclass + '"></i>');
+        $this.prepend('<i class="fas ' + cssclass + '"></i>');
     });
 
     // ==============================================================================================
@@ -1500,7 +1500,7 @@ dhbgApp.standard.start = function() {
 
         $this.css('background-image', 'url(' + src + ')');
 
-        var $icon = $('<i class="ion-arrow-expand"></i>');
+        var $icon = $('<i class="fas fa-expand-arrows-alt"></i>');
         $icon.on('click', f_show);
         $this.append($icon);
     };
@@ -1609,7 +1609,7 @@ dhbgApp.standard.start = function() {
         dhbgApp.changeSco(dhbgApp.scorm.currentSco);
     }
     else {
-        dhbgApp.loadPage(0, 0);
+        dhbgApp.loadPage(1, 0);
     }
 };
 

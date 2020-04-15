@@ -83,11 +83,11 @@ dhbgApp.mobile.start = function() {
 
     var $box_menu = $('<div id="main_menu"></div>');
 
-    var $close_menu = $('<div id="close_menu" class="button"><i class="ion-close-round"></i></div>');
+    var $close_menu = $('<div id="close_menu" class="button"><i class="fas fa-chevron-circle-right"></i></div>');
     $close_menu.on('click', function() { $box_menu.hide( { effect: 'slide', direction: 'right' } ); });
     $box_menu.append($close_menu);
 
-    var $open_menu = $('<div id="open_menu" class="button"><i class="ion-navicon-round"></i></div>');
+    var $open_menu = $('<div id="open_menu" class="button"><i class="fas fa-bars"></i></div>');
     $open_menu.on('click', function() { $box_menu.show( { effect: 'slide', direction: 'right' } ); });
 
     $('#body').append($open_menu);
@@ -1546,24 +1546,24 @@ dhbgApp.mobile.start = function() {
     // ==============================================================================================
     $('.instruction').each(function(){
         var $this = $(this);
-        var cssclass = 'ion-help-circled';
+        var cssclass = 'fa-question-circle';
         if ($this.attr('type')) {
             switch($this.attr('type')) {
                 case 'info':
-                    cssclass = 'ion-information-circled';
+                    cssclass = 'fa-info-circle';
                     break;
                 case 'danger':
-                    cssclass = 'ion-nuclear';
+                    cssclass = 'fa-radiation-alt';
                     break;
                 case 'alert':
-                    cssclass = 'ion-alert-circled';
+                    cssclass = 'fa-exclamation-triangle';
                     break;
                 case 'none':
                     // Not add icon.
                     return;
             }
         }
-        $this.prepend('<i class="' + cssclass + '"></i>');
+        $this.prepend('<i class="fas ' + cssclass + '"></i>');
     });
 
     // ==============================================================================================
@@ -1636,7 +1636,7 @@ dhbgApp.mobile.start = function() {
 
         $this.css('background-image', 'url(' + src + ')');
 
-        var $icon = $('<i class="ion-arrow-expand"></i>');
+        var $icon = $('<i class="fas fa-expand-arrows-alt"></i>');
         $icon.on('click', f_show);
         $this.append($icon);
     };
