@@ -1098,7 +1098,7 @@ sup.tooltip {
 .vertical-menu .element:after,
 .horizontal-menu .chalkboard_horizontal_content .element:after,
 .vertical-menu-both-sides .element:after {
-    content: "\f0d7";
+    content: "\f0da";
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     font-size: 16px;
