@@ -16,3 +16,7 @@ body {
 @media only screen and (orientation: landscape) {
   body.is-ios {
     min-height: 101vh; } }
+
+.genially-embed .genially-view-logo {
+    display: none !important;
+}

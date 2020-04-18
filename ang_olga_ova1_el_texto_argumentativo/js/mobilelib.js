@@ -1486,6 +1486,11 @@ dhbgApp.mobile.start = function() {
         dhbgApp.actions.activityView($this);
     });
 
+    $('.jpit-activities-textselection').each(function(){
+        var $this = $(this);
+        dhbgApp.actions.activityTextSelection($this);
+    });
+
     // ==============================================================================================
     // Open URL
     // This is processed on the end in order to not be disabled for another dynamic html and include
@@ -3792,6 +3797,169 @@ dhbgApp.mobile.load_operations = function() {
         });
 
         $(dhbgApp).trigger('jpit:activity:rendered', [$this, { id: scorm_id }]);
+    };
+
+    dhbgApp.actions.activityTextSelection = function ($this) {
+        var scorm_id = $this.attr('data-act-id') ? $this.attr('data-act-id') : 'txtselection';
+
+        if (dhbgApp.scorm) {
+            if (!dhbgApp.scorm.activities[scorm_id]) { dhbgApp.scorm.activities[scorm_id] = []; }
+        }
+
+        // Load custom feedback, if exists.
+        var feedbacktrue = null, feedbackfalse = null;
+
+        if ($this.find('feedback > correct').text() != '') {
+            feedbacktrue = $this.find('feedback > correct').html();
+        }
+
+        if ($this.find('feedback > wrong').text() != '') {
+            feedbackfalse = $this.find('feedback > wrong').html();
+        }
+
+        $this.find('feedback').empty();
+        // End feedback.
+
+        $this.selectelement = null;
+        $this.find('[data-response]').each(function (k, element) {
+            var $element = $(element);
+            $element.data('selected', false);
+
+            var response = $element.attr('data-response');
+
+            var $btn = $('<button class="btntxtselection general">' + dhbgApp.s('select_txt') + '</button>');
+            var $txt = $('<span class="txtselected">' + dhbgApp.s('txtselection_notinit') + '</span>');
+            var $likely = $('<span class="likely">0%</span>');
+            $likely.data('val', 0);
+
+            $element.append($btn);
+            $element.append($txt);
+            $element.append($likely);
+
+            $btn.on('click', function(){
+                $this.find('[data-response] .btntxtselection').html(dhbgApp.s('select_txt'));
+                $this.find('[data-response] .btntxtselection').removeClass('active');
+                $(dhbgApp).trigger('jpit:activity:substart', [$this, { id: scorm_id }]);
+                $txt.text(dhbgApp.s('txtselection_helper'));
+                $likely.text('0%');
+                $this.selectelement = $element;
+                $(this).html(dhbgApp.s('selecting')).addClass('active');
+            });
+
+            $element.setText = function (text) {
+                var sim = similarity(text, response);
+                $txt.text(text);
+                $likely.text(sim + '%');
+                $likely.data('val', sim);
+                $element.data('selected', true);
+                validate();
+            }
+        });
+
+        var $selectcontrol = $this.attr('data-select-area') ? $this.find($this.attr('data-select-area')) : $this;
+
+        $selectcontrol.on('mouseup', function () {
+            if (!$this.selectelement) {
+                return;
+            }
+
+            var text = $.trim($.selection());
+
+            if (text) {
+                $this.selectelement.setText(text);
+            }
+        });
+
+        var $box_end = $this.find('.box_end');
+
+        var $msg_end = $('<div class="msg"></div>');
+        $box_end.append($msg_end);
+
+        $(dhbgApp).trigger('jpit:activity:rendered', [$this, { id: scorm_id }]);
+
+        var validate = function () {
+            var countlikely = 0;
+            var student_response = [];
+
+            $this.find('.likely').each(function() {
+                var val = $(this).data('val');
+                countlikely += val;
+                student_response[student_response.length] = val;
+            });
+
+            var completedcount = 0;
+            $this.find('[data-response]').each(function (k, element) {
+                completedcount += $(element).data('selected') ? 1 : 0;
+            });
+
+            if (completedcount == $this.find('[data-response]').length) {
+                var weight = Math.round(countlikely / $this.find('.likely').length);
+
+                if (dhbgApp.scorm) {
+                    student_response = student_response.join('|');
+                    dhbgApp.scorm.activityAttempt(scorm_id, weight, null, student_response);
+                }
+                dhbgApp.printProgress();
+
+                var msg;
+                if (weight >= dhbgApp.evaluation.approve_limit) {
+                    msg = '<div class="correct">' + (feedbacktrue ? feedbacktrue : dhbgApp.s('all_correct_percent', weight)) + '</div>';
+                }
+                else {
+                    msg = '<div class="wrong">' + (feedbackfalse ? feedbackfalse : dhbgApp.s('wrong_percent', (100 - weight))) + '</div>';
+                }
+
+                $msg_end.empty();
+                $msg_end.append(msg);
+
+                $(dhbgApp).trigger('jpit:activity:completed', [$this, {
+                    id: scorm_id,
+                    weight: weight
+                }]);
+            }
+        }
+        // Based in https://stackoverflow.com/questions/10473745/compare-strings-javascript-return-of-likely.
+        var similarity = function (s1, s2) {
+
+            var longer = s1;
+            var shorter = s2;
+            if (s1.length < s2.length) {
+                longer = s2;
+                shorter = s1;
+            }
+            var longerLength = longer.length;
+            if (longerLength == 0) {
+                return 1.0;
+            }
+
+
+            s1 = longer.toLowerCase();
+            s2 = shorter.toLowerCase();
+
+            var costs = new Array();
+            for (var i = 0; i <= s1.length; i++) {
+                var lastValue = i;
+                for (var j = 0; j <= s2.length; j++) {
+                if (i == 0)
+                    costs[j] = j;
+                else {
+                    if (j > 0) {
+                    var newValue = costs[j - 1];
+                    if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                        newValue = Math.min(Math.min(newValue, lastValue),
+                        costs[j]) + 1;
+                    costs[j - 1] = lastValue;
+                    lastValue = newValue;
+                    }
+                }
+                }
+                if (i > 0)
+                costs[s2.length] = lastValue;
+            }
+
+            return Math.round(((longerLength - costs[s2.length]) / parseFloat(longerLength)) * 100);
+
+        };
     };
 
     $('[data-offset="true"]').each(function(){

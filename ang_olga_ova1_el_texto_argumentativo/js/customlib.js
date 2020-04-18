@@ -15,7 +15,7 @@
             reflexive = /^(4|13|14|18|20|23|27|29|32|40)$/,
             theorist= /^(1|5|10|11|21|24|30|31|33|36)$/,
             pragmatic= /^(3|6|8|9|17|26|28|35|37|38)$/;
-            
+
         var styles_results = {
             active: 0,
             reflexive: 0,
@@ -124,8 +124,8 @@
      * @param {object} args
      */
     function onActivityCompleted(event, $el, args) {
-        if (/1-camea/.test(args.id)) {
-            calculateCameaResults($el, args);
+        if (/3-1-relacione/.test(args.id)) {
+            $('#3-1-relacione-conclusion').show('slow');
             return;
         }
     }
@@ -137,26 +137,41 @@
      * @param {object} args
      */
     function onActivityRendered(event, $el, args) {
-        if (/1-observar/.test(args.id)) {
+        if (/1-conocimientos/.test(args.id)) {
 
             $el.find('.btn-verify').on('click', function() {
-                console.log('verify...');
+
                 var $li = $(this).closest('li');
                 var response = $li.find('textarea').val();
-                console.log(response);
+
                 if (response == '') return;
 
+                $(this).hide();
                 $li.find('.feedback-pane').removeClass('hidden');
             });
+
             $el.find('.btn-continue').on('click', function() {
-                console.log('continue...');
+
                 var $li = $(this).closest('li');
                 $li.find('[data-group]').trigger('click');
             });
         }
+        else if (/4-observar/.test(args.id)) {
+
+            $el.on('click', function() {
+
+                var response = $('#act4').find('textarea').val();
+
+                if (response == '') return;
+
+                $el.hide();
+                $('#act4').find('.feedback-pane').removeClass('hidden');
+            });
+        }
     }
-    
+
     //Register application event handlers
     $(app).on('jpit:activity:rendered', onActivityRendered);
     $(app).on('jpit:activity:completed', onActivityCompleted);
 })(dhbgApp);
+

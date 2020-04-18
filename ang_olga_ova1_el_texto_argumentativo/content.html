@@ -9,24 +9,13 @@
     <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
     <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
-    <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
-    <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
-    <link href="components/pit/css/jpit_zoom.css" rel="stylesheet" type="text/css">
-    <link href="components/csscircle/circle.min.css" rel="stylesheet" type="text/css">
 
     <script src="components/jquery/jquery.min.js"></script>
     <script src="components/jquery/jquery-ui.min.js"></script>
     <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
 
 <!--jQuery components -->
-    <script src="components/twentytwenty/js/jquery.event.move.js" type="text/javascript"></script>
-    <script src="components/twentytwenty/js/jquery.twentytwenty.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="components/twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
-
-    <script src="components/mediaelementjs/mediaelement-and-player.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="components/mediaelementjs/mediaelementplayer.css" type="text/css" />
-
-    <script src="components/maphilight/jquery.maphilight.min.js" type="text/javascript"></script>
+    <script src="components/jquery-selection/src/jquery.selection.min.js"></script>
 <!--End jQuery components -->
 
     <script src="components/interact/interact.min.js"></script>
@@ -35,23 +24,14 @@
     <script src="components/pit/activity/jpit_activity.js"></script>
     <script src="components/pit/resources/jpit_resource.js"></script>
     <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
-    <script src="components/pit/activity/mark/jpit_activity_mark.js"></script>
-    <script src="components/pit/activity/wordpuzzle/jpit_activity_wordpuzzle.js"></script>
     <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
-    <script src="components/pit/activity/crossword/jpit_activity_crossword.js"></script>
-    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
     <script src="components/pit/activity/form/jpit_activity_form.js"></script>
-    <script src="components/pit/activity/sortable/jpit_activity_sortable.js"></script>
-    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
-    <script src="components/pit/resources/movi/jpit_resource_movi.js"></script>
-    <script src="components/pit/resources/zoom/jpit_resource_zoom.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/init.js"></script>
     <script src="js/lang.es.js"></script>
     <script src="js/lib.js"></script>
     <script src="js/mobilelib.js"></script>
-    <script src="js/stories.js"></script>
     <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
     <script src="components/scorm/scorm_api.js"> </script>
     <script src="js/customlib.js"></script>
@@ -83,7 +63,7 @@
     </style>
 
 </head>
-<body class="loading" data-debug="true" data-model="page" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
     <div id="body" class="not_print">
         <div id="not_scorm_msg" style="display: none;"></div>
 
@@ -104,7 +84,7 @@
                     <menu>
                         <menuitem label="1. Conocimientos previos" data-page="pag-previos"></menuitem>
                         <menuitem label="2. El texto argumentativo" data-page="pag-textoarg"></menuitem>
-                        <menuitem label="3. Evalúa lo aprendido" data-page="pag-contenidointeractivo"></menuitem>        
+                        <menuitem label="3. Evalúa lo aprendido" data-page="pag-contenidointeractivo"></menuitem>
                     </menu>
                 </nav>
             </div>
@@ -117,7 +97,7 @@
             <!--Conocimientos previos-->
             <section id="pag-previos" ptitle="1. Conocimientos previos">
                 <div class="subpage">
-                    
+
                     <div class="box-text activity" label="Actividad de aprendizaje">
                         <p>
                           <strong>Objetivos de aprendizaje:</strong>
@@ -129,7 +109,7 @@
                                 Reconocer la función que cumplen las imágenes en el mensaje que se desea transmitir.
                               </li>
                           </ul>
-                          
+
                         </p>
                         <p>
                             <strong>Enunciado:</strong> Observa detenidamente la imagen y responde las preguntas que aparecen a continuación.
@@ -142,52 +122,52 @@
                         </div>
                     </div>
 
-                    <div class="jpit-activities-selection" data-act-id="1-observar" data-act-title="Conocimientos previos" data-parent-mark-selector="false" data-mode="single" data-pagination="true" data-next-page-on-selection="true" data-next-page-selection-required="true" data-auto-resolve="true">
-                        <ul class="ctrl-pagination" data-layer-height="auto" data-labelcurrent="true" data-animation="slide" data-pagination-transition-hidden=".option-group">
+                    <div class="jpit-activities-selection" data-act-id="1-conocimientos" data-act-title="Conocimientos previos" data-parent-mark-selector="false" data-mode="single" data-pagination="true" data-next-page-on-selection="true" data-next-page-selection-required="true" data-auto-resolve="true">
+                        <ul id="pag-act1" class="ctrl-pagination" data-layer-height="auto" data-labelcurrent="true" data-animation="slide" data-pagination-transition-hidden=".option-group">
                             <li>
-                                <p>1.¿Cuál es el mensaje de la imagen?</p>
+                                <h4>1.¿Cuál es el mensaje de la imagen?</h4>
                                 <textarea class="respuesta"></textarea>
                                 <button class="btn-verify general">Verificar</button>
                                 <div class="feedback-pane hidden">
                                     <p>El COVID-19 es un virus que se contagia y esparce fácilmente entre los seres humanos.</p>
                                     <button class="btn-continue general">Continuar</button>
                                 </div>
-                                <div data-group="1" data-group-value="s"  data-correct="true" class="radio tooltip" style="display: none"></div> 
+                                <div data-group="1" data-group-value="1"  data-correct="true" class="radio tooltip" style="display: none"></div>
                             </li>
                             <li>
-                                <p>2. ¿A quién va dirigido el mensaje?</p>
+                                <h4>2. ¿A quién va dirigido el mensaje?</h4>
                                 <textarea class="respuesta"></textarea>
                                 <button class="btn-verify general">Verificar</button>
                                 <div class="feedback-pane hidden">
                                     <p>El mensaje está dirigido a todos los seres humanos, puesto que somos los que estamos en peligro de contagio.</p>
                                     <button class="btn-continue general">Continuar</button>
                                 </div>
-                                <div data-group="2" data-group-value="s"  data-correct="true" class="radio tooltip" style="display: none"></div> 
+                                <div data-group="2" data-group-value="2" data-correct="true" class="radio tooltip" style="display: none"></div>
                             </li>
                             <li>
-                                <p>3. ¿Cuál es la finalidad de la imagen?</p>
+                                <h4>3. ¿Cuál es la finalidad de la imagen?</h4>
                                 <textarea class="respuesta"></textarea>
                                 <button class="btn-verify general">Verificar</button>
                                 <div class="feedback-pane hidden">
                                     <p>Por medio de la imagen se quiere sensibilizar a las personas para que tomen conciencia de los peligros y de la manera en que se transmite el virus.</p>
                                     <button class="btn-continue general">Continuar</button>
                                 </div>
-                                <div data-group="3" data-group-value="s"  data-correct="true" class="radio tooltip" style="display: none"></div> 
+                                <div data-group="3" data-group-value="3" data-correct="true" class="radio tooltip" style="display: none"></div>
                             </li>
                             <li>
-                                <p>4. ¿Qué función cumple los dibujos que acompañan al texto?</p>
+                                <h4>4. ¿Qué función cumple los dibujos que acompañan al texto?</h4>
                                 <textarea class="respuesta"></textarea>
                                 <button class="btn-verify general">Verificar</button>
                                 <div class="feedback-pane hidden">
                                     <p>La imagen cumple la función de complementar el texto y por ende el mensaje, ejemplificando o recreando lo que se dice.</p>
-                                    <button class="btn-continue w-content-controler general jpit-activities-view" data-content="#conclusion_act1" data-act-id="Conclusión general">VER CONCLUSIÓN GENERAL</button>
+                                    <button class="btn-continue w-content-controler general" data-content="#conclusion_act1">VER CONCLUSIÓN GENERAL</button>
                                 </div>
-                                <div data-group="4" data-group-value="s"  data-correct="true" class="radio tooltip" style="display: none"></div> 
+                                <div data-group="4" data-group-value="4" data-correct="true" class="radio tooltip" style="display: none"></div>
                             </li>
                         </ul>
                     </div>
-                </div>                       
-                
+                </div>
+
                 <div id="conclusion_act1" class="w-content">
                     La intención comunicativa de esta imagen es convencernos, persuadirnos y sensibilizarnos frente a una situación real. Utilizando como argumentos para defender su idea la recreación de imágenes y el texto sugestivo; es por ello por lo que la podemos agrupar en la tipología argumentativa, porque más que informar, es también alertar un peligro de contagio.
                 </div>
@@ -195,11 +175,11 @@
                     A continuación, se dan ejemplos de esta modalidad discursiva:
                 </p>
                 <div class="box_media">
-                    <iframe src="content/genially_mapa1_texto_argumentativo/genially.html" width="100%" height="500px" style="border:none;" >*Contenido interactivo*</iframe>
+                    <iframe src="content/genially_mapa1_texto_argumentativo/genially.html" class="interactivo" >*Contenido interactivo*</iframe>
                     <div class="about">
                         Tomado de Textos argumentativos [Mapa conceptual] por Paulasg14, 2012, Slideshare.
                     </div>
-                </div>                              
+                </div>
             </section>
 
             <!--El texto argumentativo-->
@@ -207,7 +187,7 @@
                 <div class="subpage">
                     <h3>2.1 ¿Qué es el texto argumentativo?</h3>
                     <div class="box_media">
-                        <iframe src="content/genially_mapa2_texto_argumentativo/genially.html" width="100%" height="500px" style="border:none;" >*Contenido interactivo*</iframe>
+                        <iframe src="content/genially_mapa2_texto_argumentativo/genially.html" class="interactivo">*Contenido interactivo*</iframe>
                         <div class="about">
                             Tomado de Cuadros sinópticos sobre textos comparativos. [Esquema] (s.f.). Cuadros Comparativos
                         </div>
@@ -218,24 +198,24 @@
                     <p>
                         Estas son algunas recomendaciones para tener en cuenta al momento de escribir un texto argumentativo:
                     </p>
-                    
-                    <iframe src="content/genially_texto_argumentativo/genially.html" width="100%" height="500px" style="border:none;" >*Contenido interactivo*</iframe>
-                    
-                    
+
+                    <iframe src="content/genially_texto_argumentativo/genially.html" class="interactivo" >*Contenido interactivo*</iframe>
+
+
                     <div class="box-text link" label="PARA PROFUNDIZAR SOBRE EL TEMA">
                         <p>
                           <strong>Enunciado</strong>: puede consultar los siguientes enlaces para profundizar sobre el texto argumentativo.
                         </p>
                         <ul class="data_list">
                             <li>
-                                <strong>Contenido educativo:</strong> <a href="http://www.colombiaaprende.edu.co/sites/default/files/naspublic/plan_choco/len_9_b1_p6_est.pdf" target="_blank">actividades sobre el texto argumentativo</a> 
+                                <strong>Contenido educativo:</strong> <a href="http://www.colombiaaprende.edu.co/sites/default/files/naspublic/plan_choco/len_9_b1_p6_est.pdf" target="_blank">actividades sobre el texto argumentativo</a>
                             </li>
                             <li>
                                 <strong>Video:</strong> <a href="https://youtu.be/DDnmTF0DDYg" target="_blank">La argumentación: concepto y estructura</a>
                             </li>
                         </ul>
-                    </div>                      
-                </div>            
+                    </div>
+                </div>
             </section>
 
             <!--Formato de contenido-->
@@ -244,13 +224,13 @@
                     <h3>3.1 Sobre el texto argumentativo</h3>
                     <div class="box-text activity" label="Actividad de aprendizaje">
                         <p>
-                             <strong>Objetivo de aprendizaje:</strong> comprender el objetivo del texto argumentativo, sus características y tipos. 
+                             <strong>Objetivo de aprendizaje:</strong> comprender el objetivo del texto argumentativo, sus características y tipos.
                         </p>
                         <p>
                             <strong>Enunciado:</strong> relaciona los enunciados que se encuentran en el costado izquierdo con las palabras que se encuentran en la parte inferior. Para ello arrastra con las opciones al enunciado que corresponde.
                         </p>
-                    </div>  
-                    <div id="arrastrar" class="jpit-activities-droppable" data-verify-type="target" data-act-id="3.1 relacione">
+                    </div>
+                    <div id="arrastrar" class="jpit-activities-droppable" data-verify-type="target" data-act-id="3-1-relacione" data-act-title="Sobre el texto argumentativo">
                         <div class="enunciados">
                             <div class="enunciado">
                                 <span>Propósito de un texto argumentativo</span>
@@ -278,7 +258,7 @@
                                 <div class="receptor" data-target-group="5"></div>
                             </div>
                         </div>
-                    
+
                         <div class="opciones">
                             <h4>Opciones:</h4>
                             <div data-group="2" class="item_1">Ejemplos, analogías e ironías </div>
@@ -286,19 +266,19 @@
                             <div data-group="4" class="item_3">Valla publicitaria </div>
                             <div data-group="3" class="item_4">Tesis, argumentos y conclusión </div>
                             <div data-group="1" class="item_5">Convencer</div>
-                            <br class="clear" />                
+                            <br class="clear" />
                             <div class="box_end"></div>
                         </div>
-                        
+
                     </div>
-                    <div class="boton_conclusion">
-                        <button class="w-content-controler general jpit-activities-view" data-content="#conclusion_act3-1" data-property-width="400px" data-act-id="Conclusión general">VER CONCLUSIÓN GENERAL</button>
-                        
+                    <div id="3-1-relacione-conclusion" class="boton_conclusion" style="display: none;">
+                        <button class="w-content-controler general" data-content="#conclusion_act3-1" data-property-width="400px">VER CONCLUSIÓN GENERAL</button>
+
                         <div id="conclusion_act3-1" class="w-content">
                             <p>
                                 <ul class="data_list">
                                     <li>
-                                        El texto argumentativo tiene como propósito comunicativo, convencer o persuadir, sobre un tema o idea determinada. Por ello, utiliza una estructura textual, basada en una tesis, que expresa la idea principal que voy a defender; unos argumentos, que justifican mi postura crítica, por medio de citas de autoridad, apelación a la vivencia colectiva o individual, datos estadísticos. También cuenta con algunos recursos estilísticos como ejemplos, analogías e ironías y finalmente, incluye una conclusión. 
+                                        El texto argumentativo tiene como propósito comunicativo, convencer o persuadir, sobre un tema o idea determinada. Por ello, utiliza una estructura textual, basada en una tesis, que expresa la idea principal que voy a defender; unos argumentos, que justifican mi postura crítica, por medio de citas de autoridad, apelación a la vivencia colectiva o individual, datos estadísticos. También cuenta con algunos recursos estilísticos como ejemplos, analogías e ironías y finalmente, incluye una conclusión.
                                     </li>
                                     <li>
                                         Por su estructura y finalidad el texto argumentativo es de carácter subjetivo, puesto que pretende que el escritor asuma una postura crítica frente a un tema y lo defienda con argumentos para convencer.
@@ -309,7 +289,7 @@
                                 </ul>
                             </p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="subpage">
@@ -336,7 +316,7 @@
                                 <div class="box_media">
                                     <img src="content/img_01.jpg" alt="El texto argumentativo" />
                                     <div class="about">
-                                        Tomado de Personas con globos de diálogo. [Ilustración] por Geralt, 2014, Pixabay. 
+                                        Tomado de Personas con globos de diálogo. [Ilustración] por Geralt, 2014, Pixabay.
                                     </div>
                                 </div>
                                 <p>
@@ -346,14 +326,14 @@
                                     Por otra parte, no sería posible concebir una sociedad democrática, como la nuestra, sin que las personas pudiéramos expresar nuestras opiniones; por esta razón, deben estar perfectamente fundamentadas pues, de lo contrario, no tendrían el peso suficiente para tratar de cambiar conductas o convencer al contrario, entre otros propósitos. Además, en nuestras relaciones personales, laborales o sociales <strong>tenemos que saber tratar y resolver conflictos</strong>, por ello es necesario saber elaborar textos argumentativos, orales o escritos: reconocer su esquema general y sus características; los propósitos y los recursos discursivos más empleados; identificar y comprender las ideas más importantes a favor o en contra de un tema polémico.
                                 </p>
                             </dd>
-                        </dl>                        
+                        </dl>
                         <dl>
                             <dt>2. ¿Qué es una argumentación?</dt>
                             <dd>
                                 <p>
                                     Una <strong>argumentación es un texto que tiene como fin o bien persuadir al destinatario del punto de vista que se tiene sobre un asunto, o bien convencerlo de la falsedad o veracidad de una teoría, para lo cual debe aportar determinadas razones</strong>. Aparte de esta intención comunicativa, el texto argumentativo se caracteriza por una organización del contenido que lo define como tal: se presentan unas opiniones, que deben ser defendidas o rechazadas con argumentos, y que derivan de forma lógica en una determinada conclusión o tesis.
                                 </p>
-                            </dd>                            
+                            </dd>
                         </dl>
                         <dl>
                             <dt>3. ¿Cuáles son sus propiedades textuales?</dt>
@@ -429,9 +409,9 @@
                                                         <td>Cierre del texto, tras el razonamiento lógico derivado de la argumentación precedente.</td>
                                                     </tr>
                                                 </tbody>
-                                            </table> 
+                                            </table>
                                         </p>
-                                    </div>                                                                     
+                                    </div>
                                 </div>
                             </dd>
                         </dl>
@@ -441,7 +421,7 @@
                                 <div class="box_media">
                                     <img class="icon" src="content/img_04.png" alt="Carpeta abierta" />
                                     <div class="about">
-                                        Tomado de Hoja de papel dentro de una carpeta abierta [Ilustración] por OpenIcons, 2013, Pixabay.  
+                                        Tomado de Hoja de papel dentro de una carpeta abierta [Ilustración] por OpenIcons, 2013, Pixabay.
                                     </div>
                                 </div>
                                 <p>
@@ -487,7 +467,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                </div>    
+                                </div>
                             </dd>
                         </dl>
                         <dl>
@@ -496,7 +476,7 @@
                                 <div class="box_media">
                                     <img class="icon" src="content/img_02.png" alt="El orden" />
                                     <div class="about">
-                                        Tomado de Lista de elementos [Ilustración] por Clker-Free-Vector-Images, 2012, Pixabay. 
+                                        Tomado de Lista de elementos [Ilustración] por Clker-Free-Vector-Images, 2012, Pixabay.
                                     </div>
                                 </div>
                                 <p>
@@ -521,7 +501,7 @@
                                 <div class="box_media">
                                     <img class="icon" src="content/img_05.png" alt="Redacción de textos" />
                                     <div class="about">
-                                        Tomado de Hoja de papel y lápiz [Ilustración] por Clker-Free-Vector-Images, 2012, Pixabay. 
+                                        Tomado de Hoja de papel y lápiz [Ilustración] por Clker-Free-Vector-Images, 2012, Pixabay.
                                     </div>
                                 </div>
                                 <p>
@@ -529,7 +509,7 @@
                                 </p>
                                 <ul class="data_list">
                                     <li>
-                                        El empleo de la <strong>primera persona gramatical</strong> (<cite>yo o nosotros</cite>), dado que se expresa una opinión propia, en algunos casos incluso sentimientos y emociones. 
+                                        El empleo de la <strong>primera persona gramatical</strong> (<cite>yo o nosotros</cite>), dado que se expresa una opinión propia, en algunos casos incluso sentimientos y emociones.
                                     </li>
                                     <li>
                                         Suelen predominar <strong>sustantivos abstractos</strong> de acuerdo con el tema que se trate: pueden ser de tipo teórico o científico.
@@ -549,11 +529,11 @@
                                 </ul>
                             </dd>
                         </dl>
-                    </div> 
+                    </div>
                     <p>
                         De acuerdo con la lectura, responde las siguientes preguntas.
                     </p>
-                    <div class="jpit-activities-quiz" data-act-title="3.2 Comprensión de lectura" data-act-id="3.2_cuestionario">
+                    <div class="jpit-activities-quiz" data-act-title="Comprensión de lectura" data-act-id="3-2-cuestionario">
                         <question type="simplechoice">
                             <description><p>Constituye la finalidad o intención comunicativa del texto argumentativo:</p></description>
                             <ul>
@@ -616,8 +596,9 @@
                         </question>
                         <div class="box_end"></div>
                     </div>
-                                  
-                </div> 
+
+                </div>
+
                 <div class="subpage">
                     <h3>3.3 Análisis de lectura</h3>
                     <div class="box-text activity" label="Actividad de aprendizaje">
@@ -625,52 +606,53 @@
                            <strong>Objetivo de aprendizaje</strong>: identificar las partes más importantes e intención comunicativa del discurso argumentativo
                         </p>
                         <p>
-                            <strong>Enunciado</strong>: lee el texto. Luego, responde las preguntas copiando y pegando la respuesta en el espacio correspondiente.
+                            <strong>Enunciado</strong>: lee el texto. Luego, responde las preguntas presionando en el botón "Seleccionar texto" y seleccionando en el discurso la respuesta correspondiente. <br />Podrá ver para cada pregunta el porcentaje de acierto de la respuesta seleccionada.
                         </p>
                     </div>
-                    
-                    <p>
-                        <cite>Hoy en día, la corrupción se ve en todas partes en la sociedad como una enfermedad infecciosa. La corrupción se ha extendido a la vida pública común, la política, los gobiernos centrales, los gobiernos estatales, las empresas, las industrias, etc. No ha dejado ningún campo libre.</cite>
-                    </p>
-                    <p>
-                        <cite>Corromper es destruir, es volver impuro un objeto que antes no lo era.</cite>
-                    </p>
-                    <p>
-                        <cite>La corrupción aumenta día a día en lugar de disminuir o estabilizarse debido al continuo aumento en el apetito de las personas por dinero, poder, posición y lujo.</cite>
-                    </p>
-                    <p>
-                        <cite>Hemos olvidado la verdadera responsabilidad de ser humano solo por el dinero. Necesitamos entender que el dinero no es todo y que no es una cosa estable. No podemos quedárnoslo para siempre, solo puede darnos avaricia y corrupción. Deberíamos dar importancia a la vida basada en valores y no a la vida basada en el dinero.</cite>
-                    </p>
-                    <p>
-                        <cite>Es cierto que necesitamos mucho dinero para vivir una vida digna, sin embargo, no es excusa para socavar el derecho de otras personas a favor de nuestro egoísmo y avaricia </cite> (10 ejemplos de textos argumentativos para secundaria, 2018).
-                    </p>
 
-                    <div class="jpit-activities-quiz" data-act-title="3.3 Análisis de lectura" data-act-id="3-3_cuestionario" data-shuffle="false">
-                        <question type="defineterm">
-                            <description><p>1. ¿Cuál es el tema del texto?</p></description>
-                                <ul>
-                                    <li data-response="la corrupción"></li>
-                                </ul>
-                        </question>
-                        <question type="defineterm">
-                            <description><p>2. ¿Cuál es la tesis que el autor mantiene sobre el tema que trata?</p></description>
-                                <ul>
-                                    <li data-response="Se ve en todas partes en la sociedad como una enfermedad infecciosa."></li>
-                                </ul>
-                        </question>
-                        <question type="defineterm">
-                            <description><p>3. Subraya dos argumentos que sostiene la tesis:</p></description>
-                                <ul>
-                                    <li data-response="La corrupción aumenta día a día en lugar de disminuir o estabilizarse debido al continuo aumento en el apetito de las personas por dinero, poder, posición y lujo."></li>
-                                    <li data-response="Hemos olvidado la verdadera responsabilidad de ser humano solo por el dinero."></li>
-                                </ul>
-                        </question>
-                        <question type="defineterm">
-                            <description><p>4. ¿Cuál es la conclusión del texto?</p></description>
-                                <ul>
-                                    <li data-response="Es cierto que necesitamos mucho dinero para vivir una vida digna, sin embargo, no es excusa para socavar el derecho de otras personas a favor de nuestro egoísmo y avaricia"></li>
-                                </ul>
-                        </question>
+                    <div id="act33" class="jpit-activities-textselection" data-act-title="Análisis de lectura" data-act-id="3-3-cuestionario" data-select-area="#select_area">
+                        <blockquote id="select_area">
+                            <p>
+                                Hoy en día, la corrupción se ve en todas partes en la sociedad como una enfermedad infecciosa. La corrupción se ha extendido a la vida pública común, la política, los gobiernos centrales, los gobiernos estatales, las empresas, las industrias, etc. No ha dejado ningún campo libre.
+                            </p>
+                            <p>
+                                Corromper es destruir, es volver impuro un objeto que antes no lo era.
+                            </p>
+                            <p>
+                                La corrupción aumenta día a día en lugar de disminuir o estabilizarse debido al continuo aumento en el apetito de las personas por dinero, poder, posición y lujo.
+                            </p>
+                            <p>
+                                Hemos olvidado la verdadera responsabilidad de ser humano solo por el dinero. Necesitamos entender que el dinero no es todo y que no es una cosa estable. No podemos quedárnoslo para siempre, solo puede darnos avaricia y corrupción. Deberíamos dar importancia a la vida basada en valores y no a la vida basada en el dinero.
+                            </p>
+                            <p>
+                                Es cierto que necesitamos mucho dinero para vivir una vida digna, sin embargo, no es excusa para socavar el derecho de otras personas a favor de nuestro egoísmo y avaricia.
+                            </p>
+                            <label>10 ejemplos de textos argumentativos para secundaria, 2018</label>
+                        </blockquote>
+
+                        <div class="box_end"></div>
+
+                        <div>
+                            <h4>1. ¿Cuál es el tema del texto?</h4>
+                            <div data-response="la corrupción"></div>
+                        </div>
+                        <div>
+                            <h4>2. ¿Cuál es la tesis que el autor mantiene sobre el tema que trata?</h4>
+                            <div data-response="Se ve en todas partes en la sociedad como una enfermedad infecciosa."></div>
+                        </div>
+                        <div>
+                            <h4>3. Subraya dos argumentos que sostiene la tesis:</h4>
+                            <div data-response="La corrupción aumenta día a día en lugar de disminuir o estabilizarse debido al continuo aumento en el apetito de las personas por dinero, poder, posición y lujo. Hemos olvidado la verdadera responsabilidad de ser humano solo por el dinero."></div>
+                        </div>
+                        <div>
+                            <h4>4. ¿Cuál es la conclusión del texto?</h4>
+                            <div data-response="Es cierto que necesitamos mucho dinero para vivir una vida digna, sin embargo, no es excusa para socavar el derecho de otras personas a favor de nuestro egoísmo y avaricia."></div>
+                        </div>
+
+                        <feedback>
+                            <correct>Muy bien, completaste la actividad satisfactoriamente.</correct>
+                            <wrong>Todavía no haz seleccionado las respuestas correctas, continua con la actividad.</wrong>
+                        </feedback>
                     </div>
 
                     <div class="box-text activity" label="Actividad de aprendizaje">
@@ -681,22 +663,20 @@
                             <strong>Enunciado</strong>: de acuerdo con la lectura responde la pregunta.
                         </p>
                     </div>
-                    <div class="jpit-activities-selection" data-act-id="1-observar" data-act-title="Conocimientos previos" data-parent-mark-selector="false" data-mode="single" data-pagination="true" data-next-page-on-selection="true" data-next-page-selection-required="true" data-auto-resolve="true">
-                        <ul class="ctrl-pagination" data-layer-height="auto" data-labelcurrent="false" data-pagination-transition-hidden=".option-group">
-                            <li>
-                                <p>¿Cuál podría ser un argumento en contra de la corrupción?</p>
-                                <textarea class="respuesta"></textarea>
-                                <div class="boton_conclusion"><button class="btn-verify general">Verificar</button></div>
-                                <div class="feedback-pane hidden">
-                                    <p>La corrupción constituye una práctica perniciosa que ha afectado prácticamente todos los campos de la sociedad. El ser humano que realiza actos corruptos ha olvidado su responsabilidad como ser activo de una comunidad, por culpa de sus ambiciones o deseos egoístas.</p>
-                                </div>
-                            </li>
-                        </ul>
+
+                    <div id="act4" class="box-text note" label="¿Cuál podría ser un argumento en contra de la corrupción?">
+                        <textarea class="respuesta"></textarea>
+                        <div class="boton_conclusion">
+                            <button class="jpit-activities-view btn-verify general" data-act-id="4-observar" data-act-title="El texto argumentativo">Verificar</button>
+                        </div>
+                        <div class="feedback-pane hidden">
+                            <p>La corrupción constituye una práctica perniciosa que ha afectado prácticamente todos los campos de la sociedad. El ser humano que realiza actos corruptos ha olvidado su responsabilidad como ser activo de una comunidad, por culpa de sus ambiciones o deseos egoístas.</p>
+                        </div>
                     </div>
-                   
+
                 </div>
             </section>
-     
+
         </main>
 
         <footer class="not_print">
@@ -736,7 +716,9 @@
     <div id="credits-page" style="display:none;">
         <div id="credits_subpage">
             <h2>Créditos</h2>
-
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
             <div>
                 <h3>Desarrollo de contenidos</h3>
                 <cite>Olga Patricia Suaza Correa</cite>
@@ -760,15 +742,14 @@
             </div>
             <div>
                 <h3>Gestión técnica y administrativa</h3>
-                <cite>Carolina Llanos Tobón</cite>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
             </div>
 
             <div>
-                <h3>Producción</h3>
-                <cite>BambuCo S.A.S.</cite>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
                 <p class="logos">
-                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="BambuColectivo" /></a>
-                    <br /><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  />
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
                 </p>
             </div>
 
@@ -780,6 +761,9 @@
                 <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
                 <img src="img/cc.png" alt="Creative Commons" /></a><br />
             </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
         </div>
     </div>
 
@@ -790,7 +774,7 @@
 
             <ul class="data_list">
                 <li>
-                    Centro Autonómico de Formación e Innovación. (s.f.). <cite>Redacción de textos argumentativos. </cite> <a href="https://www.edu.xunta.gal/centros/cafi/aulavirtual2/pluginfile.php/26651/mod_resource/content/0/Unidad_6/Web_txt_arg_I/index.html" target="_blank">https://www.edu.xunta.gal[...]</a> 
+                    Centro Autonómico de Formación e Innovación. (s.f.). <cite>Redacción de textos argumentativos. </cite> <a href="https://www.edu.xunta.gal/centros/cafi/aulavirtual2/pluginfile.php/26651/mod_resource/content/0/Unidad_6/Web_txt_arg_I/index.html" target="_blank">https://www.edu.xunta.gal[...]</a>
                 </li>
                 <li>
                     Clker-Free-Vector-Images. (2012). <cite>Hoja de papel y lápiz </cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/lista-bala-puntos-elementos-uno-27221/" target="_blank">https://pixabay.com/es/vectors/[...]</a>
@@ -800,10 +784,10 @@
                 </li>
                 <li>
                     Cuadros sinópticos sobre textos comparativos. (s.f.). <a href="https://cuadrocomparativo.org/wp-content/uploads/2015/08/SBReadResourceServlet.jpg " target="_blank">https://cuadrocomparativo.org/[...]</a>
-                </li>   
+                </li>
                 <li>
                     10 ejemplos de textos argumentativos para secundaria. (2018). <a href="https://ortografia.com.es/ejemplos-de-textos-argumentativos/" target="_blank">https://ortografia.com.es/[...]</a>
-                </li>   
+                </li>
                 <li>
                     Geralt. (2014). <cite>Personas con globos de diálogo.</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/grupo-equipo-globos-nubes-239252/" target="_blank">https://pixabay.com/[...]</a>
                 </li>
@@ -815,7 +799,7 @@
                 </li>
                 <li>
                     Paulasg14. (2012). <cite>Textos argumentativos</cite> [Mapa conceptual]. Slideshare. <a href="https://es.slideshare.net/Paulasg14/textos-argumentativo-15232268" target="_blank">https://es.slideshare.net/[...]</a>
-                </li>  
+                </li>
             </ul>
         </div>
     </div>

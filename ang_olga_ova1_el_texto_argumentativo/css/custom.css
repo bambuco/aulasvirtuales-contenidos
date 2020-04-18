@@ -1,3 +1,10 @@
+iframe.interactivo {
+    border: none;
+    width: 100%;
+    height: calc(100vw * 56 / 100);
+    max-height: 674px;
+}
+
 .box-text.activity {
     max-width: 900px;
 }
@@ -37,11 +44,21 @@
 }
 
 #pag-previos .respuesta {
-    min-width: 250px;
-    min-height: 40px;
-    margin-bottom: -15px;
+    width: 450px;
+    height: 150px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
 }
 
+#pag-act1.ctrl-pagination li.layer {
+    text-align: center;
+}
+
+#pag-act1.ctrl-pagination ul.layers {
+    overflow: unset;
+}
 /*******************************************************************************/
 /* Actividad 3.1
 /********************************************************************************/
@@ -88,6 +105,7 @@
     align-items: flex-start;
     min-height: 400px;
 }
+
 /********************************************************************************/
 /* Actividad 3.2
 /********************************************************************************/
@@ -107,7 +125,7 @@
     margin: auto;
     background: #fff;
     padding: 5px 10px 0 20px;
-    min-height: 190px; 
+    min-height: 190px;
 }
 
 #pag-contenidointeractivo .box_media img {
@@ -115,10 +133,64 @@
 }
 
 #pag-contenidointeractivo .vertical-menu .chalkboard_vertical_content {
-    height: 400px;
+    height: auto;
 }
 
 #pag-contenidointeractivo .jpit-activities-selection .ctrl-pagination li.layer {
     display: flex;
     flex-direction: column;
+}
+
+/********************************************************************************/
+/* Actividad 3.3
+/********************************************************************************/
+#act33 {
+    background-color: cornsilk;
+    padding: 5px 25px;
+    box-shadow: 0 0 7px #aaa;
+    width: 90%;
+    margin: auto;
+}
+
+#act33 [data-response] {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#act33 .txtselected {
+    margin-left: 10px;
+    background-color: yellow;
+    padding: 0 10px;
+}
+
+
+#act33 .likely {
+    font-size: large;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 0 0 10px 10px;
+}
+
+#act33 .btntxtselection {
+    min-width: 145px;
+}
+
+/********************************************************************************/
+/* Actividad 4
+/********************************************************************************/
+#act4 .respuesta {
+    width: 450px;
+    height: 150px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#act4 .box_body {
+    text-align: center;
 }

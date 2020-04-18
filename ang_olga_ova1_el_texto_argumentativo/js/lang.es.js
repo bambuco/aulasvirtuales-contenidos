@@ -93,9 +93,17 @@ dhbgApp.strings = {
 
     'scorm_not': 'Este documento se encuentra en modo de solo lectura por lo que la información de lo que realice no se guardará. Si precisa almacenar el seguimiento, por favor cierre esta página e intente más tarde.',
 
+    'select_txt': 'Seleccionar texto',
+
     'selected_required': 'Necesita seleccionar una palabra de la lista para continuar',
 
+    'selecting': 'Seleccionando...',
+
     'start_activity': 'Iniciar la actividad',
+
+    'txtselection_helper': 'El texto seleccionado se mostrará acá',
+
+    'txtselection_notinit': 'Sin responder',
 
     'verify': 'Verificar',
 
