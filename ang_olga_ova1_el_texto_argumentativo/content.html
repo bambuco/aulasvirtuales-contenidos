@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>El texto argumentativo</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+    <script src="components/jquery-selection/src/jquery.selection.min.js"></script>
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+    <script src="js/customlib.js"></script>
+
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>El texto argumentativo</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="1. Conocimientos previos" data-page="pag-previos"></menuitem>
+                        <menuitem label="2. El texto argumentativo" data-page="pag-textoarg"></menuitem>
+                        <menuitem label="3. Evalúa lo aprendido" data-page="pag-contenidointeractivo"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <!--Conocimientos previos-->
+            <section id="pag-previos" ptitle="1. Conocimientos previos">
+                <div class="subpage">
+
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                          <strong>Objetivos de aprendizaje:</strong>
+                          <ul class="data_list">
+                              <li>
+                                Identificar el mensaje que se desea transmitir a través de una imagen, a quien está dirigida y cuál es su finalidad
+                              </li>
+                              <li>
+                                Reconocer la función que cumplen las imágenes en el mensaje que se desea transmitir.
+                              </li>
+                          </ul>
+
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> Observa detenidamente la imagen y responde las preguntas que aparecen a continuación.
+                        </p>
+                    </div>
+                    <div class="box_media">
+                        <img src="content/img_03.png" alt="Me encanta viajar..." />
+                        <div class="about">
+                            Tomado de ¡Hola soy el coronavirus! El cuento para que los niños conozcan más sobre el virus [Ilustración] por Molina, M. (2020). La Vanguardia.
+                        </div>
+                    </div>
+
+                    <div class="jpit-activities-selection" data-act-id="1-conocimientos" data-act-title="Conocimientos previos" data-parent-mark-selector="false" data-mode="single" data-pagination="true" data-next-page-on-selection="true" data-next-page-selection-required="true" data-auto-resolve="true">
+                        <ul id="pag-act1" class="ctrl-pagination" data-layer-height="auto" data-labelcurrent="true" data-animation="slide" data-pagination-transition-hidden=".option-group">
+                            <li>
+                                <h4>1.¿Cuál es el mensaje de la imagen?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p>El COVID-19 es un virus que se contagia y esparce fácilmente entre los seres humanos.</p>
+                                    <button class="btn-continue general">Continuar</button>
+                                </div>
+                                <div data-group="1" data-group-value="1"  data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                            <li>
+                                <h4>2. ¿A quién va dirigido el mensaje?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p>El mensaje está dirigido a todos los seres humanos, puesto que somos los que estamos en peligro de contagio.</p>
+                                    <button class="btn-continue general">Continuar</button>
+                                </div>
+                                <div data-group="2" data-group-value="2" data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                            <li>
+                                <h4>3. ¿Cuál es la finalidad de la imagen?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p>Por medio de la imagen se quiere sensibilizar a las personas para que tomen conciencia de los peligros y de la manera en que se transmite el virus.</p>
+                                    <button class="btn-continue general">Continuar</button>
+                                </div>
+                                <div data-group="3" data-group-value="3" data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                            <li>
+                                <h4>4. ¿Qué función cumple los dibujos que acompañan al texto?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p>La imagen cumple la función de complementar el texto y por ende el mensaje, ejemplificando o recreando lo que se dice.</p>
+                                    <button class="btn-continue w-content-controler general" data-content="#conclusion_act1">VER CONCLUSIÓN GENERAL</button>
+                                </div>
+                                <div data-group="4" data-group-value="4" data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="conclusion_act1" class="w-content">
+                    La intención comunicativa de esta imagen es convencernos, persuadirnos y sensibilizarnos frente a una situación real. Utilizando como argumentos para defender su idea la recreación de imágenes y el texto sugestivo; es por ello por lo que la podemos agrupar en la tipología argumentativa, porque más que informar, es también alertar un peligro de contagio.
+                </div>
+                <p>
+                    A continuación, se dan ejemplos de esta modalidad discursiva:
+                </p>
+                <div class="box_media">
+                    <iframe src="content/genially_mapa1_texto_argumentativo/genially.html" class="interactivo" >*Contenido interactivo*</iframe>
+                    <div class="about">
+                        Tomado de Textos argumentativos [Mapa conceptual] por Paulasg14, 2012, Slideshare.
+                    </div>
+                </div>
+            </section>
+
+            <!--El texto argumentativo-->
+            <section id="pag-textoarg" ptitle="2. El texto argumentativo">
+                <div class="subpage">
+                    <h3>2.1 ¿Qué es el texto argumentativo?</h3>
+                    <div class="box_media">
+                        <iframe src="content/genially_mapa2_texto_argumentativo/genially.html" class="interactivo">*Contenido interactivo*</iframe>
+                        <div class="about">
+                            Tomado de Cuadros sinópticos sobre textos comparativos. [Esquema] (s.f.). Cuadros Comparativos
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>2.2 Orientaciones generales para construir un texto argumentativo</h3>
+                    <p>
+                        Estas son algunas recomendaciones para tener en cuenta al momento de escribir un texto argumentativo:
+                    </p>
+
+                    <iframe src="content/genially_texto_argumentativo/genially.html" class="interactivo" >*Contenido interactivo*</iframe>
+
+
+                    <div class="box-text link" label="PARA PROFUNDIZAR SOBRE EL TEMA">
+                        <p>
+                          <strong>Enunciado</strong>: puede consultar los siguientes enlaces para profundizar sobre el texto argumentativo.
+                        </p>
+                        <ul class="data_list">
+                            <li>
+                                <strong>Contenido educativo:</strong> <a href="http://www.colombiaaprende.edu.co/sites/default/files/naspublic/plan_choco/len_9_b1_p6_est.pdf" target="_blank">actividades sobre el texto argumentativo</a>
+                            </li>
+                            <li>
+                                <strong>Video:</strong> <a href="https://youtu.be/DDnmTF0DDYg" target="_blank">La argumentación: concepto y estructura</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!--Formato de contenido-->
+            <section id="pag-contenidointeractivo" ptitle="3. Evalúa lo aprendido">
+                <div class="subpage">
+                    <h3>3.1 Sobre el texto argumentativo</h3>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                             <strong>Objetivo de aprendizaje:</strong> comprender el objetivo del texto argumentativo, sus características y tipos.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> relaciona los enunciados que se encuentran en el costado izquierdo con las palabras que se encuentran en la parte inferior. Para ello arrastra con las opciones al enunciado que corresponde.
+                        </p>
+                    </div>
+                    <div id="arrastrar" class="jpit-activities-droppable" data-verify-type="target" data-act-id="3-1-relacione" data-act-title="Sobre el texto argumentativo">
+                        <div class="enunciados">
+                            <div class="enunciado">
+                                <span>Propósito de un texto argumentativo</span>
+                                <div class="conection"><span class="icon_horizontal_arrow"></span></div>
+                                <div class="receptor" data-target-group="1"></div>
+                            </div>
+                            <div class="enunciado">
+                                <span>Recursos estilísticos utilizados</span>
+                                <div class="conection"><span class="icon_horizontal_arrow"></span></div>
+                                <div class="receptor" data-target-group="2"></div>
+                            </div>
+                            <div class="enunciado">
+                                <span>Estructura de un texto argumentativo</span>
+                                <div class="conection"><span class="icon_horizontal_arrow"></span></div>
+                                <div class="receptor" data-target-group="3"></div>
+                            </div>
+                            <div class="enunciado">
+                                <span>Ejemplo de texto argumentativo</span>
+                                <div class="conection"><span class="icon_horizontal_arrow"></span></div>
+                                <div class="receptor" data-target-group="4"></div>
+                            </div>
+                            <div class="enunciado">
+                                <span>El texto argumentativo es de carácter</span>
+                                <div class="conection"><span class="icon_horizontal_arrow"></span></div>
+                                <div class="receptor" data-target-group="5"></div>
+                            </div>
+                        </div>
+
+                        <div class="opciones">
+                            <h4>Opciones:</h4>
+                            <div data-group="2" class="item_1">Ejemplos, analogías e ironías </div>
+                            <div data-group="5" class="item_2">Subjetivo</div>
+                            <div data-group="4" class="item_3">Valla publicitaria </div>
+                            <div data-group="3" class="item_4">Tesis, argumentos y conclusión </div>
+                            <div data-group="1" class="item_5">Convencer</div>
+                            <br class="clear" />
+                            <div class="box_end"></div>
+                        </div>
+
+                    </div>
+                    <div id="3-1-relacione-conclusion" class="boton_conclusion" style="display: none;">
+                        <button class="w-content-controler general" data-content="#conclusion_act3-1" data-property-width="400px">VER CONCLUSIÓN GENERAL</button>
+
+                        <div id="conclusion_act3-1" class="w-content">
+                            <p>
+                                <ul class="data_list">
+                                    <li>
+                                        El texto argumentativo tiene como propósito comunicativo, convencer o persuadir, sobre un tema o idea determinada. Por ello, utiliza una estructura textual, basada en una tesis, que expresa la idea principal que voy a defender; unos argumentos, que justifican mi postura crítica, por medio de citas de autoridad, apelación a la vivencia colectiva o individual, datos estadísticos. También cuenta con algunos recursos estilísticos como ejemplos, analogías e ironías y finalmente, incluye una conclusión.
+                                    </li>
+                                    <li>
+                                        Por su estructura y finalidad el texto argumentativo es de carácter subjetivo, puesto que pretende que el escritor asuma una postura crítica frente a un tema y lo defienda con argumentos para convencer.
+                                    </li>
+                                    <li>
+                                        Algunos ejemplos de textos argumentativos: los ensayos, artículos de opinión, vallas o anuncios publicitarios, debates, editoriales, entre otros.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>3.2 Comprensión de lectura</h3>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> identificar la silueta textual y el propósito comunicativo del texto argumentativo
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> realiza la siguiente lectura y luego responde las preguntas que corroboran la comprensión del tema.
+                        </p>
+                    </div>
+                    <p class="instruction" type="info">
+                        <span class="onlymobile">Toca </span>
+                        <span class="notmobile">Haz clic</span>
+                        en cada tema para leer la información.
+                    </p>
+                    <h4>Lectura: El texto argumentativo<sup class="tooltip" title='1. <a href="https://www.edu.xunta.gal/centros/cafi/aulavirtual2/pluginfile.php/26651/mod_resource/content/0/Unidad_6/Web_txt_arg_I/redaccin_de_textos_argumentativos.html" target="_blank">"El texto argumentativo I"</a>, que comprende los apartados del uno al siete, es un recurso elaborado por el <a href="http://www.edu.xunta.gal/portal/cafi" target="_blank">Centro Autonómico de Formación e Innovación</a> y está disponible bajo una <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">licencia CC BY-NC-SA 3.0 </a>'>[1]</sup></h4>
+
+                    <div class="vertical-menu">
+                        <dl>
+                            <dt>1. El texto argumentativo</dt>
+                            <dd>
+                                <div class="box_media">
+                                    <img src="content/img_01.jpg" alt="El texto argumentativo" />
+                                    <div class="about">
+                                        Tomado de Personas con globos de diálogo. [Ilustración] por Geralt, 2014, Pixabay.
+                                    </div>
+                                </div>
+                                <p>
+                                    Los textos argumentativos son los más empleados por estudiantes, profesores, científicos, políticos, etc. <strong>A través de la argumentación se expresan ideas u opiniones, defendiendo las propias y rechazando las que se oponen a ellas</strong>. La argumentación es la base del convencimiento, del razonamiento, de la persuasión, de la demostración y del conocimiento humano, de ahí la importancia y necesidad de conocer cómo se organizan este tipo de textos.
+                                </p>
+                                <p>
+                                    Por otra parte, no sería posible concebir una sociedad democrática, como la nuestra, sin que las personas pudiéramos expresar nuestras opiniones; por esta razón, deben estar perfectamente fundamentadas pues, de lo contrario, no tendrían el peso suficiente para tratar de cambiar conductas o convencer al contrario, entre otros propósitos. Además, en nuestras relaciones personales, laborales o sociales <strong>tenemos que saber tratar y resolver conflictos</strong>, por ello es necesario saber elaborar textos argumentativos, orales o escritos: reconocer su esquema general y sus características; los propósitos y los recursos discursivos más empleados; identificar y comprender las ideas más importantes a favor o en contra de un tema polémico.
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2. ¿Qué es una argumentación?</dt>
+                            <dd>
+                                <p>
+                                    Una <strong>argumentación es un texto que tiene como fin o bien persuadir al destinatario del punto de vista que se tiene sobre un asunto, o bien convencerlo de la falsedad o veracidad de una teoría, para lo cual debe aportar determinadas razones</strong>. Aparte de esta intención comunicativa, el texto argumentativo se caracteriza por una organización del contenido que lo define como tal: se presentan unas opiniones, que deben ser defendidas o rechazadas con argumentos, y que derivan de forma lógica en una determinada conclusión o tesis.
+                                </p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>3. ¿Cuáles son sus propiedades textuales?</dt>
+                            <dd>
+                                <p>
+                                    Al igual que todos los textos, cuando elaboramos una argumentación debemos tener en cuenta las propiedades textuales de adecuación, coherencia y cohesión:
+                                </p>
+                                <div class="accordion">
+                                    <h3>Adecuación:</h3>
+                                    <div>
+                                        es muy importante conocer el contexto comunicativo y el tipo de argumentación, pues no es lo mismo diseñar un anuncio publicitario para la televisión que redactar un texto escrito de opinión sobre un tema determinado, como una tarea de clase. Aunque el objetivo en ambos casos es el mismo, convencer, los destinatarios y la situación comunicativa son completamente diferentes.
+                                    </div>
+                                    <h3>Coherencia:</h3>
+                                    <div>
+                                        como hemos visto en los textos analizados en unidades anteriores, las ideas planteadas y los argumentos para defenderlas o rechazarlas deben estar de acuerdo con un orden lógico, sin que existan contradicciones que puedan dar lugar a ambigüedades o confusión.
+                                    </div>
+                                    <h3>Cohesión:</h3>
+                                    <div>
+                                        en el texto argumentativo es donde se hace más necesario el empleo de conectores y organizadores textuales, debido a que se plantean y defienden ideas, en muchas ocasiones contrapuestas, o bien se emplean distintos tipos de argumentos, necesarios para cumplir el objetivo comunicativo de convencer.
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>4. Estructura del texto argumentativo</dt>
+                            <dd>
+                                <p>
+                                    Son tres los elementos o partes en las que se divide generalmente una argumentación: la <strong>tesis,</strong>  el <strong>cuerpo argumentativo</strong> y la <strong>conclusión</strong>. A pesar de que la mayoría de los textos argumentativos suele presentar estos tres elementos, puede ocurrir que esté ausente alguno de ellos: la tesis, en muchos casos, es sustituida por una exposición inicial sobre el tema que se va a tratar. Es muy importante, por esta razón, señalar que el texto expositivo y argumentativo funcionan conjuntamente en el caso de la argumentación: no podemos defender ideas o situaciones sin haberlas puesto, previamente, en conocimiento de nuestro receptor.
+                                </p>
+                                <div class="accordion">
+                                    <h3>La tesis</h3>
+                                    <div>
+                                        <p>
+                                            Es la idea fundamental en torno a la que se reflexiona; puede aparecer al principio o al final del texto y ocupa un párrafo, también al inicio o al final. En este último caso muchas veces se omite la conclusión por considerarse innecesaria, pues es la tesis la que ocupa su lugar.
+                                        </p>
+                                        <p>
+                                            Es muy importante que la tesis esté formulada de forma clara, dado que es el núcleo en torno al cual gira la argumentación que se va a desarrollar a continuación.
+                                        </p>
+                                    </div>
+                                    <h3>El cuerpo de la argumentación</h3>
+                                    <div>
+                                        <p>
+                                            A partir del planteamiento de la tesis, en un nuevo párrafo, empieza la argumentación propiamente dicha. Se van ofreciendo argumentos de distinto tipo, de los que hablaremos más adelante, ejemplos y otra serie de recursos que tienen como fin fortalecer la opinión defendida y refutar la contraria.
+                                        </p>
+                                        <p>
+                                            La refutación o rechazo de las ideas contrarias es de gran importancia, pues en ella puede encontrarse el éxito de nuestro objetivo (recordemos: convencer a los demás).
+                                        </p>
+                                        <p>
+                                            Debe prestarse especial atención a los argumentos que empleamos para rechazar ideas contrarias a la nuestra: podemos emplear la ironía, introducir elementos subjetivos, pero siempre desde el respeto y la tolerancia ante las ideas ajenas, sin caer en el insulto o comentarios despectivos que podrían ofender a alguna persona.
+                                        </p>
+                                    </div>
+                                    <h3>La conclusión</h3>
+                                    <div>
+                                        <p>
+                                            Constituye la última parte de nuestra argumentación. Recuerda que un buen principio es fundamental, pero, en este caso, un buen final todavía lo es más. La conclusión recoge un razonamiento lógico derivado de la argumentación precedente: es muy importante que lo que formulemos al final sea coherente con todo lo anterior, de lo contrario, todo el esfuerzo realizado habrá sido inútil.
+                                            <table class="datatable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>TESIS</th>
+                                                        <th>CUERPO DE LA ARGUMENTACIÓN</th>
+                                                        <th>CONCLUSIÓN</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <ul class="data_list">
+                                                                <li>Idea fundamental que se defiende.</li>
+                                                                <li>Debe formularse de forma clara.</li>
+                                                            </ul>
+                                                        </td>
+                                                        <td>Relación de argumentos para defender la idea planteada o refutar ideas contrarias a ella.</td>
+                                                        <td>Cierre del texto, tras el razonamiento lógico derivado de la argumentación precedente.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </p>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>5. Tipos de argumentos</dt>
+                            <dd>
+                                <div class="box_media">
+                                    <img class="icon" src="content/img_04.png" alt="Carpeta abierta" />
+                                    <div class="about">
+                                        Tomado de Hoja de papel dentro de una carpeta abierta [Ilustración] por OpenIcons, 2013, Pixabay.
+                                    </div>
+                                </div>
+                                <p>
+                                    Para conseguir el propósito de convencer o persuadir al receptor de un texto argumentativo existen una serie de argumentos que nos pueden ser de gran ayuda. Entre ellos destacamos:
+                                </p>
+                                <div class="accordion">
+                                    <h3>5.1 El argumento de autoridad</h3>
+                                    <div>
+                                        <p>
+                                            Se trata de un recurso que <strong>se basa en testimonios o citas de personas, célebres en muchos casos, o especialistas en el tema sobre el cual redactamos nuestra argumentación</strong>. De esta forma, podemos conseguir adelantarnos a posibles opiniones contrarias, además de reforzar la idea o tesis que queremos defender, apoyándonos en expertos que gozan de un gran respeto o prestigio dentro de la sociedad:
+                                        </p>
+                                        <div class="box-text example" label="Ejemplo">
+                                            <p>
+                                               <i><u>Según reconocidos especialistas de nutrición de todo el mundo</u>, la dieta mediterránea basada en el consumo de frutas, verduras, pescado, y el aceite de oliva, es la mejor para llevar una vida sana y equilibrada.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>5.2 El argumento de la mayoría</h3>
+                                    <div>
+                                        <p>
+                                            Es otro tipo de argumento muy empleado en el que se recurre al sentir de la mayoría de la gente o de la sociedad. Al igual que en el caso anterior, tiene como finalidad <strong>reforzar aquello que queremos defender, presentándolo no como una idea propia, sino como algo compartido por la mayoría de las personas</strong>:
+                                        </p>/div>
+                                        <div class="box-text example" label="Ejemplo">
+                                            <p>
+                                               <i><u>Todo el mundo piensa</u> que la idea puede funcionar.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>5.3 El argumento del conocimiento y la experiencia: los datos y los ejemplos</h3>
+                                    <div>
+                                        <p>
+                                            Un texto argumentativo tiene con frecuencia una parte expositiva, en la cual se incluyen datos diversos, datos en los que nos apoyamos para argumentar.
+                                        </p>
+                                        <p>
+                                            Las experiencias que hemos vivido, lo que nos ha pasado a nosotros y a los que nos rodean, también son una útil fuente de datos, que podemos incluir en nuestra argumentación, si se relacionan con el tema que estamos tratando.
+                                        </p>
+                                        <p>
+                                            Es frecuente <strong>utilizar los ejemplos para ilustrar lo que se quiere defender o rechazar</strong>. Con ellos se hace referencia a situaciones vividas por nosotros mismos o por personas cercanas de las que tenemos conocimiento. Es un recurso muy efectivo para persuadir al receptor o receptores a quienes nos dirigimos:
+                                        </p>
+                                        <div class="box-text example" label="Ejemplo">
+                                            <p>
+                                               <i><u>Yo misma, y algunos de mis amigos,</u> lo hemos probado y funciona.</i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>6. El orden de los argumentos</dt>
+                            <dd>
+                                <div class="box_media">
+                                    <img class="icon" src="content/img_02.png" alt="El orden" />
+                                    <div class="about">
+                                        Tomado de Lista de elementos [Ilustración] por Clker-Free-Vector-Images, 2012, Pixabay.
+                                    </div>
+                                </div>
+                                <p>
+                                    Es muy importante realizar una adecuada presentación y organización de los argumentos que queremos utilizar, de forma que facilitemos su comprensión al receptor. Estas son algunas indicaciones que debes tener en cuenta:
+                                </p>
+                                <ul class="data_list">
+                                    <li>
+                                        <strong>Evita las divagaciones y los juegos de palabras:</strong> céntrate en la idea que vas a defender y en la exposición clara de los argumentos que utilices; que no se conviertan en palabras sin sentido
+                                    </li>
+                                    <li>
+                                        <strong>Utiliza párrafos para distribuir y organizar cada uno de los argumentos:</strong> los párrafos tienen la ventaja de presentar la información esencial de una idea con los argumentos a favor o en contra. Si el texto está adecuadamente dividido en párrafos es más fácil de leer y de interpretar por el receptor o receptores.
+                                    </li>
+                                    <li>
+                                        <strong>Relaciona los distintos párrafos empleando conectores:</strong> son los indicadores de que el razonamiento y el proceso argumentativo siguen un orden lógico. Los párrafos no funcionan aisladamente, sino que forman parte de un conjunto, al que contribuyen dando unidad y sentido global al texto. Entre ellos pueden existir distintos tipos de relación: oposición, causa-consecuencia, etc
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>7. Redacción de textos argumentativos</dt>
+                            <dd>
+                                <div class="box_media">
+                                    <img class="icon" src="content/img_05.png" alt="Redacción de textos" />
+                                    <div class="about">
+                                        Tomado de Hoja de papel y lápiz [Ilustración] por Clker-Free-Vector-Images, 2012, Pixabay.
+                                    </div>
+                                </div>
+                                <p>
+                                    Igual que en los textos de las unidades anteriores (narrativos, descriptivos), cuando redactamos una argumentación existe una serie de rasgos lingüísticos que la caracterizan y que debemos aplicar:
+                                </p>
+                                <ul class="data_list">
+                                    <li>
+                                        El empleo de la <strong>primera persona gramatical</strong> (<cite>yo o nosotros</cite>), dado que se expresa una opinión propia, en algunos casos incluso sentimientos y emociones.
+                                    </li>
+                                    <li>
+                                        Suelen predominar <strong>sustantivos abstractos</strong> de acuerdo con el tema que se trate: pueden ser de tipo teórico o científico.
+                                    </li>
+                                    <li>
+                                        Es frecuente el uso de <strong>verbos que expresan voluntad</strong> (<cite>gustar, querer, desear</cite>); <strong>verbos de dicción</strong> (<cite>decir, preguntar, manifestar</cite>), y <strong>de pensamiento</strong> (<cite>creer, opinar, pensar</cite>).
+                                    </li>
+                                    <li>
+                                        A veces se emplea la <strong>interrogación retórica</strong> para llamar la atención del receptor e invitarlo a la reflexión sobre el tema en cuestión.
+                                    </li>
+                                    <li>
+                                        Predominio de <strong>oraciones largas</strong> que expresan causa, consecuencia y condición.
+                                    </li>
+                                    <li>
+                                        Empleo de <strong>adjetivos valorativos</strong>, pues se expresa una opinión o juicio subjetivo.
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <p>
+                        De acuerdo con la lectura, responde las siguientes preguntas.
+                    </p>
+                    <div class="jpit-activities-quiz" data-act-title="Comprensión de lectura" data-act-id="3-2-cuestionario">
+                        <question type="simplechoice">
+                            <description><p>Constituye la finalidad o intención comunicativa del texto argumentativo:</p></description>
+                            <ul>
+                                <li>Informar</li>
+                                <li data-response="true">Convencer</li>
+                                <li>Expresar</li>
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>Son tipos de argumentos para persuadir sobre un tema determinado:</p></description>
+                            <ul>
+                                <li>Imágenes, comentarios y noticias.</li>
+                                <li>Ejemplos, tablas y narraciones</li>
+                                <li data-response="true">Ejemplos, anécdotas y datos estadísticos</li>
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>En la construcción de un texto argumentativo se debe evitar:</p></description>
+                            <ul>
+                                <li data-response="true">Las divagaciones y los juegos de palabras.</li>
+                                <li>La objetividad.</li>
+                                <li>El uso de imágenes.</li>
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>Son las tres partes en las que se divide un texto argumentativo:</p></description>
+                            <ul>
+                                <li>Idea principal, conclusión y ejemplos.</li>
+                                <li data-response="true">La tesis, el cuerpo argumentativo y la conclusión.</li>
+                                <li>Título, tesis y conclusión</li>
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>Son propiedades textuales que debemos tener en cuenta en el momento de elaborar una argumentación:</p></description>
+                            <ul>
+                                <li>Adecuación</li>
+                                <li>Coherencia y cohesión</li>
+                                <li data-response="true">Todas las anteriores</li>
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question>
+                        <div class="box_end"></div>
+                    </div>
+
+                </div>
+
+                <div class="subpage">
+                    <h3>3.3 Análisis de lectura</h3>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                           <strong>Objetivo de aprendizaje</strong>: identificar las partes más importantes e intención comunicativa del discurso argumentativo
+                        </p>
+                        <p>
+                            <strong>Enunciado</strong>: lee el texto. Luego, responde las preguntas presionando en el botón "Seleccionar texto" y seleccionando en el discurso la respuesta correspondiente. <br />Podrá ver para cada pregunta el porcentaje de acierto de la respuesta seleccionada.
+                        </p>
+                    </div>
+
+                    <div id="act33" class="jpit-activities-textselection" data-act-title="Análisis de lectura" data-act-id="3-3-cuestionario" data-select-area="#select_area">
+                        <blockquote id="select_area">
+                            <p>
+                                Hoy en día, la corrupción se ve en todas partes en la sociedad como una enfermedad infecciosa. La corrupción se ha extendido a la vida pública común, la política, los gobiernos centrales, los gobiernos estatales, las empresas, las industrias, etc. No ha dejado ningún campo libre.
+                            </p>
+                            <p>
+                                Corromper es destruir, es volver impuro un objeto que antes no lo era.
+                            </p>
+                            <p>
+                                La corrupción aumenta día a día en lugar de disminuir o estabilizarse debido al continuo aumento en el apetito de las personas por dinero, poder, posición y lujo.
+                            </p>
+                            <p>
+                                Hemos olvidado la verdadera responsabilidad de ser humano solo por el dinero. Necesitamos entender que el dinero no es todo y que no es una cosa estable. No podemos quedárnoslo para siempre, solo puede darnos avaricia y corrupción. Deberíamos dar importancia a la vida basada en valores y no a la vida basada en el dinero.
+                            </p>
+                            <p>
+                                Es cierto que necesitamos mucho dinero para vivir una vida digna, sin embargo, no es excusa para socavar el derecho de otras personas a favor de nuestro egoísmo y avaricia.
+                            </p>
+                            <label>10 ejemplos de textos argumentativos para secundaria, 2018</label>
+                        </blockquote>
+
+                        <div class="box_end"></div>
+
+                        <div>
+                            <h4>1. ¿Cuál es el tema del texto?</h4>
+                            <div data-response="la corrupción"></div>
+                        </div>
+                        <div>
+                            <h4>2. ¿Cuál es la tesis que el autor mantiene sobre el tema que trata?</h4>
+                            <div data-response="Se ve en todas partes en la sociedad como una enfermedad infecciosa."></div>
+                        </div>
+                        <div>
+                            <h4>3. Subraya dos argumentos que sostiene la tesis:</h4>
+                            <div data-response="La corrupción aumenta día a día en lugar de disminuir o estabilizarse debido al continuo aumento en el apetito de las personas por dinero, poder, posición y lujo. Hemos olvidado la verdadera responsabilidad de ser humano solo por el dinero."></div>
+                        </div>
+                        <div>
+                            <h4>4. ¿Cuál es la conclusión del texto?</h4>
+                            <div data-response="Es cierto que necesitamos mucho dinero para vivir una vida digna, sin embargo, no es excusa para socavar el derecho de otras personas a favor de nuestro egoísmo y avaricia."></div>
+                        </div>
+
+                        <feedback>
+                            <correct>Muy bien, completaste la actividad satisfactoriamente.</correct>
+                            <wrong>Todavía no haz seleccionado las respuestas correctas, continua con la actividad.</wrong>
+                        </feedback>
+                    </div>
+
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                           <strong>Objetivo de aprendizaje</strong>: construir un contraargumento.
+                        </p>
+                        <p>
+                            <strong>Enunciado</strong>: de acuerdo con la lectura responde la pregunta.
+                        </p>
+                    </div>
+
+                    <div id="act4" class="box-text note" label="¿Cuál podría ser un argumento en contra de la corrupción?">
+                        <textarea class="respuesta"></textarea>
+                        <div class="boton_conclusion">
+                            <button class="jpit-activities-view btn-verify general" data-act-id="4-observar" data-act-title="El texto argumentativo">Verificar</button>
+                        </div>
+                        <div class="feedback-pane hidden">
+                            <p>La corrupción constituye una práctica perniciosa que ha afectado prácticamente todos los campos de la sociedad. El ser humano que realiza actos corruptos ha olvidado su responsabilidad como ser activo de una comunidad, por culpa de sus ambiciones o deseos egoístas.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Olga Patricia Suaza Correa</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Luisa Fernanda Arboleda Parra<br />
+                Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    Centro Autonómico de Formación e Innovación. (s.f.). <cite>Redacción de textos argumentativos. </cite> <a href="https://www.edu.xunta.gal/centros/cafi/aulavirtual2/pluginfile.php/26651/mod_resource/content/0/Unidad_6/Web_txt_arg_I/index.html" target="_blank">https://www.edu.xunta.gal[...]</a>
+                </li>
+                <li>
+                    Clker-Free-Vector-Images. (2012). <cite>Hoja de papel y lápiz </cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/lista-bala-puntos-elementos-uno-27221/" target="_blank">https://pixabay.com/es/vectors/[...]</a>
+                </li>
+                <li>
+                    Clker-Free-Vector-Images. (2012). <cite>Lista de elementos </cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/lista-bala-puntos-elementos-uno-27221/" target="_blank">https://pixabay.com/es/vectors/[...]</a>
+                </li>
+                <li>
+                    Cuadros sinópticos sobre textos comparativos. (s.f.). <a href="https://cuadrocomparativo.org/wp-content/uploads/2015/08/SBReadResourceServlet.jpg " target="_blank">https://cuadrocomparativo.org/[...]</a>
+                </li>
+                <li>
+                    10 ejemplos de textos argumentativos para secundaria. (2018). <a href="https://ortografia.com.es/ejemplos-de-textos-argumentativos/" target="_blank">https://ortografia.com.es/[...]</a>
+                </li>
+                <li>
+                    Geralt. (2014). <cite>Personas con globos de diálogo.</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/grupo-equipo-globos-nubes-239252/" target="_blank">https://pixabay.com/[...]</a>
+                </li>
+                <li>
+                    Molina, M. (2020). <cite>¡Hola soy el coronavirus! El cuento para que los niños conozcan más sobre el virus </cite> [Ilustración]. La Vanguardia. <a href="https://www.lavanguardia.com/cribeo/fast-news/20200311/474087214135/hola-soy-coronavirus-cuento-infantil-ninos-padres-manuela-molina-descarga-gratis-ayuda-prevencion.html" target="_blank">https://www.lavanguardia.com/[...]</a>
+                </li>
+                <li>
+                    OpenIcons. (2013). <cite>Hoja de papel dentro de una carpeta</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/documento-abierta-carpeta-97576/" target="_blank">https://pixabay.com/[...]</a>
+                </li>
+                <li>
+                    Paulasg14. (2012). <cite>Textos argumentativos</cite> [Mapa conceptual]. Slideshare. <a href="https://es.slideshare.net/Paulasg14/textos-argumentativo-15232268" target="_blank">https://es.slideshare.net/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

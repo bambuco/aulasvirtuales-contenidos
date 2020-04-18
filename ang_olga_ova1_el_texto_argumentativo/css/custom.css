@@ -1,0 +1,196 @@
+iframe.interactivo {
+    border: none;
+    width: 100%;
+    height: calc(100vw * 56 / 100);
+    max-height: 674px;
+}
+
+.box-text.activity {
+    max-width: 900px;
+}
+
+.box-text.activity .box_body {
+    max-width: 70%;
+}
+
+.boton_conclusion {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.box_media img {
+    max-width: 600px;
+}
+
+.box_media .icon {
+    width: 100px;
+}
+
+/********************************************************************************/
+/* Actividad 1
+/********************************************************************************/
+#pag-previos .btn-continue:hover,
+#pag-previos .btn-verify:hover {
+    background-position: left bottom
+}
+
+#pag-previos .feedback-pane {
+    text-align: center;
+}
+
+#pag-previos .respuesta {
+    width: 450px;
+    height: 150px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#pag-act1.ctrl-pagination li.layer {
+    text-align: center;
+}
+
+#pag-act1.ctrl-pagination ul.layers {
+    overflow: unset;
+}
+/*******************************************************************************/
+/* Actividad 3.1
+/********************************************************************************/
+
+#arrastrar.jpit-activities-droppable {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+#arrastrar.jpit-activities-droppable .enunciado {
+    display: flex;
+    align-items: center;
+}
+
+#arrastrar.jpit-activities-droppable .enunciado .receptor {
+    width: 210px;
+    height: 50px;
+    margin: 5px;
+    padding: 0;
+}
+
+#arrastrar.jpit-activities-droppable .enunciado span {
+    width: 250px;
+}
+
+#arrastrar.jpit-activities-droppable .draggable {
+    float: left;
+    margin-bottom: 5px;
+    width: 200px;
+    height: 40px;
+    line-height: 20px;
+}
+
+#arrastrar.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+    background-color: #7bcadd;
+    border: none;
+}
+
+#arrastrar .opciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 400px;
+}
+
+/********************************************************************************/
+/* Actividad 3.2
+/********************************************************************************/
+#pag-contenidointeractivo .vertical-menu .chalkboard_vertical_items .chalkboard_vertical_item {
+    width: 180px;
+}
+
+#pag-contenidointeractivo .datatable td {
+    width: 33%;
+}
+
+#pag-contenidointeractivo .jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
+#pag-contenidointeractivo .jpit_activities_quiz_board { height: 220px; }
+
+#pag-contenidointeractivo .jpit-activities-quiz .box_content {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 5px 10px 0 20px;
+    min-height: 190px;
+}
+
+#pag-contenidointeractivo .box_media img {
+    max-width: 400px;
+}
+
+#pag-contenidointeractivo .vertical-menu .chalkboard_vertical_content {
+    height: auto;
+}
+
+#pag-contenidointeractivo .jpit-activities-selection .ctrl-pagination li.layer {
+    display: flex;
+    flex-direction: column;
+}
+
+/********************************************************************************/
+/* Actividad 3.3
+/********************************************************************************/
+#act33 {
+    background-color: cornsilk;
+    padding: 5px 25px;
+    box-shadow: 0 0 7px #aaa;
+    width: 90%;
+    margin: auto;
+}
+
+#act33 [data-response] {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#act33 .txtselected {
+    margin-left: 10px;
+    background-color: yellow;
+    padding: 0 10px;
+}
+
+
+#act33 .likely {
+    font-size: large;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 0 0 10px 10px;
+}
+
+#act33 .btntxtselection {
+    min-width: 145px;
+}
+
+/********************************************************************************/
+/* Actividad 4
+/********************************************************************************/
+#act4 .respuesta {
+    width: 450px;
+    height: 150px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#act4 .box_body {
+    text-align: center;
+}
