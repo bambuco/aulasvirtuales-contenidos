@@ -653,6 +653,26 @@ footer #labelprogress {
     padding-top: 10px;
 }
 
+.globals2 .far:before {
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.globals2 .fa-progress:before {
+    content: "\f3fd";
+}
+
+.globals2 .fa-credits:before {
+    content: "\f05a";
+}
+
+.globals2 .fa-references:before {
+    content: "\f0ca";
+}
+
 /********************************************************************************/
 /* HIGHLIGHTED BOXES
 /********************************************************************************/
@@ -1236,10 +1256,6 @@ sup.tooltip {
 .ctrl-pagination .next[disabled] {
     opacity: 0.2;
     cursor: default;
-}
-
-.ctrl-pagination .next[disabled]:hover {
-    background-position: -147px 0;
 }
 
 .ctrl-pagination ul.pagination.numeric li div {

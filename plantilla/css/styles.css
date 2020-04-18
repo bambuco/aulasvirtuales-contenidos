@@ -1373,10 +1373,6 @@ sup.tooltip {
     cursor: default;
 }
 
-.ctrl-pagination .next[disabled]:hover {
-    background-position: -147px 0px;
-}
-
 .ctrl-pagination ul.pagination.numeric li div {
     border: 1px solid #22b573;
     border-radius: 20px;
