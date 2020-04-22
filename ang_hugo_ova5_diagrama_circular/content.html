@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Diagrama circular</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/mark/jpit_activity_mark.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Diagrama circular</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="1. Diagrama circular" data-page="pag-diagrama"></menuitem>
+                        <menuitem label="2. Pasos" data-page="pag-pasos"></menuitem>
+                        <menuitem label="3. Ejemplo" data-page="pag-ejemplo"></menuitem>
+                        <menuitem label="4. Practica lo aprendido" data-page="pag-actividades"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-diagrama" ptitle="1. Diagrama circular">
+
+                <div class="subpage">
+                    <div class="box_media">
+                        <img src="content/diagrama_circular.png" alt="Diagrama circular" />
+                    </div>
+                    <p>En una gráfica circular la superficie del círculo se distribuye en sectores de amplitud proporcional al número de veces que aparece un determinado valor de una variable.</p>
+                    <p>Se debe tener en cuenta que:</p>
+                    <p>La <strong>frecuencia absoluta</strong> es el número de veces que aparece el valor de una de las variables.</p>
+                    <p>La <strong>frecuencia relativa</strong> de un dato es aquella que se obtiene como el cociente entre su frecuencia absoluta y el número total de datos.</p>
+                    <p>La suma de los ángulos centrales de todos los sectores circulares es igual a 360°.</p>
+                </div>
+            </section>
+
+            <section id="pag-pasos" ptitle="2. Pasos para construir un diagrama circular">
+                <div class="subpage">
+                    <p>Para la elaboración de un diagrama circular se puede seguir los siguientes pasos:</p>
+                    <ol type="I">
+                        <li>Calcular el valor de los ángulos centrales de cada uno de los sectores circulares. Para ello, se usa cualquiera de las siguientes expresiones:</li>
+                        <div class="box_media">
+                            <img src="content/expresion_n.png" alt="Calcular n°" />
+                        </div>
+                        <li>Calcular el valor de los porcentajes que corresponde a cada dato o sector. Para ello, se usa cualquiera de las siguientes expresiones:</li>
+                        <div class="box_media">
+                            <img src="content/porcentaje.png" alt="Calcular porcentaje" />
+                        </div>
+                        <li>Con los valores de los ángulos centrales y con la ayuda de un compás, se construye el diagrama circular. Se ubica el porcentaje y el respectivo nombre en cada uno de los sectores circulares.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="pag-ejemplo" ptitle="3. Ejemplo">
+                <div class="subpage">
+                    <p>Una empresa de reciclaje instaló 60 contenedores para el reciclaje de residuos. La siguiente tabla muestra la información de los contenedores.</p>
+                    <table class="datatable">
+                        <thead>
+                            <th>Tipo de residuo</th>
+                            <th>Cantidad de contenedores</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Papel</td>
+                                <td>30</td>
+                            </tr>
+                            <tr class="odd">
+                                <td>Plástico</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Vidrio</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>A partir de los datos suministrados, elabora un diagrama circular.</p>
+                    <p><strong>Solución:</strong></p>
+                    <p>Para la elaboración del diagrama circular, se siguen estos pasos:</p>
+                </div>
+                <div class="subpage">
+                    <h3>3.1. Cálculo de ángulos centrales</h3>
+                    <p>Se halla la medida del ángulo central que representa a <ins>los contenedores de papel:</ins></p>
+                    <div class="box_media">
+                        <img src="content/papel.png" alt="Ángulo del contenedor de papel" />
+                    </div>
+                    <p>Luego, se hallan los grados que representan a <ins>los contenedores de plástico:</ins></p>
+                    <div class="box_media">
+                        <img src="content/plastico.png" alt="Ángulo del contenedor de plástico" />
+                    </div>
+                    <h4>Práctica<sup class="tooltip" title='* Es un espacio para practicar. No se tiene en cuenta en la evaluación.'>[*]</sup></h4>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> calcular la medida del ángulo central que le corresponde a un sector circular.</p>
+                        <p><strong>Enunciado:</strong> a partir de los datos suministrados en el enunciado, ¿de cuánto es la medida del ángulo central que le corresponde a los contenedores de vidrio?</p>
+                    </div>
+                    <div class="jpit-activities-selection" data-parent-mark-selector="false" data-mode="single" data-act-id="1-seleccionar" data-act-title="Calcular la medida del ángulo central de los contenedores de vidrio">
+                        <ol>
+                            <li data-group="1"><div class="radio"></div>80°</li>
+                            <li data-group="1"><div class="radio"></div>100°</li>
+                            <li data-group="1" data-correct="true"><div class="radio"></div>120°</li>
+                            <li data-group="1"><div class="radio"></div>140°</li>
+                        </ol>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>Muy bien, los grados que corresponden a los contenedores de vidrio son 120°</correct>
+                            <wrong>Recuerda que, al sumar ángulos centrales de todos los sectores circulares, el resultado debe ser 360°.</wrong>
+                        </feedback>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>3.2.  Cálculo de porcentajes</h3>
+                    <p>Se calcula el porcentaje correspondiente a los contenedores de papel:</p>
+                    <div class="box_media">
+                        <img src="content/porcentaje_papel.png" alt="Porcentaje de los contenedores de papel" />
+                    </div>
+                    <p>Hallemos el porcentaje correspondiente a los contenedores para plástico:</p>
+                    <div class="box_media">
+                        <img src="content/porcentaje_plastico.png" alt="Porcentaje de los contenedores de plástico" />
+                    </div>
+                    <h4>Práctica<sup class="tooltip" title='* Es un espacio para practicar. No se tiene en cuenta en la evaluación.'>[*]</sup></h4>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> calcular el porcentaje que le corresponde a un dato o sector.</p>
+                        <p><strong>Enunciado:</strong> a partir de los datos suministrados en el enunciado, ¿qué porcentaje le corresponde a los contenedores de vidrio?</p>
+                    </div>
+                    <div class="jpit-activities-selection" data-parent-mark-selector="false" data-mode="single" data-act-id="2-seleccionar" data-act-title="Calcular el porcentaje de los contenedores de vidrio">
+                        <ol>
+                            <li data-group="1" data-correct="true"><div class="radio"></div>33.3 %</li>
+                            <li data-group="1"><div class="radio"></div>66.6 %</li>
+                            <li data-group="1"><div class="radio"></div>15 %</li>
+                            <li data-group="1"><div class="radio"></div>16.6 %</li>
+                        </ol>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>Muy bien, el porcentaje que corresponden a los contenedores de vidrio es 33.3 %</correct>
+                            <wrong>Recuerda que, al sumar los porcentajes de todos los sectores circulares, el resultado debe ser 100 %.</wrong>
+                        </feedback>
+                    </div>
+                </div>
+                <div id="elaboracion_diagrama" class="subpage">
+                    <h3>3.3. Elaboración del diagrama circular</h3>
+                    <p>Con la siguiente información, se elabora el diagrama:</p>
+                    <div class="box_media ajustar_tabla">
+                        <img src="content/img01.png" alt="Tabla para elaborar diagrama" />
+                    </div>
+                    <p>Primero, con los ángulos centrales obtenidos y un compás, se elaboran los sectores del diagrama circular:</p>
+                    <div class="box_media">
+                        <img src="content/img02a.png" alt="Sectores del diagrama circular" />
+                    </div>
+                    <p>Por último, se ubican los porcentajes correspondientes en el diagrama circular:</p>
+                    <p class="instruction" type="info">
+                        <span class="onlymobile">Toca </span>
+                        <span class="notmobile">Pasa el mouse sobre </span>
+                        cada sector para ver los porcentajes.
+                    </p>
+                    <div class="porcentaje">
+                        <div class="tooltip plastico" title="<p>Plástico<br />16.7 %</p>">.</div>
+                        <div class="tooltip vidrio" title="<p>Vidrio<br />33.3 %</p>">.</div>
+                        <div class="tooltip papel" title="<p>Papel<br />50.0 %</p>">.</div>
+                    </div>
+                    <div class="box-text important" label="Algunas conclusiones del ejemplo trabajado:">
+                        <ul class="data_list">
+                            <li>Hay un 16.7 % más de contenedores para reciclar papel que para reciclar vidrio.</li>
+                            <li>La diferencia entre el porcentaje de contenedores de papel y el porcentaje de contenedores de plástico, es igual al porcentaje de contenedores de vidrio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="pag-actividades" ptitle="4. Pon en práctica lo aprendido">
+                <div class="subpage" id="actividad_4-1-1">
+                    <h3>4.1 Institución educativa</h3>
+                    <p>En una institución educativa se tienen 180 alumnos en el grado 8°. Se sabe que:</p>
+                    <ul class="data_list">
+                        <li>Ambos padres de 45 de estos alumnos trabajan.</li>
+                        <li>Solo un padre de familia de 108 de estos estudiantes trabaja.</li>
+                        <li>En el resto de los hogares no trabaja ninguno de los padres.</li>
+                    </ul>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> calcular las medidas de los ángulos centrales correspondientes a cada sector circular.</p>
+                        <p><strong>4.1.1. Enunciado:</strong> arrastra hacia las casillas las medidas de ángulos correctas correspondientes a cada sector:</p>
+                    </div>
+
+                    <div class="jpit-activities-droppable actividad_4-1-1" data-verify-type="target" data-act-id="3-arrastrar" data-act-title="Calcular las medidas de los ángulos" data-shuffle="false">
+                        <div class="grafica_receptor">
+                            <div class="leyenda cero">Ningún padre trabaja</div>
+                            <div class="leyenda un">Solo un padre trabaja</div>
+                            <div class="leyenda dos">Los dos padres trabajan</div>
+                            <div class="receptor a" data-target-group="1"></div>
+                            <div class="receptor b" data-target-group="2"></div>
+                            <div class="receptor c" data-target-group="3"></div>
+                        </div>
+                        <div class="box_end">
+                            <feedback>
+                                <correct>¡Muy bien!</correct>
+                                <wrong>Incorrecto, debes revisar tus cálculos.</wrong>
+                            </feedback>
+                        </div>
+                        <div class="sources">
+                            <div class="option" data-group="4">20°</div>
+                            <div class="option" data-group="4">25°</div>
+                            <div class="option" data-group="4">32°</div>
+                            <div class="option" data-group="4">40°</div>
+                            <div class="option" data-group="4">46°</div>
+                            <div class="option" data-group="2">54°</div>
+                            <div class="option" data-group="4">60°</div>
+                            <div class="option" data-group="4">70°</div>
+                            <div class="option" data-group="4">76°</div>
+                            <div class="option" data-group="4">80°</div>
+                            <div class="option" data-group="4">85°</div>
+                            <div class="option" data-group="3">90°</div>
+                            <div class="option" data-group="4">95°</div>
+                            <div class="option" data-group="4">100°</div>
+                            <div class="option" data-group="4">105°</div>
+                            <div class="option" data-group="4">110°</div>
+                            <div class="option" data-group="4">115°</div>
+                            <div class="option" data-group="4">120°</div>
+                            <div class="option" data-group="4">125°</div>
+                            <div class="option" data-group="4">130°</div>
+                            <div class="option" data-group="4">135°</div>
+                            <div class="option" data-group="4">140°</div>
+                            <div class="option" data-group="4">150°</div>
+                            <div class="option" data-group="4">155°</div>
+                            <div class="option" data-group="4">160°</div>
+                            <div class="option" data-group="4">175°</div>
+                            <div class="option" data-group="4">180°</div>
+                            <div class="option" data-group="4">190°</div>
+                            <div class="option" data-group="4">200°</div>
+                            <div class="option" data-group="1">216°</div>
+                            <div class="option" data-group="4">224°</div>
+                            <div class="option" data-group="4">238°</div>
+                            <div class="option" data-group="4">240°</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage" id="actividad_4-1-2">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> calcular los porcentajes correspondientes de un sector circular.</p>
+                        <p><strong>4.1.2. Enunciado:</strong> arrastra hacia las casillas en blanco los porcentajes correctos de cada sector:</p>
+                    </div>
+                    <div class="jpit-activities-droppable actividad_4-1-2" data-verify-type="target" data-act-id="4-arrastrar" data-act-title="Calcular los porcentajes" data-shuffle="false">
+                        <div class="grafica_receptor">
+                            <div class="leyenda cero">Ningún padre trabaja</div>
+                            <div class="leyenda un">Solo un padre trabaja</div>
+                            <div class="leyenda dos">Los dos padres trabajan</div>
+                            <div class="receptor a" data-target-group="1"></div>
+                            <div class="receptor b" data-target-group="2"></div>
+                            <div class="receptor c" data-target-group="3"></div>
+                        </div>
+                        <div class="box_end">
+                            <feedback>
+                                <correct>¡Muy bien!</correct>
+                                <wrong>Incorrecto, debes revisar tus cálculos.</wrong>
+                            </feedback>
+                        </div>
+                        <div class="sources">
+                            <div class="option" data-group="4">5 %</div>
+                            <div class="option" data-group="4">8 %</div>
+                            <div class="option" data-group="4">10 %</div>
+                            <div class="option" data-group="4">12 %</div>
+                            <div class="option" data-group="2">15 %</div>
+                            <div class="option" data-group="4">20 %</div>
+                            <div class="option" data-group="3">25 %</div>
+                            <div class="option" data-group="4">28 %</div>
+                            <div class="option" data-group="4">30 %</div>
+                            <div class="option" data-group="4">32 %</div>
+                            <div class="option" data-group="4">35 %</div>
+                            <div class="option" data-group="4">38 %</div>
+                            <div class="option" data-group="4">40 %</div>
+                            <div class="option" data-group="4">42 %</div>
+                            <div class="option" data-group="4">45 %</div>
+                            <div class="option" data-group="4">48 %</div>
+                            <div class="option" data-group="4">50 %</div>
+                            <div class="option" data-group="4">52 %</div>
+                            <div class="option" data-group="4">55 %</div>
+                            <div class="option" data-group="4">58 %</div>
+                            <div class="option" data-group="1">60 %</div>
+                            <div class="option" data-group="4">62 %</div>
+                            <div class="option" data-group="4">65 %</div>
+                            <div class="option" data-group="4">68 %</div>
+                            <div class="option" data-group="4">70 %</div>
+                            <div class="option" data-group="4">72 %</div>
+                            <div class="option" data-group="4">75 %</div>
+                            <div class="option" data-group="4">78 %</div>
+                            <div class="option" data-group="4">80 %</div>
+                            <div class="option" data-group="4">85 %</div>
+                            <div class="option" data-group="4">90 %</div>
+                            <div class="option" data-group="4">95 %</div>
+                            <div class="option" data-group="4">100 %</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage" id="actividad_4-2-1">
+                    <h3>4.2 COVID-19</h3>
+                    <p>La siguiente tabla muestra el número de personas contagiadas por el nuevo coronavirus, COVID-19, en los primeros 7 días contados desde el instante en que se detectó el paciente cero en los siguientes países:</p>
+                    <div class="box_media">
+                        <img src="content/img05.png" alt="Tabla de contagiados por COVID-19" />
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> elaborar diagramas circulares a partir de información proveniente de diferentes fuentes.</p>
+                        <p><strong>4.2.1. Enunciado:</strong> para los cuatro países estudiados, arrastra hacia las casillas en blanco los porcentajes correctos de cada uno:</p>
+                    </div>
+                    <div class="jpit-activities-droppable actividad_4-2-1" data-verify-type="target" data-act-id="5-arrastrar" data-act-title="Calcular los porcentajes correctos de contagiados por país" data-shuffle="false">
+                        <div class="grafica_receptor">
+                            <div class="receptor colombia" data-target-group="1"><p>Colombia</p></div>
+                            <div class="receptor mexico" data-target-group="2"><p>México</p></div>
+                            <div class="receptor bolivia" data-target-group="3"><p>Bolivia</p></div>
+                            <div class="receptor brasil" data-target-group="4"><p>Brasil</p></div>
+                        </div>
+                        <div class="box_end">
+                            <feedback>
+                                <correct>¡Muy bien!</correct>
+                                <wrong>Incorrecto, debes revisar tus cálculos.</wrong>
+                            </feedback>
+                        </div>
+                        <div class="sources">
+                            <div class="pais colombia">
+                                <div><h5>Colombia</h5></div>
+                                <div class="option" data-group="5">35 %</div>
+                                <div class="option" data-group="5">39 %</div>
+                                <div class="option" data-group="1">44 %</div>
+                                <div class="option" data-group="5">40 %</div>
+                            </div>
+                            <div class="pais mexico">
+                                <div><h5>México</h5></div>
+                                <div class="option" data-group="2">17 %</div>
+                                <div class="option" data-group="5">11 %</div>
+                                <div class="option" data-group="5">22 %</div>
+                                <div class="option" data-group="5">25 %</div>
+                            </div>
+                            <div class="pais bolivia">
+                                <div><h5>Bolivia</h5></div>
+                                <div class="option" data-group="5">39 %</div>
+                                <div class="option" data-group="5">28 %</div>
+                                <div class="option" data-group="5">30 %</div>
+                                <div class="option" data-group="3">33 %</div>
+                            </div>
+                            <div class="pais brasil">
+                                <div><h5>Brasil</h5></div>
+                                <div class="option" data-group="5">8 %</div>
+                                <div class="option" data-group="5">11 %</div>
+                                <div class="option" data-group="4">6 %</div>
+                                <div class="option" data-group="5">9 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage" id="actividad_4-2-2">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> interpretar datos a partir de información proveniente de diferentes fuentes.</p>
+                        <p><strong>4.2.2. Enunciado:</strong> de acuerdo con la anterior, completa la siguiente frase con la afirmación correcta.</p>
+                    </div>
+                    <div id="arrastrar" class="jpit-activities-droppable actividad_4-2-2" data-verify-type="target" data-act-id="6-completar" data-act-title="Completar la frases">
+                        <div class="frase">
+                            <p>En los primeros 7 días de contagio, <div class="respuesta" data-target-group="1"> </div></p>
+                        </div>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>Muy bien. En los primeros 7 días, en Bolivia y México hubo 18 infectados, mientras que en Colombia hubo 16.</correct>
+                            <wrong>Esta no es la respuesta correcta.</wrong>
+                        </feedback>
+                        <div class="sources">
+                            <ul class="data_list">
+                                <li><div data-group="2">el porcentaje de infectados en Brasil y Bolivia es mayor que el porcentaje de Colombia.</div></li>
+                                <li><div data-group="2">el porcentaje de infectados en Brasil y Colombia fue mayor que el de Bolivia y México.</div></li>
+                                <li><div data-group="2">la cantidad de infectados en Bolivia y México fue mayor que la de Colombia y Brasil.</div></li>
+                                <li><div data-group="1">hubo mayor número de personas infectadas en Bolivia y México que en Colombia.</div></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="subpage" id="actividad_4-3">
+                    <h5>4.3 Producción de energía</h5>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> interpretar datos representados en diagramas circulares.</p>
+                        <p><strong>Enunciado:</strong> a continuación, se presenta el porcentaje de participación de las diferentes fuentes en la producción de energía a nivel mundial. De acuerdo con esta información, selecciona la afirmación correcta.</p>
+                    </div>
+                    <div class="jpit-activities-selection" data-parent-mark-selector="false" data-mode="single" data-act-id="7-seleccionar" data-act-title="Seleccionar la afirmación correcta">
+                        <div class="box_media">
+                            <img src="content/img07.png" alt="Fuentes de producción de energía" />
+                        </div>
+                        <div>
+                            <ul class="data_list">
+                                <li><div data-group="1"><div class="radio"></div>La cantidad de energía generada por los combustibles nucleares es la menor.</div></li>
+                                <li><div data-group="1"><div class="radio"></div>La energía generada por el gas, el carbón y el petróleo representa el 75 %.</div></li>
+                                <li><div data-group="1" data-correct="true"><div class="radio" ></div>La mitad de la energía generada a nivel mundial proviene del gas y el petróleo.</div></li>
+                                <li><div data-group="1"><div class="radio"></div>La energía proveniente de la madera, el carbón y el agua representa la mitad.</div></li>
+                            </ul>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>Muy bien. La energía generada por el gas y el petróleo suma el 50 %.</correct>
+                            <wrong>Esta no es la respuesta correcta.</wrong>
+                        </feedback>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Hugo Alexander Monterrosa Pérez</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    Ministerio de Educación Nacional. (2006). <cite>Estándares Básicos de Competencias en Matemáticas.</cite> <a href="https://www.mineducacion.gov.co/1621/articles-340021_recurso_1.pdf" target="_blank">https://www.mineducacion.gov.co/[...]</a>
+                </li>
+                <li>
+                    Ministerio de Educación Nacional. (2016). <cite>Derechos Básicos de Aprendizaje de Matemáticas.</cite> <a href="http://aprende.colombiaaprende.edu.co/sites/default/files/naspublic/DBA_Matem%C3%A1ticas.pdf" target="_blank">http://aprende.colombiaaprende.edu.co/[...]</a>
+                </li>
+                <li>
+                    Ministerio de Educación Nacional. (2017a). <cite>Vamos a aprender matemáticas 6°.</cite> Ediciones SM.
+                </li>
+                <li>
+                    Ministerio de Educación Nacional. (2017b). <cite>Vamos a aprender matemáticas 8°.</cite> Ediciones SM.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>
