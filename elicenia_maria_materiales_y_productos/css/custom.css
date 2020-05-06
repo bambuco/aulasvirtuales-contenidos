@@ -1,0 +1,152 @@
+.box_media img {
+    max-width: 800px;
+}
+/********************************************************************************/
+  /*Actividad 1
+/********************************************************************************/
+#apareamiento {
+    background: url(../content/fondo_base.png) repeat-y;
+    background-size: 100%;
+    padding: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#apareamiento .contenedor {
+    width: 150px;
+    height: 120px;
+    padding: 0;
+    border: none;
+    position: relative;
+}
+
+#apareamiento .contenedor button {
+    cursor: pointer;
+}
+
+#apareamiento .wf-content {
+    background: transparent url(../content/base_preguntas.png) no-repeat;
+    background-size: 100%;
+    width: 120px;
+    height: 100px;
+    top: 0;
+    border: none;
+    font-size: 12px;
+    line-height: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#apareamiento .adivinanza {
+    background: transparent url(../content/preguntas.png) no-repeat;
+    background-size: 100%;
+    width: 150px;
+    height: 120px;
+    padding: 0;
+    border: none;
+}
+
+#apareamiento .adivinanza.respuesta {
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+#apareamiento .respuesta img {
+    width: 100%;
+}
+
+#apareamiento .respuesta.escoba img {
+    top: -6px !important;
+    position: relative;
+}
+
+#apareamiento.jpit-activities-droppable .draggable.wrong, 
+#apareamiento.jpit-activities-droppable .droppable.wrong {
+    background-color: #D60C1B;
+}
+
+/********************************************************************************/
+  /*Actividad 2
+/********************************************************************************/
+#arrastrargrupos .box_targets { 
+  display: flex;
+  width: 906px;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .target {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background: transparent;
+  border: none;
+}
+
+#arrastrargrupos .box_targets .enunciadoone {
+  background: url(../content/fondo_base.png) no-repeat center;
+  width: 100%;
+  height: 435px;
+  margin: 10px;
+}
+
+#arrastrargrupos .box_targets .enunciadotwo {
+  background: url(../content/fondo_base.png) no-repeat center;
+  width: 100%;
+  height: 435px;
+  margin: 10px;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable {
+  text-align: center;
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-size: 27px;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .sources div {
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin: 1px;
+  border-radius: 159px;
+  border: none;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .sources div img {
+  width: 220px;
+}
+
+.jpit-activities-multidroppable .draggable {
+  max-height: 130px;
+  background-color: transparent;
+  border: none;
+}
+
+.jpit-activities-multidroppable .draggable img {
+  width: 134px;
+}
+
+#arrastrargrupos .box_targets .draggable.disabled {
+  cursor: default;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .buttons {
+  text-align: center;
+  padding: 5px 0;
+  clear: both;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .draggable.wrong, #arrastrargrupos.jpit-activities-multidroppable .droppable.wrong {
+  background-color: transparent;
+}
+
+.animacion {
+  width: 100%;
+}
