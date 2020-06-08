@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Prepositions of place</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Prepositions of place</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Explora y aprende" data-page="pag-explora"></menuitem>
+                        <menuitem label="Actividades">
+                            <menu>
+                                <menuitem label="Actividad 1" data-page="pag-act1"></menuitem>
+                                <menuitem label="Actividad 2" data-page="pag-act2"></menuitem>
+                                <menuitem label="Actividad 3" data-page="pag-act3"></menuitem>
+                                <menuitem label="Actividad 4" data-page="pag-act4"></menuitem>
+                                <menuitem label="Actividad 5" data-page="pag-act5"></menuitem>
+                            </menu>
+                        </menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-explora" ptitle="1. Explora y aprende">
+                <div class="subpage" id="act_1">
+                    <p>
+                        En este apartado vamos a hacer un repaso sobre el significado de las preposiciones de lugar en inglés <strong>under, on and in</strong>. También vas conocer el significado de las preposiciones <strong>next to and behind</strong>. Además, aprenderás el siguiente vocabulario: <strong>pink, purple, orange, green, red and yellow</strong>.
+                    </p>
+                    <p>Para iniciar vamos a ver el siguiente video.</p>
+                    <div class="box-text link" label="ENLACE DE AMPLIACIÓN">
+                        <ul class="data_list">
+                            <li>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=iz34wYw-edI" target="_blank">Preposiciones de lugar en inglés para niños.</a>
+                            </li>
+                            <li>
+                                <strong>Duración:</strong> 6:10 minutos.
+                            </li>
+                            <li>
+                                <strong>Enunciado:</strong> observa el video. Pon mucha atención a las oraciones donde están usando las preposiciones de lugar.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-act1" ptitle="Actividad 1">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> reconocer las diferentes preposiciones de lugar.</p>
+                        <p><strong>Enunciado:</strong> ubica la manzana correctamente en cada una de las preposiciones de lugar señaladas.</p>
+                        <p><strong>Duración:</strong> 30 minutos.</p>
+                    </div>
+                    <div id="act_1_1" class="jpit-activities-droppable" data-act-id="1_preposicion" data-act-title="Ubicar la manzana" data-shuffle="false">
+                        <div class="box_media" >
+                            <div class="receptor izq" data-target-group="1"></div>
+                            <div class="receptor der" data-target-group="3"></div>
+                            <div class="manzana" data-group="1"></div>
+                            <h4>To the left of</h4>
+                        </div>
+                        <div class="box_media">
+                            <div class="receptor izq" data-target-group="3"></div>
+                            <div class="receptor der" data-target-group="2"></div>
+                            <div class="manzana" data-group="2"></div>
+                            <h4>To the right of</h4>
+                        </div>
+                        <div class="box_end">
+                            <feedback>
+                                <correct>
+                                    <img src="content/manzana_correcto.gif">
+                                    <p>¡Muy bien!, continúa con la siguiente actividad</p>
+                                </correct>
+                                <wrong>
+                                    <img src="content/manzana_incorrecto.gif">
+                                    <p>¡Vuelve a intentarlo!</p>
+                                </wrong>
+                            </feedback>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-act2" ptitle="Actividad 2">
+
+                <div class="subpage" id="act_2">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> practicar vocabulario relacionado con elementos de la cotidianidad.</p>
+                        <p><strong>Enunciado:</strong> tus padres llegaron de la plaza de mercado y necesitan que les ayudes a organizar las frutas. Colócalas según sus colores en la canasta correspondiente.</p>
+                        <p><strong>Duración:</strong> 30 minutos.</p>
+                    </div>
+                    <div id="act_1_2" class="jpit-activities-droppable" data-verify-type="target" data-act-id="2_imgnombre" data-act-title="Arrastrando el nombre a cada objeto">
+                        <div class="row">
+                            <div class="col_2">
+                                <div class="box_media">
+                                    <div class="imagen">
+                                        <div class="opcion san" data-target-group="1"></div>
+                                        <div class="opcion uva" data-target-group="2"></div>
+                                        <div class="opcion manda" data-target-group="3"></div>
+                                        <div class="opcion manza" data-target-group="4"></div>
+                                        <div class="opcion tom" data-target-group="5"></div>
+                                        <div class="opcion ban" data-target-group="6"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col_2">
+                                <div class="sources">
+                                    <div class="option" data-group="1"><img src="content/sandia.png"/></div>
+                                    <div class="option" data-group="2"><img src="content/uvas.png"/></div>
+                                    <div class="option" data-group="3"><img src="content/mandarinas.png"/></div>
+                                    <div class="option" data-group="4"><img src="content/manzanas.png"/></div>
+                                    <div class="option" data-group="5"><img src="content/tomates.png"/></div>
+                                    <div class="option" data-group="6"><img src="content/bananos.png"/></div>
+                                    <div class="box_end"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-act3" ptitle="Actividad 3">
+                <div class="subpage" id="act_3">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> fortalecer la escucha y la escritura de vocabulario de la vida cotidiana.</p>
+                        <p><strong>Enunciado:</strong> escucha cada oración y escribe debajo de la fruta su respectivo color.</p>
+                        <p><strong>Duración:</strong> 30 minutos.</p>
+                    </div>
+                    <div id="act_1_3" class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="3_cloze" data-act-title="Escuchando y escribiendo el color">
+                        <p class="instruction" type="info">
+                            <span class="onlymobile">Toca </span>
+                            <span class="notmobile">Haz clic en </span>
+                            cada imagen para escuchar el audio.
+                        </p>
+                        <div class="contenedor">
+                            <div class="box_media">
+                                <img src="content/sandia.png" class="iconsound button" data-sound="pink.mp3"/>
+                                <p>
+                                    <span><input type="text" data-response="pink" /></span>
+                                </p>
+                            </div>
+                            <div class="box_media">
+                                <img src="content/uvas.png" class="iconsound button" data-sound="purple.mp3"/>
+                                <p>
+                                    <span><input type="text" data-response="purple" /></span>
+                                </p>
+                            </div>
+                            <div class="box_media">
+                                <img src="content/mandarinas.png" class="iconsound button" data-sound="orange.mp3"/>
+                                <p>
+                                    <span><input type="text" data-response="orange" /></span>
+                                </p>
+                            </div>
+                            <div class="box_media">
+                                <img src="content/manzanas.png" class="iconsound button" data-sound="green.mp3"/>
+                                <p>
+                                    <span><input type="text" data-response="green" /></span>
+                                </p>
+                            </div>
+                            <div class="box_media">
+                                <img src="content/tomates.png" class="iconsound button" data-sound="red.mp3"/>
+                                <p>
+                                    <span><input type="text" data-response="red" /></span>
+                                </p>
+                            </div>
+                            <div class="box_media">
+                                <img src="content/bananos.png" class="iconsound button" data-sound="yellow.mp3"/>
+                                <p>
+                                    <span><input type="text" data-response="yellow" /></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-act4" ptitle="Actividad 4">
+
+                <div class="subpage" id="act_4">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> responder de forma correcta utilizando preposiciones de lugar en inglés.</p>
+                        <p><strong>Enunciado:</strong> observa la siguiente imagen. Completa las oraciones utilizando la preposición de lugar adecuada y luego practica la pronunciación completa de cada oración.</p>
+                        <p><strong>Duración:</strong> 30 minutos.</p>
+                    </div>
+                    <div id="act_1_4" class="jpit-activities-cloze row" data-parent-mark-selector="span" data-act-id="4_cloze" data-act-title="Completando oraciones con preposiciones de lugar">
+                        <div class="box_media col_2">
+                            <img src="content/img_14.png" />
+                        </div>
+                        <div class="col_2 sentences">
+                            <h4>Sentences</h4>
+                            <ol>
+                                <li>
+                                    The dog is 
+                                    <span>
+                                        <select>
+                                            <option>behind</option>
+                                            <option>in</option>
+                                            <option>under</option>
+                                            <option data-response="true">next to</option>
+                                            <option>on</option>
+                                        </select>
+                                    </span> the house.<br />
+                                </li>
+                                <li>
+                                    The girl is 
+                                    <span>
+                                        <select>
+                                            <option>behind</option>
+                                            <option data-response="true">in</option>
+                                            <option>under</option>
+                                            <option>next to</option>
+                                            <option>on</option>
+                                        </select>
+                                    </span> the house.<br />
+                                </li>
+                                <li>
+                                    The cat is 
+                                    <span>
+                                        <select>
+                                            <option>behind</option>
+                                            <option>in</option>
+                                            <option>under</option>
+                                            <option>next to</option>
+                                            <option data-response="true">on</option>
+                                        </select>
+                                    </span> the roof.<br />
+                                </li>
+                                <li>
+                                    The cow is 
+                                    <span>
+                                        <select>
+                                            <option data-response="true">behind</option>
+                                            <option>in</option>
+                                            <option>under</option>
+                                            <option>next to</option>
+                                            <option>on</option>
+                                        </select>
+                                    </span> the house.<br />
+                                </li>
+                                <li>
+                                    The pig is 
+                                    <span>
+                                        <select>
+                                            <option>behind</option>
+                                            <option>in</option>
+                                            <option data-response="true">under</option>
+                                            <option>next to</option>
+                                            <option>on</option>
+                                        </select>
+                                    </span> the window.
+                                </li>
+                            </ol>
+                            <div class="box_end"></div>
+                        </div>
+                    </div>
+                    <div class="box-text link" label="ENLACE DE AMPLIACIÓN">
+                        <ul class="data_list">
+                            <li>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=O1i0c1hvhvM&t=73s" target="_blank">Las preposiciones en inglés para niños - ¿Dónde está el gato? - On, in, under, next to.</a>
+                            </li>
+                            <li>
+                                <strong>Duración:</strong> 2:16 minutos.
+                            </li>
+                            <li>
+                                <strong>Enunciado:</strong> observa este video para repasar y afianzar las preposiciones de lugar. Préstale atención a la pronunciación y practícala.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-act5" ptitle="Actividad 5">
+                <div class="subpage" id="act_5">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> responder de forma correcta utilizando preposiciones de lugar en inglés.</p>
+                        <p><strong>Enunciado:</strong> observa la imagen. Ponle el nombre a cada uno de los objetos arrastrando la palabra al lugar correcto. Después, <strong>escribe siete</strong> oraciones de acuerdo con lo que observas en la imagen. Recuerda utilizar la estructura trabajada y las preposiciones de lugar. ¡Manos a la obra!</p>
+                        <p><strong>Duración:</strong> 60 minutos.</p>
+                    </div>
+                    <div id="act_1_5" class="jpit-activities-droppable row" data-verify-type="target" data-act-id="5_imgnombre" data-act-title="Arrastrando el nombre a cada objeto">
+                        <div class="col_2">
+                            <div class="box_media">
+                                <div class="imagen">
+                                    <div class="opcion pigeon" data-target-group="1"></div>
+                                    <div class="opcion crayon" data-target-group="2"></div>
+                                    <div class="opcion fishbowl" data-target-group="3"></div>
+                                    <div class="opcion cat" data-target-group="4"></div>
+                                    <div class="opcion mouse" data-target-group="5"></div>
+                                    <div class="opcion book" data-target-group="6"></div>
+                                    <div class="opcion table" data-target-group="7"></div>
+                                    <div class="opcion dog" data-target-group="8"></div>
+                                    <div class="opcion school" data-target-group="9"></div>
+                                    <div class="opcion sofa" data-target-group="10"></div>
+                                    <div class="opcion monkey" data-target-group="11"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_2">
+                            <div class="sources">
+                                <h5>Opciones</h5>
+                                <div class="option " data-group="1">Pigeon</div>
+                                <div class="option" data-group="2">Crayon</div>
+                                <div class="option" data-group="3">Fishbowl</div>
+                                <div class="option" data-group="4">Cat</div>
+                                <div class="option" data-group="5">Mouse</div>
+                                <div class="option" data-group="6">Book</div>
+                                <div class="option" data-group="7">Table</div>
+                                <div class="option" data-group="8">Dog</div>
+                                <div class="option" data-group="9">School bag</div>
+                                <div class="option" data-group="10">Sofa</div>
+                                <div class="option" data-group="11">Monkey</div>
+                            </div>
+                            <div class="box_end">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="act_1_6" class="jpit-activities-form" data-save="true" data-require-all="true" data-act-title="Escribiendo oraciones con la estructura trabajada y las preposiciones de lugar" data-act-id="6_form" data-print="true">
+                        <div class="sheet">
+                            <div class="sheet_body">
+                                <h4>En este espacio podrás escribir tus oraciones.</h4>
+                                <p>
+                                    Example: The dog is under the table.
+                                </p>
+                                <ol>
+                                    <li><textarea name="Oración 1" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right" ></textarea></li>
+                                    <li><textarea name="Oración 2" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right" ></textarea></li>
+                                    <li><textarea name="Oración 3" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right" ></textarea></li>
+                                    <li><textarea name="Oración 4" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right" ></textarea></li>
+                                    <li><textarea name="Oración 5" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right" ></textarea></li>
+                                    <li><textarea name="Oración 6" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right" ></textarea></li>
+                                    <li><textarea name="Oración 7" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right" ></textarea></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Oscar Erladis Cárdenas Vides</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>María Elicenia Monsalve Upegui</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite><br />
+                <cite>Jorge Antonio Torres Grisales</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    AceClipart_Etsy. (2019). <cite>Uvas</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/p%C3%BArpura-de-uva-morada-frutas-4235373/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Chrisdesign. (2007). <cite>Manzana verde</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Chrisdesign_Photorealistic_Green_Apple.svg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Clker-Free-Vector-Images. (2014). <cite>Banano</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/banano-frutas-amarillo-fresco-310449/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Loyda, F. (2014). <cite>Abracadabra. Guía del Maestro 1.</cite> Richmond Publishing.
+                </li>
+                <li>
+                    MarcoRoe. (2017). <cite>Prepositions of place</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Prepositions_of_place.svg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Ministerio de Educación Nacional de Colombia. (2016). <cite>Derechos Básicos de aprendizaje de inglés. Grados Transición a 5o de primaria</cite>. <a href="https://aprende.colombiaaprende.edu.co/sites/default/files/naspublic/colombiabilingue/dbacurriculo/cartilla_dba/Derechos%20Baicos%20de%20Aprendizaje-%20Tr%20y%20Primaria.pdf" target="_blank">https://aprende.colombiaaprende.edu.co/sites/[...]</a>
+                </li>
+                <li>
+                    OpenClipart-Vectors. (2013). <cite>Mandarinas</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/mandarina-orange-c%C3%ADtricos-frutas-151616/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    OpenClipart-Vectors. (2013). <cite>Tomates</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/tomate-vegetales-los-alimentos-153272/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    OpenClipart-Vectors. (2016). <cite>Sandía</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/frutas-foto-rojo-sand%C3%ADa-1297089/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Santos, A. (2009). <cite>Single apple</cite> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Single_apple.png" target="_blank">https://commons.wikimedia.org/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

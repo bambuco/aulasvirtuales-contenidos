@@ -1,0 +1,107 @@
+.box_media img {
+    max-width: 737px;
+}
+
+/********************************************************************************/
+/* Genially
+/********************************************************************************/
+iframe.interactivo {
+    border: none;
+    width: 100%;
+    height: calc(100vw * 56 / 100);
+    max-height: 674px;
+}
+/********************************************************************************/
+/* Actividad 1
+/********************************************************************************/
+#pag-exploremos .jpit-activities-quiz .box_content {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 15px 15px 40px;
+} 
+
+#pag-exploremos .jpit_activities_quiz_question_option_answer {
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+}
+
+#pag-exploremos .jpit-activities-quiz .box_media.tv img {
+    max-width: 129px;
+}
+
+#pag-exploremos .jpit-activities-quiz .box_media.carta img {
+    max-width: 151px;
+}
+
+#pag-exploremos .jpit-activities-quiz .box_media.buzon img {
+    max-width: 81px;
+}
+
+#pag-exploremos .jpit-activities-quiz .box_media.telegrama img {
+    max-width: 148px;
+}
+
+#pag-exploremos ul.jpit_activities_quiz_question_answers {
+    position: relative;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#pag-exploremos .jpit-activities-quiz p {
+    text-align: center;
+}
+
+#pag-exploremos .jpit_activities_quiz_question_option_answer label {
+    width: 20px;
+    margin: 0 auto;
+    height: 25px;
+}
+
+/********************************************************************************/
+/* Actividad 2
+/********************************************************************************/
+#pag-evaluemos .jpit-activities-quiz .box_content {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 15px 15px 40px;
+} 
+
+.jpit_activities_quiz_question_answers {
+    display: flex;
+    text-align: center;
+}
+
+#pag-evaluemos .jpit_activities_quiz_question_statement {
+   text-align: center;
+}
+
+#pag-evaluemos .jpit-activities-quiz .box_media img {
+    max-width: 73%;
+}
+
+#pag-evaluemos ul.jpit_activities_quiz_question_answers {
+    position: relative;
+    max-width: 100%;
+}
+
+#pag-evaluemos .wrong img,
+#pag-evaluemos .correct img {
+    width: 300px;
+}
+
+#pag-evaluemos .jpit_activities_quiz_question_feedback_true, 
+#pag-evaluemos .jpit_activities_quiz_question_feedback_false {
+    width: 300px;
+}
+
+.jpit_activities_quiz_question_feedback_true img, 
+.jpit_activities_quiz_question_feedback_false img {
+    width: 300px;
+}

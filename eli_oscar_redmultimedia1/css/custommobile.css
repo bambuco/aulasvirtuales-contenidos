@@ -1,0 +1,344 @@
+/********************************************************************************/
+/* Actividad 1
+/********************************************************************************/
+#act_1_1.jpit-activities-droppable {
+    display: flex;
+    flex-direction: column;
+}
+
+#act_1_1.jpit-activities-droppable .box_media {
+    background: url(../content/mesa_sillas.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 36%;
+    position: relative;
+}
+
+#act_1_1.jpit-activities-droppable .box_media .receptor {
+    padding: 0;
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    top: 32%;
+    padding: 0;
+    border: none;
+}
+
+#act_1_1.jpit-activities-droppable .box_media .receptor.izq {
+    left: 9% !important;
+}
+
+#act_1_1.jpit-activities-droppable .box_media .receptor.der {
+    left: 75% !important;
+}
+
+#act_1_1.jpit-activities-droppable .manzana {
+    background: url(../content/manzana.png) no-repeat;
+    background-size: 100%;
+    width: 9%;
+    padding-top: 12%;
+    position: absolute;
+    top: 15%;
+    left: 43%;
+    border: none;
+}
+
+#act_1_1.jpit-activities-droppable .box_media .receptor div {
+    width: 35%;
+    height: 60%;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top: 0 !important;
+    left: 26% !important;
+}
+
+#act_1_1.jpit-activities-droppable .box_media .receptor.wrong {
+    background: transparent;
+}
+
+#act_1_1.jpit-activities-droppable .box_media .manzana.wrong:after {
+    font-family: "fontawesome";
+    content: "\f00d";
+    color: #ef6f6f;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+#act_1_1.jpit-activities-droppable .box_media .manzana.correct:after {
+    font-family: "fontawesome";
+    content: "\f00c";
+    color: #38ca82;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+#act_1_1.jpit-activities-droppable .wrong img,
+#act_1_1.jpit-activities-droppable .correct img {
+    width: 80%;
+}
+
+/********************************************************************************/
+/* Actividad 2
+/********************************************************************************/
+#act_1_2.jpit-activities-droppable {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#act_1_2 .col_2 {
+    width: 50%;
+    padding: 20px;
+    overflow: scroll;
+}
+
+#act_1_2 .box_media {
+    max-width: 900px;
+    min-width: 600px;
+}
+
+#act_1_2 .box_media .imagen { 
+    background: url(../content/despensa.png) no-repeat; 
+    background-size: 100%;
+    width: 100%;
+    height: 0;
+    padding-top: 67%;
+    position: relative; 
+}
+
+#act_1_2 .opcion {
+    position: absolute;
+    width: 110px;
+    height: 115px;
+    border: 0px;
+    background: transparent;
+    font-weight: bold;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+#act_1_2 .sources {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#act_1_2 .sources .option {
+    width: 130px;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+#act_1_2 .option img {
+    width: 100%;
+}
+
+#act_1_2 .imagen .san { 
+    top: 1%;
+    left: 18%;
+}
+
+#act_1_2 .imagen .uva {
+    top: 1%;
+    left: 42%;
+}
+
+#act_1_2 .imagen .manda {
+    top: 1%;
+    left: 67%;
+}
+
+#act_1_2 .imagen .manza {
+    top: 47%;
+    left: 20%;
+}
+
+#act_1_2 .imagen .tom {
+    top: 47%;
+    left: 44%;
+}
+
+#act_1_2 .imagen .ban {
+    top: 47%;
+    left: 68%;
+}
+
+#act_1_2 .opcion .option {
+    background-color: transparent;
+    border: none;
+}
+
+#act_1_2 .option.wrong {
+    border: 2px solid #D60C1B;
+}
+/********************************************************************************/
+/* Actividad 3
+/********************************************************************************/
+#act_3 .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#act_3 .jpit-activities-cloze input[type="text"] {
+    font-size: 26px;
+}
+
+/********************************************************************************/
+/* Actividad 4
+/********************************************************************************/
+#act_4 .jpit-activities-cloze .verify_container {
+    margin: auto;
+}
+
+#act_4 .box_media img {
+    width: 100%;
+}
+
+#act_4 .sentences {
+    text-align: center;
+}
+
+#act_4 .sentences li {
+    text-align: left;
+}
+
+/********************************************************************************/
+/* Actividad 5
+/********************************************************************************/
+#act_1_5 .col_2 {
+    overflow: scroll;
+}
+
+#act_1_5 .box_media {
+    max-width: 900px;
+    min-width: 801px;
+}
+
+#act_1_5 .box_media .imagen { 
+    background: url(../content/img_15.png) no-repeat; 
+    background-size: 100%;
+    margin: auto; 
+    width: 100%; 
+    height: 0;
+    padding-top: 67%;
+    position: relative; 
+}
+
+#act_1_5 .opcion {
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    border: 2px solid #22b573;
+    background: #fff;
+    font-weight: bold;
+    padding: 0;
+}
+
+#act_1_5 .sources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#act_1_5 .sources h5 {
+    width: 100%;
+}
+
+.jpit-activities-droppable .draggable {
+    padding: 3px;
+}
+
+#act_1_5 .sources .option {
+    width: 90px;
+    padding: 0px;
+    height: 30px;
+    margin: 5px;
+}
+
+#act_1_5 .imagen .pigeon { 
+    top: 32%;
+    left: 28%;
+}
+
+#act_1_5 .imagen .crayon {
+    top: 70%;
+    left: 30%;
+}
+
+#act_1_5 .imagen .fishbowl {
+    top: 40%;
+    left: 64%;
+}
+
+#act_1_5 .imagen .cat {
+    top: 57%;
+    left: 22%;
+}
+
+#act_1_5 .imagen .mouse {
+    top: 65%;
+    left: 52%;
+}
+
+#act_1_5 .imagen .book {
+    top: 80%;
+    left: 44%;
+}
+
+#act_1_5 .imagen .table {
+    top: 75%;
+    left: 12%;
+}
+
+#act_1_5 .imagen .dog {
+    top: 84%;
+    left: 86%;
+}
+
+#act_1_5 .imagen .school {
+    top: 20%;
+    left: 75%;
+}
+
+#act_1_5 .imagen .sofa {
+    top: 46%;
+    left: 30%;
+}
+
+#act_1_5 .imagen .monkey {
+    top: 26%;
+    left: 45%;
+}
+/********************************************************************************/
+/* Actividad 6
+/********************************************************************************/
+.jpit-activities-form .sheet {
+    background: url(../img/bg_papel.png) repeat-x left top;
+    margin: auto;
+    padding-top: 35px;
+}
+
+.jpit-activities-form .sheet_body {
+    background-color: #f6f5f2;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0px #cbcccc;
+}
+
+.jpit-activities-form textarea {
+    width: 94%;
+    height: 20px;
+    padding: 0%;
+    border: 2px dotted #aaaaaa;
+}
+

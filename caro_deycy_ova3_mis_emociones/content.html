@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icon.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Mis emociones. Actividades de finalización</title>
+        <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
+
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <!--jQuery components -->
+    <!--End jQuery components -->
+
+        <script src="components/interact/interact.min.js"></script>
+        <script src="components/pit/jpit_api.js"></script>
+        <script src="components/pit/utilities/jpit_utilities.js"></script>
+        <script src="components/pit/activity/jpit_activity.js"></script>
+        <script src="components/pit/resources/jpit_resource.js"></script>
+        <script src="components/pit/activity/wordpuzzle/jpit_activity_wordpuzzle.js"></script>
+        <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/lang.es.js"></script>
+        <script src="js/lib.js"></script>
+        <script src="js/mobilelib.js"></script>
+        <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+        <script src="components/scorm/scorm_api.js"> </script>
+
+        <style type='text/css'>
+
+            body {
+                background-color: rgba(242, 242, 242, 0.7);
+            }
+
+            body.loading {
+                text-align: center;
+            }
+
+            body.loading:after {
+                content: "";
+                background: url(img/loading.gif) no-repeat bottom center;
+                width: 130px;
+                height: 30px;
+                display: block;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            body.loading #body {
+                display: none;
+            }
+        </style>
+
+    </head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Mis emociones. Actividades de finalización</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>                       
+                        <menuitem label="Respiración consciente" data-page="pag-respiracion"></menuitem>
+                        <menuitem label="Cantar" data-page="pag-cantar"></menuitem>
+                        <menuitem label="La caja de herramientas" data-page="pag-caja"></menuitem>
+                        <menuitem label="Superhéroes y superheroínas" data-page="pag-super"></menuitem>
+                        <menuitem label="Aprende con la TV" data-page="pag-tv"></menuitem>                                                 
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+                <!--1. Respiración consciente -->
+            <section id="pag-respiracion" ptitle="1. Respiración consciente">
+                <div class="subpage">
+                    <div class="box-text connection">
+                        <p>Para ayudarte con tus emociones te dejo estas herramientas:</p>
+                    </div>
+                    <p>
+                        <cite>
+                            Los espacios de respiración consciente son una píldora para el alma, la mente y el cuerpo. Darse micromomentos para inhalar y exhalar de manera consciente y tranquila es una posibilidad para estar más livianos. 
+                        </cite>
+                    </p>
+                    <p>
+                        <cite>
+                            La respiración consciente es una puerta de entrada para vivir el presente y asumir los desafíos que presenta la vida.
+                        </cite> (Señal Colombia, s.f.) 
+                    </p>                    
+                    <div class="videobox">
+                        <iframe class="interactivo" src="https://www.youtube.com/embed/UHKEmTdVOQM" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="about">
+                        MiniPadmini. Yoga para niños y niñas, 2020
+                    </div>
+                                      
+                </div>
+            </section>
+
+            <!--2. Cantar-->
+            <section id="pag-cantar" ptitle="2. Cantar">
+                <div class="subpage">
+                    <p>Lee con tu familia la letra de la siguiente canción: </p>
+                    <div class="cancion">
+                        <h3>YO ME TRANQUILIZO</h3>
+                        <p>
+                            <cite>Respiro muy deprisa cuando me enfado<br />
+                            Si me tranquilizo respiro más despacio.<br />
+                            Hablo muy deprisa cuando me enfado<br />
+                            Y si me tranquilizo hablo más despacio<br />
+                            Y cuando me enfado…</cite>
+                        </p>
+                        <p>
+                            <cite>1 2 3 4 5 6 7 8 9 10<br />
+                            Yo me tranquilizo<br />
+                            Si vuelvo a enfadarme<br />
+                            1 2 3 4 5 6 7 8 9 10<br />
+                            Se tranquilizarme.<br />
+                            Ando muy deprisa cuando me enfado<br />
+                            Si me tranquilizo ando más despacio.<br />
+                            Me duele la cabeza cuando me enfado y si me tranquilizo se me va pasando.<br />
+                            Y cuando me enfado…<br />
+                            1 2 3 4 5 6 7 8 9 10<br />
+                            Yo me tranquilizo</cite>
+                        </p>
+                        <p>
+                            <cite>Y si vuelvo a enfadarme<br />
+                            1 2 3 4 5 6 7 8 9 10<br />
+                            Se tranquilizarme.<br />
+                            Pierdo los papeles cuando me enfado<br />
+                            Si me tranquilizo los voy encontrando.<br />
+                            Salen mal las cosas cuando me enfado<br />
+                            Si me tranquilizo mejora el resultado.<br />
+                            Y cuando me enfado…<br />
+                            1 2 3 4 5 6 7 8 9 10<br />
+                            Yo me tranquilizo<br />
+                            Si vuelvo a enfadarme…<br />
+                            1 2 3 4 5 6 7 8 9 10<br />
+                            Se tranquilizarme.<br />
+                            Respiro muy de prisa cuando me enfado<br />
+                            Si me tranquilizo respiro más despacio.</cite>
+                        </p>                        
+                    </div>
+                    <p>
+                        Ahora observa el video de los autores de esta canción. La coreografía la hace Mariana, una niña que utiliza un sombrero para bailar y dramatizar la canción. Dale reproducir al video para observarla: 
+                    </p>                    
+                    <div class="videobox">
+                        <iframe class="interactivo" src="https://www.youtube.com/embed/uovVmabRN08 " allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="about">
+                        García, 2017.
+                    </div>                 
+
+                    <div class="box-text note" label="Nota:">
+                        <p>
+                            Si puedes construir un sombrero de papel con la ayuda de tu familia, sería fabuloso. A este objeto lo llamaremos <cite>El sombrero de la calma.</cite> Recuerda ponérselo al miembro de la familia que más lo necesite.
+                        </p>
+                    </div>
+                    <div class="box-text note" label="¿No sabes cómo hacerlo?">  
+                       <p>
+                            Observa este video para aprender:
+                       </p> 
+                       
+                        <div class="videobox sombrero">
+                                <iframe class="interactivo" src="https://www.youtube.com/embed/MM8FQg1Ss3g" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="about">
+                            eHowEspañol, 2012.
+                        </div>
+                    </div>
+                    <div class="box-text connection">
+                        <p>
+                            Ahora practica el ejercicio de respirar varias veces, así te tranquilizarás cuando lo necesites.
+                        </p>
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                          <strong>Enunciado:</strong> realiza las siguientes tareas.
+                          <ol>
+                            <li>
+                                Dibuja en tu cuaderno de Ética lo que más te gustó de la canción. 
+                            </li>
+                            <li>
+                                Encuentra en la sopa de letras las palabras relacionadas con el tema. Después, crea en el cuaderno tu propia definición de cada una de ellas, es decir, escribe lo que significan para ti.
+                            </li>
+                          </ol>
+                        </p>
+                    </div>
+                    <div class="instruction" type="info">Selecciona la palabra que vas a buscar en la parte <span class="onlymobile">inferior</span><span class="notmobile">derecha</span> y cuando la encuentres en la sopa de letras, márcala <span class="onlymobile">tocando la primera y la última letra.</span> <span class="notmobile">completamente con clic sostenido.</span></div>
+                    <div class="jpit-activities-wordpuzzle" data-act-id="1-encuentra" data-act-title="Actividad 1: Encuentra las palabras" >
+                        <letters>
+                            <row>S,O,L,U,C,I,O,N,T,N,U,B,W,C</row>
+                            <row>O,N,C,O,N,F,L,I,C,T,O,I,B,O</row>
+                            <row>P,W,T,N,I,E,B,I,R,X,A,E,U,M</row>
+                            <row>M,U,D,U,N,R,N,Ñ,I,A,M,M,N,P</row>
+                            <row>I,R,E,M,P,A,T,I,A,C,R,O,T,R</row>
+                            <row>E,R,I,L,K,B,U,P,L,U,S,C,U,E</row>
+                            <row>D,J,E,X,A,I,E,F,E,E,G,I,L,N</row>
+                            <row>O,P,E,S,E,A,O,G,G,R,E,O,G,S</row>
+                            <row>U,L,E,C,P,P,O,G,R,D,E,N,G,I</row>
+                            <row>G,Y,U,K,N,I,O,G,I,O,E,E,G,O</row>
+                            <row>H,F,T,E,R,T,R,G,A,S,E,S,G,N</row>
+                            <row>D,R,T,F,G,U,O,A,R,M,E,L,G,N</row>
+                            <row>C,A,L,M,A,M,P,O,R,A,E,L,G,N</row>
+                            <row>J,U,A,R,P,O,U,L,M,Y,R,Q,L,K</row>
+                            <row>O,T,R,A,N,Q,U,I,L,I,D,A,D,N</row>
+                            <row>O,P,A,N,T,R,C,Y,E,O,T,G,R,A</row>
+                            <row>S,O,R,P,R,E,S,A,R,T,E,A,W,D</row>
+                        </letters>
+                        <div class="words">
+                            <h5>Busca y aprende</h5>
+                            <ul>
+                                <li data-term="conflicto">Conflicto</li>
+                                <li data-term="emociones">Emociones</li>                                
+                                <li data-term="empatia">Empatía</li>                               
+                                <li data-term="comprension">Comprensión</li>
+                                <li data-term="rabia">Rabia</li>
+                                <li data-term="alegria">Alegría</li>
+                                <li data-term="respirar">Respirar</li>
+                                <li data-term="calma">Calma</li>
+                                <li data-term="tranquilidad">Tranquilidad</li>                                                           
+                                <li data-term="miedo">Miedo</li>
+                                <li data-term="sorpresa">Sorpresa</li>                                                                                           
+                                <li data-term="acuerdos">Acuerdos</li>
+                                <li data-term="solucion">Solución</li>                                                           
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--3. La caja de herramientas-->
+            <section id="pag-caja" ptitle="3. La caja de herramientas">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            Para comenzar, contesta con tus conocimientos:
+                        </p>
+                    </div>                
+                    <p class="instruction" type="info">
+                        Recuerda 
+                        <span class="onlymobile">tocar </span>
+                        <span class="notmobile">hacer clic en </span>
+                        el botón Guardar para que tu respuesta se mantenga.
+                    </p>
+                    <div class="jpit-activities-form" data-save="true" data-print="true" data-require-all="true" data-act-id="2-conocimientos" data-act-title="Actividad 2: Contesta con tus conocimientos">
+                        <div class="sheet">
+                            <div class="sheet_body">                            
+                                <p>
+                                    ¿Qué es y para qué sirve una caja de herramientas?
+                                    <textarea name="¿Qué es y para qué sirve una caja de herramientas?"></textarea>
+                                </p>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-text connection">
+                        <p>
+                            Ahora que ya lo conversamos, vamos a construir una caja de herramientas emocional. 
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Esta es otra estrategia para gestionar las emociones. Es muy fácil: necesitamos reciclar una caja, un tarro vacío o una bolsa plástica. Luego, toda la familia va a escribir o dibujar en hojas aquellas actividades que les permitan calmarse, solucionar una dificultad o evitar un conflicto. Cuando terminen, las van a guardar en la caja, el tarro, o la bolsa.  
+                        </div>
+                        <div class="col-2">
+                            <div class="box_media">
+                                <img src="content/caja.PNG" />
+                                <div class="about">
+                                    Imagen de Karen Arnold en PublicDomainPictures. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-text important" label=" ">
+                        <h3>Esta será nuestra estrategia para afrontar los momentos difíciles:</h3>
+                        <p>
+                            Cuando tengas tristeza, saca un papel de tu caja de herramientas emocional y realiza la actividad que te propone.
+                        </p>
+                    </div>
+                    <div class="box-text note">
+                        <h3>Aquí te dejo algunas de las acciones que puedes dibujar o escribir:</h3>
+                        <p>
+                          <cite>Cantar una canción, hablar con alguien, dibujar, recibir un abrazo, llamar a un amigo, descansar, dormir un poco, bailar, hacer yoga, hablar con una persona y decirle lo que siento o pedir disculpas.</cite>
+                        </p>
+                        <p>
+                            Ahora vas tú. Escribe o dibuja otras posibilidades.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--4. Los superhéroes y las superheroínas-->
+            <section id="pag-super" ptitle="4. Los superhéroes y las superheroínas">
+                <div class="subpage">
+                    <div class="row">
+                        <div class="col-2">
+                            <p>
+                                Así como puedes imaginar un súper invento, imagina que eres un superhéroe o una superheroína y dibújate con todos los detalles: escribe las cualidades que tienes, tanto físicas como de tu forma de comportarte, ponle tus cualidades al dibujo, crea un nombre para él, pero recuerda que debe tener tu apellido pues es tu creación.
+                            </p>
+                            <p>
+                                Luego, presenta el personaje a tu familia y diles que lo creaste para que se sientan mejor en los momentos difíciles. 
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="box_media">
+                                <img src="content/super.png" />
+                                <div class="about">
+                                    Imagen de GraphicsSC en Pixabay.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--5. Aprende con la TV-->
+            <section id="pag-tv" ptitle="5. Aprende con la TV">
+                <div class="subpage">
+                    <div class="box-text important" label="Importante">
+                        <p>
+                            El canal Señal Colombia cuenta con una programación educativa muy interesante para estos tiempos en que debes quedarte en casa. 
+                        </p>
+                    </div>
+                    <div class="box-text link">
+                        <p>
+                            Hay una serie que se llama <cite>Álex de todas formas</cite>, te invito a que veas sus capítulos en  <a href="https://www.rtvcplay.co/" target="_blank">RTVCPLAY</a>  o en el canal Señal Colombia desde tu televisor, de lunes a viernes a las 3 p. m.
+                        </p>
+                        <p>
+                            Observa este capítulo que nos enseña sobre lo necesaria que es la empatía en estos momentos:
+                        </p>
+                        <p>
+                            <strong>Video: </strong><a href="https://www.rtvcplay.co/competencias-ciudadanas/alex-de-todas-formas/me-mame-mi-mama" target="_blank">Me mamé de mi mamá</a>
+                        </p>
+                    </div>
+                    <p>
+                        Ahora piensa:
+                    </p>
+                    <ul class="data_list">
+                        <li>¿Qué entendió Alex al convertirse en su mamá?</li>
+                        <li>¿Cómo puedes tú ayudar en casa?</li>
+                    </ul>
+                    <p>
+                        El siguiente video es de una serie animada que se llama <cite>Mi mundo interior</cite>, la transmiten por el Canal Capital. Cuenta la historia de Candelaria y la manera en que se relaciona su vida con emociones como el miedo, la valentía, el enojo o la frustración. 
+                    </p>
+                    <p>
+                        Puedes ver los capítulos para comprender un poco más acerca de las emociones.
+                    </p>
+                    <div class="box-text connection">
+                        <p>
+                            Accede a la página de <cite>Mi mundo interior</cite> con el siguiente botón:
+                        </p>
+                    </div>
+                    <div class="boton">
+                        <button class="open-url" data-url="https://conexioncapital.co/mi-mundo-interior-emocionate/">
+                            <img src="content/illu_icono_pagina.png" />
+                        </button>
+                    </div>
+                    <p class="instruction" type="info">
+                        <span class="onlymobile">Toca </span>
+                        <span class="notmobile">Haz clic en</span>
+                        la imagen para ir a la página de la serie.
+                    </p>
+                    <p>
+                        ¿Has comprendido el tema de las emociones? Practica ayudando a Candelaria a identificar cuál emoción está sintiendo, para que ella pueda ordenar su cabeza.
+                    </p>
+                    <div class="box-text connection">
+                        <p>
+                            Para ayudar a Candelaria, accede a la práctica con el siguiente botón:
+                        </p>
+                    </div>
+                    <div class="boton">
+                        <button class="open-url" data-url="https://conexioncapital.co/mi-mundo-interior-aprende/">
+                            <img src="content/illu_icono_encuesta.png" />
+                        </button>
+                    </div>
+
+                    <p class="instruction" type="info">
+                        <span class="onlymobile">Toca </span>
+                        <span class="notmobile">Haz clic en</span>
+                        la imagen para ir a la página de la serie.
+                    </p>                    
+                </div>
+            </section>
+
+           
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+            </div>
+            <div>
+                <h3>Desarrollo de Contenidos</h3>
+                <cite>Deycy Cárdenas V.</cite> 
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Carolina Llanos Tobón</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chávez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Luisa Fernanda Arboleda Parra</cite><br />
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias</h2>
+
+            <ul class="data_list">
+                <li>
+                    Arnold, K. (s.f.). <cite>Caja de cartón fondo blanco</cite> [Ilustración]. PublicDomainPictures. <a href="https://www.publicdomainpictures.net/es/view-image.php?image=56626&picture=caja-de-carton-fondo-blanco" target="_blank">https://www.publicdomainpictures.net/[...]</a>
+                </li>
+                <li>
+                    EhowEspañol. (2012, 9 de octubre). <cite>Como Hacer Sombreros de Papel: Proyectos de Arte en Papel</cite> [video]. YouTube. <a href="https://www.youtube.com/watch?v=MM8FQg1Ss3g" target="_blank">https://www.youtube.com/[...]</a>
+                </li>
+                <li>
+                    García, C. (2017, 5 de febrero). <cite>Marina y los emoticantos: Despacio me tranquilizo</cite> [video]. YouTube. <a href="https://www.youtube.com/watch?v=uovVmabRN08" target="_blank">https://www.youtube.com/[...]</a>
+                </li>
+                <li>
+                    GraphicsSC. (2017). <cite>Súper</cite> [Ilsutración]. Pixabay. <a href="https://pixabay.com/es/illustrations/s%C3%BAper-super-h%C3%A9roe-mercado-2067827/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    MiniPadmini. Yoga para niños y niñas. (2020, 22 de abril). <cite>Respiración de la Abeja con Minipadmini (Yoga para niñas y niños)</cite> [video]. YouTube. <a href="https://www.youtube.com/watch?v=UHKEmTdVOQM" target="_blank">https://www.youtube.com/[...]</a>
+                </li>
+                <li>
+                    Señal Colombia. (s.f.). <cite>Álex de todas formas. Documento de uso pedagógico.</cite> <a href="https://s3.amazonaws.com/rtvc-assets-misenal.tv/ms-public/ADTF_GUIA_PEDAGOGICA.pdf" target="_blank">https://s3.amazonaws.com/[...]</a>
+                </li>
+                <li>
+                    Vejarano, D. (director). (2019). Me mamé de mi mamá (temporada 1, episodio 5) [episodio de serie web]. Cabrera. C. (productor). <cite>Álex de todas formas.</cite> Señal Colombia; Filmawa. <a href="https://www.rtvcplay.co/competencias-ciudadanas-y-socioemocionales/alex-de-todas-formas/me-mame-mi-mama" target="_blank">https://www.rtvcplay.co/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

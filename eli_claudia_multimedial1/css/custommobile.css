@@ -1,0 +1,466 @@
+.box_end {
+    text-align: center;
+}
+
+.box_end .correct img,
+.box_end .wrong img {
+    width: 50%;
+}
+
+#image_content_2,
+#image_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.view-content {
+    font-size: 30px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.view-content p {
+    line-height: 30px;
+}
+
+.view-first img {
+    width: 100%;
+}
+
+#pag-ecos .box_media {
+    position: relative;
+    cursor: pointer;
+}
+
+.wf-content {
+    position: absolute;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 5px #bbb;
+    border: 1px solid #44c5d0;
+    top: 0;
+    z-index: 2;
+}
+/*******************************************************************************/
+/* Actividad 2
+/********************************************************************************/
+#arrastrar.jpit-activities-droppable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#arrastrar.jpit-activities-droppable .conceptos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#arrastrar.jpit-activities-droppable .concepto {
+    width: 45%;
+    min-width: 100px;
+    height: auto;
+    min-height: 120px;
+    border: 1px solid #38c4d6;
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#arrastrar.jpit-activities-droppable .concepto .target {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border-radius: 100%;
+    position: relative;
+    background-color: #fff;
+}
+
+#arrastrar.jpit-activities-droppable .concepto p {
+    width: 100%;
+}
+
+#arrastrar.jpit-activities-droppable .imagenes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#arrastrar.jpit-activities-droppable .imagen {
+    position: relative;
+}
+
+#arrastrar.jpit-activities-droppable .imagen .numero {
+    background: #fff;
+    top: 0;
+    left: 0;
+}
+
+#arrastrar.jpit-activities-droppable .imagen .numero.fijo {
+    background-color: #cbded5;
+}
+
+#arrastrar.jpit-activities-droppable .target .numero {
+    top: -2px !important;
+    left: -2px !important;
+}
+
+#arrastrar.jpit-activities-droppable .numero {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 2px solid;
+    border-color: #22b573;
+    border-radius: 100%;
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: bold;
+    padding: 0;
+}
+
+#arrastrar.jpit-activities-droppable .target .numero.wrong {
+    border-color: #D60C1B !important;
+}
+
+#arrastrar.jpit-activities-droppable .target .numero.correct {
+    color: #22b573;
+    background-color: #fff;
+}
+
+#arrastrar.jpit-activities-droppable .imagen img {
+    height: 100%;
+}
+
+#arrastrar.jpit-activities-droppable .imagen .box_media {
+    width: 300px;
+}
+
+/********************************************************************************/
+
+.expand-image {     
+    width: 230px;
+    height: 120px;
+    margin: 0 auto 5px;
+}
+/********************************************************************************/
+/* Actividad 3
+/********************************************************************************/
+.jpit-activities-form .sheet {
+    background: url(../img/bg_papel.png) repeat-x left top;
+    margin: auto;
+    padding-top: 35px;
+}
+
+.jpit-activities-form .sheet_body {
+    background-color: #f6f5f2;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0px #cbcccc;
+}
+
+.jpit-activities-form textarea {
+    width: 94%;
+    height: 40px;
+    padding: 3%;
+    border: 2px dotted #aaaaaa;
+}
+
+/********************************************************************************/
+/* Actividad 4.1
+/********************************************************************************/
+#sub_4_1 .box_media .imagen { 
+    background: url(../content/img_27.png) no-repeat; 
+    background-size: 100%;
+    margin: auto; 
+    width: 100%; 
+    height: 0;
+    padding-top: 67%;
+    position: relative; 
+}
+
+#sub_4_1 .box_media .opcion {
+    position: absolute;
+    width: 5%;
+    height: 7%;
+    border: 2px solid #22b573;
+    background: #fff;
+    border-radius: 100%;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.imagen .mariposas { 
+    top: 5%;
+    left: 76%;
+}
+
+.imagen .cebras {
+    top: 74%;
+    left: 76%;
+}
+
+.imagen .flores {
+    top: 17%;
+    left: 23%;
+}
+
+.imagen .arboles {
+    top: 75%;
+    left: 23%;
+}
+
+.imagen .abeja {
+    top: 43%;
+    left: 84%;
+}
+
+.imagen .mariquita {
+    top: 83%;
+    left: 94%;
+}
+
+.imagen .piedra {
+    top: 48%;
+    left: 71%;
+}
+
+.imagen .agua {
+    top: 55%;
+    left: 51%;
+}
+
+.imagen .casa {
+    top: 3%;
+    left: 3%;
+}
+
+.imagen .suelo {
+    top: 34%;
+    left: 17%;
+}
+
+.jpit-activities-cloze span {
+    float: right;
+    margin-left: 15px;
+}
+
+/********************************************************************************/
+/* Actividad 4.2
+/********************************************************************************/
+#sub_4_2 .box_media img {
+    width: 100%;
+}
+
+#sub_4_2 .chalkboard_content {
+    height: auto;
+}
+
+#arrastrarm h5 {
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 2px dotted #95B0CB;
+}
+
+#arrastrarm .box_targets .target {
+    min-height: 150px;
+    width: 400px;
+    overflow: auto;
+    display: inline-flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#arrastrarm.jpit-activities-multidroppable .sources {
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    margin: 10px auto 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#arrastrarm.jpit-activities-multidroppable .draggable {
+    width: 350px;
+    margin: 5px;
+    color: #333;
+}
+
+#arrastrarm table .draggable.disabled {
+    cursor: default;
+}
+
+#arrastrarm.jpit-activities-multidroppable .buttons {
+    text-align: center;
+    padding: 5px 0;
+    clear: both;
+}
+
+.jpit-activities-multidroppable .droppable .draggable.box_media {
+    width: 150px !important;
+}
+
+.jpit-activities-multidroppable .droppable .draggable .about {
+    display: none;
+}
+/********************************************************************************/
+/* Actividad 4.3
+/********************************************************************************/
+#ordenar .factores {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ordenar .factores .factor {
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+}
+
+#ordenar .factores .factor .receptor {
+    padding: 0;
+    height: 36px;
+    width: 100%;
+    margin-bottom: 4px;
+    border-radius: 10px;
+}
+
+#ordenar.jpit-activities-droppable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#ordenar .sources {
+    margin: auto;
+}
+
+#ordenar .opcion {
+    margin: 3px;
+    width: 250px;
+    height: 34px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+#ordenar .opcion.son {
+    background-color: #22b573;
+    color: #4d4d4d;
+}
+
+#ordenar .opcion.ciclo {
+    background-color: #38c4d6;
+    color: #4d4d4d;
+}
+
+#ordenar .opcion.ejemplo {
+    background-color: #f9ca48;
+    color: #4d4d4d;
+}
+
+#ordenar .factor .opcion {
+    width: 99%;
+    margin: 0;
+    line-height: 32px;
+    color: #fff;
+}
+/********************************************************************************/
+/* Actividad 4.4
+/********************************************************************************/
+#sub_4_4 .col_2 {
+    overflow: scroll;
+}
+
+#sub_4_4 .box_media {
+    min-width: 750px;
+}
+
+#sub_4_4 .box_media .imagen { 
+    background: url(../content/img_27.png) no-repeat; 
+    background-size: 100%;
+    margin: auto; 
+    width: 100%; 
+    height: 0;
+    padding-top: 67%;
+    position: relative; 
+}
+
+#sub_4_4 .opcion {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border: 2px solid #22b573;
+    background: #fff;
+    font-weight: bold;
+    padding: 0;
+    z-index: 10;
+}
+
+#sub_4_4 .sources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#sub_4_4 .sources .option {
+    width: 140px;
+    padding: 0px;
+    height: 60px;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped button.iconsound {
+    display: none;
+}
+
+#sub_4_4 .sources h4 {
+    margin-top: 0;
+}
+
+#sub_4_4 .imagen .mariposas { 
+    top: 3%;
+    left: 72%;
+}
+
+#sub_4_4 .imagen .cebras {
+    top: 70%;
+    left: 73%;
+}
+
+#sub_4_4 .imagen .arboles {
+    top: 75%;
+    left: 17%;
+}
+
+#sub_4_4 .imagen .abeja {
+    top: 36%;
+    left: 84%;
+}
+
+#sub_4_4 .imagen .piedra {
+    top: 52%;
+    left: 66%;
+}
+
+#sub_4_4 .imagen .agua {
+    top: 55%;
+    left: 47%;
+}
+
+#sub_4_4 .imagen .casa {
+    top: 3%;
+    left: 3%;
+}

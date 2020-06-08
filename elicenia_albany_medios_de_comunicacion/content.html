@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icon.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Medios de comunicación</title>
+        <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <!--jQuery components -->
+    <!--End jQuery components -->
+
+        <script src="components/interact/interact.min.js"></script>
+        <script src="components/pit/jpit_api.js"></script>
+        <script src="components/pit/utilities/jpit_utilities.js"></script>
+        <script src="components/pit/activity/jpit_activity.js"></script>
+        <script src="components/pit/resources/jpit_resource.js"></script>
+        <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/lang.es.js"></script>
+        <script src="js/lib.js"></script>
+        <script src="js/mobilelib.js"></script>
+        <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+        <script src="components/scorm/scorm_api.js"> </script>
+        <script src="js/customlib.js"></script>
+
+        <style type='text/css'>
+
+            body {
+                background-color: rgba(242, 242, 242, 0.7);
+            }
+
+            body.loading {
+                text-align: center;
+            }
+
+            body.loading:after {
+                content: "";
+                background: url(img/loading.gif) no-repeat bottom center;
+                width: 130px;
+                height: 30px;
+                display: block;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            body.loading #body {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="80" data-activities-percentaje="60" data-mobile-mode="512">
+        <div id="body" class="not_print">
+            <div id="not_scorm_msg" style="display: none;"></div>
+
+            <nav label="Características globales" class="globals">
+                <menu>
+                    <menuitem data-global-id="return">
+                        <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                        <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                    </menuitem>
+                    <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+                </menu>
+            </nav>
+
+            <header>
+                <div>
+                    <h1>Medios de comunicación</h1>
+                    <nav label="Principal" class="horizontal main" data-offset="true">
+                        <menu>                        
+                            <menuitem label="Exploremos" data-page="pag-exploremos"></menuitem>
+                            <menuitem label="Aprendamos" data-page="pag-aprendamos"></menuitem>    
+                            <menuitem label="Concluyamos" data-page="pag-concluyamos"></menuitem> 
+                            <menuitem label="Evaluemos" data-page="pag-evaluemos"></menuitem>                       
+                        </menu>
+                    </nav>
+                </div>
+            </header>
+
+            <main style="display: none;">
+
+                <h2 class="page-title"></h2>
+
+            <!--1. Exploremos-->
+                <section id="pag-exploremos" ptitle="1. Exploremos"> 
+                    <div class="subpage">
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> caracteriza los diferentes medios de comunicación de acuerdo con la validez y pertinencia de la información.
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> escucha las adivinanzas y da clic sobre la imagen para descubrir el acertijo. 
+                            </p>
+                        </div>
+                        <div class="jpit-activities-quiz" data-act-title="Actividad 1: Adivina adivinador" data-act-id="1-adivnar">
+                            <question type="simplechoice">
+                                <description>
+                                    <p>
+                                        Volaré donde me mandes <br /> 
+                                        sin tener alas ni pies,<br /> 
+                                        para contar a tus amigos<br /> 
+                                        lo que ellos quieran saber.<br />
+                                        ¿Quién soy?
+                                    </p>
+                                    <p><button class="iconsound button" data-sound="ad_1.mp3"></button></p>
+                                </description>
+                                <ul>
+                                    <li>
+                                        <div class="box_media telegrama">
+                                            <img src="content/icon_telegrama.png" alt="telegrama"/>
+                                            <p>Telegrama</p>
+                                        </div>
+                                    </li>
+                                    <li> 
+                                        <div class="box_media buzon">
+                                            <img src="content/buzon.png" alt="buzon"/>
+                                            <p>Buzón</p>
+                                        </div>
+                                    </li>
+                                    <li data-response="true">
+                                        <div class="box_media carta">
+                                            <img src="content/carta.png" alt="carta"/>
+                                            <p>Carta</p>
+                                        </div>
+                                    </li>                                
+                                    <li>
+                                        <div class="box_media tv">
+                                            <img src="content/tv.png" alt="tv"/>
+                                            <p>TV</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <feedback>
+                                    <correct>
+                                        <p>Así es.</p>
+                                        <img src="content/correcto.gif" />
+                                        <p>
+                                            Una <strong>carta</strong> es un medio de comunicación escrito por un emisor (remitente) y enviado a un receptor (destinatario).                                        
+                                        </p>
+                                        <p>
+                                            La carta tiene unas características en su estilo de escritura, por ejemplo, puede ser:
+                                        </p>
+                                        <p>
+                                            <strong>Formal:</strong> es todo tipo de correspondencia escrita de carácter profesional, laboral o institucional. 
+                                        </p>
+                                        <p>
+                                            <strong>Coloquial o informal:</strong> es una carta escrita en lenguaje informal y sencillo para que tanto remitente como receptor entiendan el mensaje. Se usa entre amigos y familiares.
+                                        </p>
+                                        <p>
+                                            <strong>Informativa:</strong> sirven para informar sobre eventos, fiestas, acontecimientos, entre otros. 
+                                        </p>
+                                    </correct>
+                                </feedback>                                                        
+                            </question>                        
+                            <question type="simplechoice">
+                                <description>
+                                    <p>
+                                        Una caja muy oscura<br />
+                                        con una ventana brillante<br />
+                                        que cuenta muchos cuentos<br />
+                                        a los que se sientan delante.<br />
+                                        ¿Quién soy?
+                                    </p>
+                                    <p><button class="iconsound button" data-sound="ad_2.mp3"></button></p>
+                                </description>
+                                <ul>
+                                    <li> 
+                                        <div class="box_media buzon">
+                                            <img src="content/buzon.png" alt="buzon"/>
+                                            <p>Buzón</p>
+                                        </div>
+                                    </li>                                
+                                    <li>
+                                        <div class="box_media telegrama">
+                                            <img src="content/icon_telegrama.png" alt="telegrama"/>
+                                            <p>Telegrama</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box_media carta">
+                                            <img src="content/carta.png" alt="carta"/>
+                                            <p>Carta</p>
+                                        </div>
+                                    </li>
+                                    <li data-response="true">
+                                        <div class="box_media tv">
+                                            <img src="content/tv.png" alt="tv"/>
+                                            <p>TV</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <feedback>
+                                    <correct>
+                                        <p>Así es.</p>
+                                        <img src="content/correcto.gif" />
+                                        <p>
+                                            <cite>La televisión es un sistema para la transmisión y recepción de imágenes y sonido a distancia que simulan movimiento. Los primeros televisores fueron sacados al mercado en versión mecánica en 1884. En la década de 1970, los televisores a color empezaron a comercializarse en los países desarrollados.</cite> (Wikipedia,2020)                                      
+                                        </p>
+                                        
+                                    </correct>
+                                </feedback>                                                        
+                            </question>
+                            <question type="simplechoice">
+                                <description>
+                                    <p>
+                                        Vuela sin alas,<br />
+                                        habla sin boca,<br />
+                                        corre sin pies<br />
+                                        y llega muy lejos.<br />
+                                        Dime, ¿qué es?
+                                    </p>
+                                    <p><button class="iconsound button" data-sound="ad_3.mp3"></button></p>
+                                </description>
+                                <ul>
+                                    <li> 
+                                        <div class="box_media buzon">
+                                            <img src="content/buzon.png" alt="buzon"/>
+                                            <p>Buzón</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box_media carta">
+                                            <img src="content/carta.png" alt="carta"/>
+                                            <p>Carta</p>
+                                        </div>
+                                    </li>                                
+                                    <li>
+                                        <div class="box_media tv">
+                                            <img src="content/tv.png" alt="tv"/>
+                                            <p>TV</p>
+                                        </div>
+                                    </li>
+                                    <li data-response="true">
+                                        <div class="box_media telegrama">
+                                            <img src="content/icon_telegrama.png" alt="telegrama"/>
+                                            <p>Telegrama</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <feedback>
+                                    <correct>
+                                        <p>Así es.</p>
+                                        <img src="content/correcto.gif" />
+                                        <p>
+                                            El telegrama fue uno de los primeros medios de comunicación escrito que existió en el siglo 19 (XIX). Consistía en un texto corto de pocas palabras. En aquella época era más veloz que enviar una carta, pero con un costo muy superior porque se le debía hacer mantenimiento a los circuitos eléctricos.
+                                        </p>
+                                        
+                                    </correct>
+                                </feedback>
+                            </question>
+                            <question type="simplechoice">
+                                <description>
+                                    <p>
+                                        Por mi boca entran,<br />
+                                        pero no sé leer<br />
+                                        y aunque todas me las trago<br />
+                                        nunca mancho su papel.
+                                    </p>
+                                    <p><button class="iconsound button" data-sound="ad_4.mp3"></button></p>
+                                </description>
+                                <ul>
+                                    <li>
+                                        <div class="box_media carta">
+                                            <img src="content/carta.png" alt="carta"/>
+                                            <p>Carta</p>
+                                        </div>
+                                    </li>
+                                    <li data-response="true"> 
+                                        <div class="box_media buzon">
+                                            <img src="content/buzon.png" alt="buzon"/>
+                                            <p>Buzón</p>
+                                        </div>
+                                    </li>
+                                    <li >
+                                        <div class="box_media telegrama">
+                                            <img src="content/icon_telegrama.png" alt="telegrama" />
+                                            <p>Telegrama</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box_media tv">
+                                            <img src="content/tv.png" alt="tv"/>
+                                            <p>TV</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <feedback>
+                                    <correct>
+                                        <p>Así es.
+                                        </p>
+                                        <img src="content/correcto.gif" />
+                                        <p>
+                                            <cite>
+                                                Los <strong>buzones de correos</strong> son los objetos que instala el servicio de correos en la calle o en locales públicos para que los ciudadanos depositen sus cartas y postales. 
+                                            </cite>
+                                        </p>
+                                        <p>
+                                            <cite>Los buzones públicos se colocan en zonas de paso y se suelen pintar en colores llamativos para facilitar su localización. </cite> (Wikipedia, 2019) 
+                                        </p>
+                                    </correct>
+                                </feedback>
+                            </question>
+                            <feedback>
+                                <wrong>
+                                    <p>No es correcto, sigue intentanto</p>
+                                    <img src="content/Incorrecto.gif" />
+                                </wrong>
+                            </feedback>
+                        </div>
+                    </div>
+                </section> 
+
+                <!--2. Aprendamos-->
+                <section id="pag-aprendamos" ptitle="2. Aprendamos"> 
+                    <div class="subpage">
+                        <h3 >Aprendamos sobre los medios de comunicación<sup class="tooltip" title='1. El contenido del apartado titulado “Aprendamos” ha sido adaptado con fines educativos de la página web “Ejemplos de medios de comunicación” y el artículo “Los medios de comunicación” del Portal Educativo de Antioquia. Los enlaces al contenido original se encuentran en la lista de referencias.'>[1]</sup></h3>
+                        <p>
+                            <strong>Los medios de comunicación</strong> son distintas tecnologías que a través de dispositivos permiten a un <strong>emisor</strong> ponerse en contacto con un público <strong>receptor</strong>. La comunicación ocurre en tiempo real o en diferido mediante ondas sonoras como ocurre con la radio, la televisión y el teléfono o por texto escrito como es el caso de las cartas.
+                        </p>
+                        <p>
+                            Ahora veamos una corta clasificación de los medios de comunicación:
+                        </p>
+                        <ol class="data_list">
+                            <li>
+                                <strong>Medios de comunicación masiva:</strong> hacen referencia al alcance que tienen los emisores de llegar a un amplio número de personas sin un intercambio de roles entre emisor y receptor.
+                            </li>
+                            <li>
+                                <strong>Medios interpersonales de comunicación:</strong> permiten conectar a dos o más personas de forma privada y a menudo íntima. Por ejemplo, el chat o el teléfono.
+                            </li>
+                            <li>
+                                <strong>Medios de comunicación para el entretenimiento:</strong> el alcance de este tipo de medios está encaminado al uso masivo de redes para el disfrute y el ocio. Por ejemplos, las redes sociales.
+                            </li>
+                        </ol>
+                        <p>
+                            <strong>Ejemplos de medios de comunicación:</strong> en la siguiente imagen podrás ver todos los medios de comunicación que existen en la actualidad, da clic sobre cada uno y aprenderás sobre su origen y funcionalidad.
+                        </p>
+                        <div class="box_media">
+                            <iframe src="content/genially/genially.html" class="interactivo" >
+                                Contenido interactivo
+                            </iframe>
+                        </div>
+                        
+                        <div class="box-text link" label="ENLACE DE AMPLIACIÓN.">
+                            <p>
+                            <strong>Para que sigas aprendiendo sobre los medios de comunicación te invitamos a ver el siguiente contenido </strong>
+                            </p>
+                            <p>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=uYhXN0mgyek" target="_blank">Los medios de comunicación.</a>
+                            </p>
+                            <p>
+                                <strong>Duración:</strong> 4:25 minutos
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> en este video puedes conocer los diversos medios de comunicación que hay actualmente en el mundo. Conversa con tus padres:
+                                <p>
+                                    ¿Consideras importantes los medios de comunicación?, ¿por qué? Escribe el resumen de la conversación en tu cuaderno. 
+                                </p>
+                            </p>
+                        </div>
+                    </div>
+                </section> 
+                        
+                <!--3. Concluyamos-->
+                <section id="pag-concluyamos" ptitle="3. Concluyamos"> 
+                    <div class="subpage">
+                        <div class="box-text note" label="Recuerda">
+                            <p>El uso de los medios mencionados en la infografía, requiere de una comunicación consciente en la que los humanos intercambian información a través de diferentes elementos como: </p>
+                            <ul class="data_list">
+                                <li><strong>Mensaje:</strong> es el tipo de información que se comunica.</li>
+                                <li><strong>Emisor:</strong> es la persona que envía el mensaje.</li>
+                                <li><strong>Receptor:</strong> es la persona que recibe el mensaje.</li>
+                                <li><strong>Código:</strong> conjunto de elementos simbólicos, compartidos por los hablantes que comunican un mensaje. Implica la comprensión o descodificación de la información.</li>
+                                <li><strong>Canal:</strong> medio de comunicación por el que se envía la información. Por ejemplo, la radio, la carta, el correo electrónico, el celular, etc.</li>
+                                <li><strong>Contexto:</strong> se relaciona con el lugar y la cultura de los hablantes, tanto del emisor como del receptor del mensaje.</li>
+                            </ul>
+                        </div>
+                        <div class="box_media">
+                            <img src="content/EtapasComunicacion.png" alt="etapas de la comunicacion" title="Etapas de la Comunicación" />
+                        </div>
+                    </div>
+                </section>
+
+                <!--4. Evaluemos-->
+                <section id="pag-evaluemos" ptitle="4. Evaluemos"> 
+                    <div class="subpage">
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> caracteriza los diferentes medios de comunicación de acuerdo con la validez y pertinencia de la información.
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> lee los textos y selecciona el medio de comunicación correcto. 
+                            </p>
+                            <p>
+                                <strong>Duración: 30 minutos</strong>
+                            </p>
+                            
+                        </div>
+                        <div class="jpit-activities-quiz" data-act-title="Actividad 2: Lee y selecciona" data-act-id="2-lectura">
+                            <question type="simplechoice">
+                                <description>
+                                    <p>
+                                        Jaimito es un niño de la ciudad de Medellín. En una visita al Parque Explora conoció a Luis, un niño que había venido de una vereda muy lejana llamada La Culebrera en Puerto Triunfo, Antioquia. Jaimito y Luis se hicieron muy buenos amigos y compartieron sus aventuras en el parque. Pero, cuando llegó el momento de despedirse Jaimito le dio a Luis su número de celular para que lo llamara cuando quisiera. Luis le recordó a Jaimito que él vivía en la <strong>vereda La Culebrera de Puerto Triunfo</strong>. Jaimito desea comunicarse con Luis, ¿cuál de los siguientes medios de comunicación debe utilizar?
+                                    </p>
+                                </description>
+                                <ul>
+                                    <li>
+                                        <div class="box_media">
+                                            <img src="content/icon_telefono.png" alt="Teléfono"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box_media">
+                                            <img src="content/icon_radio.png" alt="Radio"/>
+                                        </div>
+                                    </li>
+                                    <li data-response="true">
+                                        <div class="box_media">
+                                            <img src="content/icon_carta.png" alt="Carta"/>
+                                        </div>
+                                    </li>
+                                </ul>                            
+                            </question>
+                            <question type="simplechoice">
+                                <description>
+                                    <p>
+                                        Lucía vive en Bogotá y necesita enviar con urgencia un mensaje a Matías que está en la ciudad de Medellín. ¿Cuál de los siguientes medios de comunicación le sugieres a Lucía para que se comunique con rapidez?
+                                    </p>
+                                </description>
+                                <ul>
+                                    <li>
+                                        <div class="box_media">
+                                            <img src="content/icon_tv.png" alt="Televisión"/>
+                                        </div>
+                                    </li>
+                                    <li data-response="true">
+                                        <div class="box_media">
+                                            <img src="content/icon_celular.png" alt="Celular"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box_media">
+                                            <img src="content/icon_telegrama.png" alt="Telegrama"/>
+                                        </div>
+                                    </li>
+                                </ul>                            
+                            </question>
+                            <question type="simplechoice">
+                                <description>
+                                    <p>
+                                        Juan es el gerente de Empresas Públicas de Medellín (EPM) y tiene que enviar una comunicación con 10 documentos anexos al jefe de personal de la hidroeléctrica Hidro Ituango. El jefe de personal requiere la información en 1 hora pues debe entregársela a su supervisor. ¿Qué medio de comunicación debe utilizar el gerente de EPM para enviarle el paquete de documentos al jefe de personal?
+                                    </p>
+                                </description>
+                                <ul>
+                                    <li>
+                                        <div class="box_media">
+                                            <img src="content/icon_postal.png" alt="El correo postal"/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box_media">
+                                            <img src="content/icon_telegrama.png" alt="El telegrama "/>
+                                        </div>
+                                    </li>
+                                    <li data-response="true">
+                                        <div class="box_media">
+                                            <img src="content/icon_email.png" alt="El correo electrónico"/>
+                                        </div>
+                                    </li>
+                                </ul>                            
+                            </question>
+                            <div class="box_end">
+                            </div>
+                            <feedback>
+                                <wrong>No es correcto, sigue intentanto <img src="content/Incorrecto.gif" /></wrong>
+                                <correct>Así es <img src="content/correcto.gif" /></correct>
+                            </feedback>
+                        </div>
+                        <div class="box-text link" label="ENLACE DE AMPLIACIÓN.">
+                            <p>
+                                Si no tienes internet en tu casa o si quieres avanzar y hacer trabajos extras para aprender sobre los medios de comunicación, te sugerimos descargar e imprimir la siguiente guía de trabajo que realizó el Ministerio de Educación Nacional para ampliar tus conocimientos y practicar. 
+                            </p>
+                            <p>
+                                <strong>Enunciado: </strong>para que sigas aprendiendo sobre los medios de comunicación te invitamos a explorar el siguiente documento. 
+                            </p>
+                            <p>
+                                <strong>Texto:</strong> <a href="http://aprende.colombiaaprende.edu.co/sites/default/files/naspublic/ContenidosAprender/G_4/L/SM/SM_L_G04_U05_L06.pdf" target="_blank">Los medios de comunicación</a> 
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+
+            <footer class="not_print">
+                <div class="measuring-progress" data-type="horizontal"></div>
+
+                <nav label="General" class="globals2">
+                    <menu>
+                        <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                        <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                        <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                    </menu>
+                </nav>
+
+                <div id="subpages_menu">
+                    <div class="button" previous-page></div>
+                    <div id="page_number"></div>
+                    <ul class="button" subpages-menu></ul>
+                    <div class="button" next-page></div>
+                </div>
+
+
+            </footer>
+
+        </div>
+
+        <div id="results_page" style="display:none;">
+            <h2>Resumen de su avance en la lectura del documento</h2>
+            <h3>Páginas visitadas</h3>
+            <p>En verde, aquellas páginas que ya ha visitado.</p>
+            <div id="results_page_visited" class="container"></div>
+            <br class="clear" />
+            <h3>Actividades de aprendizaje</h3>
+            <div id="results_page_activities"></div>
+        </div>
+
+        <!--Créditos-->
+        <div id="credits-page" style="display:none;">
+            <div id="credits_subpage">
+                <h2>Créditos</h2>
+                <div>
+                    <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+                </div>
+                <div>
+                    <h3>Desarrollo de contenidos</h3>
+                    <cite>Albany Elena Madrid Molina</cite>
+                </div>
+                <div>
+                    <h3>Asesoría pedagógica y diseño instruccional</h3>
+                    <cite>María Elicenia Monsalve Upegui</cite>
+                </div>
+                <div>
+                    <h3>Corrección de estilo</h3>
+                    <cite>Paola Andrea Velandia Vega</cite>
+                </div>
+                <div>
+                    <h3>Diseño gráfico</h3>
+                    <cite>Juliana Tobón Gaviria</cite> <br/>
+                    <cite>Nicole Chávez García</cite>
+                </div>
+                <div>
+                    <h3>Integración de contenidos</h3>
+                    <cite>Juan Fernando Bernal García</cite><br />
+                    <cite>Luisa Fernanda Arboleda Parra</cite><br />
+                    <cite>Santiago Bernal García</cite>
+                </div>
+                <div>
+                    <h3>Gestión técnica y administrativa</h3>
+                    <cite>Carolina Llanos Tobón</cite><br />
+                    <cite>David Herney Bernal García</cite>
+                </div>
+
+                <div>
+                    <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                    <p class="logos">
+                        <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                    </p>
+                </div>
+
+                <div class="editions">
+                    1ª edición: abril de 2020<br />
+                </div>
+                <div>
+                    <br />
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                    <img src="img/cc.png" alt="Creative Commons" /></a><br />
+                </div>
+                <div>
+                    <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bibliografía -->
+        <div id="library-page" style="display:none;">
+            <div id="library_subpage">
+                <h2>Referencias bibliográficas</h2>
+
+                <ul class="data_list">
+                    <li>
+                        Enciclopedia de ejemplos. (2019) <cite>Ejemplos de medios comunicación. <a href="https://www.ejemplos.co/20-ejemplos-de-medios-de-comunicacion/" target="_blank">https://www.ejemplos.co/[...]</a></cite>
+                    </li>
+                    <li>
+                        Los medios de comunicación. (s.f.). Unidos a un clic. Portal Educativo de Antioquia. <a href="https://www.antioquiatic.edu.co/noticias-general/item/209-los-medios-de-comunicacion" target="_blank">"https://www.antioquiatic.edu.co/[...]</a>
+                    </li>
+                    <li>
+                        Openclipart. (2014). <cite>Ilustración de vector de pictograma carta de amor</cite> [Ilustración]. Publicdomainvectors.org. <a href="https://publicdomainvectors.org/es/vectoriales-gratuitas/Amor-letra-pictograma-vector-de-la-imagen/17428.html" target="_blank">https://publicdomainvectors.org/[...]</a>
+                    </li>
+                    <li>
+                        Openclipart. (2014). <cite>Ilustración vectorial de un televisor viejo funky.</cite> [Ilustración]. Publicdomainvectors.org.  <a href="https://publicdomainvectors.org/es/vectoriales-gratuitas/Funky-viejo-televisor-vector-de-la-imagen/10116.html" target="_blank">https://publicdomainvectors.org/[...]</a>
+                    </li>
+                    <li>
+                        Piotr Siedlecki. (s.f) <cite>Buzón de correo</cite> [Ilustración]. PublicDomainPictures.net.  <a href="https://www.publicdomainpictures.net/es/view-image.php?image=132995&picture=buzon-de-correo" target="_blank">https://www.publicdomainpictures.net/[...]</a>
+                    </li>
+                    <li>
+                        Televisión. (17 de abril de 2020). En <cite>Wikipedia.</cite> <a href="https://es.wikipedia.org/w/index.php?title=Televisi%C3%B3n&oldid=125279574" target="_blank">https://es.wikipedia.org/[...]</a>
+                    </li>                               
+                </ul>
+            </div>
+        </div>
+
+        <div id="printent_content" style="display:none;">
+            <div class="content"></div>
+            <div class="button_container">
+                <button class="general button" onclick="window.print();">Imprimir</button>
+                <button id="printent_back" class="general button" >Volver</button>
+            </div>
+        </div>
+
+    </body>
+</html>

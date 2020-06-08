@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Adjectives and descriptions</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="80" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Adjectives and descriptions</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Exploremos" data-page="pag-exploremos"></menuitem>
+                        <menuitem label="Aprendamos" data-page="pag-aprendamos"></menuitem>
+                        <menuitem label="Practiquemos" data-page="pag-practiquemos"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-exploremos" ptitle="1. Exploremos">
+                <div class="subpage">
+                    <p>En este apartado vamos a hacer un repaso sobre el tema: <em><strong>the feelings</strong></em></p>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> asocio un dibujo con su descripción.</p>
+                        <p><strong>Enunciado:</strong> revisa las siguientes flashcards y practica los <em><strong>feelings</strong></em></p>
+                        <p><strong>Duración:</strong> 10 minutos</p>
+                    </div>
+                    <div class="ctrl-pagination" data-layer-height="350px" data-orientation="sides">
+                        <li>
+                            <div class="titulo">Angry</div>
+                            <div class="imagen box_media">
+                                <img src="content/angry.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is angry</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Bored</div>
+                            <div class="imagen box_media">
+                                <img src="content/bored.png">
+                                <div class="about">Imagen de ZeeNBee en Pixabay.</div>
+                            </div>
+                            <div class="frase">He is bored</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Cold</div>
+                            <div class="imagen box_media">
+                                <img src="content/cold.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is cold</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Happy</div>
+                            <div class="imagen box_media">
+                                <img src="content/happy.png">
+                                <div class="about">Imagen de GraphicMama-team en Pixabay.</div>
+                            </div>
+                            <div class="frase">He is happy</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Hot</div>
+                            <div class="imagen box_media">
+                                <img src="content/hot.webp">
+                                <div class="about">Imagen de Openclipart en PublicDomainVectors.</div>
+                            </div>
+                            <div class="frase">They are hot</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Sad</div>
+                            <div class="imagen box_media">
+                                <img src="content/sad.png">
+                                <div class="about">Imagen de Arhavisual en Pixabay.</div>
+                            </div>
+                            <div class="frase">He is sad</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Scared</div>
+                            <div class="imagen box_media">
+                                <img src="content/scared.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">He is scared</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Shy</div>
+                            <div class="imagen box_media">
+                                <img src="content/shy.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is shy</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Sleepy</div>
+                            <div class="imagen box_media">
+                                <img src="content/sleepy.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is sleepy</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Surprised</div>
+                            <div class="imagen box_media">
+                                <img src="content/surprised.png">
+                                <div class="about">Imagen de Mohamed_hassan en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is surprised</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Tired</div>
+                            <div class="imagen box_media">
+                                <img src="content/tired.svg">
+                                <div class="about">Imagen de VideoPlasty en Wikimedia Commons. CC BY-SA 4.0</div>
+                            </div>
+                            <div class="frase">He is tired</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Worried</div>
+                            <div class="imagen box_media">
+                                <img src="content/worried.png">
+                                <div class="about">Imagen de ZeeNBee en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is worried</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Mad</div>
+                            <div class="imagen box_media">
+                                <img src="content/mad.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is mad</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Sick</div>
+                            <div class="imagen box_media">
+                                <img src="content/sick.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">She is sick</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Hungry</div>
+                            <div class="imagen box_media">
+                                <img src="content/hungry.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">I am hungry</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Thirsty</div>
+                            <div class="imagen box_media">
+                                <img src="content/thirsty.png">
+                                <div class="about">Imagen de MarCuesBo en Pixabay</div>
+                            </div>
+                            <div class="frase">They are thirsty</div>
+                        </li>
+                        <li>
+                            <div class="titulo">In love</div>
+                            <div class="imagen box_media">
+                                <img src="content/love.png">
+                                <div class="about">Imagen de Emiliebergman en Pixabay.</div>
+                            </div>
+                            <div class="frase">They are in love</div>
+                        </li>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> aprendo vocabulario relacionado con los <em><strong>feelings</strong></em>.</p>
+                        <p><strong>Enunciado:</strong> practica los <em><strong>feelings</strong></em> jugando.</p>
+                    </div>
+                    <div id="memoria" class="jpit-activities-droppable" data-act-id="1-memoria" data-act-title="Practica los feelings jugando">
+                        <div class="ctrl-pagination" data-layer-height="310px" data-orientation="sides">
+                            <li>
+                                <div class="titulo" data-target-group="1"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/angry.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="2"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/bored.png">
+                                    <div class="about">Imagen de ZeeNBee en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="3"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/cold.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="4"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/happy.png">
+                                    <div class="about">Imagen de GraphicMama-team en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="5"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/hot.webp">
+                                    <div class="about">Imagen de Openclipart en PublicDomainVectors.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="6"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/sad.png">
+                                    <div class="about">Imagen de Arhavisual en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="7"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/scared.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="8"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/shy.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="9"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/sleepy.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="10"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/surprised.png">
+                                    <div class="about">Imagen de Mohamed_hassan en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="11"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/tired.svg">
+                                    <div class="about">Imagen de VideoPlasty en Wikimedia Commons. CC BY-SA 4.0</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="12"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/worried.png">
+                                    <div class="about">Imagen de ZeeNBee en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="13"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/mad.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="14"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/sick.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="15"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/hungry.png">
+                                    <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="16"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/thirsty.png">
+                                    <div class="about">Imagen de MarCuesBo en Pixabay</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="titulo" data-target-group="17"></div>
+                                <div class="imagen box_media">
+                                    <img src="content/love.png">
+                                    <div class="about">Imagen de Emiliebergman en Pixabay.</div>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sources">
+                            <div class="opcion" data-group="1">Angry</div>
+                            <div class="opcion" data-group="2">Bored</div>
+                            <div class="opcion" data-group="3">Cold</div>
+                            <div class="opcion" data-group="4">Happy</div>
+                            <div class="opcion" data-group="5">Hot</div>
+                            <div class="opcion" data-group="6">Sad</div>
+                            <div class="opcion" data-group="7">Scared</div>
+                            <div class="opcion" data-group="8">Shy</div>
+                            <div class="opcion" data-group="9">Sleepy</div>
+                            <div class="opcion" data-group="10">Surprised</div>
+                            <div class="opcion" data-group="11">Tired</div>
+                            <div class="opcion" data-group="12">Worried</div>
+                            <div class="opcion" data-group="13">Mad</div>
+                            <div class="opcion" data-group="14">Sick</div>
+                            <div class="opcion" data-group="15">Hungry</div>
+                            <div class="opcion" data-group="16">Thirsty</div>
+                            <div class="opcion" data-group="17">In love</div>
+                            <div class="box_end"></div>
+                        </div>
+                    </div>
+                    <div class="box-text link" label="ENLACE DE AMPLIACIÓN.">
+                        <p><strong>Juego interactivo:</strong> <a href="https://pbskids.org/daniel/games/guess-the-feeling" target="_blank">Guess the feeling</a></p>
+                        <p><strong>Duración:</strong> no tiene tiempo límite</p>
+                        <p><strong>Enunciado:</strong> si no tienes forma de acceder al juego virtual, puedes jugar Guess <em>the feeling</em> en tu casa. Invita a tus padres, familiares, o personas que estén contigo. Cada uno realiza el gesto de un sentimiento y los demás concursantes adivinan qué sentimiento es. Intenten decirlo en inglés.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-aprendamos" ptitle="2. Aprendamos">
+                <div class="subpage">
+                    <div class="box-text link" label="ENLACE DE AMPLIACIÓN">
+                        <p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=qRKrtiFhD5c&t=141s" target="_blank">Common adjectives. Learning videos for children.</a></p>
+                        <p><strong>Duración:</strong> 6:19</p>
+                        <p><strong>Enunciado:</strong> observa el video para que reconozcas y aprendas el vocabulario sobre los adjetivos.</p>
+                        <br />
+                        <p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=3JZi2oDvPs4" target="_blank">Big, big, big | Adjectives song for kids.</a></p>
+                        <p><strong>Duración:</strong> 1:27</p>
+                        <p><strong>Enunciado:</strong> observa el video para que reconozcas y aprendas el vocabulario sobre los adjetivos.</p>
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> asocio un dibujo con su descripción.</p>
+                        <p><strong>Enunciado:</strong> revisa las siguientes flashcards y practica el vocabulario de los <em><strong>adjectives</strong></em>.</p>
+                        <p><strong>Duración:</strong> 10 minutos</p>
+                    </div>
+                    <div class="box-text important" label="NOTA DE LA PROFESORA">
+                        <p>Explora la presentación con flashcards con vocabulario de los adjetivos y ejemplos con descripciones de objetos, que encontrarás en el espacio “APRENDAMOS”, de nuestra aula virtual.</p>
+                    </div>
+                    <div class="ctrl-pagination" data-layer-height="350px" data-orientation="sides">
+                        <li>
+                            <div class="titulo">Big</div>
+                            <div class="imagen box_media">
+                                <img src="content/big.jpg">
+                                <div class="about">Imagen de CharlesAPhillips63 en Wikimedia Commons. CC BY-SA 4.0.</div>
+                            </div>
+                            <div class="frase">Pumpkin is big</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Young</div>
+                            <div class="imagen box_media">
+                                <img src="content/young.png">
+                                <div class="about">Imagen de GraphicMama-team en Pixabay.</div>
+                            </div>
+                            <div class="frase">The woman is young</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Little</div>
+                            <div class="imagen box_media">
+                                <img src="content/little.png">
+                                <div class="about">Imagen de Pixaline en Pixabay.</div>
+                            </div>
+                            <div class="frase">The house is little</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Ugly</div>
+                            <div class="imagen box_media">
+                                <img src="content/ugly.png">
+                                <div class="about">Imagen de DoomSlayer en Pixabay.</div>
+                            </div>
+                            <div class="frase">That face is ugly</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Delicious</div>
+                            <div class="imagen box_media">
+                                <img src="content/delicious.png">
+                                <div class="about">Imagen de AceClipart_Etsy en Pixabay.</div>
+                            </div>
+                            <div class="frase">Fruits are delicious</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Fast</div>
+                            <div class="imagen box_media">
+                                <img src="content/fast.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">The deer runs fast</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Sad</div>
+                            <div class="imagen box_media">
+                                <img src="content/sad.png">
+                                <div class="about">Imagen de Arhavisual en Pixabay.</div>
+                            </div>
+                            <div class="frase">The kid is sad</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Slow</div>
+                            <div class="imagen box_media">
+                                <img src="content/slow.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">The turtle is slow</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Tall</div>
+                            <div class="imagen box_media">
+                                <img src="content/tall.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">The giraffe is tall</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Old</div>
+                            <div class="imagen box_media">
+                                <img src="content/old.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">The car is old</div>
+                        </li>
+                        <li>
+                            <div class="titulo">New</div>
+                            <div class="imagen box_media">
+                                <img src="content/new.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">This is a new car</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Beautiful</div>
+                            <div class="imagen box_media">
+                                <img src="content/beautiful.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">Hummingbird is beautiful</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Small</div>
+                            <div class="imagen box_media">
+                                <img src="content/small.png">
+                                <div class="about">Imagen de Grafikacesky en Pixabay.</div>
+                            </div>
+                            <div class="frase">The mouse is small</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Short</div>
+                            <div class="imagen box_media">
+                                <img src="content/short.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">The pants are short</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Handsome</div>
+                            <div class="imagen box_media">
+                                <img src="content/handsome.png">
+                                <div class="about">Imagen de Chakkree_Chantakad en Pixabay.</div>
+                            </div>
+                            <div class="frase">That man is handsome</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Happy</div>
+                            <div class="imagen box_media">
+                                <img src="content/happy.png">
+                                <div class="about">Imagen de GraphicMama-team en Pixabay.</div>
+                            </div>
+                            <div class="frase">The young man is happy</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Clean</div>
+                            <div class="imagen box_media">
+                                <img src="content/clean.png">
+                                <div class="about">Imagen de Jambulboy en Pixabay.</div>
+                            </div>
+                            <div class="frase">My teeth are clean</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Smart</div>
+                            <div class="imagen box_media">
+                                <img src="content/smart.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">His sister is smart</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Fat</div>
+                            <div class="imagen box_media">
+                                <img src="content/fat.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">The pig is fat</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Pretty</div>
+                            <div class="imagen box_media">
+                                <img src="content/pretty.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">The woman is pretty</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Organized</div>
+                            <div class="imagen box_media">
+                                <img src="content/organized.png">
+                                <div class="about">Imagen de BilliTheCat en Pixabay.</div>
+                            </div>
+                            <div class="frase">The library is organized</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Responsible</div>
+                            <div class="imagen box_media">
+                                <img src="content/responsible.png">
+                                <div class="about">Imagen de DavidRockDesign en Pixabay.</div>
+                            </div>
+                            <div class="frase">The child is responsible</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Fun</div>
+                            <div class="imagen box_media">
+                                <img src="content/fun.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">Playing is fun</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Interesting</div>
+                            <div class="imagen box_media">
+                                <img src="content/interesting.jpg">
+                                <div class="about">Imagen de Julianza en Pixabay.</div>
+                            </div>
+                            <div class="frase">Medellín is interesting</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Patient</div>
+                            <div class="imagen box_media">
+                                <img src="content/patient.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">Mom is patient</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Strong</div>
+                            <div class="imagen box_media">
+                                <img src="content/strong.png">
+                                <div class="about">Imagen de Dazzleology en Pixabay.</div>
+                            </div>
+                            <div class="frase">The woman is strong</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Dirty</div>
+                            <div class="imagen box_media">
+                                <img src="content/dirty.png">
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div class="frase">The dishes are dirty</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Brilliant</div>
+                            <div class="imagen box_media">
+                                <img src="content/brilliant.png">
+                                <div class="about">Imagen de GDJ en Pixabay.</div>
+                            </div>
+                            <div class="frase">Davinci was brilliant</div>
+                        </li>
+                        <li>
+                            <div class="titulo">Thin</div>
+                            <div class="imagen box_media">
+                                <img src="content/thin.png">
+                                <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                            </div>
+                            <div class="frase">Reindeer is thin</div>
+                        </li>
+                    </div>
+                    <div class="box-text note" label="NOTA">
+                        <p>We can use the feelings to do description too</p>
+                    </div>
+                    <div class="box-text link" label="ENLACE DE AMPLIACIÓN">
+                        <p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=Iv6pMDEiZzM" target="_blank">Short animated story - Sunday picnic.</a></p>
+                        <p><strong>Duración:</strong> 3:17</p>
+                        <p><strong>Enunciado:</strong> escucha la historia y presta atención a los adjetivos utilizados.</p>
+                        <br />
+                        <p><strong>Enlace:</strong> <a href="https://www.mes-games.com/adjectives1.php" target="_blank">Adjectives game</a>.</p>
+                        <p><strong>Enunciado:</strong> esta ruta, te llevará a algunos juegos virtuales para que aprendas más sobre los adjetivos. Diviértete.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-practiquemos" ptitle="3. Practiquemos">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> practicar los adjetivos.</p>
+                        <p><strong>Enunciado:</strong> complete the sentences with the following adjectives.</p>
+                        <p><strong>Duración:</strong> 20 minutos</p>
+                    </div>
+                    <div id="adjectives" class="jpit-activities-droppable" data-act-id="2-adjetivos" data-act-title="Complete the sentences">
+                        <div class="ctrl-pagination" data-layer-height="350px" data-orientation="sides">
+                            <li>
+                                <div class="imagen box_media">
+                                    <img src="content/small.png">
+                                    <div class="about">Imagen de Grafikacesky en Pixabay.</div>
+                                </div>
+                                <div class="frase">The mouse is 
+                                    <div class="titulo" data-target-group="1"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="imagen box_media">
+                                    <img src="content/beautiful2.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                                <div class="frase">The cat is 
+                                    <div class="titulo" data-target-group="2"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="imagen box_media">
+                                    <img src="content/tall.png">
+                                    <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                                </div>
+                                <div class="frase">The giraffe is 
+                                    <div class="titulo" data-target-group="3"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="imagen box_media">
+                                    <img src="content/slow.png">
+                                    <div class="about">Imagen de Clker-Free-Vector-Images en Pixabay.</div>
+                                </div>
+                                <div class="frase">The turtle is 
+                                    <div class="titulo" data-target-group="4"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="imagen box_media">
+                                    <img src="content/fat2.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                                <div class="frase">The whale is 
+                                    <div class="titulo" data-target-group="5"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="imagen box_media">
+                                    <img src="content/thin2.png">
+                                    <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                                </div>
+                                <div class="frase">The snake is 
+                                    <div class="titulo" data-target-group="6"></div>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="sources">
+                            <div class="opcion" data-group="1">little</div>
+                            <div class="opcion" data-group="2">beautiful</div>
+                            <div class="opcion" data-group="3">tall</div>
+                            <div class="opcion" data-group="4">old</div>
+                            <div class="opcion" data-group="5">fat</div>
+                            <div class="opcion" data-group="6">thin</div>
+                            <div class="box_end"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> practicar los adjetivos.</p>
+                        <p><strong>Enunciado:</strong> reading comprehension. Read and answer the questions.</p>
+                        <p><strong>Duración:</strong> 20 minutos</p>
+                    </div>
+                    <div class="box-text connection">
+                        <div class="row">
+                            <div class="col-2 box_media">
+                                <img src="content/foca.png" alt="The seal" />
+                            </div>
+                            <div class="col-2">
+                                <h3>THE SEAL</h3>
+                                <p>I can see a little and fat seal. It has a big ball. The ball is green, blue and orange. The seal likes to play with the ball.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jpit-activities-quiz" data-act-title="The seal" data-act-id="3_seal" data-layer-width="300px">
+                        <question type="simplechoice">
+                            <description><p>The seal is:</p></description>
+                            <ul>
+                                <li>little and pretty</li>
+                                <li data-response="true">little and fat</li>
+                                <li>thin</li>
+                                <li>sad</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>The ball is:</p></description>
+                            <ul>
+                                <li>small</li>
+                                <li>beautiful</li>
+                                <li>big, green, blue and orange</li>
+                                <li data-response="true">big</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>The seal likes to:</p></description>
+                            <ul>
+                                <li data-response="true">play with the ball</li>
+                                <li>jump on the ball</li>
+                                <li>run with the ball</li>
+                                <li>swim with the ball</li>
+                            </ul>
+                        </question>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Astrid Johanna Martínez</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>María Elicenia Monsalve Upegui</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>AceClipart_Etsy. (2019). <cite>Frutas</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/frutas-banano-apple-saludable-4202929/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Arhavisual. (2019). <cite>Niño llorando</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/llorar-dolor-ni%C3%B1o-solo-emociones-4250450/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>BilliTheCat. (2019). <cite>Biblioteca desorganizada</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/gr%C3%A1fica-desorden-desordenado-3963750/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Chakkree_Chantakad. (2020) <cite>Hombre de negocios</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/negocio-hombre-de-negocios-joven-4811925/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>CharlesAPhillips63. (2014). <cite>Big & small pumkins</cite> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Big_%26_Small_Pumkins.JPG" target="_blank">https://commons.wikimedia.org/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2012). <cite>Ciervo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ciervos-ejecuci%C3%B3n-forestales-48432/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2012). <cite>Coche de carreras</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/coche-carreras-rojo-nuevo-deportes-40241/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2012). <cite>Coche vintage</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/coche-vintage-rojo-antigua-33633/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2012). <cite>Hamburguesa</cite> [Ilustración]. Pixabay.  <a href="https://pixabay.com/es/vectors/hamburguesa-con-queso-carne-bollo-34315/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2012). <cite>Hombres jugando con bombas de agua</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/salpicaduras-de-agua-globos-peleas-23798/" target="_blank">https://pixabay.com/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2012). <cite>Jirafa</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/jirafa-de-altura-puntos-de-largo-48393/" target="_blank">https://pixabay.com/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2012). <cite>Madre con su hijo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/madre-ni%C3%B1o-flor-presente-el-amor-308077/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2014). <cite>Cerdo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/cerdo-granja-animales-carne-312249/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2014). <cite>Colibrí colorido</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/colibr%C3%ADes-colorido-caleidoscopio-307916/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2014). <cite>Niño</cite> [Ilustración]. Pixabay <a href="https://pixabay.com/es/vectors/ni%C3%B1o-joven-stand-mostrar-se%C3%B1alando-306170/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2014). <cite>Pareja abrazándose</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/pareja-abrazos-feliz-amigos-308544/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2014). <cite>Reno</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/reno-delgado-sombrero-de-la-navidad-306490/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Clker-Free-Vector-Images. (2014). <cite>Tortuga</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/tortuga-brown-verde-shell-animales-304426/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>DavidRockDesign. (2018). <cite>Niño estudiando</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/ni%C3%B1o-estudio-libro-infantil-figura-3326960/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Dazzleology. (2016). <cite>Mujer con tatuajes</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/mam%C3%A1-tatuaje-rosie-remachador-1508902/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>DoomSlayer. (2020). <cite>Calavera</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/voz-gutural-s%C3%ADmbolo-muerte-aislados-5039075/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Emiliebergman. (2017). <cite>Pareja enamorada</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/derecho-gay-mujer-amor-en-el-amor-2363090/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>GDJ. (2020). <cite>Hombre de Vitruvio</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/hombre-de-vitruvio-leonardo-da-vinci-4995947/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Grafikacesky. (2016). <cite>Ratón</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/rat%C3%B3n-casa-animal-roedor-par%C3%A1sito-1148152/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>GraphicMama-team. (2016). <cite>Hombre con altavoz</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/altavoz-hombre-ni%C3%B1o-explotaci%C3%B3n-1459128/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>GraphicMama-team. (2016). <cite>Mujer mensajera</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/entrega-ni%C3%B1a-mensajero-mujer-env%C3%ADo-1417310/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Jambulboy. (2017). <cite>Cuidado dental</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/cuidado-dental-dental-mascota-2516133/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Julianza. (2008). <cite>Medellín</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/medell%C3%ADn-colombia-panor%C3%A1mica-182352/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>MarCuesBo. (2018). <cite>Jarra de agua con vaso</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/agua-mano-jarra-vaso-sediento-3226252/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Mohamed_hassan. (2018). <cite>Mujer con caja de regalo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/regalo-tienda-cuadro-3422921/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Openclipart. (2019). <cite>Hombre y mujer en la playa</cite> [Ilustración]. PublicDomainVectors. <a href="https://publicdomainvectors.org/es/vectoriales-gratuitas/Hombre-y-mujer-en-la-playa/80502.html" target="_blank">https://publicdomainvectors.org/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013) <cite>Mujer adormilada</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/canalizaci%C3%B3n-vertical-tarde-149016/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Ballena</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ballena-ballena-de-olla-cachalote-155390/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Mujer</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ni%C3%B1a-mujeres-cara-cuerpo-joven-147105/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Mujer enferma en la cama</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/gripe-contra-la-gripe-fiebre-grippe-156098/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Mujer relajada y feliz</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ni%C3%B1a-rubia-relajada-hermosa-feliz-162122/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Niña con ropa de invierno</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ni%C3%B1a-lindo-fr%C3%ADo-invierno-anime-160326/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Serpiente</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/animales-reptiles-serpiente-1295060/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2015). <cite>Platos sucios</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/platos-bolos-los-alimentos-limpieza-576654/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2016) <cite>Hombre con miedo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/comic-miedo-huir-susto-1296117/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2016) <cite>Niño con ropa de invierno</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ni%C3%B1o-dibujos-animados-1296150/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2016). <cite>Gato animado</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/animales-azul-dibujos-animados-gato-1297724/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2016). <cite>Mujer enojada</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/enojado-mujeres-pu%C3%B1o-loco-rabia-1296476/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Pixaline. (2016). <cite>Paisaje de invierno</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/invierno-abeto-cubierto-de-nieve-1891595/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>VideoPlasty. (2018). <cite>Man tired after workout cartoon</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Man_Tired_After_Workout_Cartoon.svg" target="_blank">https://commons.wikimedia.org/[...]</a></li>
+                <li>ZeeNBee. (2017). <cite>Niña preocupada</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/preocupado-aburrido-triste-ni%C3%B1a-2310879/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>ZeeNBee. (2017). <cite>Niño preocupado</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/preocupado-aburrido-triste-ni%C3%B1o-2296975/" target="_blank">https://pixabay.com/es/[...]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

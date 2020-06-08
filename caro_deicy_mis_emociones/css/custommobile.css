@@ -1,0 +1,33 @@
+iframe.interactivo {
+  border: none;
+  width: 100%;
+  max-width: 900px;
+  height: calc(89vw * 50 / 89);
+  max-height: 674px;
+}
+
+.wf-content.autoy {
+  top: 1150px;
+  height: 7%;
+}
+  
+/********************************************************************************/
+/*Actividad 1*
+/********************************************************************************/
+.jpit-activities-form .sheet {
+    background: url(../img/bg_papel.png) repeat-x left top;
+    padding-top: 35px;
+}
+
+.jpit-activities-form .sheet_body {
+    background-color: #f6f5f2;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0px #cbcccc;
+}
+
+.jpit-activities-form textarea {
+    width: 94%;
+    height: 40px;
+    padding: 3%;
+    border: 2px dotted #aaaaaa;
+}

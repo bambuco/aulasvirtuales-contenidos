@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icon.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Organización de la materia</title>
+        <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+        <script src="components/interact/interact.min.js"></script>
+        <script src="components/pit/jpit_api.js"></script>
+        <script src="components/pit/utilities/jpit_utilities.js"></script>
+        <script src="components/pit/activity/jpit_activity.js"></script>
+        <script src="components/pit/resources/jpit_resource.js"></script>
+        <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/lang.es.js"></script>
+        <script src="js/lib.js"></script>
+        <script src="js/mobilelib.js"></script>
+        <script src="js/stories.js"></script>
+        <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+        <script src="components/scorm/scorm_api.js"> </script>
+        <script src="js/customlib.js"></script>
+
+    
+
+        <style type='text/css'>
+
+            body {
+                background-color: rgba(242, 242, 242, 0.7);
+            }
+
+            body.loading {
+                text-align: center;
+            }
+
+            body.loading:after {
+                content: "";
+                background: url(img/loading.gif) no-repeat bottom center;
+                width: 130px;
+                height: 30px;
+                display: block;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            body.loading #body {
+                display: none;
+            }
+        </style>
+
+    </head>
+    <body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+        <div id="body" class="not_print">
+            <div id="not_scorm_msg" style="display: none;"></div>
+
+            <nav label="Características globales" class="globals">
+                <menu>
+                    <menuitem data-global-id="return">
+                        <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                        <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                    </menuitem>
+                    <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+                </menu>
+            </nav>
+
+            <header>
+                <div>
+                    <h1>Organización de la materia</h1>
+                    <nav label="Principal" class="horizontal main" data-offset="true">
+                        <menu>                       
+                            <menuitem label="Exploremos" data-page="pag-exploremos"></menuitem>
+                            <menuitem label="Aprendamos" data-page="pag-aprendamos"></menuitem>
+                            <menuitem label="Ponte a prueba" data-page="pag-prueba"></menuitem>
+                        </menu>
+                    </nav>
+                </div>
+            </header>
+
+            <main style="display: none;">
+
+                <h2 class="page-title"></h2>
+
+            
+                <!--Exploremos-->
+                <section id="pag-exploremos" ptitle="1. Exploremos">
+                    <div class="subpage">
+                        <div class="box-text important" label="Recuerda">
+                            <p>
+                                La célula es un organismo microscópico y aunque sea casi invisible a los ojos, realiza todas las funciones que un ser vivo necesita para vivir:  respirar, transformar el alimento, eliminar sustancias tóxicas, reproducirse y, además, tienen un ciclo de vida.
+                            </p>
+                            <p>
+                                ¿Son seres pluricelulares o multicelulares?  
+                            </p>
+                            <p>
+                                Los seres vivos que conocemos de cerca son organismos pluricelulares, por ejemplo: un gato, un cerdo, un girasol, un delfín, una planta o un gusano. A estos organismos también se les llama multicelulares, pues tienen más de una célula. 
+                            </p>
+                            <h4>No olvides que: </h4>
+                            <ul class="data_list">
+                                <li>Cada célula o grupo de células realizan una función específica.</li>
+                                <li>Las células no pueden separarse del organismo y vivir independientemente.</li>
+                                <li>Las células se necesitan entre sí para vivir. </li>
+                                <li>Las células se forman a partir de una célula madre o cigoto.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!--Aprendamos-->
+                <section id="pag-aprendamos" ptitle="2. Aprendamos">
+                    <div class="subpage">
+                        <h3>2.1. Niveles de organización de la materia</h3>
+                        <p>
+                            La materia está organizada jerárquicamente de la siguiente manera:
+                        </p>                      
+                        
+                        <div class="box_media">
+                            <iframe src="content/niveles_organizacion_materia/genially.html" class="interactivo" >Contenido interactivo</iframe>
+                        </div>
+
+                        <div class="box-text link" label="ENLACE DE AMPLIACIÓN.">
+                            <p>
+                                Para entender cómo están estructurados los tejidos que viste en las imágenes y las funciones que cumple cada uno, vas a observar el siguiente video. Presta mucha atención a la información, más adelante la necesitarás para poner a prueba tus conocimientos.
+                            </p>
+                            <p>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=2Dmk9_d1W4Y&t=32s" target="_blank">¿Qué son los tejidos? </a>                                                       
+                            </p>
+                            <p>
+                                <strong>Duración:</strong> 4: 57 minutos
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> en el video, vas a encontrar la explicación para cada uno de los tejidos que viste en las imágenes anteriores
+                            </p>
+                        </div> 
+                        <div class="box-text link" label="ENLACE DE AMPLIACIÓN.">
+                            <p>
+                                Para entender cómo están distribuidos los órganos en el cuerpo humano y algunas de sus funciones, te invito a observar el siguiente video. Presta mucha atención a la información, más adelante la necesitarás para poner a prueba tus conocimientos.
+                            </p>
+                            <p>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=xBDd0SP5Tqw&t=37s" target="_blank"> ¿Qué son los órganos?</a>                                                       
+                            </p>
+                            <p>
+                                <strong>Duración:</strong> 5: 53 minutos
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> en el video puedes observar cómo están distribuidos los órganos a lo largo del cuerpo y para qué sirven algunos de ellos.
+                            </p>
+                        </div>  
+                        <div class="box-text activity" label="¡Ubícame!">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> identifica los órganos que conforman los sistemas del cuerpo humano.
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> ¡ubícame! coloca las palabras en cada uno de los órganos de acuerdo con lo que has aprendido.
+                            </p>
+                            <p>
+                                <strong>Duración:</strong>  30 minutos
+                            </p>
+                        </div>
+                        <div id="arrastrar_one" class="jpit-activities-droppable" data-verify-type="target" data-act-title="Actividad 1: ¡Ubícame! Partes del cuerpo humano" data-act-id="1-ubicame cuerpo">
+                            <p class="instruction onlymobile" type="info">
+                                Presiona durante dos segundos cada círculo para seleccionar el órgano que corresponde de acuerdo a su número. Da clic en <cite>Aceptar</cite> para guardar tu elección.
+                            </p>
+                            <div class="box_targets">
+                                <div class="num one"><span class="fas fa-dot-circle">1</span></div>
+                                <div class="num two"><span class="fas fa-dot-circle">2</span></div>
+                                <div class="num three"><span class="fas fa-dot-circle">3</span></div>
+                                <div class="num four"><span class="fas fa-dot-circle">4</span></div>
+                                <div class="num five"><span class="fas fa-dot-circle">5</span></div>
+                                <div class="num six"><span class="fas fa-dot-circle">6</span></div>
+                                <div class="num seven"><span class="fas fa-dot-circle">7</span></div>
+                                <div class="num eight"><span class="fas fa-dot-circle">8</span></div>
+                                <div class="num nine"><span class="fas fa-dot-circle">9</span></div>
+                                <div class="num ten"><span class="fas fa-dot-circle">10</span></div>
+                                <div class="enunciado one">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">1</span></div>
+                                    <div class="receptor" data-target-group="1"></div>
+                                </div>
+                                <div class="enunciado two">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">2</span></div>
+                                    <div class="receptor" data-target-group="2"></div>
+                                </div>
+                                <div class="enunciado three">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">3</span></div>
+                                    <div class="receptor" data-target-group="3"></div>
+                                </div>
+                                <div class="enunciado four">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">4</span></div>
+                                    <div class="receptor" data-target-group="4"></div>
+                                </div>
+                                <div class="enunciado five">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">5</span></div>
+                                    <div class="receptor" data-target-group="5"></div>
+                                </div>
+                                <div class="enunciado six">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">6</span></div>
+                                    <div class="receptor" data-target-group="6"></div>
+                                </div>
+                                <div class="enunciado seven">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">7</span></div>
+                                    <div class="receptor" data-target-group="7"></div>
+                                </div>
+                                <div class="enunciado eight">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">8</span></div>
+                                    <div class="receptor" data-target-group="8"></div>
+                                </div>
+                                <div class="enunciado nine">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">9</span></div>
+                                    <div class="receptor" data-target-group="9"></div>
+                                </div>
+                                <div class="enunciado ten">                                    
+                                    <div class="conection"><span class="fas fa-dot-circle">10</span></div>
+                                    <div class="receptor" data-target-group="10"></div>                                    
+                                </div>                                
+                            </div>                        
+                           
+                            <div class="opciones">
+                                <div data-group="5"><img src="content/pancreas.png"/><span>Páncreas</span></div>
+                                <div data-group="1"><img src="content/tiroides.png"/><span>Tiroides</span></div>                                
+                                <div data-group="3"><img src="content/higado.png"/><span>Higado</span></div>
+                                <div data-group="10"><img src="content/s_femenino.png"/><span>Femenino</span></div>
+                                <div data-group="6"><img src="content/intestinos.png"/><span>Intestinos</span></div>
+                                <div data-group="7"><img src="content/pulmones.png"/><span>Pulmones</span></div>
+                                <div data-group="2"><img src="content/timo.png"/><span>Timo</span></div>
+                                <div data-group="8"><img src="content/riñon.png"/><span>Riñón</span></div> 
+                                <div data-group="4"><img src="content/estomago.png"/><span>Estómago</span></div>
+                                <div data-group="9"><img src="content/s_masculino.png"/><span>Maculino</span></div>
+                            </div>
+                            <br class="clear" />
+                        
+                            <div class="box_end"></div>
+                        </div>                                                                      
+                    </div>
+                </section>
+
+                <!--Ponte a prueba-->
+                <section id="pag-prueba" ptitle="3. Ponte a prueba">
+                    <div class="subpage">
+                        <div class="box-text activity" label="¡Ubícame en el ciclo!">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> identifica la relación existente entre la función y estructura de las células, tejidos, órganos y sistemas
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> ¡ubícame! coloca las partes del ciclo de organización de la materia correctamente. Recuerda todo lo que has aprendido hasta el momento. 
+                            </p>
+                        </div>
+                        <div id="arrastrar_two" class="jpit-activities-droppable" data-verify-type="target" data-act-title="Actividad 1: ¡Ubícame! coloca las partes del ciclo de organización" data-act-id="2-ciclo">
+                            <p class="instruction onlymobile" type="info">
+                                Presiona durante dos segundos cada círculo para seleccionar la opción que corresponde. Da clic en <cite>Aceptar</cite> para guardar tu elección.
+                            </p>
+                            <div class="box_targets">
+                                <div class="enunciado one">                                    
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="2"><span class="hidro">Hidrógeno</span><span class="atm">Átomos</span></div>
+                                </div>
+                                <div class="enunciado two">                                    
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="1"><span class="oxg">Oxígeno</span></div>
+                                </div>
+                                <div class="enunciado three">                                    
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="3"><span class="mole">Molécula</span></div>
+                                </div>
+                                <div class="enunciado four">                                    
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="4"></div>
+                                </div>
+                                <div class="enunciado five">                                    
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="5"></div>
+                                </div>
+                                <div class="enunciado six">                                    
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="6"></div>
+                                </div>
+                                <div class="enunciado seven">                                    
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="7"></div>
+                                </div>
+                                <div class="enunciado eight">
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="8"></div>
+                                </div>
+                                <div class="enunciado nine">
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="9"></div>
+                                </div>
+                                <div class="enunciado ten">
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="10"></div>
+                                </div>
+                                <div class="enunciado eleven">
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="11"></div>
+                                </div>
+                                <div class="enunciado twelve">
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="12"></div>
+                                </div>
+                                <div class="enunciado thirteen">             
+                                    <div class="conection"></div>
+                                    <div class="receptor" data-target-group="13"></div>
+                                </div>
+                            </div>
+                            <div class="opciones">
+                                <div class="opcion" data-group="1"><img src="content/1_act2_atomos.png"/></div>
+                                <div class="opcion" data-group="12"><img src="content/12_act2_bioticos_abioticos.png"/><span class="elemt">Elementos bióticos y abióticos</span></div>
+                                <div class="opcion" data-group="6"><img src="content/6_act2_tejido_oseo.png"/><span class="tej">Tejido óseo</span></div>
+                                <div class="opcion" data-group="7"><img src="content/7_act2_hueso.png"/><span class="hue">Hueso</span></div>
+                                <div class="opcion" data-group="2"><img src="content/2_act2_oxigeno.png"/></div>
+                                <div class="opcion" data-group="11"><img src="content/11_act2_diferentes_especies.png"/><span class="dif">Diferentes especies</span></div> 
+                                <div class="opcion" data-group="8"><img src="content/8_act2_esqueleto.png"/><span class="esq">Esqueleto</span></div>
+                                <div class="opcion" data-group="5"><img src="content/5_act2_osteocito.png"/><span class="ost">Osteocito</span></div>
+                                <div class="opcion" data-group="13"><img src="content/13_act2_ecosistema.png"/><span class="eco">Gran ecosistema</span></div> 
+                                <div class="opcion" data-group="4"><img src="content/4_act2_nucle.png"/><span class="nuc">Núcleo</span></div>
+                                <div class="opcion" data-group="3"><img src="content/3_act2_moleculaa.png"/><span class="agu">Agua</span></div>
+                                <div class="opcion" data-group="9"><img src="content/9_act2_individuo.png"/><span class="ind">Individuo</span></div>
+                                <div class="opcion" data-group="10"><img src="content/10_act2_familia.png"/><span class="fam">Familia de la misma especie</span></div>
+                                <br class="clear" />
+                                <div class="box_end"></div>
+                            </div>
+                        </div> 
+                        <div class="box-text link" label="EXTENDIENDO EL SABER">
+                            <p>
+                                <strong>Recurso educativo:</strong> <a href="https://youtu.be/mHpqQ7mZSvY" target="_blank">Niveles de organización de la materia y los seres vivos.</a>                                
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> entra al enlace web que te sugiero y sigue aprendiendo del tema.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            
+            
+            </main>
+
+            <footer class="not_print">
+                <div class="measuring-progress" data-type="horizontal"></div>
+
+                <nav label="General" class="globals2">
+                    <menu>
+                        <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                        <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                        <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                    </menu>
+                </nav>
+
+                <div id="subpages_menu">
+                    <div class="button" previous-page></div>
+                    <div id="page_number"></div>
+                    <ul class="button" subpages-menu></ul>
+                    <div class="button" next-page></div>
+                </div>
+
+
+            </footer>
+
+        </div>
+
+        <div id="results_page" style="display:none;">
+            <h2>Resumen de su avance en la lectura del documento</h2>
+            <h3>Páginas visitadas</h3>
+            <p>En verde, aquellas páginas que ya ha visitado.</p>
+            <div id="results_page_visited" class="container"></div>
+            <br class="clear" />
+            <h3>Actividades de aprendizaje</h3>
+            <div id="results_page_activities"></div>
+        </div>
+
+        <!--Créditos-->
+        <div id="credits-page" style="display:none;">
+            <div id="credits_subpage">
+                <h2>Créditos</h2>
+                <div>
+                    <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+                </div>
+                <div>
+                    <h3>Desarrollo de Contenidos</h3>
+                    <cite>Claudia Carolina López</cite> 
+                </div>
+                <div>
+                    <h3>Asesoría pedagógica y diseño instruccional</h3>
+                    <cite>María Elicenia Monsalve Upegui</cite>
+                </div>
+                <div>
+                    <h3>Corrección de estilo</h3>
+                    <cite>Paola Andrea Velandia Vega</cite>
+                </div>
+                <div>
+                    <h3>Diseño gráfico</h3>
+                    <cite>Juliana Tobón Gaviria</cite> <br/>
+                    <cite>Nicole Chavez García</cite>
+                </div>
+                <div>
+                    <h3>Integración de contenidos</h3>
+                    <cite>Juan Fernando Bernal García</cite><br/>
+                    <cite>Luisa Fernanda Arboleda Parra</cite><br/>
+                    <cite>Santiago Bernal García</cite>
+                </div>
+                <div>
+                    <h3>Gestión técnica y administrativa</h3>
+                    <cite>Carolina Llanos Tobón</cite><br />
+                    <cite>David Herney Bernal García</cite>
+                </div>
+                <div>
+                    <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                    <p class="logos">
+                        <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                    </p>
+                </div>
+    
+                <div class="editions">
+                    1ª edición: abril de 2020<br />
+                </div>
+                <div>
+                    <br />
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                    <img src="img/cc.png" alt="Creative Commons" /></a><br />
+                </div>
+                <div>
+                    <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bibliografía -->
+        <div id="library-page" style="display:none;">
+            <div id="library_subpage">
+                <h2>Referencias</h2>
+
+                <ul class="data_list">
+                    <li>
+                        Angeleses. (2018). <cite>Rebaño</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/cordero-ovejas-reba%C3%B1o-ganado-3715136/ " target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Arcadian. (2014). <cite>Esquema del sistema o aparato digestivo</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Diagram_of_the_digestive_system-es.png" target="_blank">https://commons.wikimedia.org/[...]</a>
+                    </li>
+                    <li>
+                        Arnold, K. (s.f.). <cite>Vintage Animals Art Print</cite> [Ilustración]. PublicDomainPictures.net. <a href="https://www.publicdomainpictures.net/en/view-image.php?image=281957&picture=vintage-animals-art-print" target="_blank">https://www.publicdomainpictures.net/[...]</a>
+                    </li>
+                    <li>
+                        Brucusy5ka. (s.f.). <cite>Núcleo atómico</cite> [Ilustración]. Freepng,es. <a href="https://www.freepng.es/png-2frmku/" target="_blank">https://www.freepng.es/[...]</a>
+                    </li>
+                    <li>
+                        ColiN00B. (2014). <cite>Molécula del agua</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/h2o-el-agua-mol%C3%A9cula-580992/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Esqueleto humano de rata [Ilustración]. (s.f.). Pngocean. <a href="https://www.pngocean.com/gratis-png-clipart-jigsa" target="_blank">https://www.pngocean.com/[...]</a>
+                    </li>
+                    <li>
+                        Fémur hueso anatomía [Ilustración]. (s.f.). Pngocean.<a href="https://www.pngocean.com/gratis-png-clipart-amcrq" target="_blank">https://www.pngocean.com/[...]</a>
+                    </li>
+                    <li>
+                        Fernández, R, (1996). <cite>Biólogos Ciencias Naturales y de la Salud 2. Educación Básica Primaria.</cite> Editorial Voluntad S.A
+                    </li>
+                    <li>
+                        Ganímedes. (2013). <cite>Corte transversal de músculo esquelético estriado.</cite> [Fotografía]. Wikipedia. <a href="https://es.m.wikipedia.org/wiki/Archivo:Muscular_estriado_transv_400X.JPG" target="_blank">https://es.m.wikipedia.org/[...]</a>
+                    </li>
+                    <li>
+                        Geralt. (2017). <cite>Átomo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/litio-atom-aislado-at%C3%B3mico-f%C3%ADsica-2784853/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>                    
+                    <li>
+                        Ilustración de órganos humanos y anatomía del tracto gastrointestinal [Ilustración]. (s.f.). Pngocean. <a href="https://www.pngocean.com/gratis-png-clipart-wuhbc" target="_blank">https://www.pngocean.com/[...]</a>
+                    </li>
+                    <li>
+                        Lección 2. Niveles de organización de los seres vivos. (s.f.). Currículos exploratorios en TIC. <a href="http://aprende.colombiaaprende.edu.co/sites/default/files/naspublic/curriculos_ex/n2g10_cienamb/nivel2/ciencias/unidad1/leccion2.html
+                        " target="_blank">http://aprende.colombiaaprende.edu.co/[...]</a>
+                    </li>
+                    <li>
+                        Macrovector. (2019). <cite>Cartel infográfico de órganos internos humanos vector gratuito</cite>  [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/cartel-infografico-organos-internos-humanos_6168813.htm#page=1&query=cuerpo%20humano%20organos&position=6" target="_blank">https://www.freepik.es/[...]</a>
+                    </li>
+                    <li>
+                        OpenClipart-Vectors. (2013). <cite>Hueso tejido</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/hueso-tejido-anatom%C3%ADa-laminillas-161522/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        OpenClipart-Vectors. (2013). <cite>Molécula</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/mol%C3%A9cula-ox%C3%ADgeno-el-agua-161361/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        OpenClipart-Vectors. (2017). <cite>Cooperación</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ni%C3%B1o-cooperaci%C3%B3n-pap%C3%A1-hija-2026064/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Rollroboter. (2013). <cite>Modifizierte Azanfärbung: Kollagenes Bindegewebe blau. Nebenhoden</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Hist.Technik_(2).jpg" target="_blank">https://commons.wikimedia.org/[...]</a>
+                    </li>
+                    <li>
+                        Ruiz, M. (2013). <cite>Diagrama del sistema endomembranoso de una célula eucariota</cite> [Ilustración]. Wikipedia. <a href="https://es.m.wikipedia.org/wiki/Archivo:Endomembrane_system_diagram_es.svg" target="_blank">https://es.m.wikipedia.org/[...]</a>
+                    </li>
+                    <li>
+                        Sabine_Zierer. (2018). <cite>Neuronas</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/neuronas-cerebro-neurociencia-red-3743011/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Schwoaze. (2018). <cite>Jirafa y humanos</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/zool%C3%B3gico-jirafa-lengua-humanos-3532181/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Sjeiti. (2017). <cite>Hidrógeno átomo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/hidr%C3%B3geno-%C3%A1tomo-electr%C3%B3n-2750576/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Sjeiti. (2017). <cite>Núcleo Celular</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/eukaryot-celular-n%C3%BAcleo-2743678/" target="_blank">https://pixabay.com/es/vectors/[...]</a>
+                    </li>
+                    <li>
+                        Solis67. (2015). <cite>Ecosistema</cite> [Ilustración]. Wikipedia. <a href="https://es.wikipedia.org/wiki/Archivo:Ecosistema.jpg" target="_blank">https://pixabay.com/es/vectors/[...]</a>
+                    </li>
+                    <li>
+                        TymonOziemblewski. (2016). <cite>Esqueleto humano</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/esqueleto-humano-huesos-cr%C3%A1neo-1158318/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Universidad de Vigo. (2014). <cite>Epitelio estratificado prismático de la uretra de ratón</cite> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Epit-estrat-prismatico.jpg" target="_blank">https://commons.wikimedia.org/[...]</a>
+                    </li>
+                    <li>
+                        Universidad de Vigo. (2019). <cite>Hueso compacto</cite> [Fotografía]. Atlas de Histología Vegetal y Animal. <a href="https://mmegias.webs.uvigo.es/a-imagenes-grandes/oseo_compacto.php" target="_blank">https://mmegias.webs.uvigo.es/[...]</a>
+                    </li>
+                    <li>
+                        Uschi_Du. (2019). <cite>Oveja</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/ovejas-sheepshead-schafportrait-4673941/" target="_blank">https://mmegias.webs.uvigo.es/[...]</a>
+                    </li>
+                    <li>
+                        WikiImages. (2011). <cite>Planeta Tierra</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/la-tierra-planeta-azul-mundo-11015/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="printent_content" style="display:none;">
+            <div class="content"></div>
+            <div class="button_container">
+                <button class="general button" onclick="window.print();">Imprimir</button>
+                <button id="printent_back" class="general button" >Volver</button>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,448 @@
+iframe.interactivo {
+    border: none;
+    width: 100%;
+    height: calc(100vw * 56 / 100);
+    max-height: 674px;
+}
+
+.box_media img {
+    max-width: 1274px;
+}
+/********************************************************************************/
+/* Activida 2.1 - Organización de la materia
+/********************************************************************************/
+#arrastrar_one .box_targets {
+    background: url(../content/actividad_arrastrar.png) no-repeat center;
+    width: 100%;
+    position: relative;
+    padding-top: 694px;
+}
+
+#arrastrar_one .box_targets .num {
+    position: absolute;
+    color: #000;
+}
+
+#arrastrar_one .box_targets .num.one {
+    top: 39%;
+    left: 49%;
+}
+
+#arrastrar_one .box_targets .num.two {
+    top: 46%;
+    left: 49%;
+}
+
+#arrastrar_one .box_targets .num.three {
+    top: 58%;
+    left: 45%;
+}
+
+#arrastrar_one .box_targets .num.four {
+    top: 60%;
+    left: 50%;
+}
+
+#arrastrar_one .box_targets .num.five {
+    top: 63%;
+    left: 48%;
+}
+
+#arrastrar_one .box_targets .num.six {
+    top: 70%;
+    left: 48%;
+}
+
+#arrastrar_one .box_targets .num.seven {
+    top: 50%;
+    left: 60%;
+}
+
+#arrastrar_one .box_targets .num.eight {
+    top: 62%;
+    left: 59%;
+}
+
+#arrastrar_one .box_targets .num.nine {
+    top: 75%;
+    left: 51%;
+}
+
+#arrastrar_one .box_targets .num.ten {
+    top: 80%;
+    left: 50%;
+}
+
+#arrastrar_one.jpit-activities-droppable {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.one {
+    top: 26%;
+    left: 3%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.two {
+    top: 40%;
+    left: 3%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.three {
+    top: 54%;
+    left: 3%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.four {
+    top: 68%;
+    left: 3%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.five {
+    top: 82%;
+    left: 3%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.six {
+    top: 26%;
+    left: 70%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.seven {
+    top: 40%;
+    left: 70%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.eight {
+    top: 54%;
+    left: 70%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.nine {
+    top: 68%;
+    left: 70%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado.ten {
+    top: 82%;
+    left: 70%;
+}
+
+#arrastrar_one.jpit-activities-droppable .enunciado .receptor {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    padding: 0;
+    border-radius: 72px;
+    border: 4px solid;
+}
+
+#arrastrar_one.jpit-activities-droppable .draggable {
+    float: left;
+    width: 86px;
+    height: 118px;
+    background: transparent;
+    border: none;
+}
+
+#arrastrar_one.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+    background-color: #7bcadd;
+    border-radius: 85px;
+    width: 51px;
+    height: 50px;
+}
+
+#arrastrar_one .opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped img {
+    left: 3%;
+    position: absolute;
+    top: 1.5%;
+    width: 93%;
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped span {
+    color: #000;
+    position: absolute;
+    top: 100%;
+    left: -2%;
+}
+
+#arrastrar_one .opciones img {
+    width: 100%;
+}
+/********************************************************************************/
+/* Activida 3 - Organización de la materia
+/********************************************************************************/
+#arrastrar_two .box_targets {
+    background: url(../content/act2_fondo_base.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    position: relative;
+    padding-top: 55%;
+}
+
+#arrastrar_two .box_targets span {
+    position: absolute;
+    color: #908b8b;
+}
+
+#arrastrar_two .box_targets span.hidro {
+    top: -40%;
+    left: -15%;
+}
+
+#arrastrar_two .box_targets span.atm {
+    top: 83%;
+    left: -96%;
+}
+
+#arrastrar_two .box_targets span.oxg {
+    top: 100%;
+    left: 0%;
+}
+
+#arrastrar_two.jpit-activities-droppable {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado {
+    position: absolute;
+    border-radius: 100%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado span {
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.one {
+    top: 36.4%;
+    left: 35.8%;
+    width: 6.4%;
+    height: 11.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.two {
+    top: 46.7%;
+    left: 36.8%;
+    width: 6.4%;
+    height: 11.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.three {
+    top: 42.4%;
+    left: 45.3%;
+    width: 9.5%;
+    height: 17.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.three span {
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.three span.mole {
+    top: -26%;
+    left: 12%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.four {
+    top: 75.5%;
+    left: 42%;
+    width: 9.5%;
+    height: 17.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.four span {
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.five {
+    top: 78.5%;
+    left: 29%;
+    width: 9.5%;
+    height: 17.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.five span {
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.six {
+    top: 68.4%;
+    left: 15.2%;
+    width: 9.5%;
+    height: 17.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.six span {
+    top: 66%;
+    left: -94%;
+    width: 85%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.seven {
+    top: 41%;
+    left: 13.7%;
+    width: 9.5%;
+    height: 17.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.seven span {
+    top: 53%;
+    left: -110%;
+    width: 98%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.eight {
+    top: 18.5%;
+    left: 20.1%;
+    width: 9.5%;
+    height: 17.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.eight span {
+    top: 50%;
+    left: -151%;
+    width: 138%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.nine {
+    top: 6%;
+    left: 34.5%;
+    width: 9.5%;
+    height: 17.5%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.nine span {
+    top: 27%;
+    left: -153%;
+    width: 137%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.ten {
+    top: 3.5%;
+    left: 49%;
+    width: 12.8%;
+    height: 23%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.ten span {
+    top: 47%;
+    left: 113%;
+    width: 150%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.eleven {
+    top: 23%;
+    left: 60%;
+    width: 12.8%;
+    height: 23%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.eleven span {
+    top: 61%;
+    left: 109%;
+    width: 106%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.twelve {
+    top: 49.8%;
+    left: 67.8%;
+    width: 12.6%;
+    height: 23%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.twelve span {
+    top: 60%;
+    left: 108%;
+    width: 110%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.thirteen {
+    top: 72%;
+    left: 56.4%;
+    width: 14.6%;
+    height: 27%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado.thirteen span {
+    top: 65%;
+    left: 108%;
+    width: 69%;
+}
+
+#arrastrar_two.jpit-activities-droppable .enunciado .receptor {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+}
+
+#arrastrar_two.jpit-activities-droppable .draggable {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#arrastrar_two .opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped img {
+    width: 100%;
+    height: 100%;
+}
+
+.jpit-activities-droppable .draggable.wrong, .jpit-activities-droppable .droppable.wrong {
+    background-color: rgb(240, 134, 141);
+    opacity: 0.7;
+    border-radius: 100%;
+}
+
+.jpit-activities-droppable .draggable.wrong, .jpit-activities-droppable .droppable.correct {
+    background-color: rgb(163, 224, 113);
+    opacity: 0.7;
+    border-radius: 100%;
+}
+
+#pag-prueba #arrastrar_two.jpit-activities-droppable .enunciado .draggable {
+    margin: 0;
+}
+
+#arrastrar_two .enunciado .opcion {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#arrastrar_two .opciones .opcion img {min-width: 80px;}

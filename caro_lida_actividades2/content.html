@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="single">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Actividades de aprendizaje</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/wordpuzzle/jpit_activity_wordpuzzle.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Actividades de aprendizaje</h1>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-inicio">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Enunciado:</strong> identifica en la sopa de letras, según los contenidos estudiados, cuál es el concepto asociado a cada definición. ¡Adelante!</p>
+                    </div>
+                    <div class="jpit-activities-wordpuzzle" data-act-id="1_sopadeletras" data-act-title="Sopa de letras">
+                        <letters>
+                            <row>Q,K,O,L,M,N,V,C,T,O,F</row>
+                            <row>M,H,F,K,H,F,N,V,C,T,P</row>
+                            <row>P,T,H,A,J,U,E,G,O,L,E</row>
+                            <row>A,W,A,A,E,N,D,I,M,E,L</row>
+                            <row>S,V,B,B,B,A,O,M,P,U,O</row>
+                            <row>C,M,I,R,A,L,E,S,A,E,G</row>
+                            <row>E,O,T,A,R,V,S,I,R,N,I</row>
+                            <row>L,M,O,Z,E,V,A,E,T,N,A</row>
+                            <row>U,X,S,P,S,A,N,S,I,N,R</row>
+                            <row>J,U,E,W,P,N,T,U,R,A,H</row>
+                            <row>R,E,S,P,O,N,S,A,B,G,A</row>
+                            <row>L,M,S,A,N,I,B,A,R,I,J</row>
+                            <row>E,G,A,B,S,R,T,A,Z,F,G</row>
+                            <row>M,L,E,A,A,C,S,A,K,E,I</row>
+                            <row>J,O,E,F,B,B,M,A,E,S,R</row>
+                            <row>I,C,A,N,I,O,R,T,I,A,D</row>
+                            <row>E,N,E,N,L,K,A,A,M,A,S</row>
+                            <row>C,R,U,T,I,N,A,E,Z,R,A</row>
+                            <row>M,U,C,A,D,E,R,E,N,A,C</row>
+                            <row>I,B,L,W,A,N,U,C,R,A,R</row>
+                            <row>T,O,T,A,D,L,A,M,P,J,E</row>
+                        </letters>
+                        <div class="words">
+                            <ul>
+                                <li data-term="habito">Actividad que se hace a diario o es constante, tiene tiempos definidos por una persona o grupo. </li>
+                                <li data-term="responsabilidad">Cumplir con una obligación o actividad sin que tenga que ser recordado.</li>
+                                <li data-term="juego">Actividad que permite la recreación, utilizando la imaginación y respetando las reglas.</li>
+                                <li data-term="compartir">Acto de participar recíprocamente en algo o con alguien.</li>
+                                <li data-term="abrazar">Rodear a otra persona o a sí misma con los brazos.</li>
+                                <li data-term="rutina">Hábito o costumbre que se adquiere al repetir una misma tarea muchas veces.</li>
+                                <li data-term="elogiar">Decir cosas buenas a una persona resaltando sus cualidades.</li>
+                            </ul>
+                            <div class="box_end"></div>
+                        </div>
+                        <feedback>
+                            <correct>
+                                <p>¡Muy bien!</p>
+                                <img src="content/correcto.gif" />
+                            </correct>
+                            <wrong>
+                                <p>Inténtalo de nuevo</p>
+                                <img src="content/incorrecto.gif" />
+                            </wrong>
+                        </feedback>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+            </div>
+            <div>
+                <h3>Desarrollo de Contenidos</h3>
+                <cite>Lida Yanira Amaya Muñoz</cite> 
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Carolina Llanos Tobón</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chávez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

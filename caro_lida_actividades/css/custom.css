@@ -1,0 +1,310 @@
+.box-text.activity .title {min-width: 250px;}
+.box_end img {width: 80%;}
+.box_media img {width: 100%;}
+.row {align-items: center;}
+.col-2 {position: relative;}
+/********************************************************************************/
+/* Escudo
+/********************************************************************************/
+.jpit-activities-droppable .instruction {
+    position: absolute;
+    top: -15px;
+}
+
+.jpit-activities-droppable {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+#escudo.jpit-activities-droppable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+#escudo .contenedor {
+	width: 50%;
+}
+
+#escudo .escudo {
+	background: url(../content/escudo.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+	padding-top: 97.4%;
+    position: relative;
+}
+
+#escudo .escudo .receptor {
+	position: absolute;
+	width: 5%;
+	height: 5%;
+	padding: 0;
+	background-color: #fff;
+	border: 3px solid #f9ca48;
+	border-radius: 100%;
+	left: 48%;
+}
+
+#escudo .sources {
+	width: 48%;
+    margin-left: 2%;
+}
+
+#escudo .sources .parte {
+	border: 1px solid #000;
+	width: 25px;
+	height: 25px;
+	border-radius: 100%;
+	text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    padding: 0;
+    z-index: 2;
+}
+
+#escudo .lista .numero {
+	background-color: #ffd33a;
+	margin-right: 10px
+}
+
+#escudo.jpit-activities-droppable .parte.draggable {
+	position: absolute;
+}
+
+#escudo.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+	background-color: #ffd33a;
+    color: #000;
+    border: none;
+	border-radius: 100%;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+    position: absolute;
+}
+
+#escudo.jpit-activities-droppable .sources .lista {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+#escudo .escudo .opcion {
+	width: 100%;
+	height: 100%;
+}
+
+.jpit-activities-droppable .draggable.wrong, 
+.jpit-activities-droppable .droppable.wrong {
+	background-color: #D60C1B !important;
+    color: #fff !important;
+}
+
+.jpit-activities-droppable .draggable.correct, 
+.jpit-activities-droppable .droppable.correct {
+	background-color: #22b573 !important;
+    color: #fff !important;
+}
+
+.jpit-activities-droppable .ocultar {color: transparent;}
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped .ocultar {display: none;}
+
+#escudo .escudo .receptor1 {top: 25%;}
+#escudo .escudo .receptor2 {top: 50%;}
+#escudo .escudo .receptor3 {top: 80%;}
+#escudo .escudo .receptor4 {top: 93%;}
+
+/********************************************************************************/
+/* Himno
+/********************************************************************************/
+#pag-himno .jpit-activities-cloze {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url(../img/bg_papel.png) repeat-x left top;
+    width: 410px;
+    margin: auto;
+	background-color: #f6f5f2;
+    padding: 10px 20px;
+    padding-top: 65px;
+    box-shadow: 3px 3px 0px #cbcccc;
+}
+/********************************************************************************/
+/* Bandera
+/********************************************************************************/
+#bandera.jpit-activities-droppable {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+#bandera .contenedor {
+	width: 50%;
+}
+
+#bandera .bandera {
+	background: url(../content/bandera.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+	padding-top: 64%;
+    position: relative;
+}
+
+#bandera .bandera .receptor {
+	position: absolute;
+    width: 25%;
+    height: 10%;
+    padding: 0;
+    background-color: #fff;
+    border: 3px solid #f9ca48;
+    border-radius: 20px;
+}
+
+#bandera .sources {
+	width: 48%;
+    margin-left: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bandera .sources .opcion {
+	width: 150px;
+    padding: 5px;
+    background-color: #fff;
+    border: 3px solid #f9ca48;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+#bandera .bandera .opcion {
+	width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+    color: #000;
+}
+
+#bandera .receptor1 .opcion {background-color: #ffff00;}
+#bandera .receptor2 .opcion {background-color: #ff0000;}
+#bandera .receptor3 .opcion {background-color: #1b9e18;}
+
+.jpit-activities-droppable .draggable.wrong, 
+.jpit-activities-droppable .droppable.wrong {
+	background-color: #D60C1B !important;
+    color: #fff !important;
+}
+
+.jpit-activities-droppable .draggable.correct, 
+.jpit-activities-droppable .droppable.correct {
+	background-color: #22b573 !important;
+    color: #fff !important;
+}
+
+.jpit-activities-droppable .ocultar {color: transparent;}
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped .ocultar {display: none;}
+
+#bandera .bandera .receptor1 {top: 20%;left: 35%;}
+#bandera .bandera .receptor2 {top: 45%;left: 8%;}
+#bandera .bandera .receptor3 {top: 63%;left: 47%;}
+/********************************************************************************/
+/* Derechos y deberes
+/********************************************************************************/
+#der-deb .tablero {
+	background: url(../content/bg_tablero.png) no-repeat;
+	background-size: 100%;
+	width: 100%;
+	padding-top: 40.4%;
+	position: relative;
+}
+
+#der-deb .tablero .receptor {
+	position: absolute;
+    height: 66%;
+    padding: 0;
+    background-color: transparent;
+	border: none;
+	top: 30%;
+
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#der-deb .tablero .receptor.der {width: 14.5%}
+#der-deb .tablero .receptor.res {width: 16.3%}
+
+#der-deb .tablero .receptor.estudiantes.der {left: 2.7%}
+#der-deb .tablero .receptor.padres.der {left: 34.5%}
+#der-deb .tablero .receptor.institucion.der {left: 66%}
+#der-deb .tablero .receptor.estudiantes.res {left: 17.5%}
+#der-deb .tablero .receptor.padres.res {left: 49.3%}
+#der-deb .tablero .receptor.institucion.res {left: 81%}
+
+#der-deb .sources {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	padding-top: 30px;
+}
+
+#der-deb .hoja {
+	background-size: 100%;
+	width: 50px;
+	height: 51px;
+	color: transparent;
+	border: none;
+	padding: 0;
+}
+
+#der-deb .hoja.gris {
+	background: url(../content/nota1.png) no-repeat;
+}
+
+#der-deb .hoja.verde {
+	background: url(../content/nota2.png) no-repeat;
+}
+
+#der-deb.jpit-activities-multidroppable .buttons {
+    text-align: center;
+    padding: 5px 0;
+    clear: both;
+}
+
+.jpit-activities-multidroppable .draggable.wrong, 
+.jpit-activities-multidroppable .droppable.wrong {
+	background-color: #D60C1B !important;
+}
+/********************************************************************************/
+/* Situaciones
+/********************************************************************************/
+span select {
+	max-width: 90%;
+}
+
+.wf-content-controler {
+	background-color: transparent;
+    border: none;
+}
+
+.wf-content {
+	top: 0;
+}
+
+.row .col-2 img {
+	cursor: pointer;
+}

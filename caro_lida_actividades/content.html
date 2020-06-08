@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Actividades de aprendizaje</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/crossword/jpit_activity_crossword.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Actividades de aprendizaje</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Actividades">
+                            <menu>
+                                <menuitem label="Sobre el escudo" data-page="pag-escudo"></menuitem>
+                                <menuitem label="Sobre el himno" data-page="pag-himno"></menuitem>
+                                <menuitem label="Sobre la bandera" data-page="pag-bandera"></menuitem>
+                                <menuitem label="Sobre los derechos y deberes" data-page="pag-derechos-deberes"></menuitem>
+                                <menuitem label="Sobre los valores instituciones" data-page="pag-valores"></menuitem>
+                                <menuitem label="Sobre los comportamientos" data-page="pag-comportamientos"></menuitem>
+                            </menu>  
+                        </menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-escudo" ptitle="El escudo">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 1">
+                        <p><strong>Objetivo de aprendizaje:</strong> reconocer las partes del escudo de la Institución y su significado.</p>
+                        <p><strong>Enunciado:</strong> pon a prueba tu conocimiento arrastrando a cada parte del escudo el significado correspondiente. ¡Adelante!</p>
+                    </div>
+                    <div id="escudo" class="jpit-activities-droppable" data-act-id="1-escudo" data-act-title="Reconocer el escudo" data-shuffle="false">
+                        <p class="instruction" type="info">
+                            <span class="onlymobile">Presiona durante dos segundos cada parte del escudo y escoge el significado </span>
+                            <span class="notmobile">Arrastra cada número a la parte del escudo </span>
+                            correspondiente.
+                        </p>
+                        <div class="contenedor">
+                            <div class="escudo">
+                                <div class="receptor receptor1" data-target-group="1"></div>
+                                <div class="receptor receptor2" data-target-group="2"></div>
+                                <div class="receptor receptor3" data-target-group="3"></div>
+                                <div class="receptor receptor4" data-target-group="4"></div>
+                            </div>
+                        </div>
+                        <div class="sources">
+                            <div class="lista"><div class="numero parte">1</div>Carácter integrador de la filosofía. Representa las secciones.<div class="parte" data-group="1">1 <div class="ocultar">Carácter integrador de la filosofía. Representa las secciones.</div></div></div>
+                            <div class="lista"><div class="numero parte">2</div>Cultura y acción dinámica en la construcción del conocimiento.<div class="parte" data-group="3">2 <div class="ocultar">Cultura y acción dinámica en la construcción del conocimiento.</div></div></div>
+                            <div class="lista"><div class="numero parte">3</div>Propósitos institucionales en la educación y formación de su talento humano.<div class="parte" data-group="4">3 <div class="ocultar">Propósitos institucionales en la educación y formación de su talento humano.</div></div></div>
+                            <div class="lista"><div class="numero parte">4</div>Sendero del saber, reflejo de la formación en valores.<div class="parte" data-group="2">4 <div class="ocultar">Sendero del saber, reflejo de la formación en valores.</div></div></div>
+
+                            <div class="box_end"></div>
+                            <feedback>
+                                <correct>
+                                    <p>¡Muy bien!</p>
+                                    <img src="content/correcto.gif" />
+                                </correct>
+                                <wrong>
+                                    <p>Inténtalo de nuevo</p>
+                                    <img src="content/incorrecto.gif" />
+                                </wrong>
+                            </feedback>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-himno" ptitle="El himno">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 2">
+                        <p><strong>Objetivo de aprendizaje:</strong> reconocer el texto del himno de la Institución.</p>
+                        <p><strong>Enunciado:</strong> ¿te sabes el himno de la Institución? Pon a prueba tu memoria completando las estrofas y el coro de nuestro himno de la manera correcta. En algunos casos tendrás una lista de las que podrás elegir la respuesta, en otros, debes escribir la palabra en el espacio correspondiente. ¡Adelante!</p>
+                    </div>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="2-himno" data-act-title="El himno">
+                        <p>
+                            Mariscal con 
+                            <span>
+                                <input type="text" data-response="futuro" />
+                            </span>
+                             optimista
+                             <br />
+                             El gran sueño podré 
+                             <span>
+                                <select>
+                                    <option data-response="true">alcanzar</option>
+                                    <option>lograr</option>
+                                    <option>realizar</option>
+                                </select>
+                            </span><br />
+                            Con la fe, 
+                            <span>
+                                <input type="text" data-response="esperanza" />
+                            </span>
+                             y respeto
+                             <br />
+                             Nuestro 
+                             <span>
+                                <select>
+                                    <option data-response="true">mundo</option>
+                                    <option>pueblo</option>
+                                    <option>sueño</option>
+                                </select>
+                            </span>
+                             podré transformar
+                        </p>
+                        <p>
+                            Al oriente una luz ilumina <br />
+                            cuatro 
+                            <span>
+                                <select>
+                                    <option>ideas</option>
+                                    <option data-response="true">sedes</option>
+                                    <option>seres</option>
+                                </select>
+                            </span>
+                             que imparten saber <br/>
+                             la niñez, juventud y maestros <br />
+                             con misión en la 
+                             <span>
+                                <input type="text" data-response="patria" />
+                            </span>
+                             crecer
+                        </p>
+                        <p>
+                            Tengo a Dios como guía y 
+                            <span>
+                                <input type="text" data-response="maestro" />
+                            </span><br />
+                            de la ciencia podré aprender <br />
+                            que la 
+                            <span>
+                                <select>
+                                    <option>práctica</option>
+                                    <option>sabiduría</option>
+                                    <option data-response="true">técnica</option>
+                                </select>
+                            </span>
+                             es útil al hombre <br />
+                             la palabra me ayuda a creer
+                        </p>
+                        <p>
+                            El 
+                            <span>
+                                <select>
+                                    <option data-response="true">deporte</option>
+                                    <option>estudio</option>
+                                    <option>saber</option>
+                                </select>
+                            </span>
+                             despeja la mente <br />
+                             con las artes expreso mi ser <br />
+                             el entorno yo admiro y protejo <br />
+                             y en la 
+                             <span>
+                                <input type="text" data-response="historia" />
+                            </span>
+                             yo quiero creer
+                        </p>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>
+                                <p>¡Muy bien!</p>
+                                <img src="content/correcto.gif" />
+                            </correct>
+                            <wrong>
+                                <p>Inténtalo de nuevo</p>
+                                <img src="content/incorrecto.gif" />
+                            </wrong>
+                        </feedback>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-bandera" ptitle="La bandera">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 3">
+                        <p><strong>Objetivo de aprendizaje:</strong> relacionar los colores de la bandera de la Institución con su significado.</p>
+                        <p><strong>Enunciado:</strong> ¿recuerdas qué significa cada color de la bandera? Pon a prueba tu conocimiento arrastrando a cada color el significado correspondiente. ¡Adelante!</p>
+                    </div>
+                    <div id="bandera" class="jpit-activities-droppable" data-act-id="3-bandera" data-act-title="Significado de la bandera">
+                        <p class="instruction" type="info">
+                            <span class="onlymobile">Presiona durante dos segundos cada color de la bandera y escoge el significado </span>
+                            <span class="notmobile">Arrastra cada significado al color </span>
+                            correspondiente.
+                        </p>
+                        <div class="contenedor">
+                            <div class="bandera">
+                                <div class="receptor receptor1" data-target-group="1"></div>
+                                <div class="receptor receptor2" data-target-group="2"></div>
+                                <div class="receptor receptor3" data-target-group="3"></div>
+                            </div>
+                        </div>
+                        <div class="sources">
+                            <div class="opcion" data-group="1">La luz</div>
+                            <div class="opcion" data-group="2">La tenacidad </div>
+                            <div class="opcion" data-group="3">El respeto</div>
+                            <div class="box_end"></div>
+                            <feedback>
+                                <correct>
+                                    <p>¡Muy bien!</p>
+                                    <img src="content/correcto.gif" />
+                                </correct>
+                                <wrong>
+                                    <p>Inténtalo de nuevo</p>
+                                    <img src="content/incorrecto.gif" />
+                                </wrong>
+                            </feedback>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-derechos-deberes" ptitle="Derechos y responsabilidades de los padres, los estudiantes y la institución">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 4">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar derechos y deberes de los distintos actores del contexto escolar.</p>
+                        <p><strong>Enunciado:</strong> ¿derechos y obligaciones? en la Institución, todos los tenemos.</p>
+                        <p>Por eso, en esta actividad debes reconocer para cada enunciado si es un deber o un derecho y a cuál actor corresponde, sea estudiante, acudiente o la Institución. ¡Adelante!</p>
+                    </div>
+                    <div id="der-deb" class="jpit-activities-multidroppable" data-act-title="Identifica derechos y deberes" data-act-id="4-der-deb">
+                        <div class="box_targets">
+                            <div class="tablero">
+                                <div class="target receptor estudiantes der" data-target-group="1"></div>
+                                <div class="target receptor padres der" data-target-group="2"></div>
+                                <div class="target receptor institucion der" data-target-group="3"></div>
+                                <div class="target receptor estudiantes res" data-target-group="4"></div>
+                                <div class="target receptor padres res" data-target-group="5"></div>
+                                <div class="target receptor institucion res" data-target-group="6"></div>
+                            </div>
+                        </div>
+                        <br class="clear" />
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>
+                                <p>¡Muy bien!</p>
+                                <img src="content/correcto.gif" />
+                            </correct>
+                            <wrong>
+                                <p>Inténtalo de nuevo</p>
+                                <img src="content/incorrecto.gif" />
+                            </wrong>
+                        </feedback>
+                        <div class="buttons">
+                            <button class="general verify">Verificar</button>
+                            <button class="general continue" style="display: none;">Continuar intentando</button>
+                        </div>
+                        <div class="sources">
+                            <div class="hoja gris tooltip" title="Escuchar las informaciones y directrices de la institución para llevar a cabo los procesos necesarios" data-group="5">.</div>
+                            <div class="hoja verde tooltip" title="Ser tratados con respeto, comprensión y justicia" data-group="1">.</div>
+                            <div class="hoja gris tooltip" title="Detectar oportunamente situaciones que vulneran a los estudiantes llevando un debido proceso y reportando a las autoridades competentes" data-group="6">.</div>
+                            <div class="hoja verde tooltip" title="Ser escuchados" data-group="1">.</div>
+                            <div class="hoja gris tooltip" title="Presentar excusa escrita con soporte de los acudientes en caso de falta" data-group="4">.</div>
+                            <div class="hoja verde tooltip" title="Presentar tarde sus actividades y evaluaciones con excusa justificada" data-group="1">.</div>
+                            <div class="hoja gris tooltip" title="Responder económicamente por los elementos dañados por los estudiantes" data-group="5">.</div>
+                            <div class="hoja verde tooltip" title="Participar en las actividades de la institución" data-group="1">.</div>
+                            <div class="hoja gris tooltip" title="Respetar a docentes, directivos y administradores" data-group="5">.</div>
+                            <div class="hoja verde tooltip" title="Expresar su opinión" data-group="2">.</div>
+                            <div class="hoja gris tooltip" title="Coordinar, apoyar y seguir procesos pedagógicos, terapéuticos y tecnológicos siempre velando por la integración de todos los estudiantes y comunidad educativa" data-group="6">.</div>
+                            <div class="hoja verde tooltip" title="Ser informados y conocer los procesos académicos y disciplinarios de los estudiantes" data-group="2">.</div>
+                            <div class="hoja gris tooltip" title="Dotar a los estudiantes de los elementos como uniforme y material de trabajo" data-group="5">.</div>
+                            <div class="hoja verde tooltip" title="Participación" data-group="3">.</div>
+                            <div class="hoja gris tooltip" title="Desarrollar las actividades planteadas en clase y extraclase oportunamente" data-group="4">.</div>
+                            <div class="hoja verde tooltip" title="Corresponsabilidad" data-group="3">.</div>
+                            <div class="hoja gris tooltip" title="Ser agentes activos de las actividades planteadas" data-group="4">.</div>
+                            <div class="hoja verde tooltip" title="Diversidad" data-group="3">.</div>
+                            <div class="hoja gris tooltip" title="Respetar al personal de la institución, compañeros, acudientes y a las normas, acatándolas" data-group="4">.</div>
+                            <div class="hoja verde tooltip" title="Ser evaluados con educación integra" data-group="1">.</div>
+                            <div class="hoja gris tooltip" title="Comportarse con el debido respeto tanto fuera como dentro de la institución" data-group="4">.</div>
+                            <div class="hoja gris tooltip" title="Practicar los valores institucionales respetando las instalaciones y cuidándolas de la misma manera que al material proporcionado" data-group="4">.</div>
+                            <div class="hoja verde tooltip" title="Ser informados de sus deberes y derechos" data-group="1">.</div>
+                            <div class="hoja gris tooltip" title="Respetar el conducto regular" data-group="5">.</div>
+                            <div class="hoja verde tooltip" title="Integralidad" data-group="3">.</div>
+                            <div class="hoja gris tooltip" title="Acompañar a los estudiantes en las actividades planteadas por la institución" data-group="5">.</div>
+                            <div class="hoja verde tooltip" title="Asistir a los eventos culturales, científicos académicos, artísticos, entre otros" data-group="2">.</div>
+                            <div class="hoja gris tooltip" title="Tener un trato respetuoso con toda la comunidad educativa" data-group="6">.</div>
+                            <div class="hoja verde tooltip" title="Tener un trato respetuoso" data-group="2">.</div>
+                            <div class="hoja gris tooltip" title="Ofrecer escenarios acordes donde se vivencie la sana convivencia, con procesos de integración" data-group="6">.</div>
+                            <div class="hoja gris tooltip" title="Generar estrategias de participación y actividades que faciliten los procesos académicos y disciplinarios" data-group="6">.</div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-valores" ptitle="Valores institucionales">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 5">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar los valores instituciones según su definición.</p>
+                        <p><strong>Enunciado:</strong> ¿recuerdas nuestros valores? Identifica, según la definición, cuál es el valor correspondiente y escríbelo en el crucigrama. Primero debes seleccionar la pista (definición) y luego escribir la palabra correspondiente. ¡Adelante!</p>
+                    </div>
+                    <div class="jpit-activities-crossword">
+                        <horizontal>
+                            <li data-row="6" data-col="0" data-term="tolerancia">Comprender las diferencias, ideas, costumbres y creencias de la sociedad.</li>
+                            <li data-row="16" data-col="5" data-term="libertad">Capacidad de decidir y actuar respondiendo responsablemente a las consecuencias.</li>
+                            <li data-row="19" data-col="0" data-term="verdad">Argumentos y opiniones asertivas, críticas y analíticas.</li>
+                        </horizontal>
+                        <vertical>
+                            <li data-row="0" data-col="1" data-term="respeto">Aceptar al otro tal como es.</li>
+                            <li data-row="4" data-col="4" data-term="responsabilidad">Nuestros actos tienen consecuencias: “Lo que hago siempre afecta a los demás”.</li>
+                            <li data-row="1" data-col="6" data-term="etica ambiental">Cuidar y conservar el medio ambiente.</li>
+                            <li data-row="2" data-col="9" data-term="solidaridad">Ayudar y comprender a los demás.</li>
+                            <li data-row="5" data-col="12" data-term="laboriosidad">Esfuerzo personal que busca alcanzar las metas propuestas.</li>
+                        </vertical>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>
+                                <p>¡Muy bien!</p>
+                                <img src="content/correcto.gif" />
+                            </correct>
+                            <wrong>
+                                <p>Inténtalo de nuevo</p>
+                                <img src="content/incorrecto.gif" />
+                            </wrong>
+                        </feedback>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-comportamientos" ptitle="Comportamientos">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 6">
+                        <p><strong>Objetivo de aprendizaje:</strong> reconocer los tipos de comportamientos, sus circunstancias y los procedimientos a seguir en caso de ocurrencia.</p>
+                        <p><strong>Enunciado:</strong> hemos hablado de los comportamientos y sus características. Ahora, pongamos en práctica lo estudiado identificando para cada una de las siguientes situaciones, cuáles son sus características. Toca la imagen del salón para ver en qué consiste la situación. ¡Adelante!</p>
+                    </div>
+                    <div class="ctrl-pagination" data-layer-height="auto" data-labelcurrent="true">
+                        <li>
+                            <div class="row">
+                                <div class="col-2">
+                                    <button class="wf-content-controler" data-content="#situacion1">
+                                        <div class="box_media">
+                                            <img src="content/tablero1.jpg" />
+                                            <div class="about">Imagen de Vectorpocket en Freepik.</div>
+                                        </div>
+                                    </button>
+                                    <div id="situacion1" class="wf-content">
+                                        <h3>SITUACIÓN 1</h3>
+                                        <p>Carolina y Pedro son dos estudiantes de primaria. Pedro es responsable, desarrolla todas las actividades en el aula y en su hogar, mientras que Carolina no cuenta con apoyo familiar, siempre está atrasada, es violenta y esconde y daña los objetos de los compañeros.</p>
+                                        <p>La docente realiza proceso disciplinario con la familia de Carolina, pero, la mamá de Pedro constantemente está solicitando que Carolina sea retirada del grupo, incitando a que los otros padres envíen cartas a la institución para que Carolina sea cambiada de curso.</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="6-comportamientos1" data-act-title="Comportamientos: situación 1">
+                                    <h4>Características de la situación:</h4>
+                                    <p>
+                                        Comportamiento tipo 
+                                        <span>
+                                            <select>
+                                                <option>I</option>
+                                                <option data-response="true">II</option>
+                                                <option>III</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Circunstancia atenuante: 
+                                        <span>
+                                            <select>
+                                                <option data-response="true">Llevarse a la niña para otra institución.</option>
+                                                <option>Asistir a las actividades planteadas por docentes, directivos y grupo de apoyo para mejorar los comportamientos de la estudiante.</option>
+                                                <option>Dejar que la situación sea remitida al Instituto de Bienestar Familiar.</option>
+                                                <option>Iniciar proceso médico con apoyo terapéutico para comprender lo que piensa y vive Carolina.</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Circunstancia agravante: 
+                                        <span>
+                                            <select>
+                                                <option>Llevarse a la niña para otra institución.</option>
+                                                <option>Asistir a las actividades planteadas por docentes, directivos y grupo de apoyo para mejorar los comportamientos de la estudiante.</option>
+                                                <option data-response="true">Dejar que la situación sea remitida al Instituto de Bienestar Familiar.</option>
+                                                <option>Iniciar proceso médico con apoyo terapéutico para comprender lo que piensa y vive Carolina.</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Procedimiento a seguir:
+                                        <ol>
+                                            <li>
+                                                <span>
+                                                    <select>
+                                                        <option>Llevarse a la niña para otra institución.</option>
+                                                        <option data-response="true">Asistir a las actividades planteadas por docentes, directivos y grupo de apoyo para mejorar los comportamientos de la estudiante.</option>
+                                                        <option>Dejar que la situación sea remitida al Instituto de Bienestar Familiar.</option>
+                                                        <option>Iniciar proceso médico con apoyo terapéutico para comprender lo que piensa y vive Carolina.</option>
+                                                    </select>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <select>
+                                                        <option>Llevarse a la niña para otra institución.</option>
+                                                        <option>Asistir a las actividades planteadas por docentes, directivos y grupo de apoyo para mejorar los comportamientos de la estudiante.</option>
+                                                        <option>Dejar que la situación sea remitida al Instituto de Bienestar Familiar.</option>
+                                                        <option data-response="true">Iniciar proceso médico con apoyo terapéutico para comprender lo que piensa y vive Carolina.</option>
+                                                    </select>
+                                                </span>
+                                            </li>
+                                        </ol>
+                                    </p>
+                                    <div class="box_end"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-2">
+                                    <button class="wf-content-controler" data-content="#situacion2">
+                                        <div class="box_media">
+                                            <img src="content/tablero2.jpg" />
+                                            <div class="about">Imagen de Upklyak en Freepik.</div>
+                                        </div>
+                                    </button>
+                                    <div id="situacion2" class="wf-content">
+                                        <h3>SITUACIÓN 2</h3>
+                                        <p>Sofía es una estudiante que tiene padres que se preocupan por darle lo necesario y se esfuerzan a pesar de las dificultades. Pero, Sofía es rebelde y asiste con los uniformes que no corresponden al día o va de civil, incluso en ocasiones deja materiales y útiles escolares. Luis una mañana por accidente daña el uniforme de Sofía, pero él junto con los acudientes y directivos de la institución logran conseguirle uno nuevo. Los acudientes de Sofía son citados y se hace el debido proceso explicando la importancia del uniforme y los días de uso, iniciando compromiso escrito en el observador.</p>
+                                        <p><strong>Comportamiento:</strong> usar inadecuadamente el uniforme y utilizar el mismo en días y horarios no indicados.</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="6-comportamientos2" data-act-title="Comportamientos: situación 2">
+                                    <h4>Características de la situación:</h4>
+                                    <p>
+                                        Comportamiento tipo 
+                                        <span>
+                                            <select>
+                                                <option data-response="true">I</option>
+                                                <option>II</option>
+                                                <option>III</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Circunstancia atenuante: 
+                                        <span>
+                                            <select>
+                                                <option data-response="true">Un compañero lo daño en el aula con una puntilla. Se debe asumir la responsabilidad, guiando a Sofía al uso adecuado del uniforme.</option>
+                                                <option>Aceptar la sanción correspondiente y en una situación posterior, enviar una excusa por lo presentado.</option>
+                                                <option>Dejar que la estudiante siga asistiendo como quiere a la institución.</option>
+                                                <option>Dialogar con el estudiante, compromiso escrito y sanción pedagógica por un día dentro de la institución. </option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Circunstancia agravante: 
+                                        <span>
+                                            <select>
+                                                <option>Un compañero lo daño en el aula con una puntilla. Se debe asumir la responsabilidad, guiando a Sofía al uso adecuado del uniforme.</option>
+                                                <option>Aceptar la sanción correspondiente y en una situación posterior, enviar una excusa por lo presentado.</option>
+                                                <option data-response="true">Dejar que la estudiante siga asistiendo como quiere a la institución.</option>
+                                                <option>Dialogar con el estudiante, compromiso escrito y sanción pedagógica por un día dentro de la institución. </option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Procedimiento a seguir:
+                                        <ol>
+                                            <li>
+                                                <span>
+                                                    <select>
+                                                        <option>Un compañero lo daño en el aula con una puntilla. Se debe asumir la responsabilidad, guiando a Sofía al uso adecuado del uniforme.</option>
+                                                        <option data-response="true">Aceptar la sanción correspondiente y en una situación posterior, enviar una excusa por lo presentado.</option>
+                                                        <option>Dejar que la estudiante siga asistiendo como quiere a la institución.</option>
+                                                        <option>Dialogar con el estudiante, compromiso escrito y sanción pedagógica por un día dentro de la institución. </option>
+                                                    </select>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <select>
+                                                        <option>Un compañero lo daño en el aula con una puntilla. Se debe asumir la responsabilidad, guiando a Sofía al uso adecuado del uniforme.</option>
+                                                        <option>Aceptar la sanción correspondiente y en una situación posterior, enviar una excusa por lo presentado.</option>
+                                                        <option>Dejar que la estudiante siga asistiendo como quiere a la institución.</option>
+                                                        <option data-response="true">Dialogar con el estudiante, compromiso escrito y sanción pedagógica por un día dentro de la institución. </option>
+                                                    </select>
+                                                </span>
+                                            </li>
+                                        </ol>
+                                    </p>
+                                    <div class="box_end"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-2">
+                                    <button class="wf-content-controler" data-content="#situacion3">
+                                        <div class="box_media">
+                                            <img src="content/tablero3.jpg" />
+                                            <div class="about">Imagen de Vectorpocket en Freepik.</div>
+                                        </div>
+                                    </button>
+                                    <div id="situacion3" class="wf-content">
+                                        <h3>SITUACIÓN 3</h3>
+                                        <p>Camilo es un estudiante que poco hace, pero es muy aceptado entre sus compañeros por su actitud despreocupada y facilista. Algunos siempre le ayudan a pasar las materias.  Laura es una niña muy responsable y poco cuidado le pone a Camilo. Él, buscando llamar su atención toma fotos de Laura las modifica y las sube a la web. Laura se entera y deja de asistir a la institución. La docente directora de grupo realiza llamado telefónico, pero ella expresa sentirse enferma. Luego, averigua con sus compañeros qué paso, hasta que finalmente se entera de la situación y junto al grupo de apoyo hacen el debido proceso.</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="6-comportamientos3" data-act-title="Comportamientos: situación 3">
+                                    <h4>Características de la situación:</h4>
+                                    <p>
+                                        Comportamiento tipo 
+                                        <span>
+                                            <select>
+                                                <option>I</option>
+                                                <option>II</option>
+                                                <option data-response="true">III</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Circunstancia atenuante: 
+                                        <span>
+                                            <select>
+                                                <option>Solicitar a su hijo que realice un compromiso escrito donde pide disculpas públicas y por la web de su mal comportamiento. Imponer un castigo en el hogar y acordar la sanción que la institución debe imponer. </option>
+                                                <option>Asistir a la institución justificando a su hijo y explicar que era un juego.</option>
+                                                <option data-response="true">Obligar al estudiante a que se responsabilice de sus actos, confesando los hechos y a las personas involucradas para asumir las sanciones pertinentes.</option>
+                                                <option>Por venganza decide amenazar a la compañera que habló, el grupo de apoyo se entera y es remitido a la autoridad pertinente.</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Circunstancia agravante: 
+                                        <span>
+                                            <select>
+                                                <option>Solicitar a su hijo que realice un compromiso escrito donde pide disculpas públicas y por la web de su mal comportamiento. Imponer un castigo en el hogar y acordar la sanción que la institución debe imponer. </option>
+                                                <option data-response="true">Asistir a la institución justificando a su hijo y explicar que era un juego.</option>
+                                                <option>Obligar al estudiante a que se responsabilice de sus actos, confesando los hechos y a las personas involucradas para asumir las sanciones pertinentes.</option>
+                                                <option>Por venganza decide amenazar a la compañera que habló, el grupo de apoyo se entera y es remitido a la autoridad pertinente.</option>
+                                            </select>
+                                        </span>
+                                        <span>
+                                            <select>
+                                                <option>Solicitar a su hijo que realice un compromiso escrito donde pide disculpas públicas y por la web de su mal comportamiento. Imponer un castigo en el hogar y acordar la sanción que la institución debe imponer. </option>
+                                                <option>Asistir a la institución justificando a su hijo y explicar que era un juego.</option>
+                                                <option>Obligar al estudiante a que se responsabilice de sus actos, confesando los hechos y a las personas involucradas para asumir las sanciones pertinentes.</option>
+                                                <option data-response="true">Por venganza decide amenazar a la compañera que habló, el grupo de apoyo se entera y es remitido a la autoridad pertinente.</option>
+                                            </select>
+                                        </span>
+                                    </p>
+                                    <p>
+                                        Procedimiento a seguir:
+                                        <ol>
+                                            <li>
+                                                <span>
+                                                    <select>
+                                                        <option data-response="true">Solicitar a su hijo que realice un compromiso escrito donde pide disculpas públicas y por la web de su mal comportamiento. Imponer un castigo en el hogar y acordar la sanción que la institución debe imponer. </option>
+                                                        <option>Asistir a la institución justificando a su hijo y explicar que era un juego.</option>
+                                                        <option>Obligar al estudiante a que se responsabilice de sus actos, confesando los hechos y a las personas involucradas para asumir las sanciones pertinentes.</option>
+                                                        <option>Por venganza decide amenazar a la compañera que habló, el grupo de apoyo se entera y es remitido a la autoridad pertinente.</option>
+                                                    </select>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span>
+                                                    <select>
+                                                        <option>Solicitar a su hijo que realice un compromiso escrito donde pide disculpas públicas y por la web de su mal comportamiento. Imponer un castigo en el hogar y acordar la sanción que la institución debe imponer. </option>
+                                                        <option>Asistir a la institución justificando a su hijo y explicar que era un juego.</option>
+                                                        <option data-response="true">Obligar al estudiante a que se responsabilice de sus actos, confesando los hechos y a las personas involucradas para asumir las sanciones pertinentes.</option>
+                                                        <option>Por venganza decide amenazar a la compañera que habló, el grupo de apoyo se entera y es remitido a la autoridad pertinente.</option>
+                                                    </select>
+                                                </span>
+                                            </li>
+                                        </ol>
+                                    </p>
+                                    <div class="box_end"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+            </div>
+            <div>
+                <h3>Desarrollo de Contenidos</h3>
+                <cite>Lida Yanira Amaya Muñoz</cite> 
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Carolina Llanos Tobón</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chávez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>Upklyak. (2020). <cite>Aula vacía interior, escuela o clase universitaria</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/aula-vacia-interior-escuela-o-clase-universitaria_6993851.htm#page=1&query=study%20room&position=4" target="_blank">https://www.freepik.es/[...]</a></li>
+                <li>Vectorpocket. (2018). <cite>Fondo de dibujos animados con aula</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/fondo-dibujos-animados-aula-vacia-interior-interior_2669611.htm#page=1&query=study%20room&position=5" target="_blank">https://www.freepik.es/[...]</a></li>
+                <li>Vectorpocket. (2018). <cite>Interior del aula escolar. universidad, concepto educativo, pizarra y mesa </cite>[Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/interior-aula-escolar-universidad-concepto-educativo-pizarra-mesa_3264664.htm#page=1&query=study%20room&position=8" target="_blank">https://www.freepik.es/[...]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

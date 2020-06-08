@@ -1,0 +1,450 @@
+/********************************************************************************/
+/* OVERALL CUSTOM DEFINED STYLES 
+/********************************************************************************/
+.iconsound {display: none}
+
+iframe.interactivo {
+    border: none;
+    width: 100%;
+    height: calc(100vw * 56 / 100);
+    max-height: 674px;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-wrapper.responsive img {
+    width: 100%;
+    max-width: 800px;
+}
+
+.arrastrar-dialogo.jpit-activities-droppable .activity-text {
+    max-width: 870px;
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: 28px;
+}
+.arrastrar-dialogo.jpit-activities-droppable .activity-text p {
+    line-height: 28px;
+}
+
+.arrastrar-dialogo.jpit-activities-droppable .sources {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.arrastrar-dialogo.jpit-activities-droppable .draggable {
+    margin: 5px 8px;
+    clear: both;
+    height: 15px;
+    color: #000;
+    padding: 1px 5px 12px;
+}
+
+.arrastrar-dialogo.jpit-activities-droppable .droppable {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    min-width: 90px;
+    height: 25px;
+    padding: 0;
+}
+
+.arrastrar-dialogo.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+    border: none;
+    background-color: transparent;
+    height: 17px;
+    margin: 0px 6px -16px;
+}
+
+.arrastrar-dialogo.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped.draggable.wrong {
+    color: #D60C1B;
+}
+
+.exploremos-droppable-activity .box_end .correct:after {
+    top: 40px;
+}
+
+.feedback-with-image .img-wrapper {
+    max-width: 350px;
+    text-align: center;
+    margin: auto;
+}
+
+.feedback-with-image .img-wrapper img {
+    width: 100%;
+    margin: 20px auto 0;
+}
+
+
+/********************************************************************************/
+/* Actividad - Cuestionario
+/********************************************************************************/
+.jpit-activities-form .sheet {
+  background: url(../img/bg_papel.png) repeat-x left top;
+  width: 410px;
+  margin: auto;
+  padding-top: 35px;
+}
+
+.jpit-activities-form .sheet_body {
+  background-color: #f6f5f2;
+  text-align: center;
+  padding: 10px 20px;
+  box-shadow: 3px 3px 0px #cbcccc;
+}
+
+.jpit-activities-form textarea {
+  width: 94%;
+  height: 40px;
+  padding: 3%;
+  border: 2px dotted #aaaaaa;
+}
+
+#pag-caja .box-text.important > .title {
+  padding: 0px 30px 8px 65px;
+}
+
+#pag-caja .box-text.important .box_body {
+  padding: 0px 180px 10px 50px;
+}
+
+
+/********************************************************************************/
+/* 2. Aprendamos
+/********************************************************************************/
+.box_media img.corcho {
+    max-width: 250px;
+}
+
+/********************************************************************************/
+/* ACTIVIDAD FORMULARIO
+/********************************************************************************/
+.jpit-activities-form .sheet {
+    background: url(../img/bg_papel.png) repeat-x left top;
+    width: 100%;
+    margin: auto;
+    padding-top: 35px;
+}
+
+.jpit-activities-form .sheet_body {
+    background-color: #f6f5f2;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0px #cbcccc;
+}
+
+.jpit-activities-form input[type=text] {
+    border: 2px dotted #aaaaaa;
+    width: 94%;
+    margin-bottom: 10px;
+    padding: 5px 3%;
+}
+
+.jpit-activities-form textarea {
+    width: 94%;
+    height: 40px;
+    padding: 3%;
+    border: 2px dotted #aaaaaa;
+}
+
+/********************************************************************************/
+/* ACTIVIDAD - ARRASTRAR PALABRAS
+/********************************************************************************/
+#arrastrar-exploremos-1 .sources {
+    margin-bottom: 30px;
+}
+
+.box_media img {
+    width: 100%;
+}
+
+/********************************************************************************/
+/* ACTIVIDAD - FALSO Y VERDADERO
+/********************************************************************************/
+
+#falso-verdadero.jpit-activities-check .check_left .word_content {
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 3px 3px 3px #dadbdc;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#falso-verdadero.jpit-activities-check .buttons {
+    text-align: center;
+}
+
+#falso-verdadero.jpit-activities-check .buttons button.yes,
+#falso-verdadero.jpit-activities-check .buttons button.not {
+    font-size: 30px;
+}
+
+#falso-verdadero.jpit-activities-check .box_result {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#falso-verdadero.jpit-activities-check .box_result > div {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px #cbcccc;
+    padding: 10px;
+    width: 110px;
+    margin: 10px;
+}
+
+#falso-verdadero.jpit-activities-check .box_result .correct {
+    color: #8bc541;
+}
+#falso-verdadero.jpit-activities-check .box_result .hits {
+    font-size:30px;
+}
+
+#falso-verdadero.jpit-activities-check .box_result .wrong {
+    color: #d60c1b;
+}
+#falso-verdadero.jpit-activities-check .box_result .miss {
+    font-size:30px;
+}
+
+#falso-verdadero.jpit-activities-check {
+    height: 300px;
+}
+/********************************************************************************/
+/* ACTIVIDAD - UNICELULAR/PLURICELULAR
+/********************************************************************************/
+#uni-pluri.jpit-activities-quiz {
+    text-align: center;
+    background: #fff;
+    border: 20px solid #22b573;
+    border-radius: 28px;
+    box-shadow: 7px 7px 0px rgba(35, 31, 32, 0.15);
+    margin: auto;
+}
+
+#uni-pluri.jpit-activities-quiz p {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#uni-pluri .jpit_activities_quiz_question_option_answer {
+    cursor: pointer;
+    padding: 10px;
+    border: 5px solid #f9ca48;
+    border-radius: 28px;
+    font-weight: bold;
+    box-shadow: 4px 5px 0px rgba(35, 31, 32, 0.15)
+}
+
+#uni-pluri .jpit_activities_quiz_question_feedback_true, 
+#uni-pluri .jpit_activities_quiz_question_feedback_false {
+    position: absolute;
+    bottom: 0;
+}
+
+#uni-pluri .box_end {
+    position: absolute;
+    top: 20px;
+}
+
+#uni-pluri.jpit-activities-quiz .box_content {
+    padding-bottom: 60px;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.paramecio {
+    background: url(../content/paramecio.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.diatomeas {
+    background: url(../content/diatomeas.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.ameba {
+    background: url(../content/ameba.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.euglena {
+    background: url(../content/euglena.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.protozoos {
+    background: url(../content/protozoos.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.algas {
+    background: url(../content/algas.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.perro {
+    background: url(../content/perro.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.rana {
+    background: url(../content/rana.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.elefante {
+    background: url(../content/elefante.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.flores {
+    background: url(../content/flores.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.arboles {
+    background: url(../content/arboles.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri.jpit-activities-quiz .imagen.humanos {
+    background: url(../content/humanos.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#uni-pluri .jpit_activities_quiz_question_option_answer label {
+    color: transparent;
+}
+
+#uni-pluri ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#uni-pluri {
+    width: 300px;
+}
+
+/********************************************************************************/
+/* ACTIVIDAD - DIFERENCIAS
+/********************************************************************************/
+#diferencia .jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
+#diferencia .jpit_activities_quiz_board { height: 220px; }
+/********************************************************************************/
+/* ACTIVIDAD - LA CELULA
+/********************************************************************************/
+#pag-profundicemos .celula {
+    background: url(../content/lacelula.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 53%;
+    position: relative;
+}
+
+#pag-profundicemos .celula .wf-content-controler {
+    position: absolute;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #22b573;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pag-profundicemos .celula .wf-content-controler.centriolos {
+    top: 28%;
+    left: 38%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.lisosoma { 
+    left: 52%;
+    top: 9%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.citoplasma {
+    left: 34%;
+    top: 15%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.vacuola {
+    top: 8%;
+    left: 40%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.mitocondria {
+    top: 22%;
+    left: 24%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.reticulo_liso {
+    top: 60%;
+    left: 34%;
+} 
+
+#pag-profundicemos .celula .wf-content-controler.citoesqueleto {
+    top: 84%;
+    left: 60%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.aparato {
+    left: 70%;
+    top: 62%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.reticulo {
+    top: 39%;
+    left: 59%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.vesicula {
+    left: 87%;
+    top: 25%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.ribosoma {
+    top: 43%;
+    left: 81%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.nucleo {
+    left: 74%;
+    top: 15%;
+}
+
+#pag-profundicemos .celula .wf-content-controler.nucleolo {
+    top: 15%;
+    left: 66%;
+}
+
+.wf-content .box_media img {
+    width: 100%;
+}
+
+.wf-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+/********************************************************************************/
+/* PONTE A PRUEBA
+/********************************************************************************/
+#pag-prueba .jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
+#pag-prueba .jpit_activities_quiz_board { height: 220px; }

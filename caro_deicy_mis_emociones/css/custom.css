@@ -1,0 +1,77 @@
+html.single h2 {
+    padding: 8px;
+}
+
+.box_media img {
+    max-width: 500px;
+}
+
+iframe.interactivo {
+    border: none;
+    width: 100%;
+    max-width: 900px;
+    height: calc(89vw * 50 / 89);
+    max-height: 600px;
+}
+
+.wf-content.autoy {
+    top: 500px;
+    left: 40px;
+    right: 59px;
+    height: 719px;
+}
+    
+/********************************************************************************/
+/*Actividad 1*
+/********************************************************************************/
+.jpit-activities-form .sheet {
+    background: url(../img/bg_papel.png) repeat-x left top;
+    width: 410px;
+    margin: auto;
+    padding-top: 35px;
+}
+
+.jpit-activities-form .sheet_body {
+    background-color: #f6f5f2;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0px #cbcccc;
+}
+
+.jpit-activities-form textarea {
+    width: 94%;
+    height: 40px;
+    padding: 3%;
+    border: 2px dotted #aaaaaa;
+}
+/********************************************************************************/
+/*Imgagen de unidos*
+/********************************************************************************/
+.box_media.one {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+.box_media.one img {
+    max-width: 143px;
+}
+
+.box-text.important .box_body {
+    padding: 15px 214px 10px 30px;
+}
+
+#pag-previos .respuesta {
+    width: 450px;
+    height: 150px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+.final.row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}

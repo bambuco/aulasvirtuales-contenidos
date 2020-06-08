@@ -1,0 +1,29 @@
+
+/********************************************************************************/
+/* Actividad 1
+/********************************************************************************/
+.jpit-activities-form .sheet {
+    background: url(../img/bg_papel.png) repeat-x left top;
+    margin: auto;
+    padding-top: 35px;
+}
+
+.jpit-activities-form .sheet_body {
+    background-color: #f6f5f2;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0px #cbcccc;
+}
+
+.jpit-activities-form textarea {
+    width: 95%;
+    height: 45px;
+    padding: 1%;
+    border: 2px dotted #aaaaaa;
+}
+
+.jpit-activities-form input {
+    width: 160;
+    height: 20px;
+    padding: 1%;
+    border: 2px solid #aaaaaa;
+}

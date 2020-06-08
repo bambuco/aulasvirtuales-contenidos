@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>¿Qué estructura es común a todos los seres vivos?</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <!--jQuery components -->
+    <!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+    
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+  </style>
+
+</head>
+
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="90" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+    <nav label="Características globales" class="globals">
+        <menu>
+            <menuitem data-global-id="return">
+                <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+            </menuitem>
+            <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+        </menu>
+    </nav>
+
+    <header>
+        <div>
+            <h1>¿Qué estructura es común a todos los seres vivos?</h1>
+            <nav label="Principal" class="horizontal main" data-offset="true">
+                <menu>
+                    <menuitem label="Contenido">
+                        <menu>
+                            <menuitem label="1. Exploremos" data-page="pag-exploremos"></menuitem>
+                            <menuitem label="2. Aprendamos" data-page="pag-aprendamos"></menuitem>
+                            <menuitem label="3. Experimentemos" data-page="pag-experimentemos"></menuitem>
+                            <menuitem label="4. Profundicemos" data-page="pag-profundicemos"></menuitem>
+                            <menuitem label="5. Ponte a prueba" data-page="pag-prueba"></menuitem>
+                        </menu>
+                    </menuitem>
+                </menu>
+            </nav>
+        </div>
+    </header>
+
+    <main style="display: none;">
+
+        <h2 class="page-title"></h2>
+
+        <!-- 1. Exploremos -->
+        <section id="pag-exploremos" ptitle="1. Exploremos">
+            <div class="subpage">
+                <button class="iconsound button" data-sound="ECO-AU005.mp3"></button>
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <p>
+                        <strong>Enunciado:</strong> contesta y dialoga con tus padres o las personas con las que vivas las siguientes preguntas:
+                    </p>
+                </div>
+                <div class="jpit-activities-form" data-save="true" data-print="true" data-require-all="true" data-act-id="1-conocimientos" data-act-title="Preguntas sobre la célula">
+                    <div class="sheet">
+                        <div class="sheet_body">
+                            <p>
+                                ¿Qué es una célula?
+                                <textarea name="¿Qué es una célula?"></textarea>
+                            </p>
+                            <p>
+                                ¿Por qué es importante la célula en la vida de los organismos?
+                                <textarea name="¿Por qué es importante la célula en la vida de los organismos?"></textarea>
+                            </p>
+                            <p>
+                                ¿Cómo crees que se descubrió la célula?
+                                <textarea name="¿Cómo crees que se descubrió la célula?"></textarea>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subpage">
+
+                <div class="box-text connection">
+                    <p>
+                        Ahora observa y escucha con atención el siguiente video
+                    </p>
+                </div>
+
+                <div>
+                    <div class="videobox">
+                        <video controls>
+                            <source src="http://aprende.colombiaaprende.edu.co/sites/default/files/naspublic/ContenidosAprender/G_4/S/S_G04_U03_L01/video/AN_S_G04_U03_L01_01_01.mp4" type="video/mp4">
+                            El reproductor de video no es soportado por el navegador
+                        </video>
+                    </div>
+                    <div class="about">Video 1. Formando un panal. (Colombia Aprende, s.f.)</div>
+                </div>
+
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <button class="iconsound button" data-sound="ECO-AU006.mp3"></button>
+                    <p><strong>Objetivo de aprendizaje:</strong> identificar las características comunes de algunas células.</p>
+                    <p><strong>Enunciado:</strong> de acuerdo con lo aprendido en el video, organiza el siguiente texto arrastrando los conceptos al lugar correcto. Luego, conversa con tus padres o hermanos: ¿qué tienen en común el paramecio, las diatomeas y las amebas? </p>
+                    <p><strong>Duración:</strong> 30 minutos.</p>
+                </div>
+
+                <!-- Inicia actividad droppable en paginación en Exploremos -->
+                <p class="onlymobile"><strong>Arrastra las palabras a los espacios en blanco para completar las frases del texto.</strong></p>
+                <div class="ctrl-pagination exploremos-droppable-activity">
+                    <li>
+                        <div id="arrastrar-exploremos-1" class=" arrastrar-dialogo jpit-activities-droppable" data-verify-type="target" data-act-id="2_arrastrar-exploremos-1" data-act-title="Act. arrastar en Exploremos - 1">
+                            <div class="sources draggable-items">
+                                <div data-group="1">paramecio</div>
+                                <div data-group="2">organismo unicelular</div>
+                                <div data-group="3">célula</div>
+                                <div data-group="4">organismos unicelulares</div>
+                            </div>
+                            <div class="activity-text">
+                                <button class="iconsound button" data-sound="ECO-AU007.mp3"></button>
+                                <p>
+                                    El <button data-target-group="1"></button> 
+                                    es un <button data-target-group="2"></button>, 
+                                    quiere decir que tiene una sola <button data-target-group="3"></button>. 
+                                    Por ejemplo, las bacterias son <button data-target-group="4"></button>.
+                                </p>
+                            </div>
+
+                            <feedback>
+                                <correct>
+                                    <h3>¡Muy bien!</h3>
+                                    <div class="box_media">
+                                        <img src="content/paramecio.jpg" alt="Imagen paramecio">
+                                        <div class="about">
+                                            Imagen de Proyecto Agua en Flickr. CC BY-NC-SA 2.0.
+                                        </div>
+                                    </div>
+                                </correct>
+                            </feedback>
+                            <div class="box_end"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="arrastrar-exploremos-2" class=" arrastrar-dialogo jpit-activities-droppable" data-verify-type="target" data-act-id="2_arrastrar-exploremos-2" data-act-title="Act. arrastar en Exploremos - 2">
+                            <div class="sources draggable-items">
+                                <div data-group="1">diatomeas</div>
+                                <div data-group="2">algas</div>
+                                <div data-group="3">unicelulares</div>
+                                <div data-group="4">organismos</div>
+                                <div data-group="5">agua</div>
+                                <div data-group="6">húmedas</div>
+                            </div>
+                            <div class="activity-text">
+                                <button class="iconsound button" data-sound="ECO-AU008.mp3"></button>
+                                <p>
+                                    Las <button data-target-group="1"></button> 
+                                    son pequeñas <button data-target-group="2"></button>
+                                    microscópicas <button data-target-group="3"></button>. 
+                                    Estos <button data-target-group="4"></button> 
+                                    viven en el <button data-target-group="5"></button> 
+                                    o sobre superficies <button data-target-group="6"></button>.
+                                </p>
+                            </div>
+
+                            <div class="box_end"></div>
+                            <feedback>
+                                <correct>
+                                    <h3>¡Muy bien!</h3>
+                                    <div class="box_media">
+                                        <img src="content/diatomeas.jpg" alt="Imagen diatomeas">
+                                        <div class="about">
+                                            Imagen de Mkpstees en Pixabay
+                                        </div>
+                                    </div>
+                                </correct>
+                            </feedback>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="arrastrar-exploremos-3" class=" arrastrar-dialogo jpit-activities-droppable" data-verify-type="target" data-act-id="2_arrastrar-exploremos-3" data-act-title="Act. arrastar en Exploremos - 3">
+                        
+                            <div class="sources draggable-items">
+                                <div data-group="1">ameba</div>
+                                <div data-group="2">unicelular</div>
+                                <div data-group="3">agua</div>
+                                <div data-group="4">tierra</div>
+                                <div data-group="5">organismos</div>
+                                <div data-group="6">partículas</div>
+                                <div data-group="7">descomposición</div>
+                            </div>
+                            <div class="activity-text">
+                                <button class="iconsound button" data-sound="ECO-AU009.mp3"></button>
+                                <p>
+                                    La <button data-target-group="1"></button> 
+                                    es un organismo <button data-target-group="2"></button> 
+                                    y tiene formas diversas. Viven en el <button data-target-group="3"></button> 
+                                    o en la <button data-target-group="4"></button> 
+                                    y se alimentan de <button data-target-group="5"></button> 
+                                    más pequeños o de <button data-target-group="6"></button> 
+                                    en <button data-target-group="7"></button>.
+                                </p>
+                            </div>
+                            <div class="box_end"></div>
+                            <feedback>
+                                <correct>
+                                    <h3>¡Muy bien!</h3>
+                                    <div class="box_media">
+                                        <img src="content/ameba.jpg" alt="Imagen amebas">
+                                        <div class="about">
+                                            Imagen de Proyecto Agua en Flickr. CC BY-NC-SA 2.0.
+                                        </div>
+                                    </div>
+                                </correct>
+                            </feedback>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="arrastrar-exploremos-4" class="arrastrar-dialogo jpit-activities-droppable" data-verify-type="target" data-target-multi="2" data-act-id="2_arrastrar-exploremos-4" data-act-title="Act. arrastar en Exploremos - 4">
+                            <div class="sources draggable-items">
+                                <div data-group="1">multicelulares</div>
+                                <div data-group="2">dos</div>
+                                <div data-group="3">células</div>
+                                <div data-group="4">plantas</div>
+                                <div data-group="4">animales</div>
+                                <div data-group="5">algas</div>
+                            </div>
+                            <div class="activity-text">
+                                <button class="iconsound button" data-sound="ECO-AU0010.mp3"></button>
+                                <p>Los organismos <button data-target-group="1"></button> 
+                                    tienen <button data-target-group="2"></button> 
+                                    o más <button data-target-group="3"></button> 
+                                    y se encuentran en<button data-target-group="4"></button>, 
+                                    <button data-target-group="4"></button> 
+                                    y algunas <button data-target-group="5"></button>.
+                                </p>
+                            </div>
+                            <div class="box_end"></div>
+                            <feedback>
+                                <correct>
+                                    <h3>¡Muy bien!</h3>
+                                    <div class="box_media">
+                                        <img src="content/organismos_multicelulares.jpg" alt="Imagen organismos multicelulares">
+                                        <div class="about">
+                                            Imagen de Frank Fox en Wikipedia. CC BY-SA 3.0.
+                                        </div>
+                                    </div>
+                                </correct>
+                            </feedback>
+                        </div>
+                    </li>
+                </div>
+                  <!-- Finaliza actividad droppable en paginación en Exploremos -->
+            </div>
+        </section>
+
+        <!-- 2. Aprendamos -->
+        <section id="pag-aprendamos" ptitle="2. Aprendamos">
+            <div class="subpage">
+                <h3>2.1 Teoría celular: ¿quién descubrió la célula?</h3>
+
+                <div class="box_media">
+                    <iframe src="content/teoria_celular/genially.html" class="interactivo" >Contenido interactivo</iframe>
+                </div>
+
+                <div class="box-text link" label="Enlace de ampliación">
+                    <button class="iconsound button float-rigth" data-sound="ECO-AU0018.mp3"></button>
+                    <p>
+                        Para que enriquezcas tus conocimientos y aprendas más del tema, visita el siguiente enlace.
+                    </p>
+                    <p><strong>Video:</strong> <a href="https://cutt.ly/btMoK0v" target="_blank">La teoría celular</a></p>
+                    <p><strong>Duración:</strong> 3:26 minutos</p>
+                    <p><strong>Enunciado:</strong> en el video puedes encontrar a los científicos que inventaron la célula.</p>
+                </div>
+
+                <div class="box-text activity" label="Actividad en casa">
+                    <button class="iconsound button float-left" data-sound="ECO-AU019.mp3"></button>
+                    <p><strong>Objetivo de aprendizaje:</strong> explica la relación existente entre la función y estructura de
+                      las células, tejidos, órganos y sistemas.</p>
+                    <p><strong>Enunciado:</strong> en compañía de tus padres desarrolla el siguiente taller, puede ser en hojas
+                      de bloc o en tu cuaderno.</p>
+                    <p><strong>Duración:</strong> 2 horas.</p>
+                </div>
+
+                <div class="sheet">
+                    <h5>Taller 1</h5>
+                    <ol class="data_list">
+                        <button class="iconsound button" data-sound="ECO-AU020.mp3"></button>
+                        <li>
+                            <p>Si tu fueras Robert Hooke y mientras observas un trozo de corcho a través de un microscopio, vieras una imagen como la que se presenta a continuación ¿cómo la describirías?</p>
+                            <div class="box_media">
+                                <img class="corcho" src="content/imagen-corcho-en-miscroscopio.png" alt="Imagen de corcho a través de microscopio">
+                                <div class="about">
+                                    Corcho a través de microscopio. (2020)
+                                </div>
+                            </div>
+                        </li>
+                        <li>Si tuvieras que explicarle a alguien qué es la célula, ¿qué le dirías?
+                          Puedes hacer una historieta para responder.</li>
+                        <li>¿Por qué la célula es la unidad fundamental de los seres vivos?</li>
+                        <li>¿Existen seres vivos que sobreviven con una sola célula?, ¿conoces alguno?. Da ejemplos. Puedes
+                          dibujar o buscar imágenes, recortarlas y pegarlas.</li>
+                        <li>Observa el siguiente video y después dibuja algunos seres pluricelulares. También puedes buscar
+                          imágenes, recortarlas y pegarlas.
+                        
+                            <div class="box-text link" label="Enlace de ampliación">
+                                <p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=inyX6Hc1Png" target="_blank">Seres unicelulares y pluricelulares.</a></p>
+                                <p><strong>Duración:</strong> 3:26 minutos</p>
+                                <p><strong>Enunciado:</strong> en este video puedes ver diferentes tipos de seres unicelulares y pluricelulares</p>
+                            </div>
+                        </li>
+
+                        <li>¿Cuál es la estructura de la célula que le permite intercambiar nutrientes, agua y oxígeno con el medio?, ¿cómo crees que ocurre este proceso?</li>
+
+                        <li>En el interior de la célula, ¿quién contiene la información necesaria para que esta cumpla sus funciones?</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="subpage">
+                <h3>2.2 La célula</h3>
+                <div class="box-text important" label="importante">
+                    <p>Lee con mucha atención el siguiente texto. Después de leer, escribe en tu cuaderno todas las palabras desconocidas y busca su significado en el diccionario.</p>
+                </div>
+                <h4>La célula</h4>
+                <p>La célula es el elemento de menor tamaño que puede considerarse vivo, pero es la unidad fundamental de todo ser vivo. Los organismos vivos pueden clasificarse según el número de células que posean: si solo tienen una, se les denomina unicelulares como pueden ser los protozoos o las bacterias, entre otros organismos microscópicos; si tienen más de una célula, se les llama pluricelulares, dentro de este grupo están los animales, las plantas o el ser humano. Existen dos tipos de células las células procariotas y las células eucariotas.</p>
+                <p>Las <strong>células procariotas</strong> son pequeñas, no tienen un núcleo definido en su interior y su material genético está guardado en el citosol que es el líquido que se encuentra dentro de la célula y forma el mayor fluido intracelular. De este grupo hacen parte las bacterias porque son organismos unicelulares.</p>
+                <p>El otro grupo de células <strong>son las eucariotas,</strong> este grupo de células se caracteriza por ser multicelulares o pluricelulares. Las células eucariotas tienen un núcleo en el que se guarda el material genético o ADN, que permite a este grupo de células realizar funciones complejas y además guardar los rasgos hereditarios de los seres vivos. Por ejemplo, guarda información sobre nuestro color de ojos, tono de piel y las características que nos permiten parecernos a nuestros padres.</p>
+
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <p><strong>Objetivo de aprendizaje:</strong> analizar un texto científico e identificar elementos importantes para comprender el tema.</p>
+                    <p><strong>Enunciado:</strong> de acuerdo con lo que aprendiste en el texto, responde las siguientes preguntas.</p>
+                    <p><strong>Duración:</strong> 30 minutos</p>
+                </div>
+                <div class="jpit-activities-check" id="falso-verdadero" data-act-id="3_check" data-act-title="Falso o verdadero">
+                    <words>
+                        <li data-val="true">La célula es la unidad fundamental de los seres vivos.</li>
+                        <li>Las células procariotas tienen un núcleo definido.</li>
+                        <li data-val="true">En las células eucariotas, el ADN se guarda en el núcleo.</li>
+                        <li data-val="true">El ADN guarda los rasgos hereditarios de los seres vivos.</li>
+                        <li data-val="true">Las bacterias son organismos unicelulares.</li>
+                        <li>Los organismos multicelulares o pluricelulares están constituidos por una célula.</li>
+                    </words>
+                    <div class="board">
+                        <div class="check_left">
+                            <div class="play">
+                                <p>Responde si es falso o verdadero</p>
+                                <div class="word_content"> </div>
+                                <div class="buttons">
+                                    <button class="yes general">Verdadero</button>
+                                    <button class="not general">Falso</button>
+                                </div>
+                            </div>
+                            <div class="box_conclution">
+                                <h3>¡Ha finalizado!</h3>
+                                
+                                <div class="buttons">
+                                    <button class="general reload">Vuelve a intentarlo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="check_right">
+                            <div class="box_result">
+                                <div class="correct">
+                                    <div class="hits">0</div>
+                                    <div class="text">Aciertos</div>
+                                </div>
+                                <div class="wrong">
+                                    <div class="miss">0</div>
+                                    <div class="text">Desaciertos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subpage">
+                <h3>2.3 Organismos unicelulares y organismos pluricelulares</h3>
+                <h4>Características de los organismos unicelulares.</h4>
+                <ul class="data_list">
+                    <li><cite>Viven en todos los ecosistemas.</cite></li>
+                    <li><cite>Tienen una sola célula.</cite></li>
+                    <li><cite>Son organismos microscópicos.</cite></li>
+                    <li><cite>Existen millones de organismos unicelulares en los ecosistemas. Son tantos que incluso superan a los organismos pluricelulares.</cite></li>
+                    <li><cite>Son de los primeros organismos que habitaron el mundo.</cite></li>
+                    <li><cite>Se reproducen <strong>asexualmente.</strong></cite></li>
+                    <li><cite>Forman grupos de colonias.</cite> (Organismos unicelulares y multicelulares, 2019) </li>
+                </ul>
+                <h4>Ejemplos de organismos unicelulares</h4>
+                <ul class="data_list">
+                    <li>La ameba.</li>
+                    <li>Las bacterias.</li>
+                    <li>Las diatomeas.</li>
+                    <li>Las microalgas.</li>
+                    <li>La levadura.</li>
+                    <li>El paramecio.</li>
+                    <li>La euglena.</li>
+                    <li>Los protozoos.</li>
+                </ul>
+                <h4>Características de los organismos multicelulares</h4>
+                <ul class="data_list">
+                    <li><cite>Son células que tienen ADN guardado en el núcleo.</cite></li>
+                    <li><cite>Viven en todos los ecosistemas.</cite></li>
+                    <li><cite>Son células que están relacionadas entre sí y se necesitan mutuamente.</cite></li>
+                    <li><cite>Son organismos macroscópicos.</cite></li>
+                    <li><cite>Son organismos que tienen múltiples células.</cite></li>
+                    <li><cite>Inicialmente surgen de una única célula que se multiplica a través de la mitosis o meiosis. </cite>(Organismos unicelulares y multicelulares, 2019)</li>
+                </ul>
+                <h4>Ejemplos de organismos pluricelulares</h4>
+                <ul class="data_list">
+                    <li>El ser humano.</li>
+                    <li>El cangrejo.</li>
+                    <li>El delfín.</li>
+                    <li>El trigo.</li>
+                    <li>Los árboles.</li>
+                    <li>La gallina.</li>
+                    <li>La rana.</li>
+                    <li>El elefante.</li>
+                </ul>
+                <p>Ahora vamos a practicar y a fortalecer nuestros conocimientos.</p>
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <p><strong>Objetivo de aprendizaje:</strong> identificar los organismos unicelulares y pluricelulares.</p>
+                    <p><strong>Enunciado:</strong> de acuerdo con lo aprendido sobre organismos unicelulares y pluricelulares, clasifica a cuál de los dos grupos corresponde cada carta.</p>
+                    <p><strong>Duración:</strong> 15 minutos</p>
+                </div>
+
+                <div id="uni-pluri" class="jpit-activities-quiz" data-act-title="Unicelular o pluricelular" data-act-id="4_uni-pluri">
+                    <question type="simplechoice">
+                        <description>
+                            <p>Paramecio</p>
+                            <div class="imagen paramecio"></div>
+                        </description>
+                        <ul>
+                            <li data-response="true">Unicelular</li>
+                            <li>Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Diatomeas</p>
+                            <div class="imagen diatomeas"></div>
+                        </description>
+                        <ul>
+                            <li data-response="true">Unicelular</li>
+                            <li>Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Ameba</p>
+                            <div class="imagen ameba"></div>
+                        </description>
+                        <ul>
+                            <li data-response="true">Unicelular</li>
+                            <li>Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Euglena</p>
+                            <div class="imagen euglena"></div>
+                        </description>
+                        <ul>
+                            <li data-response="true">Unicelular</li>
+                            <li>Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Protozoos</p>
+                            <div class="imagen protozoos"></div>
+                        </description>
+                        <ul>
+                            <li data-response="true">Unicelular</li>
+                            <li>Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Algas</p>
+                            <div class="imagen algas"></div>
+                        </description>
+                        <ul>
+                            <li>Unicelular</li>
+                            <li data-response="true">Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Perro</p>
+                            <div class="imagen perro"></div>
+                        </description>
+                        <ul>
+                            <li>Unicelular</li>
+                            <li data-response="true">Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Rana</p>
+                            <div class="imagen rana"></div>
+                        </description>
+                        <ul>
+                            <li>Unicelular</li>
+                            <li data-response="true">Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Elefante</p>
+                            <div class="imagen elefante"></div>
+                        </description>
+                        <ul>
+                            <li>Unicelular</li>
+                            <li data-response="true">Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Flores</p>
+                            <div class="imagen flores"></div>
+                        </description>
+                        <ul>
+                            <li>Unicelular</li>
+                            <li data-response="true">Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Árboles</p>
+                            <div class="imagen arboles"></div>
+                        </description>
+                        <ul>
+                            <li>Unicelular</li>
+                            <li data-response="true">Pluricelular</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description>
+                            <p>Humanos</p>
+                            <div class="imagen humanos"></div>
+                        </description>
+                        <ul>
+                            <li>Unicelular</li>
+                            <li data-response="true">Pluricelular</li>
+                        </ul>
+                    </question>
+                    <div class="box_end"></div>
+                </div>
+
+            </div>
+            <div class="subpage">
+                <h3>2.4 Estructura celular</h3>
+                <p>En los capítulos y actividades anteriores aprendiste sobre los tipos de células con varios ejemplos de ellas. Sin embargo, es importante que también conozcas la estructura de una célula y las partes que la conforman.</p>
+                <p>Para empezar, debes saber que las células pueden ser muy diferentes: algunas son alargadas, mientras que otras son rectangulares o redondas. Cuando los científicos han observado con detenimiento las células en el microscopio, se han dado cuenta que tienen características comunes como, por ejemplo, una envoltura llamada <strong>membrana celular,</strong> que sirve para delimitar y proteger la célula. Esta membrana sirve como una barrera protectora que permite regular el paso de sustancias entre el interior y el exterior de la célula.</p>
+                <p>Dentro de la membrana celular hay un líquido pegajoso llamado <strong>citoplasma,</strong> que tiene como función albergar las pequeñas estructuras con las que funciona la célula y que se conocen como <strong>orgánulos.</strong> El citoplasma contiene numerosas sustancias que realizan diferentes reacciones químicas de la célula.</p>
+                <p>Finalmente, en el interior de cada célula y en algún punto de su citoplasma, hay una zona más oscura que se llama <strong>núcleo.</strong> Su función es proteger el ADN, es decir, el material hereditario de la célula. Casi todas las células, a excepción de los microorganismos llamados bacterias y arqueas, tienen un núcleo en el que está guardado y protegido su material hereditario.</p>
+                <p>Todas las células animales y vegetales tienen los tres componentes básicos mencionados en los párrafos anteriores, pero no son los únicos, pues tienen otras estructuras que se encargan de funciones tales como alimentarse, respirar y deshacerse de los desechos. A continuación, podrás ver la estructura celular de los tres tipos de células que has estudiado hasta el momento.</p>
+
+                <div class="box-text link" label="ENLACE DE AMPLIACIÓN">
+                    <p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=Ps54eXe8YHY" target="_blank">La célula y sus partes.</a></p>
+                    <p><strong>Duración:</strong> 3:53minutos</p>
+                    <p><strong>Enunciado:</strong> en este video puedes observar las partes de la célula. </p>
+                </div>
+            </div>
+            <div class="subpage">
+                <div class="box-text connection">
+                    <p>Observa con mucho detalle la imagen, identifica qué tienen de diferente cada una de las células para que puedas realizar la siguiente actividad.</p>
+                </div>
+                <div class="box_media">
+                    <img src="content/tipos-celulares.jpg" alt="Tipos de celulas" />
+                    <div class="about">
+                        Imagen 1. Tomado de: Tipos de células [Ilustración] por A, Porto. 2014. Wikimedia Commons. CC BY-SA 3.0.
+                    </div>
+                </div>
+
+                <div id="diferencia" class="box-text activity" label="Actividad de aprendizaje">
+                    <p><strong>Objetivo de aprendizaje:</strong> identificar en qué se diferencian las células procariotas de las eucariotas.</p>
+                    <p><strong>Enunciado:</strong> de acuerdo con lo que observaste en la imagen anterior, marca la respuesta correcta.</p>
+                    <p><strong>Duración:</strong> 30 minutos</p>
+                </div>
+
+                <div class="jpit-activities-quiz" data-act-title="Analiza la imagen" data-act-id="5_cuestionario">
+                    <question type="simplechoice">
+                        <description><p>La diferencia entre célula procariota y célula eucariota <strong>es que la célula eucariota</strong> presenta:</p></description>
+                        <ul>
+                            <li>Citoplasma.</li>
+                            <li>Vacuola.</li>
+                            <li data-response="true">Membrana celular.</li>
+                            <li>Membrana nuclear.</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description><p>Un orgánulo <strong>que solo</strong> se encuentra en la célula vegetal es:</p></description>
+                        <ul>
+                            <li>Núcleo.</li>
+                            <li>Mitocondria.</li>
+                            <li>Ribosomas.</li>
+                            <li data-response="true">Pared celular.</li>
+                        </ul>
+                    </question>
+                </div>
+            </div>
+        </section>
+
+        <section id="pag-experimentemos" ptitle="3. Experimentemos en casa">
+            <div class="subpage">
+                <p><strong>Duración: 1 hora y 30 minutos</strong></p>
+                <p>Para realizar el experimento necesitas:</p>
+                <ul class="data_list">
+                    <li>1 plato.</li>
+                    <li>1 huevo.</li>
+                    <li>Dulces o elementos pequeños que tengas en casa.</li>
+                    <li>Colbón.</li>
+                </ul>
+                <p>Antes de hacer el experimento, responde:</p>
+                <ul class="data_list">
+                    <li>¿Será el huevo una célula? ¿por qué?</li>
+                </ul>
+                <h4>Realiza los siguientes pasos</h4>
+                <p>Parte el huevo, deposítalo en el plato y responde las siguientes preguntas:</p>
+                <ul class="data_list">
+                    <li>¿Qué observas? </li>
+                    <li>¿Qué parte de la célula representará la clara y que parte la yema? ¿qué otros elementos de la célula puedes ver en el huevo?</li>
+                </ul>
+                <p>En una hoja de bloc vas a diseñar tu propia célula con algunos alimentos, dulces o elementos pequeños que tengas en casa.</p>
+                <p>Haz las mitocondrias, ribosomas, citoplasmas, nucléolos y todos los elementos de la célula. Cuando termines tu creación, vas a tomar fotos o a realizar un video explicando la célula que hiciste. Compártelo en nuestra plataforma de clase.</p>
+            </div>
+        </section>
+
+        <section id="pag-profundicemos" ptitle="4. Profundicemos">
+            <div class="subpage">
+                <p>Ya sabes que hay células animales y células vegetales. Ahora vas a estudiar muy bien cómo está formada la célula animal, cuáles son sus partes y la función que cumple cada una.</p>
+                <p>Es muy importante que leas y analices la función que cumple cada parte de la célula, lo vas a necesitar para poner a prueba tus conocimientos en la siguiente actividad.</p>
+                <div class="box-text example" label="Conozcamos la célula">
+                    <p><strong>Objetivo de aprendizaje:</strong> comprender que los seres vivos están formados por células y que la estructura de cada tipo de célula ayuda a cumplir una función específica.</p>
+                    <p><strong>Enunciado:</strong> en la siguiente imagen encuentras una célula animal, vas a dar clic en cada uno de los números que hay a su alrededor para estudiar muy bien cada una de las partes de la célula y sus funciones. Esta información la vas a necesitar para poner a prueba tus conocimientos.</p>
+                    <p><strong>Duración:</strong> 60 minutos</p>
+                </div>
+                <div class="box_media">
+                    <div class="celula">
+                        <button class="wf-content-controler nucleolo" data-content="#nucleolo">1</button>
+                        <button class="wf-content-controler nucleo" data-content="#nucleo">2</button>
+                        <button class="wf-content-controler ribosoma" data-content="#ribosoma">3</button>
+                        <button class="wf-content-controler vesicula" data-content="#vesicula">4</button>
+                        <button class="wf-content-controler reticulo" data-content="#reticulo">5</button>
+                        <button class="wf-content-controler aparato" data-content="#aparato">6</button>
+                        <button class="wf-content-controler citoesqueleto" data-content="#citoesqueleto">7</button>
+                        <button class="wf-content-controler reticulo_liso" data-content="#reticulo_liso">8</button>
+                        <button class="wf-content-controler mitocondria" data-content="#mitocondria">9</button>
+                        <button class="wf-content-controler vacuola" data-content="#vacuola">10</button>
+                        <button class="wf-content-controler citoplasma" data-content="#citoplasma">11</button>
+                        <button class="wf-content-controler lisosoma" data-content="#lisosoma">12</button>
+                        <button class="wf-content-controler centriolos" data-content="#centriolos">13</button>
+
+                        <!-- contenido -->
+                        <div id="nucleolo" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/nucleolo.jpg" alt="Nucléolo" />
+                                <div class="about">Imagen tomada de Wikimedia Commons. CC BY-SA 2.5.</div>
+                            </div>
+                            <div>
+                                <p><cite>La función principal del nucléolo es la transcripción del ARN ribosomal y el posterior procesamiento y ensamblaje de los pre-componentes que formarán los ribosomas</cite> (Wikipedia, 2020).</p>
+                            </div>
+                        </div>
+                        <div id="nucleo" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/nucleo.png" alt="Núcleo" />
+                                <div class="about">Imagen de OpenClipart-Vectors en Pixabay.</div>
+                            </div>
+                            <div>
+                                <p>La principal función del núcleo es controlar la genética y mediar en la forma en la que se duplica el ADN. En el núcleo se guardan los genes en forma de cromosomas.</p>
+                            </div>
+                        </div>
+                        <div id="ribosoma" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/ribosoma.png" alt="Ribosoma" />
+                                <div class="about">Imagen del European Bioinformatics Institute en Wikipedia.</div>
+                            </div>
+                            <div>
+                                <p><cite>El ribosoma lee el ARN y enlaza los aminoácidos suministrados por los ARN de transferencia a la proteína en crecimiento</cite> (Wikipedia, 2020). </p>
+                            </div>
+                        </div>
+                        <div id="vesicula" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/lacelula.png" alt="Vesícula" />
+                            </div>
+                            <div>
+                                <p>Las vesículas almacenan, transportan o digieren productos y residuos de la célula. Son una herramienta fundamental para la organización del metabolismo.</p>
+                            </div>
+                        </div>
+                        <div id="reticulo" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/reticulo.png" alt="Retículo endoplasmático rugoso" />
+                                <div class="about">Imagen de BruceBlaus en Wikipedia. CC BY 3.0.</div>
+                            </div>
+                            <div>
+                                <p><cite>El retículo endoplasmático rugoso participa en la elaboración de todas las proteínas que deben empacarse o trasladarse a la membrana plasmática o de la membrana de algún orgánulo </cite>(Wikipedia, 2020).</p>
+                            </div>
+                        </div>
+                        <div id="aparato" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/aparato.png" alt="Aparato de Golgi" />
+                                <div class="about">Imagen de Kelvinsong en Wikipedia. CC BY 3.0.</div>
+                            </div>
+                            <div>
+                                <p><cite>Se encarga de la modificación, distribución y envío de macromoléculas en la célula. Modifica proteínas y lípidos (grasas) que han sido sintetizados previamente tanto en el retículo endoplasmático rugoso como en el liso y los etiqueta para enviarlos a donde corresponda, ya sea fuera o dentro de la célula. </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                        <div id="citoesqueleto" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/citoesqueleto.jpg" alt="Citoesqueleto (microtúbulos)" />
+                                <div class="about">Imagen tomada de Wikimedia Commons.</div>
+                            </div>
+                            <div>
+                                <p><cite>Es un entramado tridimensional de proteínas que provee soporte interno en las células. Organiza las estructuras internas e interviene en los fenómenos de transporte, tráfico y división celular </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                        <div id="reticulo_liso" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/reticulo_liso.png" alt="Retículo endoplasmático liso" />
+                                <div class="about">Imagen de Mariana Ruiz en Wikimedia Commons.</div>
+                            </div>
+                            <div>
+                                <p><cite>El retículo endoplasmático liso está involucrado en la detoxificación, la síntesis de lípidos y actúa como reservorio intracelular de calcio  </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                        <div id="mitocondria" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/mitocondria.png" alt="Mitocondria" />
+                                <div class="about">Imagen de Kelvinsong en Wikipedia</div>
+                            </div>
+                            <div>
+                                <p><cite>La principal función de las mitocondrias es la oxidación de metabolitos. La mitocondria almacena sustancias como iones, agua, y algunas partículas como restos de virus y proteínas  </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                        <div id="vacuola" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/vacuola.jpg" alt="Vacuola" />
+                                <div class="about">Imagen de Mnolf en Wikipedia. CC BY-SA 3.0</div>
+                            </div>
+                            <div>
+                                <p><cite>La función de las vacuolas en la célula animal es actuar como un lugar donde se almacenan proteínas. La vacuola permite mantener a la célula hidratada </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                        <div id="citoplasma" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/citoplasma.png" alt="Citoplasma" />
+                                <div class="about">Imagen de Mike Jones en Wikimedia Commons. CC BY-SA 2.5</div>
+                            </div>
+                            <div>
+                                <p><cite>Su función es albergar los orgánulos celulares y contribuir al movimiento de estos. El citoplasma es la sede de muchos de los procesos metabólicos que se dan en las células </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                        <div id="lisosoma" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/lisosoma.png" alt="Lisosoma" />
+                                <div class="about">Imagen de Alejandro Porto en Wikimedia Commons. CC BY-SA 3.0</div>
+                            </div>
+                            <div>
+                                <p><cite>La función de los lisosomas en la célula es ayudarla a digerir tanto sustancias externas como aquellas que ya no necesita. Los lisosomas transforman las grasas, las proteínas y los ácidos nucleicos </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                        <div id="centriolos" class="wf-content">
+                            <div class="box_media">
+                                <img src="content/centrosoma.png" alt="Centríolos" />
+                                <div class="about">Imagen de Kelvinsong en Wikipedia. CC BY 3.0.</div>
+                            </div>
+                            <div>
+                                <p><cite>Contribuyen al mantenimiento de la forma de la célula, transportan orgánulos y partículas en el interior de la célula </cite>(Wikipedia, 2020)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about">
+                        Imagen 2. <br />
+                        Tomado de: Diagrama de una célula animal [Ilustración] por MesserWoland y Szczepan1990. 2006.<br />
+                        Wikimedia Commons. CC BY-SA 3.0.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pag-prueba" ptitle="5. Ponte a prueba">
+            <div class="subpage">
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <p><strong>Objetivo de aprendizaje:</strong> evaluar los conocimientos adquiridos por los estudiantes sobre la temática “la célula”.</p>
+                    <p><strong>Enunciado:</strong> a continuación, encuentras un cuestionario de preguntas responde teniendo en cuenta lo aprendido en esta lección. Selecciona la respuesta correcta para cada pregunta. Muchos éxitos, recuerda: cree en ti, tú puedes.</p>
+                    <p><strong>Duración:</strong> 30 minutos</p>
+                </div>
+                <div class="jpit-activities-quiz" data-act-title="Ponte a prueba" data-act-id="6_cuestionario">
+                    <question type="simplechoice">
+                        <description><p>¿Qué es la célula?</p></description>
+                        <ul>
+                            <li data-response="true">La célula es la unidad fundamental de los seres vivos que contiene todo el material necesario para mantener los procesos vitales como crecimiento, nutrición y reproducción.</li>
+                            <li>La célula forma los tejidos y órganos de los seres vivos.</li>
+                            <li>Es una parte esencial de las bacterias.</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description><p>¿Cuál es la función del núcleo?</p></description>
+                        <ul>
+                            <li data-response="true">Controlar la expresión genética y permitir la replicación del ADN.</li>
+                            <li>Albergar los demás organelos celulares.</li>
+                            <li>Permitir la entrada y salida de sustancias de la célula hacia el medio.</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description><p>¿Qué son los organismos multicelulares o pluricelulares?</p></description>
+                        <ul>
+                            <li>Los organismos que solo poseen una célula.</li>
+                            <li data-response="true">Los organismos que poseen más de una célula. Sus células se especializan, realizan funciones diferentes y forman tejidos y órganos.</li>
+                            <li>Las amebas.</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description><p>¿Por qué es importante el ADN?</p></description>
+                        <ul>
+                            <li>El ADN permite el movimiento de la célula.</li>
+                            <li>El ADN es el encargado de permitir el intercambio de sustancias entre las células.</li>
+                            <li data-response="true">El ADN contiene la información que le permite a las células realizar sus funciones y además guarda los rasgos hereditarios de los seres vivos.</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description><p>¿Qué tipo de células tienen las bacterias?</p></description>
+                        <ul>
+                            <li>Células eucariotas.</li>
+                            <li data-response="true">Células procariotas.</li>
+                            <li>No tienen células.</li>
+                        </ul>
+                    </question>
+                    <question type="simplechoice">
+                        <description><p>¿Qué tienen en común los seres vivos?</p></description>
+                        <ul>
+                            <li data-response="true">Todos los seres vivos estamos formados de células. Ya sea que seamos organismos unicelulares o pluricelulares; o que por el contrario tengamos células procariotas o eucariotas.</li>
+                            <li>Todos los seres vivos nacemos y nos reproducimos.</li>
+                            <li>Todos los seres vivos tenemos células eucariotas, ya que solo los seres multicelulares son considerados “seres vivos”.</li>
+                        </ul>
+                    </question>
+                </div>
+                <div class="box-text link" label="EXTENDIENDO EL SABER">
+                    <p>Si deseas saber más sobre este maravilloso mundo de las células te propongo que sigas este camino.</p>
+                    <br />
+                    <p><strong>Recurso educativo:</strong> <a href="https://www.youtube.com/watch?v=aoj9oTvVJ8o" target="_blank">La célula: tipos, estructura, funciones y partes.</a></p>
+                    <p><strong>Enunciado:</strong> entra al enlace web que te sugiero y sigue aprendiendo del tema.</p>
+                    <br />
+                    <p><strong>Recurso educativo:</strong> <a href="https://www.cerebriti.com/juegos-de-ciencias/partes-de-la-celula" target="_blank">Juego interactivo sobre la célula.</a></p>
+                    <p><strong>Enunciado:</strong> diviértete jugando y aprende más sobre la célula.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="not_print">
+        <div class="measuring-progress" data-type="horizontal"></div>
+
+        <nav label="General" class="globals2">
+            <menu>
+                <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i>
+                    <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i>
+                    <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i>
+                    <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+            </menu>
+        </nav>
+
+        <div id="subpages_menu">
+            <div class="button" previous-page></div>
+            <div id="page_number"></div>
+            <ul class="button" subpages-menu></ul>
+            <div class="button" next-page></div>
+        </div>
+
+    </footer>
+
+</div>
+
+<div id="results_page" style="display:none;">
+    <h2>Resumen de su avance en la lectura del documento</h2>
+    <h3>Páginas visitadas</h3>
+    <p>En verde, aquellas páginas que ya ha visitado.</p>
+    <div id="results_page_visited" class="container"></div>
+    <br class="clear" />
+    <h3>Actividades de aprendizaje</h3>
+    <div id="results_page_activities"></div>
+</div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Astrid Johanna Martínez</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>María Elicenia Monsalve Upegui</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Juan Fernando Bernal</cite><br />
+                <cite>Leonardo Pérez Marulanda</cite><br />
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>Nota: Si desea usar este recurso con fines comerciales, debe prescindir del video realizado por Colombia Aprende llamado “Formando un panal” del contenido final.</p>
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>    
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    Aparato de Golgi. (6 de abril de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Aparato_de_Golgi&oldid=124959264" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Audesirk, T., Ausderick, G. y Byers, B. (2003). <cite>Biología 1: unidad en la diversidad</cite>. Prentice Hall.
+                </li>
+                <li>
+                    Azcón-Bieto, J., Talón, M. (2008). <cite>Fundamentos de fisiología vegetal</cite>. (2da ed.). Mc Graw Hill.
+                </li>
+                <li>
+                    BruceBlaus. (2013). <cite>Endoplasmic Reticulum </cite>[Ilustración]. Wikipedia. <a href="https://es.wikipedia.org/wiki/Archivo:Blausen_0350_EndoplasmicReticulum.png" target="_blank">https://es.wikipedia.org/wiki/[...]
+                </li>
+                <li>
+                    Centriolo. (18 de abril de 2020) En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Centriolo&oldid=125289771" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Citoesqueleto. (16 de marzo de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Citoesqueleto&oldid=124285792" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Citoplasma. (8 de abril de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Citoplasma&oldid=125000507" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Citosol. (10 de marzo de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Citosol&oldid=124153707" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Colombia Aprende. (s.f). Formando un panal. [video]. Colombia Aprende. <a href="http://aprende.colombiaaprende.edu.co/sites/default/files/naspublic/ContenidosAprender/G_4/S/S_G04_U03_L01/S_G04_U03_L01_01_01.html" target="_blank">http://aprende.colombiaaprende.edu.co/sites/[...]</a>
+                </li>
+                <li>
+                    Deuterostome. (2011). <cite>Euglena</cite> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Euglena_sp.jpg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Don Hamerman. (2004). <cite>Potrait of Carl Woese</cite> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Carl_Woese.jpg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Enciclopedia de Ejemplos. (2019). <cite>Organismos Unicelulares y Multicelulares</cite>. <a href="https://www.ejemplos.co/25-ejemplos-de-organismos-unicelulares-y-multicelulares/" target="_blank">https://www.ejemplos.co/25[...]</a>
+                </li>
+                <li>
+                    European Bioinformatics Institute. (s.f.). <cite>Cartoon representation of the molecular structure of protein</cite> [Ilustración]. Wikipedia. <a href="https://es.wikipedia.org/wiki/Archivo:PDB_2jq7_EBI.png" target="_blank">https://es.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Fernández, R. (1996). <cite>Biólogos Ciencias Naturales y de la Salud 2. Educación Básica Primaria</cite>. Editorial Voluntad S.A.
+                </li>
+                <li>
+                    Fleuron. (s.f.). Fleuron from book [Dibujo]. Fleuron. <a href="https://cutt.ly/DtVWfmw" target="_blank">https://cutt.ly/[...]</a>
+                </li>
+                <li>
+                    Frank Fox. (2011). <cite>Volvox is a genus of multicellular green algae</cite> [Fotografía]. Wikipedia. <a href="https://es.m.wikipedia.org/wiki/Archivo:Mikrofoto.de-volvox-4.jpg" target="_blank">https://es.m.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Geralt. (2014). <cite>Estructura del cuerpo humano</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/anatom%C3%ADa-mujer-humano-cuerpo-piel-254120/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Gustav VH. (2007). <cite>Robert Hooke</cite> [Retrato en lienzo]. Wikipedia. <a href="https://es.m.wikipedia.org/wiki/Archivo:Robert_Hooke_portrait.jpg" target="_blank">https://es.m.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Internet Archive Book Images. (1932). <cite>Antony van Leeuwenhoek and his "Little animals"</cite> [Pintura]. Flickr. <a href="https://www.flickr.com/photos/internetarchivebookimages/19718593096/" target="_blank">https://www.flickr.com/photos/[...]</a>
+                </li>
+                <li>
+                    Jones, M. (2014). <cite>Nuclear Pore</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:NuclearPore_crop-it.svg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Kaz. (2013). <cite>Kusky Siberiano</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/perro-husky-husky-siberiano-164372/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Kelvinsong. (2012). <cite>El aparato de Golgi</cite> [Ilustración]. Wikipedia. <a href="https://es.wikipedia.org/wiki/Archivo:Golgi_apparatus_(borderless_version)-es.svg" target="_blank">https://es.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Kelvinsong. (2012). <cite>El centrosoma</cite> [Ilustración]. Wikipedia. <a href="https://commons.wikimedia.org/wiki/File:Centrosome_(standalone_version)-es.svg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Kelvinsong. (2012). <cite>La mitocondria</cite> [Ilustración]. Wikipedia. <a href="https://es.m.wikipedia.org/wiki/Archivo:Mitochondrion_(standalone_version)-es.svg" target="_blank">https://es.m.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Laurentmarx. (2014). <cite>Elefante</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/elefante-safari-animales-defensa-1421167/" target="_blank">https://pixabay.com/es/photos/[...]</a>
+                </li>
+                <li>
+                    Lisosoma. (28 de marzo de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Lisosoma&oldid=124622806" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Manfredrichter. (2017). <cite>Flores</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/almohada-azul-jard%C3%ADn-de-plantas-2219594/" target="_blank">https://pixabay.com/es/photos/[...]</a>
+                </li>
+                <li>
+                    MesserWoland y Szczepan1990. (2006). <cite>Diagrama de una célula animal</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Biological_cell.svg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Mitocondria. (16 de abril de 2020) En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Mitocondria&oldid=125227752" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Mkpstees. (2016). <cite>Diatomea</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/photos/diatomea-algas-dise%C3%B1o-cielo-1343736/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Mnolf. (2004). <cite>Rhoeo Discolor - Plasmolysis</cite> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Rhoeo_Discolor_-_Plasmolysis.jpg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Núcleo celular. (13 de abril de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/wiki/N%C3%BAcleo_celular" target="_blank">https://es.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Nucleolo. (7 de abril de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Nucl%C3%A9olo&oldid=124980617" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    OpenClipart-Vectors. (2013). <cite>Célula</cite>[Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/celular-n%C3%BAcleo-de-la-c%C3%A9lula-156402/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Perucultural Académico. (2017, 24 de abril). <cite>La teoría celular</cite> [video]. YouTube. <a href="https://www.youtube.com/watch?v=4inO1AA0yxg" target="_blank">https://www.youtube.com/watch[...]</a>
+                </li>
+                <li>
+                    Porto, A (2014). <cite>Bombeo de protones a través de la membrana del lisosoma</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Lisosoma.png" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Porto, A. (2014). <cite>Tipos de células</cite> [Ilustración]. Wikimedia Commons. <a href="https://es.wikipedia.org/wiki/Archivo:Tipos_de_celulas.png" target="_blank">https://es.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Proyecto Agua. (2009). <cite>Amebas luchadoras</cite> [Fotografía]. Flickr. <a href="https://www.flickr.com/photos/microagua/3260502753" target="_blank">https://www.flickr.com/photos/[...]</a>
+                </li>
+                <li>
+                    Proyecto Agua. (2017). <cite>Paramecium Trichium</cite> [Fotografía]. Flickr. <a href="https://www.flickr.com/photos/microagua/36385158866/" target="_blank">https://www.flickr.com/photos/[...]</a>
+                </li>
+                <li>
+                    Pxhere. (2017). <cite>Protozoos flagelados</cite> [Fotografía]. Pxhere. <a href="https://pxhere.com/es/photo/443617" target="_blank">https://pxhere.com/es/[...]</a>
+                </li>
+                <li>
+                    Rafaminu~commonswiki. (2007). <cite>Célula</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Celula.jpg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Ramírez, H. (2013). <cite>Biología general</cite>. Universidad Nacional de Colombia.
+                </li>
+                <li>
+                    Retículo endoplasmático liso. (28 de marzo de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Ret%C3%ADculo_endoplasm%C3%A1tico_liso&oldid=124623144" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Retículo endoplasmático rugoso. (6 de abril de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Ret%C3%ADculo_endoplasm%C3%A1tico_rugoso&oldid=124919175" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Ribosoma. (5 de abril de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Ribosoma&oldid=124917067" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Robert Hooke (2009). <cite>The cork described in “Micrographia” by Robert Hooke</cite> [Dibujo]. Wikipedia. <a href="https://commons.wikimedia.org/wiki/File:Cork_Micrographia_Hooke.png" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Ruiz, M. (2007). <cite>Endomembrane system diagram</cite>[Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Endomembrane_system_diagram_fr.svg#mw-jump-to-license" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Suju. (2016). <cite>Rana</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/rana-ex%C3%B3ticas-cerrar-terrario-1335022/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Tama66. (2017). <cite>Árboles</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/avenida-%C3%A1rboles-de-distancia-a-pie-2215317/" target="_blank">https://pixabay.com/es/photos/[...]</a>
+                </li>
+                <li>
+                    Teoría celular. (17 de abril de 2020) En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_celular" target="_blank">https://es.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Vacuola. (17 de abril de 2020). En <cite>Wikipedia</cite>. <a href="https://es.wikipedia.org/w/index.php?title=Vacuola&oldid=125275062" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Vallejo, C., Espitia, M., Estrada, E. y Ramírez, H. (2010). <cite>Genética vegetal</cite>. Universidad Nacional.
+                </li>
+                <li>
+                    Welcome Collection. (s.f.) <cite>Robert Hooke, Micrographia, detail: microscope</cite> [Dibujo]. Welcome Collection. <a href="https://wellcomecollection.org/works/e2bynyv4" target="_blank">https://wellcomecollection.org/works/[...]</a>
+                </li>
+                <li>
+                    Welcome Collection. (s.f.). <cite>Potrait of Theodor Schwann</cite> [Pintura]. Welcome Collection. <a href="https://wellcomecollection.org/works/vstzguu4?wellcomeImagesUrl=/indexplus/image/M0005626.html" target="_blank">https://wellcomecollection.org/works/[...]</a>
+                </li>
+                <li>
+                    Wikimedia Commons. (2006). <cite>Microtúbulos en verde</cite> [Fotografía]. Wikimedia Commons. <a href="https://es.wikipedia.org/wiki/Citoesqueleto#/media/Archivo:FluorescentCells.jpg" target="_blank">https://es.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Wikipedia. (2005). <cite>Potrait of Rudolf Virchow</cite> [Dibujo]. Wikipedia. <a href="https://es.m.wikipedia.org/wiki/Archivo:Rudolf_Virchow.jpg" target="_blank">https://es.m.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    Wikipedia. (2010). <cite>Potrait of Mattias Schleiden</cite> [Dibujo]. Wikipedia. <a href="https://es.m.wikipedia.org/wiki/Archivo:PSM_V22_D156_Matthias_Jacob_Schleiden.jpg" target="_blank">https://es.m.wikipedia.org/wiki/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button">Volver</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

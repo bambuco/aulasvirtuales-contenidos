@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Los ecosistemas y sus componentes</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Los ecosistemas y sus componentes</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="¿Qué sabes de los ecosistemas?" data-page="pag-sabe"></menuitem>
+                        <menuitem label="¿Qué es un ecosistema?" data-page="pag-ecos"></menuitem>
+                        <menuitem label="Factores bióticos y abióticos" data-page="pag-fact"></menuitem>
+                        <menuitem label="Vamos a jugar" data-page="pag-vamo"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <!--¿Qué sabes de los ecosistemas?-->
+            <section id="pag-sabe" ptitle="1. ¿Qué sabes de los ecosistemas?">
+
+                <div class="subpage">
+                    <span class="notmobile"><button class='iconsound button' data-sound='eco-au006-pc.mp3'></button></span>
+                    <span class="onlymobile"><button class='iconsound button' data-sound='eco-au006-movil.mp3'></button></span>
+                    <p>
+                        Queremos que en casa converses con tus padres o hermanos y les hagas las siguientes preguntas:
+                    </p>
+                    <ul class="data_list">
+                        <li>¿Sabes qué es un ecosistema?</li>
+                        <li>¿Quiénes viven en un ecosistema?</li>
+                        <li>¿Por qué son importantes los ecosistemas?</li>
+                        <li>¿En un lugar cerca de nuestra casa hay algún ecosistema?</li>
+                    </ul>
+                    <p>Ahora identifica los tipos de ecosistemas que existen en la naturaleza.</p>
+                    <div class="instruction" type="info"><span class="onlymobile">Toca </span><span class="notmobile">Pasa el ratón por </span>cada imagen para conocer su definición.</div>
+                    <div id="image_content">
+                        <div class="box_media">
+                            <div class="view-first">
+                                <img src="content/img_1.png" />
+                                <div class="view-content">
+                                    <p>Es un ecosistema terrestre en el que habitan especies como: animales, aves, plantas y otros seres vivos. <br /><button class='iconsound button' data-sound='eco-au007.mp3'></button></p>
+                                </div>
+                            </div>
+                            <div class="about">
+                                Imagen tomada de Paxala.
+                            </div>
+                        </div>
+                        <div class="box_end">
+                            <div class="view-first">
+                                <img src="content/img_2.png" />
+                                <div class="view-content">
+                                    <p>Es un ecosistema marino de agua salada en el que habitan especies como: peces, algas, corales, plantas, entre otros.<br /> <button class='iconsound button' data-sound='eco-au008.mp3'></button></p>
+                                </div>
+                            </div>
+                            <div class="about">
+                                Imagen tomada de Pxhere.
+                            </div>
+                        </div>
+                        <div class="box_end">
+                            <div class="view-first">
+                                <img src="content/img_3.png" />
+                                <div class="view-content">
+                                    <p>No es un ecosistema, es un alimento muy importante para el consumo humano.<br /><button class='iconsound button' data-sound='eco-au009.mp3'></button></p>
+                                </div>
+                            </div>
+                            <div class="about">
+                                Imagen de Emmagrau en Pixabay.
+                            </div>
+                        </div>
+                        <div class="box_end">
+                            <div class="view-first">
+                                <img src="content/img_4.png" />
+                                <div class="view-content">
+                                    <p>Es un ecosistema de agua dulce donde viven diversas especies como: peces, aves, plantas, entre otros. <br /><button class='iconsound button' data-sound='eco-au010.mp3'></button></p>
+                                </div>
+                            </div>
+                            <div class="about">
+                                Imagen tomada de Pxhere.
+                            </div>
+                        </div>
+                        <div class="box_end">
+                            <div class="view-first">
+                                <img src="content/img_5.png" />
+                                <div class="view-content">
+                                    <p>No es un ecosistema, es una hoja que ha caído de un árbol por el efecto del viento.<br /><button class='iconsound button' data-sound='eco-au011.mp3'></button></p>
+                                </div>
+                            </div>
+                            <div class="about">
+                                Imagen de Castleguard en Pixabay.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--¿Qué es un ecosistema?-->
+            <section id="pag-ecos" ptitle="2. ¿Qué es un ecosistema?">
+
+                <div class="subpage">
+                    <button class='iconsound button' data-sound='eco-au012.mp3'></button>
+                    <div class="box-text connection">
+                        <p>
+                            Para que tengas los conocimientos necesarios sobre el tema, estudia con tus padres o hermanos este diccionario de conceptos:
+                        </p>
+                    </div>
+                    <div class="instruction" type="info"><span class="onlymobile">Toca </span> <span class="notmobile">Haz clic en </span>la imagen para ver el concepto correspondiente.</div>
+                    <div id="image_content_2">
+                        <div class="box_media">
+                            <img class="wf-content-controler general" data-content="#ventana_img_6" src="content/img_6.png" />
+                            <div class="about">
+                                Imagen de Orlane Polanco en Wikimedia Commons.
+                            </div>
+                            <div id="ventana_img_6" class="wf-content">
+                                <p>
+                                    <strong>Medio ambiente:</strong> es el conjunto de elementos biológicos, físicos y químicos relacionados con las personas y el ambiente. El medio ambiente incluye los valores naturales, sociales y culturales que influyen en la vida presente y futura del ser humano. Esto quiere decir, que no se trata solo del espacio en que ocurre la vida, sino que también incluye a los seres vivos, el agua, el aire y las relaciones que existen entre estos elementos.
+                                </p>
+                                <div class="instruction" type="info"><span class="onlymobile">Toca </span> <span class="notmobile">Haz clic en </span>el botón <button class="iconsound button" data-sound="eco-au013.mp3"></button> para escuchar el concepto.</div>
+                            </div>
+                        </div>
+                        <div class="box_media">
+                            <img class="wf-content-controler general" data-content="#ventana_img_7" src="content/img_7.png" />
+                            <div id="ventana_img_7" class="wf-content">
+                                <p>
+                                    <strong>Ecosistema:</strong> es una comunidad formada por <strong>organismos vivos (bióticos)</strong> como los animales, las plantas, etc, que habitan un <strong>medio físico (elementos abióticos)</strong> como la tierra, el agua, entre otros y requieren del aire o la luz para vivir.
+                                </p>
+                                <div class="instruction" type="info"><span class="onlymobile">Toca </span> <span class="notmobile">Haz clic en </span>el botón <button class="iconsound button" data-sound="eco-au014.mp3"></button> para escuchar el concepto.</div>
+                            </div>
+                            <div class="about">
+                                Imagen de Solis 67 en Wikipedia.
+                            </div>
+                        </div>
+                        <div class="box_media">
+                            <img class="wf-content-controler general" data-content="#ventana_img_8" src="content/img_8.png" />
+                            <div id="ventana_img_8" class="wf-content">
+                                <p>
+                                    <strong>Ser vivo:</strong> son todos los organismos bióticos <strong>(vivos)</strong> que habitan el planeta tierra y los océanos. Los seres vivos cumplen unos ciclos importantes que son:  nacer, crecer, alimentarse, relacionarse con otros, reproducirse, envejecer y morir.
+                                </p>
+                                <div class="instruction" type="info"><span class="onlymobile">Toca </span> <span class="notmobile">Haz clic en </span>el botón <button class="iconsound button" data-sound="eco-au015.mp3"></button> para escuchar el concepto.</div>
+                            </div>
+                            <div class="about">
+                                Imagen de Innviertlerin en Pixabay.
+                            </div>
+                        </div>
+                        <div class="box_media">
+                            <img class="wf-content-controler general" data-content="#ventana_img_9" src="content/img_9.png" />
+                            <div id="ventana_img_9" class="wf-content">
+                                <p>
+                                    <strong>Flora:</strong> es el conjunto de plantas que son propias de un ecosistema, a estas se les llama plantas nativas.
+                                </p>
+                                <p>
+                                    Existe otro tipo de flora, la cual se introduce o se lleva a un ecosistema y es procedente de otro lugar.
+                                </p>
+                                <div class="instruction" type="info"><span class="onlymobile">Toca </span> <span class="notmobile">Haz clic en </span>el botón <button class="iconsound button" data-sound="eco-au016.mp3"></button> para escuchar el concepto.</div>
+                            </div>
+                            <div class="about">
+                                Imagen de David Mark en Pixabay.
+                            </div>
+                        </div>
+                        <div class="box_media">
+                            <img class="wf-content-controler general" data-content="#ventana_img_10" src="content/img_10.png" />
+                            <div id="ventana_img_10" class="wf-content">
+                                <p>
+                                    <strong>Fauna:</strong> son todas las especies animales que habitan el planeta tierra. Aunque cada país tiene su propia fauna.
+                                </p>
+                                <div class="instruction" type="info"><span class="onlymobile">Toca </span> <span class="notmobile">Haz clic en </span>el botón <button class="iconsound button" data-sound="eco-au017.mp3"></button> para escuchar el concepto.</div>
+                            </div>
+                            <div class="about">
+                                Imagen de Wasi1370 en Pixabay.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar los ciclos de vida de los seres vivos que hacen parte de un ecosistema.</p>
+                        <p><strong>Enunciado:</strong> escucha y arrastra el número de la imagen al concepto que corresponda con el ciclo de vida.<br /><button class="iconsound button" data-sound="eco-au018.mp3"></button></p>
+                    </div>
+                    <div id="arrastrar" class="jpit-activities-droppable" data-verify-type="target" data-act-id="2-arrastre" data-act-title="Identificar ciclos de vida" data-shuffle="false">
+
+                        <div class="conceptos">
+                            <span class="onlymobile"><div class="instruction" type="info">Mantén presionado por dos segundos el espacio en blanco de cada concepto para elegir el número de la imagen que corresponda.</div></span>
+                            <h4>Conceptos:</h4>
+                            <div class="instruction" type="info"><span class="onlymobile">Toca </span> <span class="notmobile">Haz clic en </span>el botón <button class="iconsound button"></button> para escuchar cada concepto.</div>
+                            <div class="concepto"><p>Crecen</p><button class="iconsound button" data-sound="eco-au019-2crecen.mp3"></button><div class="target" data-target-group="2"></div></div>
+                            <div class="concepto"><p>Se reproducen</p><button class="iconsound button" data-sound="eco-au019-5reproducen.mp3"></button><div class="target" data-target-group="5"></div></div>
+                            <div class="concepto"><p>Se relacionan con otros</p><button class="iconsound button" data-sound="eco-au019-4relacionan.mp3"></button><div class="target" data-target-group="4"></div></div>
+                            <div class="concepto"><p>Se alimentan</p><button class="iconsound button" data-sound="eco-au019-3alimentan.mp3"></button><div class="target" data-target-group="3"></div></div>
+                            <div class="concepto"><p>Nacen</p><button class="iconsound button" data-sound="eco-au019-1nacen.mp3"></button><div class="target" data-target-group="1"></div></div>
+                            <div class="concepto"><p>Envejecen y mueren</p><button class="iconsound button" data-sound="eco-au019-6mueren.mp3"></button><div class="target" data-target-group="6"></div></div>
+                        </div>
+                        <div class="imagenes">
+
+                            <div class="box_media imagen">
+                                <img src="content/img_11.png" alt="Ciclos de vida" />
+                                <div class="about">
+                                    Imagen de Kasman en Pixabay.
+                                </div>
+                                <div class="numero fijo">1</div>
+                                <div data-group="1" class="numero">1</div>
+                            </div>
+                            <div class="box_media imagen">
+                                <img src="content/img_12.png" alt="Ciclos de vida" />
+                                <div class="about">
+                                    Imagen de FamilyPhotoStudio en Pixabay.
+                                </div>
+                                <div class="numero fijo">2</div>
+                                <div data-group="2" class="numero">2</div>
+                            </div>
+                            <div class="box_media imagen">
+                                <img src="content/img_13.png" alt="Ciclos de vida" />
+                                <div class="about">
+                                    Imagen de JillWellington en Pixabay.
+                                </div>
+                                <div class="numero fijo">3</div>
+                                <div data-group="3" class="numero">3</div>
+                            </div>
+                            <div class="box_media imagen">
+                                <img src="content/img_14.png" alt="Ciclos de vida" />
+                                <div class="about">
+                                    Imagen de HaiRobe en Pixabay.
+                                </div>
+                                <div class="numero fijo">4</div>
+                                <div data-group="4" class="numero">4</div>
+                            </div>
+                            <div class="box_media imagen">
+                                <img src="content/img_15.png" alt="Ciclos de vida" />
+                                <div class="about">
+                                    Imagen de Free-Photos en Pixabay.
+                                </div>
+                                <div class="numero fijo">5</div>
+                                <div data-group="5" class="numero">5</div>
+                            </div>
+                            <div class="box_media imagen">
+                                            
+                                <img src="content/img_16.png" alt="Ciclos de vida" />
+                                <div class="about">
+                                    Imagen de Free-Photos en Pixabay.
+                                </div>
+                                <div class="numero fijo">6</div>
+                                <div data-group="6" class="numero">6</div>
+                            </div>
+                        </div>
+                        <div class="box_end">
+                            <feedback>
+                                <correct><img src="content/correcto.gif" title="Correcto" /><br />Ahora ya reconoces y puedes nombrar los factores bióticos y abióticos de un ecosistema.</correct>
+                                <wrong><img src="content/incorrecto.gif" title="Incorrecto" /><br />Intenta nuevamente para que logres tu objetivo.</wrong>
+                            </feedback>
+                        </div>
+                    </div>
+
+                    <div class="box-text link" label="ENLACE DE AMPLIACIÓN">
+                        <p>Para que conozcas y aprendas mucho más acerca del tema, visita el siguiente video.</p>
+                        <ul class="data_list">
+                            <li>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=K3xNO0oZo7Q" target="_blank">Los ecosistemas.</a>
+                            </li>
+                            <li>
+                                <strong>Duración:</strong> 3:12 minutos.
+                            </li>
+                            <li>
+                                <strong>Enunciado:</strong> en este video puedes ver diferentes ecosistemas y su importancia para el planeta Tierra. <br />
+                                <button class="iconsound button" data-sound="eco-au020.mp3"></button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--Los factores bióticos y abióticos de un ecosistema-->
+            <section id="pag-fact" ptitle="3. Los factores bióticos y abióticos de un ecosistema">
+
+                <div class="subpage">
+                    <button class="iconsound button" data-sound="eco-au021.mp3"></button>
+                    <div class="box-text connection">
+                        <p>
+                            Lee o escucha el siguiente texto en compañía de tus padres o hermanos.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <h4>Factores abióticos <button class="iconsound button" data-sound="eco-au022.mp3"></button></h4>
+                            <p>Son todos los fenómenos físicos (presión atmosférica, lluvia, aire, suelo, luz solar, etc.) y químicos (componentes de las rocas, minerales, las aguas dulces, las aguas saladas, etc.) que afectan a los organismos. Es importante tener claro que estos elementos no tienen vida.</p>
+                        </div>
+                        <div class="col-2">
+                            <h4>Factores bióticos <button class="iconsound button" data-sound="eco-au023.mp3"></button></h4>
+                            <p>Son los organismos vivos que determinan el funcionamiento, las interacciones y la forma de un ecosistema. Por ejemplo, la flora y la fauna de un lugar.</p>
+                        </div>
+                    </div>
+                    <div class="instruction" type="info">Hacer clic en el mapa para ampliar</div>
+                    <div class="box_media">
+                        <p><button class="iconsound button" data-sound="eco-au024.mp3"></button></p>
+                        <div class="expand-image" data-src="content/img_17.jpg" title="Mapa conceptual"></div>
+                    </div>
+                    <div class="box-text link" label="VAMOS A REFLEXIONAR">
+                        <ul class="data_list">
+                            <li>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=_tz3UcG2RRg" target="_blank">Michael Jackson – Earth Song.</a>
+                            </li>
+                            <li>
+                                <strong>Duración:</strong> 6:44 minutos.
+                            </li>
+                            <li>
+                                <strong>Enunciado:</strong> con este video se pretende que los estudiantes reflexionen sobre la importancia del medio ambiente para la vida en la Tierra y sobre el cuidado del hombre a los ecosistemas.
+                                <p><button class="iconsound button" data-sound="eco-au025.mp3"></button></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> reflexionar sobre la importancia de los ecosistemas.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> lee con tus padres o hermanos las siguientes preguntas y responde con tus propias palabras.
+                        </p>
+                        <p><button class="iconsound button" data-sound="eco-au026-enunciado.mp3"></button></p>
+                    </div>
+                    <div class="jpit-activities-form" data-save="true" data-require-all="true" data-act-title="Reflexionar sobre la importancia de los ecosistemas" data-act-id="3_formulario">
+                        <div class="sheet">
+                            <div class="sheet_body">
+                                <p>
+                                    1. ¿Por qué es importante el medio ambiente para los seres vivos?
+                                    <audio controls>
+                                        <source src="content/sounds/eco-au026-pregunta1.mp3" type="audio/mp3">
+                                        Su navegador no soporta el componente de audio
+                                    </audio>
+                                    <textarea name="¿Por qué es importante el medio ambiente para los seres vivos?" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right bottom" ></textarea>
+                                </p>
+                                <p>
+                                    2. Si se altera un factor abiótico como el agua en un ecosistema, ¿qué le podría pasar a los seres vivos que lo habitan?
+                                    <audio controls>
+                                        <source src="content/sounds/eco-au026-pregunta2.mp3" type="audio/mp3">
+                                        Su navegador no soporta el componente de audio
+                                    </audio>
+                                    <textarea name="Si se altera un factor abiótico como el agua en un ecosistema, ¿qué le podría pasar a los seres vivos que lo habitan?" class="tooltip" title="Escribe en este espacio tu respuesta" data-position-at="right bottom" ></textarea>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Vamos a jugar y a poner a prueba lo que aprendimos-->
+            <section id="pag-vamo" ptitle="4. Vamos a jugar y a poner a prueba lo que aprendimos">
+
+                <div class="subpage" id="sub_4_1">
+                    <p><button class="iconsound button" data-sound="eco-au027.mp3"></button></p>
+                    
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> diferenciar los factores bióticos (plantas y animales) de los abióticos (luz, agua, temperatura, suelo y aire) de un ecosistema.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> selecciona en cada elemento de la imagen, si es un factor biótico o abiótico.
+                        </p>
+                        <p><button class="iconsound button" data-sound="eco-au028.mp3"></button></p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col_2">
+                            <div class="box_media">
+                                <div class="imagen">
+                                    <div class="opcion abeja">1</div>
+                                    <div class="opcion agua">2</div>
+                                    <div class="opcion mariposas">3</div>
+                                    <div class="opcion suelo">4</div>
+                                    <div class="opcion flores">5</div>
+                                    <div class="opcion casa">6</div>
+                                    <div class="opcion arboles">7</div>
+                                    <div class="opcion cebras">8</div>
+                                    <div class="opcion mariquita">9</div>
+                                    <div class="opcion piedra">10</div>
+                                </div>
+                                <div class="about">
+                                    Imagen de Hasank4j3 en Pixabay.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_2">
+                            <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-title="Seleccionando si es un factor biótico o abiótico" data-act-id="4_1_cloze">
+                                <ol>
+                                    <li>La abeja <span><select><option data-response="true">Biótico</option><option>Abiótico</option></select></span></li>
+                                    <li>El agua <span><select><option>Biótico</option><option data-response="true">Abiótico</option></select></span></li>
+                                    <li>Las mariposas <span><select><option data-response="true">Biótico</option><option>Abiótico</option></select></span></li>
+                                    <li>El suelo <span><select><option>Biótico</option><option data-response="true">Abiótico</option></select></span></li>
+                                    <li>Las flores <span><select><option data-response="true">Biótico</option><option>Abiótico</option></select></span></li>
+                                    <li>La casa <span><select><option>Biótico</option><option data-response="true">Abiótico</option></select></span></li>
+                                    <li>Los árboles <span><select><option data-response="true">Biótico</option><option>Abiótico</option></select></span></li>
+                                    <li>Las cebras <span><select><option data-response="true">Biótico</option><option>Abiótico</option></select></span></li>
+                                    <li>La mariquita <span><select><option data-response="true">Biótico</option><option>Abiótico</option></select></span></li>
+                                    <li>Las piedras <span><select><option>Biótico</option><option data-response="true">Abiótico</option></select></span></li>
+                                </ol>
+                                    
+                                <div class="box_end">
+                                    <feedback>
+                                        <correct>
+                                            <audio controls>
+                                                <source src="content/sounds/eco-au031.mp3" type="audio/mp3">
+                                                Su navegador no soporta el componente de audio
+                                            </audio>
+                                            <audio controls>
+                                                <source src="content/sounds/eco-au032.mp3" type="audio/mp3">
+                                                Su navegador no soporta el componente de audio
+                                            </audio>
+                                            <img src="content/correcto.gif" title="Correcto" /><br />
+                                            <audio controls>
+                                                <source src="content/sounds/eco-au029.mp3" type="audio/mp3">
+                                                Su navegador no soporta el componente de audio
+                                            </audio>
+                                            <p>Ahora ya reconoces y puedes nombrar los factores bióticos y abióticos de un ecosistema.</p>
+                                        </correct>
+                                        <wrong>
+                                            <img src="content/incorrecto.gif" title="Incorrecto" /><br />
+                                            <audio controls>
+                                                <source src="content/sounds/eco-au030.mp3" type="audio/mp3">
+                                                Su navegador no soporta el componente de audio
+                                            </audio>
+                                            <p>Intenta nuevamente para que logres tu objetivo.</p>
+                                        </wrong>
+                                    </feedback>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="subpage" id="sub_4_2">
+                    <div class="box-text connection">
+                        <p>
+                            Sigamos practicando y poniendo a prueba lo que aprendimos.
+                        </p>
+                        <p><button class="iconsound button" data-sound="eco-au033.mp3"></button></p>
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> diferenciar los factores bióticos (plantas y animales) de los abióticos (luz, agua, temperatura, suelo y aire) de un ecosistema.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> arrastra las imágenes y suéltalas dentro del factor del ecosistema al que corresponda.
+                        </p>
+                        <p><button class="iconsound button" data-sound="eco-au034.mp3"></button></p>
+                    </div>
+                    <div id="arrastrarm" class="jpit-activities-multidroppable" data-act-title="Arrastrando las imágenes al factor correspondiente" data-act-id="4_2_arrastre">
+                        <div class="box_targets">                            
+                            <div><h5>Factores bióticos <button class="iconsound button" data-sound="eco-au036.mp3"></button></h5><div data-target-group="2" class="target"></div></div>
+                            <div><h5>Factores abióticos <button class="iconsound button" data-sound="eco-au035.mp3"></h5><div data-target-group="1" class="target"></div></div>
+                        </div>
+                        <div class="buttons">
+                            <button class="general verify">Verificar</button>
+                            <button class="general continue" style="display: none;">Continuar intentando</button>
+                        </div>
+                        <div class="box_end">
+                            <feedback>
+                                <correct>
+                                    <audio controls>
+                                        <source src="content/sounds/eco-au038.mp3" type="audio/mp3">
+                                        Su navegador no soporta el componente de audio
+                                    </audio>
+                                    <audio controls>
+                                        <source src="content/sounds/eco-au039.mp3" type="audio/mp3">
+                                        Su navegador no soporta el componente de audio
+                                    </audio>
+                                    <img src="content/correcto.gif" title="Correcto" /><br />
+                                    <p>Ahora ya reconoces y puedes nombrar los factores bióticos y abióticos de un ecosistema.</p>
+                                </correct>
+                                <wrong>
+                                    <img src="content/incorrecto.gif" title="Incorrecto" /><br />
+                                    <p>Intenta nuevamente para que logres tu objetivo.</p>
+                                </wrong>
+                            </feedback>
+                        </div>
+                        <div class="sources">
+                            <div class="box_media" data-group="2">    
+                                <img src="content/img_25.png" alt="Flores" />
+                                <div class="about">
+                                    Imagen de Pasja1000 en Pixabay.
+                                </div>
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/img_19.png" alt="Piedras" />
+                                <div class="about">
+                                    Imagen de Alexandra_Koch en Pixabay.
+                                </div>
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/img_21.png" alt="Nubes" />
+                                <div class="about">
+                                    Imagen de Dimitrisvetsikas1969 en Pixabay.
+                                </div>
+                            </div>
+                            <div  class="box_media" data-group="2">
+                                <img src="content/img_26.png" alt="Árbol" />
+                                <div class="about">
+                                    Imagen de Liggraphy en Pixabay.
+                                </div>
+                            </div>
+                            <div class="box_media" data-group="2">
+                                <img src="content/img_24.png" alt="Hongos" />
+                                <div class="about">
+                                    Imagen de TomaszProszek en Pixabay.
+                                </div>
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/img_20.png" alt="Iceberg" />
+                                <div class="about">
+                                    Imagen de Enriquelopezgarre en Pixabay.
+                                </div>
+                            </div>
+                            <div class="box_media" data-group="2">
+                                <img src="content/img_23.png" alt="Mascotas" />
+                                <div class="about">
+                                    Imagen de Free-Photos en Pixabay.
+                                </div>
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/img_22.png" alt="Sol" />
+                                <div class="about">
+                                    Imagen de Pixel2013 en Pixabay.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage" id="sub_4_3">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> diferenciar los factores bióticos (plantas y animales) de los abióticos (luz, agua, temperatura, suelo y aire) de un ecosistema.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> ordena los ciclos de los seres vivos e inertes arrastrando cada palabra a su posición correcta.
+                        </p>
+                    </div>
+                    <div id="ordenar" class="jpit-activities-droppable" data-verify-type="target" data-act-id="4_3_arrastrar" data-act-title="Ordenando los ciclos de los seres vivos e inertes" data-shuffle="false">
+                        <div class="factores">
+                            <span class="onlymobile"><div class="instruction" type="info">Mantén presionado por dos segundos el espacio en blanco de cada concepto para elegir la opción que corresponda. Toca en <cite>Aceptar</cite> para fijar tu respuesta</div></span>
+                            <div class="factor bioticos">
+                                <h3>Factores bióticos</h3>
+                                <p>Se les llama:</p>
+                                <div class="receptor" data-target-group="1"></div>
+                                <p>Sus ciclos son:</p>
+                                <div class="receptor" data-target-group="10"></div>
+                                <div class="receptor" data-target-group="11"></div>
+                                <div class="receptor" data-target-group="12"></div>
+                                <div class="receptor" data-target-group="13"></div>
+                                <div class="receptor" data-target-group="14"></div>
+                                <div class="receptor" data-target-group="15"></div>
+                                <p>Algunos de ellos son:</p>
+                                <div class="receptor" data-target-group="6"></div>
+                            </div>
+                            <div class="factor abioticos">
+                                <h3>Factores abióticos</h3>
+                                <p>Se les llama:</p>
+                                <div class="receptor" data-target-group="2"></div>
+                                <p>Sobre los ciclos decimos que:</p>
+                                <div class="receptor" data-target-group="20"></div>
+                                <div class="receptor" data-target-group="21"></div>
+                                <div class="receptor" data-target-group="22"></div>
+                                <p>Algunos de ellos son:</p>
+                                <div class="receptor" data-target-group="5"></div>
+                            </div>
+                        </div>
+                        <div class="sources">
+                            <h4>Opciones:</h4>
+                            <div class="opcion son" data-group="2">Seres inertes</div>
+                            <div class="opcion son" data-group="1">Seres vivos</div>
+
+                            <div class="opcion ciclo" data-group="11">Crecen</div>
+                            <div class="opcion ciclo" data-group="21">No se reproducen</div>
+                            <div class="opcion ciclo" data-group="10">Nacen</div>
+                            <div class="opcion ciclo" data-group="12">Se alimentan</div>
+                            <div class="opcion ciclo" data-group="22">No envejecen</div>
+                            <div class="opcion ciclo" data-group="20">No crecen</div>
+                            <div class="opcion ciclo" data-group="15">Envejecen y mueren</div>
+                            <div class="opcion ciclo" data-group="14">Se reproducen</div>
+                            <div class="opcion ciclo" data-group="13">Se relacionan con otros</div>
+
+                            <div class="opcion ejemplo" data-group="5">Luz, calor, agua, minerales y aire</div>
+                            <div class="opcion ejemplo" data-group="6">Plantas y animales</div>
+                            <div class="box_end">
+                                <feedback>
+                                    <correct>
+                                        <audio controls>
+                                            <source src="content/sounds/eco-au040.mp3" type="audio/mp3">
+                                            Su navegador no soporta el componente de audio
+                                        </audio>
+                                        <audio controls>
+                                            <source src="content/sounds/eco-au041.mp3" type="audio/mp3">
+                                            Su navegador no soporta el componente de audio
+                                        </audio>
+                                        <img src="content/correcto.gif" title="Correcto" /><br />
+                                        <p>Ahora ya reconoces y puedes nombrar los factores bióticos y abióticos de un ecosistema.</p>
+                                    </correct>
+                                    <wrong>
+                                        <img src="content/incorrecto.gif" title="Incorrecto" /><br />
+                                        <p>Intenta nuevamente para que logres tu objetivo.</p>
+                                    </wrong>
+                                </feedback>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage" id="actividad_4_4">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> nombrar los factores bióticos y abióticos de un ecosistema.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> en la imagen que encuentras a continuación, ubica el nombre de cada uno de los factores que forman parte del ecosistema.
+                        </p>
+                        <button class="iconsound button" data-sound="eco-au042.mp3"></button>
+                    </div>
+                    <div id="sub_4_4" class="jpit-activities-droppable row" data-verify-type="target" data-act-id="4-4-seleccionar" data-act-title="Nombrando los factores bióticos y abióticos de un ecosistema.">
+                        <div class="col_2">
+                            <div class="box_media">
+                                <div class="imagen">
+                                    <div class="opcion casa" data-target-group="1"></div>
+                                    <div class="opcion agua" data-target-group="2"></div>
+                                    <div class="opcion piedra" data-target-group="3"></div>
+                                    <div class="opcion cebras" data-target-group="4"></div>
+                                    <div class="opcion abeja" data-target-group="5"></div>
+                                    <div class="opcion arboles" data-target-group="6"></div>
+                                    <div class="opcion mariposas" data-target-group="7"></div>
+                                </div>
+                                <div class="about">
+                                    Imagen de Hasank4j3 en Pixabay.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_2">
+                            <div class="sources">
+                                <h4>Opciones</h4>
+                                <div class="option" data-group="1">Casa<button class="iconsound button" data-sound="eco-au045-casa.mp3"></button></div>
+                                <div class="option" data-group="2">Agua<button class="iconsound button" data-sound="eco-au045-agua.mp3"></button></div>
+                                <div class="option" data-group="3">Piedra<button class="iconsound button" data-sound="eco-au045-piedra.mp3"></button></div>
+                                <div class="option" data-group="4">Cebra<button class="iconsound button" data-sound="eco-au045-cebra.mp3"></button></div>
+                                <div class="option" data-group="5">Abeja<button class="iconsound button" data-sound="eco-au045-abeja.mp3"></button></div>
+                                <div class="option" data-group="6">Árbol<button class="iconsound button" data-sound="eco-au045-arbol.mp3"></button></div>
+                                <div class="option" data-group="7">Mariposa<button class="iconsound button" data-sound="eco-au045-mariposa.mp3"></button></div>
+                            </div>
+                                    
+                            <div class="box_end">
+                                <feedback>
+                                    <correct>
+                                        <img src="content/correcto.gif" title="Correcto" /><br />
+                                        <audio controls>
+                                            <source src="content/sounds/eco-au043.mp3" type="audio/mp3">
+                                            Su navegador no soporta el componente de audio
+                                        </audio>
+                                        <p>Ahora ya reconoces y puedes nombrar los factores bióticos y abióticos de un ecosistema.</p>
+                                    </correct>
+                                    <wrong>
+                                        <img src="content/incorrecto.gif" title="Incorrecto" /><br />
+                                        <audio controls>
+                                            <source src="content/sounds/eco-au044.mp3" type="audio/mp3">
+                                            Su navegador no soporta el componente de audio
+                                        </audio>
+                                        <p>Intenta nuevamente para que logres tu objetivo.</p>
+                                    </wrong>
+                                </feedback>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="box-text connection">   
+                        <p>Si deseas saber más sobre este maravilloso tema de los ecosistemas, los factores bióticos y los abióticos te propongo que sigas este camino.</p>
+                        <p><button class="iconsound button" data-sound="eco-au046.mp3"></button></p>
+                    </div>
+                    <div class="box-text link" label="EXTENDIENDO EL SABER">
+                        <ul class="data_list">
+                            <li>
+                                <strong>Recurso educativo:</strong> <a href="http://aprende.colombiaaprende.edu.co/sites/default/files/naspublic/curriculos_ex/n2g10_cienamb/nivel2/ciencias/home-ciencias.html" target="_blank">Currículos exploratorios.</a>
+                            </li>
+                            <li>
+                                <strong>Enunciado:</strong> entra al enlace web que te sugiero y sigue aprendiendo del tema.
+                                <p><button class="iconsound button" data-sound="eco-au047.mp3"></button></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>    
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Claudia Carolina López</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>María Elicenia Monsalve Upegui</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite><br />
+                <cite>Jorge Antonio Torres Grisales</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    Alexandra_Koch. (2015).  <cite>Piedras</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/equilibrio-piedras-meditaci%C3%B3n-zen-1372677/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Castleguard. (2016). <cite>Hoja en otoño</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/coraz%C3%B3n-amor-de-la-hoja-oto%C3%B1o-arce-1776746/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    David Mark. (2016). <cite>Paisaje</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/jardines-bellingrath-alabama-paisaje-1612728/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Dimitrisvetsikas1969. (2017). <cite>Nubes</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/nubes-cumulus-cielo-naturaleza-2329680/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Emmagrau. (2018). <cite>Huevos</cite> [Fotografía intervenida]. Pixabay. <a href="https://pixabay.com/es/photos/huevo-pluma-huevos-de-gallina-3235184/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Enriquelopezgarre. (2019). <cite>Iceberg</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/monta%C3%B1a-nieve-lago-iceberg-cielo-3948461/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    FamilyPhotoStudio. (2016). <cite>Mujer de cabello rizado</cite> [Fotografía]. <a href="https://pixabay.com/es/photos/mujer-cara-rizado-cabello-la-moda-1439909/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Fernández, R (1996). <cite>Biólogos Ciencias Naturales y de la Salud 2. Educación Básica Primaria.</cite> Editorial Voluntad S.A
+                </li>
+                <li>
+                    Free-Photos. (2016). <cite>Mascotas</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/amigos-gato-y-perro-perros-y-gatos-1149841/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Free-Photos. (2015). <cite>Mujer embarazada sosteniendo a una niña</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/embarazada-mam%C3%A1-madre-mujer-hija-690735/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Free-Photos. (2015). <cite>Rostro de una mujer anciana</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/mujer-antigua-senior-mujeres-1031000/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    HaiRobe. (2016). <cite>Niños jugando</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/personas-ni%C3%B1os-ni%C3%B1o-feliz-1560569/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Hasank4j3. (2019). <cite>Paisaje</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/arte-digital-dibujos-animados-4533086/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Innviertlerin. (2019). <cite>Gallinas ponedoras</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/pollo-gallina-gallinas-ponedoras-4267713/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    JillWellington. (2014). <cite>Niña comiendo sandía</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/sand%C3%ADa-verano-ni%C3%B1a-comiendo-sand%C3%ADa-846357/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Kasman. (2018). <cite>Bebé recién nacido</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/infantil-reci%C3%A9n-nacido-beb%C3%A9-la-piel-3432147/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Liggraphy. (2018). <cite>Árbol de olivo</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/olivo-%C3%A1rbol-olivier-antigua-3579922/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Orlane Polanco. (2016). <cite>Nuestro medio ambiente</cite> [Ilustración]. Wikimedia Commons. <a href="https://commons.wikimedia.org/w/index.php?title=File:Nuestro_Medio_Ambiente.jpg&oldid=202569581" target="_blank">https://commons.wikimedia.org/w/[...]</a>
+                </li>
+                <li>
+                    Pasja1000. (2018). <cite>Flores</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/flores-silvestres-prado-hierba-3571119/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Paxala. (s.f.). <cite>Ecosistema terrestre</cite> [Fotografía]. Paxala. <a href="https://www.paxala.com/media/biologia/caracteristicas-ecosistema-terrestre.jpg" target="_blank">https://www.paxala.com/media/[...]</a>
+                </li>
+                <li>
+                    Pixel2013. (2018). <cite>Sol y nubes</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/sunrise-sol-nubes-cielo-3533173/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Pxhere. (2017). <cite>Agua dulce</cite> [Fotografía]. Pxhere. <a href="https://pxhere.com/es//995303" target="_blank">https://pxhere.com/es//995303[...]</a>
+                </li>
+                <li>
+                    Pxhere. (2017). <cite>Océano</cite> [Fotografía]. Pxhere. <a href="https://pxhere.com/es/photo/1079232" target="_blank">https://pxhere.com/es/photo/1079232[...]</a>
+                </li>
+                <li>
+                    Solis 67. (2015). <cite>Un ecosistema</cite> [Ilustración]. Wikipedia. <a href="https://es.wikipedia.org/wiki/Archivo:Ecosistema.jpg" target="_blank">https://es.wikipedia.org/wiki/[...]</a>
+                </li>
+                <li>
+                    TomaszProszek. (2014). <cite>Hongos</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/setas-plantas-forestales-oto%C3%B1o-548360/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+                <li>
+                    Wasi1370. (2019). <cite>Aves migratorias</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/gr%C3%BAas-las-aves-migratorias-4544886/" target="_blank">https://pixabay.com/es/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>
