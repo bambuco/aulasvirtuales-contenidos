@@ -1,0 +1,30 @@
+.box_media img {
+    width: 100%;
+}
+/********************************************************************************/
+/* CRUCIGRAMA
+/********************************************************************************/
+.jpit_activity_crossword_board {
+    min-width: 400px;
+}
+
+.jpit-activities-crossword {
+    background: #ece1cd url(../content/bg_crucigrama.png) no-repeat bottom;
+    background-size: 100%;
+    padding: 0;
+    min-width: 400px;
+}
+
+.jpit-activities-crossword .word_content {
+    border: none;
+    background-color: transparent; 
+}
+
+.box_end .correct, 
+.box_end .wrong {
+    max-width: 550px;
+}
+
+.row {
+    justify-content: center;
+}

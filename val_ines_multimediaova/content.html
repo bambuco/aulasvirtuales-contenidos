@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="single"><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Enlaces</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="90" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Enlaces</h1>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-enlace">
+                <h2>1. Elementos vs compuestos</h2>
+                <div class="subpage" id="elementos">
+                    <div class="box-text connection">
+                        <p>
+                            Agua es una pequeña gota que está buscando respuesta sobre sus orígenes y quiere que la ayudes en esta pequeña aventura. ¡Acompáñala! abre la siguiente imagen interactiva para descubrir qué es ella y quiénes son sus padres.
+                        </p>
+                    </div>
+                    <div class="box_media">
+                        <img src="content/gota1.png"/>
+                    </div>
+                    <div class="box_media">
+                        <iframe src="content/genially_elemento_vs_compuesto/genially.html" class="interactivo" >Contenido interactivo</iframe>
+                    </div>
+                    <div class="box-text connection">
+                        <p>
+                            Gracias a ti, ahora Agua sabe que es un compuesto hija de los elementos (H) y 2 (O) que se fusionaron para darle vida a ella.
+                        </p>
+                    </div>
+                    <div class="box_media">
+                        <img src="content/gota2.png"/>
+                    </div>
+                    <div class="box-text connection">
+                        <p>
+                            Existen otros tipos de compuestos distintos a los que Agua nos mostró. Identifiquémoslos juntos.
+                        </p>
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar como se crean diferentes tipos de compuestos.</p>
+                        <p><strong>Enunciado:</strong> Agua está haciendo la tarea que la maestra Litio le puso sobre diferentes tipos de compuestos. Ayúdala arrastrado las cápsulas a la probeta de la parte superior para crear los compuestos que necesita.</p>
+                    </div>
+
+                    <div id="act_1_1" class="jpit-activities-droppable" data-act-title="Creando diferentes tipos de compuestos" data-act-id="1_arrastrar" data-shuffle="false">
+                        <div class="fondo">
+                            <div class="ctrl-pagination" data-layer-width="200px" data-layer-height="300px" data-orientation="sides">
+                                <li>
+                                    <h4>Óxidos básicos</h4>
+                                    <div class="probeta" data-target-group="1">
+                                        <div class="elemento oxigeno">Oxígeno</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4>Óxidos ácidos</h4>
+                                    <div class="probeta" data-target-group="2">
+                                        <div class="elemento oxigeno">Oxígeno</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4>Hidrácidos</h4>
+                                    <div class="probeta" data-target-group="3">
+                                        <div class="elemento agua">Agua</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4>Hidruros</h4>
+                                    <div class="probeta" data-target-group="8">
+                                        <div class="elemento metal">Metal /No metal</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4>Hidróxidos</h4>
+                                    <div class="probeta" data-target-group="4">
+                                        <div class="elemento agua">Agua</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4>Oxoácidos</h4>
+                                    <div class="probeta" data-target-group="5">
+                                        <div class="elemento agua">Agua</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4>Oxisales</h4>
+                                    <div class="probeta" data-target-group="6">
+                                        <div class="elemento hidroxido">Hidróxido</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h4>Sal binaria</h4>
+                                    <div class="probeta" data-target-group="7">
+                                        <div class="elemento hidroxido">Hidróxido</div>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="elemento metal" data-group="1">Metal</div>
+                            <div class="elemento no_metal" data-group="2">No metal</div>
+                            <div class="elemento hidruro" data-group="3">Hidruros no metálicos</div>
+                            <div class="elemento oxidob" data-group="4">Óxido básico</div>
+                            <div class="elemento oxidoa" data-group="5">Óxido ácido</div>
+                            <div class="elemento oxacido" data-group="6">Oxácido</div>
+                            <div class="elemento hidracido" data-group="7">Hidrácido</div>
+                            <div class="elemento hidrogeno" data-group="8">Hidrógeno</div>
+
+                            <div class="elemento oxigeno" data-group="10">Oxígeno</div>
+                            <div class="elemento hidroxido" data-group="10">Hidróxido</div>
+                            <div class="elemento agua" data-group="10">Agua</div>
+                            <div class="elemento oxigeno" data-group="10">Oxígeno</div>
+                            <div class="elemento hidroxido" data-group="10">Hidróxido</div>
+                            <div class="elemento agua" data-group="10">Agua</div>
+                            <div class="elemento oxigeno" data-group="10">Oxígeno</div>
+                            <div class="elemento hidroxido" data-group="10">Hidróxido</div>
+                            <div class="elemento agua" data-group="10">Agua</div>
+                            <div class="elemento oxigeno" data-group="10">Oxígeno</div>
+                            <div class="elemento hidroxido" data-group="10">Hidróxido</div>
+                            <div class="elemento agua" data-group="10">Agua</div>   
+                        </div>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>
+                                <p>¡Lo hiciste muy bien!</p>
+                                <ul class="data_list">
+                                    <li><strong>Óxidos básicos:</strong> están formados por un metal y oxígeno.</li>
+                                    <li><strong>Óxidos ácidos:</strong> formados por un no metal y oxígeno.</li>
+                                    <li><strong>Hidruros:</strong> pueden ser tanto metálicos como no metálicos. Están compuestos por un elemento cualquiera e hidrógeno (Wikipedia, 2020).</li>
+                                    <li><strong>Hidrácidos:</strong> son hidruros no metálicos que, cuando se disuelven en agua, adquieren carácter ácido (Wikipedia, 2020).</li>
+                                    <li><strong>Hidróxidos:</strong> compuestos formados por la reacción entre un óxido básico y el agua. Se caracterizan por presentar el grupo oxidrilo (OH) (Wikipedia, 2020).</li>
+                                    <li><strong>Oxoácidos:</strong> compuestos obtenidos por la reacción de un óxido ácido y agua. Sus moléculas están formadas por hidrógeno, un no metal y oxígeno (Wikipedia, 2020).</li>
+                                    <li><strong>Oxisales:</strong> formadas por la reacción de un oxoácido y un hidróxido.</li>
+                                    <li><strong>Sales binarias:</strong> compuestos formados por un hidrácido más un hidróxido.</li>
+                                </ul>
+                            </correct>
+                        </feedback>
+                    </div>
+                    <div class="box-text connection">
+                        <p>
+                            Gracias a ti, Agua ha logrado entregar la tarea y sacar un 5.
+                        </p>
+                    </div>
+                    <div class="box_media">
+                        <img src="content/gota3.png"/>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Inés Carolina Acevedo</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Valentina Pinillos Echavarría</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite><br />
+                <cite>Jorge Antonio Torres Grisales</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias</h2>
+
+            <ul class="data_list">
+                <li>
+                    Compuesto químico. (14 de abril de 2020). En <cite>Wikipedia</cite> . <a href="https://es.wikipedia.org/w/index.php?title=Compuesto_qu%C3%ADmico&oldid=125182974" target="_blank">https://es.wikipedia.org/w/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

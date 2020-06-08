@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Latidos</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+    
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="80" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Latidos</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="El corazón es un músculo" data-page="pag-musculo"></menuitem>
+                        <menuitem label="Partes del corazón" data-page="pag-partes"></menuitem>
+                        <menuitem label="¡Ubícame!" data-page="pag-ubicame"></menuitem>
+                        <menuitem label="¿Cómo?" data-page="pag-como"></menuitem>
+                        <menuitem label="Juguemos" data-page="pag-juguemos"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-musculo" ptitle="1. El corazón es un músculo <sup class='tooltip' title='1.  Los apartados: “El corazón es un músculo”, “Partes del corazón” y “¡Ubícame!”, son textos tomados del artículo “Tu corazón y el sistema circulatorio” publicado en la página web de KidsHealth. El vínculo al recurso original se encuentra citado en la lista de referencias.'>[1]</sup>">
+                <div class="subpage">
+                    <div class="row">
+                        <div class="col_2">
+                            <div class="box_media">
+                                <img src="content/sistema_circulatorio.png" alt="Sistema circulatorio" />
+                                <div class="about">Imagen de Nidias13 en Glogster.</div>
+                            </div>        
+                        </div>
+                        <div class="col_2">
+                            <blockquote>
+                                <p>Realmente, tu corazón es un músculo. Lo tienes situado un poco a la izquierda del centro del pecho y es aproximadamente del tamaño de tu puño. Tú tienes montones de músculos por todo el cuerpo: en los brazos, las piernas, la espalda y hasta en el trasero.</p>
+                                <p>Pero el músculo del corazón es especial por lo que hace. El corazón envía sangre a todo tu cuerpo. La sangre proporciona al cuerpo el oxígeno y los nutrientes que necesita. También se lleva los productos de desecho.</p>
+                                <p>Tu corazón es una especie de bomba, o dos bombas en una. El lado derecho recibe sangre del resto del cuerpo y la bombea hacia los pulmones. El lado izquierdo hace justo lo contrario: recibe sangre procedente de los pulmones y la bombea al resto del cuerpo.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="pag-partes" ptitle="2. Partes del corazón">
+                <div class="subpage">
+                
+                    <p><cite>El corazón consta de cuatro partes distintas llenas de sangre, y cada una de esas partes se llama cavidad. Hay dos cavidades en cada lado del corazón: una arriba y otra abajo. Las dos cavidades de arriba se llaman aurículas. Las aurículas son las cavidades que se llenan de la sangre procedente del resto del cuerpo y de los pulmones. El corazón tiene una aurícula izquierda y una aurícula derecha.</cite></p>
+                    <p><cite>Las dos cavidades de abajo se llaman ventrículos. El corazón tiene un ventrículo izquierdo y uno ventrículo derecho. Su función consiste en bombear sangre hacia el resto del cuerpo y hacia los pulmones. En el centro del corazón hay una gruesa pared vertical de músculo llamada tabique (o septo). Su función consiste en separar el lado izquierdo del corazón del lado derecho.</cite></p>
+                    <p><cite>Las aurículas y los ventrículos trabajan en equipo: las aurículas se llenan de sangre y después la envían a los ventrículos. A continuación, los ventrículos se contraen, bombeando la sangre hacia fuera. Mientras los ventrículos se contraen, las aurículas se vuelven a llenar de sangre y se preparan para la siguiente contracción.</cite></p>
+                    <p class="instruction" type="info">
+                        <span class="onlymobile">Toca </span>
+                        <span class="notmobile">Pasa el mouse por </span>
+                        la imagen para conocer cada parte del corazón.
+                    </p>
+                    <div class="corazon">
+                        <div class="tooltip aur_der" title="Aurícula derecha">1.</div>
+                        <div class="tooltip aur_izq" title="Aurícula izquierda">1.</div>
+                        <div class="tooltip ven_der" title="Ventrículo derecho">1.</div>
+                        <div class="tooltip ven_izq" title="Ventrículo izquierdo">1.</div>
+                        <div class="tooltip vca" title="Vena cava superior">1.</div>
+                        <div class="tooltip vci" title="Vena cava inferior">1.</div>
+                        <div class="tooltip vpsi" title="Vena pulmonar superior izquierda">1.</div>
+                        <div class="tooltip vpii" title="Vena pulmonar inferior izquierda">1.</div>
+                        <div class="tooltip api" title="Arteria pulmonar izquierda">1.</div>
+                        <div class="tooltip art_sub" title="Arteria subclavia">1.</div>
+                        <div class="tooltip acc" title="Arteria carótida común">1.</div>
+                        <div class="tooltip tro_bra" title="Tronco braquiocefálico">1.</div>
+                        <div class="tooltip tro_pul" title="Tronco pulmonar">1.</div>
+                        <div class="tooltip val_tp" title="Válvula del tronco pulmonar">1.</div>
+                        <div class="tooltip val_tri" title="Válvula tricúspide">1.</div>
+                        <div class="tooltip val_aor" title="Válvula de la aorta">1.</div>
+                        <div class="tooltip val_mit" title="Válvula mitral">1.</div>
+                        <div class="tooltip aorta" title="Aorta">1.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-ubicame" ptitle="3. ¡Ubícame!">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar las partes del corazón.</p>
+                        <p><strong>Enunciado:</strong> ¡ubícame! Coloca las partes del corazón correctamente de acuerdo con lo aprendido.</p>
+                    </div>
+                    <div class="jpit-activities-droppable" data-verify-type="target" data-act-id="1-corazon" data-act-title="Ubicar las partes del corazón" data-shuffle="false">
+                        <p class="instruction" type="info">
+                            <span class="onlymobile">Presiona durante dos segundos cada parte del corazón y escoge el nombre </span>
+                            <span class="notmobile">Arrastra cada número a la parte del corazón </span>
+                            correspondiente.
+                        </p>
+                        
+                        <div class="corazon">
+                            <div class="receptor aur_der" data-target-group="1"></div>
+                            <div class="receptor aur_izq" data-target-group="2"></div>
+                            <div class="receptor ven_der" data-target-group="3"></div>
+                            <div class="receptor ven_izq" data-target-group="4"></div>
+                            <div class="receptor vca" data-target-group="5"></div>
+                            <div class="receptor vci" data-target-group="6"></div>
+                            <div class="receptor vpsi" data-target-group="7"></div>
+                            <div class="receptor vpii" data-target-group="8"></div>
+                            <div class="receptor api" data-target-group="9"></div>
+                            <div class="receptor art_sub" data-target-group="10"></div>
+                            <div class="receptor acc" data-target-group="11"></div>
+                            <div class="receptor tro_bra" data-target-group="12"></div>
+                            <div class="receptor tro_pul" data-target-group="13"></div>
+                            <div class="receptor val_tp" data-target-group="14"></div>
+                            <div class="receptor val_tri" data-target-group="15"></div>
+                            <div class="receptor val_aor" data-target-group="16"></div>
+                            <div class="receptor val_mit" data-target-group="17"></div>
+                            <div class="receptor aorta" data-target-group="18"></div>
+                        </div>
+                        <div class="box_end"></div>
+                        <div class="sources row">
+                            <div class="col_2">
+                                <div class="lista"><div class="numero parte">1</div>Aurícula derecha<div class="parte" data-group="1">1 <div class="ocultar">Aurícula derecha</div></div></div>
+                                <div class="lista"><div class="numero parte">2</div>Aurícula izquierda<div class="parte" data-group="2">2 <div class="ocultar">Aurícula izquierda</div></div></div>
+                                <div class="lista"><div class="numero parte">3</div>Ventrículo derecho<div class="parte" data-group="3">3 <div class="ocultar">Ventrículo derecho</div></div></div>
+                                <div class="lista"><div class="numero parte">4</div>Ventrículo izquierdo<div class="parte" data-group="4">4 <div class="ocultar">Ventrículo izquierdo</div></div></div>
+                                <div class="lista"><div class="numero parte">5</div>Vena caba superior<div class="parte" data-group="5">5 <div class="ocultar">Vena caba superior</div></div></div>
+                                <div class="lista"><div class="numero parte">6</div>Vena caba inferior<div class="parte" data-group="6">6 <div class="ocultar">Vena caba inferior</div></div></div>
+                                <div class="lista"><div class="numero parte">7</div>Vena pulmonar superior izquierda<div class="parte" data-group="7">7 <div class="ocultar">Vena pulmonar superior izquierda</div></div></div>
+                                <div class="lista"><div class="numero parte">8</div>Vena pulmonar inferior izquierda<div class="parte" data-group="8">8 <div class="ocultar">Vena pulmonar inferior izquierda</div></div></div>
+                                <div class="lista"><div class="numero parte">9</div>Arteria pulmonar izquierda<div class="parte" data-group="9">9 <div class="ocultar">Arteria pulmonar izquierda</div></div></div>
+                            </div>
+                            
+                            <div class="col_2">
+                                <div class="lista"><div class="numero parte">10</div>Arteria subclavia<div class="parte" data-group="10">10 <div class="ocultar">Arteria subclavia</div></div></div>
+                                <div class="lista"><div class="numero parte">11</div>Arteria carótida común<div class="parte" data-group="11">11 <div class="ocultar">Arteria carótida común</div></div></div>
+                                <div class="lista"><div class="numero parte">12</div>Tronco braquiocefálico<div class="parte" data-group="12">12 <div class="ocultar">Tronco braquiocefálico</div></div></div>
+                                <div class="lista"><div class="numero parte">13</div>Tronco pulmonar<div class="parte" data-group="13">13 <div class="ocultar">Tronco pulmonar</div></div></div>
+                                <div class="lista"><div class="numero parte">14</div>Válvula del tronco pulmonar<div class="parte" data-group="14">14 <div class="ocultar">Válvula del tronco pulmonar</div></div></div>
+                                <div class="lista"><div class="numero parte">15</div>Válvula tricúspide<div class="parte" data-group="15">15 <div class="ocultar">Válvula tricúspide</div></div></div>
+                                <div class="lista"><div class="numero parte">16</div>Válvula de la aorta<div class="parte" data-group="16">16 <div class="ocultar">Válvula de la aorta</div></div></div>
+                                <div class="lista"><div class="numero parte">17</div>Válvula mitrál<div class="parte" data-group="17">17 <div class="ocultar">Válvula mitrál</div></div></div>
+                                <div class="lista"><div class="numero parte">18</div>Aorta<div class="parte" data-group="18">18 <div class="ocultar">Aorta</div></div></div>
+                            </div>
+                        </div>
+                        <br class="clear" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-como" ptitle="4. ¿Cómo late el corazón? ¿cómo circula la sangre?">
+                <div class="subpage">
+                    <blockquote>
+                        <p>
+                            <cite>Cada latido, el corazón se te llena de sangre. A continuación, el músculo se contrae para impulsar la sangre hacia fuera. Cuando el corazón se contrae, se encoge: prueba a cerrar la mano para formar un puño. Eso es más o menos lo que hace tu corazón para impulsar la sangre hacia fuera. Y tu corazón lo hace todo el día y toda noche, sin parar, constantemente. ¡Tu corazón trabaja muy duro! ¿Quieres ver como lo hace?</cite>
+                        </p>
+                    </blockquote>
+
+                    <div class="box-text link" label="Extendiendo el saber">
+                        <p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=HuwcgaU26sQ&t=69s" target="_blank">Fisiología del corazón.</a></p>
+                        <p><strong>Duración:</strong> 7.43 minutos</p>
+                        <p><strong>Enunciado:</strong> observemos el video para comprender cómo funciona nuestro corazón, que es el motor de nuestro cuerpo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-juguemos" ptitle="5. Juguemos">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> afianzar conocimientos propuestos en el objeto virtual de aprendizaje.</p>
+                        <p><strong>Enunciado:</strong> elige correctamente si cada afirmación es verdadera o falsa.</p>
+                    </div>
+                    <div class="jpit-activities-check" data-act-id="2-falso-verdadero" data-act-title="Falso o verdadero">
+                        <words>
+                            <li>Sentimientos como la alegría o la tristeza son provocados por el corazón.</li>
+                            <li data-val="true">El corazón es un músculo que se sitúa un poco a la izquierda del pecho.</li>
+                            <li data-val="true">El corazón se encarga de transportar sangre a todo el cuerpo.</li>
+                            <li>La sangre transporta nutrientes y oxígeno, pero no los desechos que producen las células.</li>
+                            <li data-val="true">El lado derecho del corazón recibe sangre del resto del cuerpo y la bombea hacia los pulmones.</li>
+                            <li data-val="true">El lado izquierdo del corazón recibe sangre procedente de los pulmones y la bombea al resto del cuerpo.</li>
+                            <li>El corazón es un músculo que trabaja únicamente cuando estamos despiertos.</li>
+                            <li>El corazón cuenta con cinco cavidades encargadas de almacenar la sangre.</li>
+                            <li>Las dos cavidades superiores del corazón se llaman ventrículos.</li>
+                            <li data-val="true">Las dos cavidades inferiores se llaman ventrículos.</li>
+                            <li data-val="true">Las dos cavidades superiores se llaman aurículas.</li>
+                            <li>Las aurículas se encargan de bombear la sangre.</li>
+                            <li data-val="true">Las aurículas son las cavidades que se llenan de sangre.</li>
+                            <li data-val="true">Los ventrículos se encargan de bombear la sangre.</li>
+                            <li>El tabique o septo es una gruesa pared que separa la parte superior del corazón de su parte inferior.</li>
+                            <li data-val="true">Los vasos sanguíneos son tubos, específicamente venas y arterias, que transportan la sangre.</li>
+                        </words>
+                        <div class="board">
+                            <div class="check_left">
+                                <div class="play">
+                                    <p>Indique si la siguiente afirmación es falsa o verdadera</p>
+                                    <div class="word_content"> </div>
+                                    <div class="buttons">
+                                        <button class="yes general">Verdadero</button>
+                                        <button class="not general">Falso</button>
+                                    </div>
+                                </div>
+                                <div class="box_conclution">
+                                    <h3>¡Ha finalizado!</h3>
+                                    <div class="buttons">
+                                        <button class="general reload">¡Vuelve a intentarlo! Corrige las afirmaciones que fallaste</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_right">
+                                <div class="box_result">
+                                    <div class="correct">
+                                        <div class="hits">0</div>
+                                        <div class="text">Aciertos</div>
+                                    </div>
+                                    <div class="wrong">
+                                        <div class="miss">0</div>
+                                        <div class="text">Desaciertos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Laura Villota</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Valentina Pinillos Echavarría</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>KidsHealth. (s.f.). <cite>Tu corazón y el sistema circulatorio.</cite> <a href="https://kidshealth.org/es/kids/heart-esp.html" target="_blank">https://kidshealth.org/[...]</a></li>
+                <li>Nidias13. (2014). <cite>Sistema circulatorio</cite> [Ilustración]. Glogster. <a href="https://edu.glogster.com/glog/sistema-circulatorio-5003/1igib0swmi1" target="_blank">https://edu.glogster.com/[...]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

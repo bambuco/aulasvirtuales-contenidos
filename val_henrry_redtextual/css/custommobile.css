@@ -1,0 +1,170 @@
+h5 {
+    text-align: center;
+}
+
+.tabla tr {
+    border: 1px solid black;
+}
+
+.tabla td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.tabla em {
+    font-size: 20px;
+    color: #000;
+}
+
+.jpit-activities-cloze input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 45px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.jpit-activities-cloze input.correct {
+    color: #038B5E;
+}
+
+.row {
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.row p {
+    text-align: center;
+}
+
+.col_2 {
+    border: 1px solid black;
+    height: auto;
+    margin: 5px;
+    padding: 5px 30px;
+    overflow: auto;
+}
+
+
+.color {
+    background-color: #97F8D8;
+}
+
+.jpit-activities-form input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 250px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.jpit-activities-form h5 input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 215px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.jpit-activities-form li input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 275px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/********************************************************************************/
+/* Actividad 5
+/********************************************************************************/
+
+#arrastrar .granja { 
+    background: url(../content/granja.png) no-repeat; 
+    background-size: 100%;
+    margin: auto; 
+    width: 100%; 
+    height: 0;
+    position: relative; 
+}
+
+#arrastrar .selva { 
+    background: url(../content/selva.png) no-repeat; 
+    background-size: 100%;
+    margin: auto; 
+    width: 100%; 
+    height: 0;
+    position: relative; 
+}
+#arrastrar .mar { 
+    background: url(../content/mar.png) no-repeat; 
+    background-size: 100%;
+    width: 100%; 
+    height: 0;
+    position: relative; 
+}
+
+#arrastrar .sources img {
+    width: 70%;
+}
+
+#arrastrar .sources {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#arrastrar .box_targets {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: auto;
+}
+
+#arrastrar .box_targets .target {
+    min-height: 280px;
+    width: 298px;
+    padding-top: 42px;
+    margin: 2px;
+    display: inline-flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#arrastrar.jpit-activities-droppable .draggable {
+    width: 120px;
+    margin: 1px;
+    background-color: transparent;
+    border: 0px solid #7c8f8c;
+    text-align: center;
+    cursor: move;
+    padding: 1px;
+    -ms-touch-action: none;
+    touch-action: none;
+    user-select: none;
+}
+
+.jpit-activities-droppable .droppable {
+    padding-bottom: 0px;
+}
+
+.jpit-activities-droppable .droppable .draggable.box_media img {
+    width: 70%;
+}
+
+.jpit-activities-droppable .droppable .draggable.box_media {
+    width: 120px;
+}
+

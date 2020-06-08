@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icon.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Materiales y productos</title>
+        <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <!--jQuery components -->
+    <!--End jQuery components -->
+
+        <script src="components/interact/interact.min.js"></script>
+        <script src="components/pit/jpit_api.js"></script>
+        <script src="components/pit/utilities/jpit_utilities.js"></script>
+        <script src="components/pit/activity/jpit_activity.js"></script>
+        <script src="components/pit/resources/jpit_resource.js"></script>
+        <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+        <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/lang.es.js"></script>
+        <script src="js/lib.js"></script>
+        <script src="js/mobilelib.js"></script>
+        <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+        <script src="components/scorm/scorm_api.js"> </script>
+
+        <style type='text/css'>
+
+            body {
+                background-color: rgba(242, 242, 242, 0.7);
+            }
+
+            body.loading {
+                text-align: center;
+            }
+
+            body.loading:after {
+                content: "";
+                background: url(img/loading.gif) no-repeat bottom center;
+                width: 130px;
+                height: 30px;
+                display: block;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            body.loading #body {
+                display: none;
+            }
+        </style>
+
+    </head>
+    <body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="90" data-activities-percentaje="60" data-mobile-mode="512">
+        <div id="body" class="not_print">
+            <div id="not_scorm_msg" style="display: none;"></div>
+
+            <nav label="Características globales" class="globals">
+                <menu>
+                    <menuitem data-global-id="return">
+                        <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                        <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                    </menuitem>
+                    <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+                </menu>
+            </nav>
+
+            <header>
+                <div>
+                    <h1>Materiales y productos</h1>
+                    <nav label="Principal" class="horizontal main" data-offset="true">
+                        <menu>                        
+                            <menuitem label="Exploremos" data-page="pag-exploremos"></menuitem>
+                            <menuitem label="Aprendamos" data-page="pag-aprendamos"></menuitem>
+                            <menuitem label="Concluyamos" data-page="pag-concluyamos"></menuitem>
+                            <menuitem label="Evaluemos " data-page="pag-evaluemos"></menuitem>                      
+                        </menu>
+                    </nav>
+                </div>
+            </header>
+
+            <main style="display: none;">
+
+                <h2 class="page-title"></h2>
+
+                <!--Exploremos-->
+                <section id="pag-exploremos" ptitle="1. Exploremos">
+                    <div class="subpage">
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> identifico la tecnología que me rodea y explico la importancia que tiene para desarrollar actividades en mi casa, colegio y comunidad
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> en el tablero vas a encontrar signos de interrogación e imágenes. Lo primero que debes hacer es dar clic en los signos de interrogación, dentro de ellos encuentras adivinanzas. Para buscar sus respuestas, debes tocar las imágenes y encontrar cuál es la opción correcta.
+                            </p>
+                            <p>
+                                <strong>Duración: 1 hora.</strong>
+                            </p>
+                        </div>
+                        <div id="apareamiento" class="jpit-activities-droppable" data-act-id="1-arrastrar" data-act-title="Actividad 1: identifico la tecnología que me rodea">
+
+                            <p class="instruction onlymobile" type="info">
+                                Toca cada tarjeta para leer una adivinanza. Luego, presiona sobre ella durante 2 segundos y escoge la respuesta correcta de la lista. Para finalizar, guarda tu elección tocando el botón <cite>Aceptar</cite>
+                            </p>
+
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza1"></button>
+                                <div id="adivinanza1" class="wf-content">
+                                    <div class="receptor" data-target-group="1">En la mesa me ponen y sobre mí todos comen.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza2"></button>
+                                <div id="adivinanza2" class="wf-content">
+                                    <div class="receptor" data-target-group="2">Tiene ojos y no ve, tiene agua y no la bebe, tiene carne y no la come, tiene barba y no es un hombre.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza3"></button>
+                                <div id="adivinanza3" class="wf-content">
+                                    <div class="receptor" data-target-group="3">Yo tengo calor y frío, y no frío sin calor. Sin ser ni mar ni río, peces en mí he visto yo.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza4"></button>
+                                <div id="adivinanza4" class="wf-content">
+                                    <div class="receptor" data-target-group="4">Con tomate y con lechuga en el plato suelo estar; puedo ser algo picante y a muchos hago llorar.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza5"></button>
+                                <div id="adivinanza5" class="wf-content">
+                                    <div class="receptor" data-target-group="5">Una caja muy oscura con su ventana brillante cuenta cuentos e historias al que se sienta delante.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza6"></button>
+                                <div id="adivinanza6" class="wf-content">
+                                    <div class="receptor" data-target-group="6">Oro no es, plata no es, abre la cortina y mira lo que es.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza7"></button>
+                                <div id="adivinanza7" class="wf-content">
+                                    <div class="receptor" data-target-group="7">Habla y no tiene boca, oye y no tiene oído, es chiquito y hace ruido.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza8"></button>
+                                <div id="adivinanza8" class="wf-content">
+                                    <div class="receptor" data-target-group="8">Te doy la leche y mi lana, y para hablar digo beeeee si no adivinas mi nombre, tampoco te lo diré</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza9"></button>
+                                <div id="adivinanza9" class="wf-content">
+                                    <div class="receptor" data-target-group="9">Sale de la sala y entra a la cocina, meneando la cola como una gallina.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza10"></button>
+                                <div id="adivinanza10" class="wf-content">
+                                    <div class="receptor" data-target-group="10">Lámina que no se ve y nos protege del viento, aunque la atraviesa el sol, se empaña con el aliento.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza11"></button>
+                                <div id="adivinanza11" class="wf-content">
+                                    <div class="receptor" data-target-group="11">Vengo de padres cantores, pero yo no soy cantor. Llevo la ropa blanca y amarillo el corazón. ¿Quién soy?</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza12"></button>
+                                <div id="adivinanza12" class="wf-content">
+                                    <div class="receptor" data-target-group="12">Sin aire no sobrevivo y sin la tierra me muero; tengo yemas y no soy huevo, tengo copa y no soy sombrero.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza13"></button>
+                                <div id="adivinanza13" class="wf-content">
+                                    <div class="receptor" data-target-group="13">Cuerpo de palo, cabeza de color, me encienden con cuidado y doy mucho calor.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <button class="wf-content-controler adivinanza" data-content="#adivinanza14"></button>
+                                <div id="adivinanza14" class="wf-content">
+                                    <div class="receptor" data-target-group="14">Aunque soy iluminada, siempre me tienen colgada.</div>
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="1" class="adivinanza respuesta plato">
+                                    <img src="content/elplato.png" alt="Plato" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="2" class="adivinanza respuesta coco">
+                                    <img src="content/elcoco.png" alt="Coco" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="3" class="adivinanza respuesta sarten">
+                                    <img src="content/elsarten.png" alt="Sartén" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="4" class="adivinanza respuesta cebolla">
+                                    <img src="content/lacebolla.png" alt="Cebolla" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="5" class="adivinanza respuesta tv">
+                                    <img src="content/eltv.png" alt="TV" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="6" class="adivinanza respuesta platano">
+                                    <img src="content/elplatano.png" alt="Platano" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="7" class="adivinanza respuesta celular">
+                                    <img src="content/elcelular.png" alt="Celular" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="8" class="adivinanza respuesta oveja">
+                                    <img src="content/laoveja.png" alt="Oveja" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="9" class="adivinanza respuesta escoba">
+                                    <img src="content/laescoba.png" alt="Escoba" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="10" class="adivinanza respuesta vidrio">
+                                    <img src="content/elvidrio.png" alt="Vidrio" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="11" class="adivinanza respuesta huevo">
+                                    <img src="content/elhuevo.png" alt="Huevo" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="12" class="adivinanza respuesta arbol">
+                                    <img src="content/elarbol.png" alt="Árbol" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="13" class="adivinanza respuesta fosforo">
+                                    <img src="content/elfosforo.png" alt="Fósforo" />
+                                </div>
+                            </div>
+                            <div class="contenedor">
+                                <div data-group="14" class="adivinanza respuesta lampara">
+                                    <img src="content/lalampara.png" alt="Lámpara" />
+                                </div>
+                            </div>
+                            <div class="box_end"></div>
+                        </div>
+                    
+                        <!--Actividad adivina adivinador-->
+                        <div class="box-text connection">
+                            <p>
+                                En las adivinanzas que acabas de jugar encontraste una serie de elementos que provienen directamente de la naturaleza y otros que han sido creados por el hombre. 
+                            </p>
+                        </div>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> identifico de dónde provienen los recursos que utiliza el hombre.                                 
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> en esta actividad debes agrupar todos los objetos que provienen de la naturaleza y todos los objetos que han sido creados por el hombre. Arrastra las imágenes a la casilla correcta.                        
+                            </p>
+                            <p>
+                                <strong>Duración: 30 minutos</strong>
+                            </p>                                         
+                        </div>                      
+                                        
+                        <div id="arrastrargrupos" class="jpit-activities-multidroppable" data-act-title="Actividad 2: objetos por la naturaleza y objetos creados por el hombre" data-act-id="2-relacionar">                        
+                            <div class="box_targets">
+                                <div class="enunciadoone">
+                                    <div class="titulo"><span>Objetos creados por el hombre</span></div>
+                                    <div class="target" data-target-group="1"></div>
+                                </div>
+                                <div class="enunciadotwo">
+                                    <div class="titulo"><span>Objetos que provienen de la naturaleza</span></div>
+                                    <div class="target" data-target-group="2"></div>
+                                </div>                            
+                            </div> 
+                            <div class="buttons">
+                                <button class="general verify">Verificar</button>
+                                <button class="general continue" style="display: none;">Continuar intentando</button>
+                            </div>
+                            <div class="box_end"></div>                         
+                            <div class="sources">
+                                <div data-group="2">
+                                    <img src="content/elarbol.png" alt="arbol"/>
+                                </div>
+                                <div data-group="1">
+                                    <img src="content/elplato.png" alt="plato"/>
+                                </div>                            
+                                <div data-group="1">
+                                    <img src="content/lalampara.png" alt="lampara"/>
+                                </div>
+                                <div data-group="2">
+                                    <img src="content/elhuevo.png" alt="huevo"/>
+                                </div>
+                                <div data-group="2">
+                                    <img src="content/elcoco.png" alt="coco"/>
+                                </div>
+                                <div data-group="1">
+                                    <img src="content/elfosforo.png" alt="fosforo"/>
+                                </div>
+                                <div data-group="1">
+                                    <img src="content/elvidrio.png" alt="vidrio"/>
+                                </div>
+                                <div data-group="2">
+                                    <img src="content/lacebolla.png" alt="cebolla"/>
+                                </div>
+                                <div data-group="1">
+                                    <img src="content/laescoba.png" alt="escoba"/>
+                                </div>
+                                <div data-group="1">
+                                    <img src="content/eltv.png" alt="tv"/>
+                                </div>
+                                <div data-group="1">
+                                    <img src="content/elsarten.png" alt="sarten"/>
+                                </div>
+                                <div data-group="2">
+                                    <img src="content/elplatano.png" alt="nube"/>
+                                </div>
+                                <div data-group="1">
+                                    <img src="content/elcelular.png" alt="celular"/>
+                                </div>
+                            </div>                       
+                        </div>
+                        <div class="box-text note" label="NOTA:">
+                            <p>
+                                Cuando termines de agrupar los objetos, vas a observa los elementos que hay a tu alrededor. Escoge 20 objetos, dibújalos en tu cuaderno, escribe el nombre de cada uno y la materia prima con que fueron hechos. Esta consulta la vas a escribir en tu cuaderno con una letra bien bonita, le tomas una foto y se la envías a la profe por el aula virtual. 
+                            </p>
+                        </div>  
+                    </div>
+                </section>
+
+                <!--Aprendamos-->
+                <section id="pag-aprendamos" ptitle="2. Aprendamos">
+                    <div class="subpage">
+                        <div class="box-text connection">
+                            <p>
+                                Ahora aprenderás sobre las materias primas, su origen y características. Observa con mucha atención el video y toma nota en tu cuaderno para que luego pongas en práctica tus conocimientos en las actividades. 
+                            </p>
+                        </div>
+                        <div class="box-text link" label="ENLACE DE AMPLIACIÓN">
+                            <p>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=nsAYW7OPmHU" target="_blank">¿Qué son las materias primas?</a>
+                            </p>
+                            <p>
+                                <strong>Duración:</strong> 4:08 minutos
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> observa con atención el vídeo, toma nota en tu cuaderno de las palabras desconocidas y busca su significado en el diccionario. 
+                            </p>
+                        </div>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> identifico la tecnología que me rodea y explico la importancia que tiene para desarrollar actividades en mi casa, colegio y comunidad.
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> ahora que ya sabes sobre las materias primas, vas a consultar con tus padres, con tus amigos o en internet: 
+                            </p>
+                            <ol>
+                                <li>
+                                    ¿Cómo se hace el papel? 
+                                </li>
+                                <li>
+                                    ¿Con qué materia prima se hace el papel?
+                                </li>
+                                <li>
+                                    ¿Estás de acuerdo con que se sigan utilizando los árboles para hacer el papel que se consume en el mundo? ¿por qué?
+                                </li>
+                            </ol>                        
+                        </div>
+                        <div class="box-text note" label="Nota">
+                            <p>
+                                Esta consulta la vas a escribir en tu cuaderno con una letra bien bonita, le tomas una foto y se la envías a la profe por el aula virtual. 
+                            </p>
+                        </div>
+                    </div>
+                </section>     
+                
+                <!--Concluyamos-->
+                <section id="pag-concluyamos" ptitle="3. Concluyamos">
+                    <div class="subpage">
+                        <p>
+                            Las materias primas son materiales extraídos de la naturaleza y utilizados por el hombre para transformarlas, con ayuda de herramientas, maquinaria y tecnologías, en productos de consumo para la satisfacción de las necesidades cotidianas. 
+                        </p>
+                        <p>
+                            En el siguiente gráfico puedes ver el origen de algunas materias primas.
+                        </p>
+                        <!--Esperar si va el genially-->
+                        <div class="box_media">
+                            <img src="content/materias_primas .jpg" />                        
+                        </div>
+                        <div class="box-text link" label="ENLACE DE AMPLIACIÓN.">
+                            <p>                           
+                                Para que sigas aprendiendo sobre las materias primas que utiliza el hombre para la creación de productos, te invitamos a ver el siguiente video.                            
+                            </p>
+                            <p>
+                                <strong>Video:</strong> <a href="https://www.youtube.com/watch?time_continue=50&v=2qmLSORYwCY&feature=emb_logo" target="_blank">Las materias primas</a> 
+                                
+                            </p>
+                            <p>
+                                <strong>Duración:</strong>  2:55 minutos                                                     
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> en este video nos muestran de qué materias primas están hechos algunos artefactos que el hombre utiliza en su cotidianidad.
+                            </p>
+                        </div>
+                    </div>
+                </section>  
+                
+                <!--Evaluemos-->
+                <section id="pag-evaluemos" ptitle="4. Evaluemos">
+                    <div class="subpage">
+                        <p>
+                            Ahora vamos a poner en práctica lo aprendido en esta lección
+                        </p>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p>
+                                <strong>Objetivo de aprendizaje:</strong> identifico la tecnología que me rodea y explico la importancia que tiene para desarrollar actividades en mi casa, colegio y comunidad.                          
+                            </p>
+                            <p>
+                                <strong>Enunciado:</strong> para elaborar productos de consumo se requieren materias primas de origen vegetal, animal, mineral o artificial. A continuación, encuentras un grupo de situaciones que debes resolver, para hacerlo selecciona la respuesta correcta de la lista desplegable. Piensa bien antes de responder.                           
+                            </p>
+                            <p>
+                                <strong>Duración:</strong> 1 hora. 
+                            </p>
+                        </div>
+                        <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-title="Actividad 3: materias primas" data-act-id="3-escoger">
+                            <ul class="data_list">
+                                
+                                <li>
+                                    <p>
+                                        Don José vive en la ciudad de Medellín y tiene una fábrica de calzado y bolsos muy finos y costosos. Para elaborar sus productos don José necesita 
+                                        <span>
+                                            <select>
+                                                <option>plumas</option>
+                                                <option>lana</option>
+                                                <option>piel</option>
+                                                <option data-response="true">cuero</option>
+                                                <option>madera</option>
+                                                <option>carbón</option>                                    
+                                            </select>
+                                        </span>
+                                        de alta calidad. El material que utiliza don José es de origen 
+                                        <span>
+                                            <select>
+                                                <option>vegetal</option>
+                                                <option data-response="true">animal</option>
+                                                <option>mineral</option>
+                                            </select>
+                                        </span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Juan tiene un taller de joyería fina y las principales materias primas que necesita para fabricar las joyas son 
+                                        <span>
+                                            <select>
+                                                <option>hierro</option>
+                                                <option>carbón</option>
+                                                <option data-response="true"> oro</option>
+                                            </select>
+                                        </span> 
+                                        y 
+                                        <span>
+                                            <select>
+                                                <option data-response="true">plata</option>
+                                                <option>arcilla</option>
+                                                <option>ferroníquel</option>
+                                                <option>yeso</option>
+                                            </select>
+                                        </span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Karla vive en un pueblo muy frío de Boyacá, tejé sacos y ruanas para vender y así ayudarse con sus gastos en la universidad. La materia prima que utiliza Karla para tejer es 
+                                        <span>
+                                            <select>                                    
+                                                <option>cáñamo</option>
+                                                <option>hilo</option>
+                                                <option data-response="true">lana</option>
+                                                <option>fique</option>
+                                            </select>
+                                        </span>
+                                        y proviene de las 
+                                        <span>
+                                            <select>                                    
+                                                <option>vacas</option>
+                                                <option>caballos</option>
+                                                <option>aves</option>
+                                                <option data-response="true">ovejas</option>
+                                            </select>
+                                        </span>.
+                                        Esta materia prima es de origen 
+                                        <span>
+                                            <select>                                    
+                                                <option>vegetal</option>
+                                                <option data-response="true">animal</option>
+                                                <option>mineral</option>                                    
+                                            </select>
+                                        </span>.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        La vía férrea por donde se desplaza el metro de Medellín tiene unos rieles que están hechos con 
+                                        <span>
+                                            <select>                                    
+                                                <option>hierro</option>
+                                                <option data-response="true">acero</option>
+                                                <option>arcillas</option> 
+                                                <option>plata</option>    
+                                                <option>oro</option>                               
+                                            </select>
+                                        </span>.
+                                        Este material es de origen 
+                                        <span>
+                                            <select>                                    
+                                                <option>vegetal</option>
+                                                <option>animal</option>
+                                                <option>mineral</option> 
+                                                <option data-response="true">artificial</option>                                   
+                                            </select>
+                                        </span>.
+                                        La materia prima es una aleación (mezcla) de hierro y carbono principalmente, pero también tiene otros compuestos minerales que el hombre utiliza para su creación. 
+                                    </p>   
+                                </li>
+                                <li>
+                                    <p>
+                                        Luis tiene una fábrica de bolsas plásticas no reciclables, este tipo de bolsas son elaboradas con derivados del 
+                                        <span>
+                                            <select>                                    
+                                                <option>carbón</option>
+                                                <option data-response="true">petróleo</option>
+                                                <option>hierro</option> 
+                                                <option>madera</option>                                   
+                                            </select>
+                                        </span>. 
+                                        Como sabemos, el plástico es un material muy contaminante para el medio ambiente, por lo tanto, es necesario cambiarlo. Si fueras una autoridad ambiental, ¿qué otra materia prima le recomendarías a Luis para hacer bolsas ecológicas biodegradables? Selecciona una opción: 
+                                        <span>
+                                            <select>                                    
+                                                <option>seda</option>
+                                                <option>lino</option>
+                                                <option>piel</option> 
+                                                <option data-response="true">almidón de maíz o papa, celulosa derivada del algodón</option>                                   
+                                            </select>
+                                        </span>. 
+                                        Estos materiales son derivados de 
+                                        <span>
+                                            <select>                                    
+                                                <option>animales</option>
+                                                <option data-response="true">vegetales</option>
+                                                <option>minerales</option>                                                                   
+                                            </select>
+                                        </span>, como la papa, el maíz o el algodón.
+                                    </p>
+                                </li>
+                            </ul>
+                            <div class="box_end">
+                                <feedback>
+                                    <correct>
+                                        <p>Así es.</p> 
+                                        <img src="content/correcto.gif" class="animacion"/>
+                                    </correct>
+                                </feedback> 
+                                <feedback>
+                                    <wrong>
+                                        <p>No es correcto, sigue intentanto</p> 
+                                        <img src="content/incorrecto.gif" class="animacion"/>
+                                    </wrong>
+                                </feedback>
+                            </div>
+                        </div>
+                    </div>
+                </section> 
+            
+            </main>
+
+            <footer class="not_print">
+                <div class="measuring-progress" data-type="horizontal"></div>
+
+                <nav label="General" class="globals2">
+                    <menu>
+                        <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                        <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                        <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                    </menu>
+                </nav>
+
+                <div id="subpages_menu">
+                    <div class="button" previous-page></div>
+                    <div id="page_number"></div>
+                    <ul class="button" subpages-menu></ul>
+                    <div class="button" next-page></div>
+                </div>
+
+
+            </footer>
+
+        </div>
+
+        <div id="results_page" style="display:none;">
+            <h2>Resumen de su avance en la lectura del documento</h2>
+            <h3>Páginas visitadas</h3>
+            <p>En verde, aquellas páginas que ya ha visitado.</p>
+            <div id="results_page_visited" class="container"></div>
+            <br class="clear" />
+            <h3>Actividades de aprendizaje</h3>
+            <div id="results_page_activities"></div>
+        </div>
+
+        <!--Créditos-->
+        <div id="credits-page" style="display:none;">
+            <div id="credits_subpage">
+                <h2>Créditos</h2>
+                <div>
+                    <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+                </div>
+                <div>
+                    <h3>Desarrollo de Contenidos</h3>
+                    <cite>María Eugenia Vásquez</cite> 
+                </div>
+                <div>
+                    <h3>Asesoría pedagógica y diseño instruccional</h3>
+                    <cite>María Elicenia Monsalve Upegui</cite>
+                </div>
+                <div>
+                    <h3>Corrección de estilo</h3>
+                    <cite>Paola Andrea Velandia Vega</cite>
+                </div>
+                <div>
+                    <h3>Diseño gráfico</h3>
+                    <cite>Juliana Tobón Gaviria</cite><br/>
+                    <cite>Nicole Chávez García</cite>
+                </div>
+                <div>
+                    <h3>Integración de contenidos</h3>
+                    <cite>Juan Fernando Bernal García</cite><br />
+                    <cite>Luisa Fernanda Arboleda Parra</cite><br />
+                    <cite>Santiago Bernal García</cite>
+                </div>
+                <div>
+                    <h3>Gestión técnica y administrativa</h3>
+                    <cite>Carolina Llanos Tobón</cite><br />
+                    <cite>David Herney Bernal García</cite>
+                </div>
+                <div>
+                    <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                    <p class="logos">
+                        <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                    </p>
+                </div>
+
+                <div class="editions">
+                    1ª edición: abril de 2020<br />
+                </div>
+                <div>
+                    <br />
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                    <img src="img/cc.png" alt="Creative Commons" /></a><br />
+                </div>
+                <div>
+                    <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bibliografía -->
+        <div id="library-page" style="display:none;">
+            <div id="library_subpage">
+                <h2>Bibliografía</h2>
+
+                <ul class="data_list">
+                    <li>
+                        Brgfx. (2020). <cite>Plato blanco con gotas de agua</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/plato-blanco-gotas-agua-sobre-blanco_6822388.htm" target="_blank">https://www.freepik.es/vector-gratis/[...]</a>
+                    </li>
+                    <li>
+                        Clker-Free-Vector-Images. (2012). <cite>Cebolla</cite> [Ilustración]. Freepik. <a href="https://pixabay.com/es/vectors/cebolla-veggie-vegetariana-33639/ " target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Freepik. (2015). <cite>Marco de cristal en estilo realista</cite> [Ilustración]. Freepik.  <a href="https://www.freepik.es/vector-gratis/marco-cristal-estilo-realista_774484.htm#page=1&query=vidrio&position=6" target="_blank">https://www.freepik.es/[...]</a>
+                    </li>
+                    <li>
+                        Freepik. (2018). <cite>Mano sujetando móvil con notificaciones</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/mano-sujetando-movil-notificaciones-facebook_2338438.htm#page=1&query=Celphone&position=3" target="_blank">https://www.freepik.es/[...]</a>
+                    </li>
+                    <li>
+                        Freepik. (2020). <cite>Fósforos</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/detener-coronavirus-fosforos_7716859.htm#page=1&query=Fosforo&position=4" target="_blank">https://www.freepik.es/[...]</a>
+                    </li>
+                    <li>
+                        MarCuesBo. (2018). <cite>Plátano maduro</cite> [Ilustración]. Pixabay.  <a href="https://pixabay.com/es/vectors/ilustraci%C3%B3n-icono-pl%C3%A1tano-3092853/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Ministerio de Educación Nacional. (2008). <cite>Orientaciones generales para la educación en tecnología. Ser competente en tecnología: ¡una necesidad para el desarrollo!</cite> <a href="https://www.mineducacion.gov.co/1621/articles-160915_archivo_pdf.pdf " target="_blank">https://www.mineducacion.gov.co/[...]</a>
+                    </li>
+                    <li>
+                        MostafaElTurkey36. (2020). <cite>Escoba</cite> [Ilustración]. Pixabay.  <a href="https://pixabay.com/es/vectors/escoba-mafia-limpieza-limpia-polvo-4991869/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        OpenClipart-Vectors. (2014a). <cite>Coco</cite> [Ilustración]. Pixabay.  <a href="https://pixabay.com/es/vectors/coco-alimentos-frutas-tropicales-575780/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        OpenClipart-Vectors. (2014b). <cite>Huevo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/huevo-desayuno-yema-de-huevo-575756/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        OpenClipart-Vectors. (2016). <cite>Oveja</cite> [Ilustración]. Pixabay.  <a href="https://pixabay.com/es/vectors/animales-granja-ovejas-1295118/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        OpenClipart-Vectors. (2017). <cite>Árbol</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/naturaleza-planta-%C3%A1rbol-2027899/" target="_blank">https://pixabay.com/es/[...]</a>
+                    </li>
+                    <li>
+                        Pérsico, L. (2014). <cite>Mi primer libro de adivinanzas.</cite> Editorial Libsa.
+                    </li>
+                    <li>
+                        Rawpixel.com. (2018). <cite>Gráfico de utensilios de cocina de sartén</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/grafico-utensilios-cocina-sarten_2632388.htm#page=1&query=sarten&position=1" target="_blank">https://www.freepik.es/[...]</a>
+                    </li>
+                    <li>
+                        Schujer, S. (2004). <cite>351 adivinanzas para jugar.</cite> Editorial Sudamericana.
+                    </li>
+                    <li>
+                        Studiogstock. (2020a). <cite>Campaña quedarse en casa con pareja viendo tv</cite> [Ilustración]. Freepik.  <a href="https://www.freepik.es/vector-gratis/campana-quedarse-casa-pareja-viendo-tv_7585969.htm#page=1&query=Television&position=5" target="_blank">https://www.freepik.es/[...]</a>
+                    </li>
+                    <li>
+                        Studiogstock. (2020b). <cite>Icono aislado de bombilla</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/icono-aislado-bombilla_6821427.htm" target="_blank">https://www.freepik.es/[...]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="printent_content" style="display:none;">
+            <div class="content"></div>
+            <div class="button_container">
+                <button class="general button" onclick="window.print();">Imprimir</button>
+                <button id="printent_back" class="general button" >Volver</button>
+            </div>
+        </div>
+
+    </body>
+</html>

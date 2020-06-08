@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>En busca del tiempo</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/crossword/jpit_activity_crossword.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>En busca del tiempo</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Edades" data-page="pag-edades"></menuitem>
+                        <menuitem label="Reto final" data-page="pag-crucigrama"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-edades" ptitle="1. Edades">
+                <div class="subpage"> 
+                    <div class="videobox">
+                        <video controls>
+                            <source src="content/video/powtoon.mp4" type="video/mp4">
+                            El reproductor de video no es soportado por el navegador
+                        </video>
+                    </div>
+                </div>     
+            </section>
+
+            <section id="pag-crucigrama" ptitle="2. Reto final">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> consolidar conceptos adquiridos.
+                        </p>
+                        <div class="box_media">
+                            <img src="content/pirata9.png" alt="Enunciado" />
+                        </div>
+                    </div>
+                    <div class="jpit-activities-crossword" data-act-id="1-crossword" data-act-title="Crucigrama tiempo">
+                        <horizontal>
+                            <li data-row="2" data-col="1" data-term="prehistoria">Es el periodo comprendido desde el comienzo de la vida humana hasta la invención de la escritura.</li>
+                            <li data-row="6" data-col="8" data-term="moderna">Comprende desde la caída del Imperio bizantino en 1453, hasta finales del siglo XVIII con la Revolución francesa en 1789.</li>
+                            <li data-row="9" data-col="7" data-term="cristianismo">Toma el centro de la vida de las personas, se constituye como ciencia y religión. Además, universaliza el pensamiento de la población europea.</li>
+                            <li data-row="11" data-col="0" data-term="piedra antigua">Es la traducción de Paleolítico.</li>
+                            <li data-row="13" data-col="8" data-term="antigua">Comienza con la aparición de los primeros documentos escritos hace unos 5.000 años y llega hasta la caída del Imperio romano.</li>
+                        </horizontal>
+                        <vertical>
+                            <li data-row="0" data-col="9" data-term="contemporanea">Se extiende desde la Revolución francesa hasta nuestros días.</li>
+                            <li data-row="6" data-col="5" data-term="piedra nueva">Es la traducción de Neolítico.</li>
+                            <li data-row="8" data-col="18" data-term="media">Se inicia con el final del dominio romano y se prolonga hasta la caída del Imperio bizantino en 1453.</li>
+                            <li data-row="12" data-col="13" data-term="guerra">Es el único medio para someter a los demás pueblos durante la Edad Antigua.</li>
+                        </vertical>
+                        <div class="box_end">
+                            <feedback>
+                                <correct>
+                                    <div class="row">
+                                        <div class="box_media col_2">
+                                            <img src="content/pirata10.png" alt="¡Felicitaciones!" />
+                                        </div>
+                                        <div class="col_2">    
+                                            <h5>Gracias valiente, lo has logrado. Con tu ayuda hemos recuperado el tiempo y hemos adquirido muchos conocimientos.</h5>
+                                        </div>
+                                    </div>
+                                </correct>
+                            </feedback>
+                        </div>
+                    </div>
+                    <div class="box-text important" label="Recuerda">
+                        <ol>
+                            <li>Los cambios de era fueron marcados por hechos decisivos, que a su vez llevaron a cambios ideológicos fuertes.</li>
+                            <li>Son cambios que se construyeron durante años, nunca se trata de hechos puntuales y aislados.</li>
+                            <li>Somos consecuencia de un sin fin de hechos.  Piensa, ¿qué hubiera pasado si…? O, si tal acontecimiento nunca hubiera ocurrido, ¿cómo seríamos hoy?</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Luz Elena Wiederman</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Valentina Pinillos Echavarría</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite><br />
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

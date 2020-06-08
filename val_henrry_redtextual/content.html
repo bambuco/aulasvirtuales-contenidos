@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Juguemos con las palabras</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Juguemos con las palabras </h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Semántica" data-page="pag-semantica"></menuitem>
+                        <menuitem label="Retos">
+                            <menu>
+                                <menuitem label="Reto 1" data-page="pag-act1"></menuitem>
+                                <menuitem label="Reto 2" data-page="pag-act2"></menuitem>
+                            </menu>
+                        </menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-semantica" >
+                <div class="subpage">
+                    <div class="box-text note" label="Semántica">
+                        <p>
+                            Recuerda que la semántica es el significado de las palabras. Juguemos para poner a prueba nuestra capacidad de conectar imágenes, palabras y significados.
+                        </p>
+                    </div>
+                    
+                    <p>
+                        Antes de iniciar, busca un cronómetro o reloj con el que puedas medir el tiempo. ¿Listo? Siéntate y ¡comencemos!
+                    </p>
+                    <p>
+                        Recuerda controlar cuántos minutos te demoras en responder cada reto.
+                    </p>
+                </div>
+            </section>
+
+            <section id="pag-act1" ptitle="Reto 1">
+                <div class="subpage" id="act_1">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Enunciado:</strong> para tu primer reto que consta de 4 ejercicios, vas llenar los espacios como en un crucigrama teniendo en cuenta únicamente las líneas horizontales. Complétalo con letras o sílabas según una definición o pista dada. O, al contrario, deberás dar la pista para encontrar la palabra propuesta. No olvides que <u>cada palabra lleva una determinada sílaba y está en una posición específica</u>.</p>
+                    </div>
+                    <h3>
+                        Ejercicio 1.
+                    </h3>
+                    <h4>
+                        Sílaba: <em>li</em>.
+                    </h4>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-title="Reto 1. Ejercicio 1, sílaba 'li'" data-act-id="1_cloze">
+                        <div class="row">
+                            <div class="col_2">
+                                <p><strong>PISTAS</strong></p>
+                                <ol>
+                                    <li>Ascendencia ilustre de una persona; estirpe.</li>
+                                    <li>Condiciones atmosféricas (plural).</li>
+                                    <li>Niebla en tiempo de mucho calor.</li>
+                                    <li>Error leve no intencionado. Falta moral.</li>
+                                    <li>Planta de jardín, cuya flor es muy aromática.</li>
+                                    <li>Muro que dividía a Alemania.</li>
+                                    <li>Quebrantamiento de la ley.</li>
+                                    <li>Obra literaria griega escrita por Homero.</li>
+                                    <li>País asiático.</li>
+                                </ol>
+                            </div>
+                            <div class="col_2">
+                                <p><strong>PALABRAS</strong></p>
+                                <table class="tabla">
+                                    <tr>
+                                        <td>1.</td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="n" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="j" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="c" /></span></td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="m" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="c" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="m" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="d" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="z" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="h" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="b" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="r" /></span></td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="n" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="d" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="t" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="i" /></span></td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="d" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.</td>
+                                        <td><strong><em>l</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="b" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="n" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                    </div>
+                    
+                </div>
+                <div class="subpage" id="act_2">
+                    <h3>
+                        Ejercicio 2.
+                    </h3>
+                    <h4>
+                        Sílaba: <em>ve</em>.
+                    </h4>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-title="Reto 1. Ejercicio 2, sílaba 've'" data-act-id="2_cloze">
+                        <div class="row">
+                            <div class="col_2">
+                                <p><strong>PISTAS</strong></p>
+                                <ol>
+                                    <li>Estación del tiempo.</li>
+                                    <li>Daño.</li>
+                                    <li>Estructura de una construcción con forma curva.</li>
+                                    <li>Movimiento alternativo de un cuerpo. Oscilación.</li>
+                                    <li>Pretérito del verbo andar en primera persona.</li>
+                                    <li>Poco, conciso (plural).</li>
+                                    <li>Obra escrita en prosa.</li>
+                                    <li>Prenda de vestir de una pieza.<br />
+                                    Generalmente se usa para trabajar</li>
+                                    <li>Embarcación.</li>
+                                </ol>
+                            </div>
+                            <div class="col_2">
+                                <p><strong>PALABRAS</strong></p>
+                                <table class="tabla">
+                                    <tr>
+                                        <td>1.</td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="r" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="n" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="r" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="i" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="b" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="d" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="v" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="i" /></span></td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="n" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="n" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="d" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="u" /></span></td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="b" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="r" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="n" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="r" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.</td>
+                                        <td><strong><em>v</em></strong></td>
+                                        <td><strong><em>e</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="r" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+                <div class="subpage" id="act_3">
+                    <h3>
+                        Ejercicio 3.
+                    </h3>
+                    <h4>
+                        Sílaba: <em>si</em>.
+                    </h4>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-title="Reto 1. Ejercicio 3, sílaba 'si'" data-act-id="3_cloze">
+                        <div class="row">
+                            <div class="col_2">
+                                <p><strong>PISTAS</strong></p>
+                                <ol>
+                                    <li>Que se pronuncia en una sola emisión o golpe de voz.</li>
+                                    <li>Establecimiento benéfico de amparo o protección (plural).</li>
+                                    <li>Que se da con la boca (diminutivo).</li>
+                                    <li>Tira larga, enunciados o numeración vertical (plural, inverso).</li>
+                                    <li>Isla pequeña y generalmente despoblada (invertido).</li>
+                                    <li>Temblor (plural, inverso).</li>
+                                    <li>Mueble (diminutivo).</li>
+                                    <li>Frecuente. Que se repite a menudo.</li>
+                                    <li>Lugar (plural).</li>
+                                </ol>
+                            </div>
+                            <div class="col_2">
+                                <p><strong>PALABRAS</strong></p>
+                                <table class="tabla">
+                                    <tr>
+                                        <td>1.</td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="b" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="b" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="t" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="t" /></span></td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="t" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="l" /></span></td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="m" /></span></td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="m" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="e" /></span></td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="t" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.</td>
+                                        <td><span><input maxlength="1" type="text" data-response="a" /></span></td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="d" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="u" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.</td>
+                                        <td><strong><em>s</em></strong></td>
+                                        <td><strong><em>i</em></strong></td>
+                                        <td><span><input maxlength="1" type="text" data-response="t" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="i" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="o" /></span></td>
+                                        <td><span><input maxlength="1" type="text" data-response="s" /></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+                <div class="subpage" id="act_4">
+                    <h3>
+                        Ejercicio 4.
+                    </h3>
+                    <p>
+                        Ahora es tu turno de inventar. Elige una sílaba, ubícala en <em>“V”</em> como se muestra en los ejercicios anteriores y escribe su pista teniendo cuidado de no ser muy directo o que su significado sea muy fácil. Por último, anota la palabra correspondiente.
+                    </p>
+                    <div class="jpit-activities-form" data-save="true" data-print="true" data-require-all="true" data-act-title="Reto 1. Ejercicio 4, eligiendo tu silaba y tus 9 palabras" data-act-id="4_form">
+                        <h4>
+                            Sílaba: <strong><input maxlength="2" type="text" name="silaba" ftitle="Silaba"
+                            placeholder="Escribe aquí tu sílaba">.</strong>
+                        </h4>
+                        <div class="row">
+                            <div class="col_2">
+                                <p><strong>PISTAS</strong></p>
+                                <ol>
+                                    <li><input type="text" name="pista1" ftitle="Pista 1"
+                                    placeholder="Escribe aquí la pista 1." ></li>
+                                    <li><input type="text" name="pista2" ftitle="Pista 2"
+                                    placeholder="Escribe aquí la pista 2." ></li>
+                                    <li><input type="text" name="pista3" ftitle="Pista 3"
+                                    placeholder="Escribe aquí la pista 3." ></li>
+                                    <li><input type="text" name="pista4" ftitle="Pista 4"
+                                    placeholder="Escribe aquí la pista 4." ></li>
+                                    <li><input type="text" name="pista5" ftitle="Pista 5"
+                                    placeholder="Escribe aquí la pista 5." ></li>
+                                    <li><input type="text" name="pista6" ftitle="Pista 6"
+                                    placeholder="Escribe aquí la pista 6." ></li>
+                                    <li><input type="text" name="pista7" ftitle="Pista 7"
+                                    placeholder="Escribe aquí la pista 7." ></li>
+                                    <li><input type="text" name="pista8" ftitle="Pista 8"
+                                    placeholder="Escribe aquí la pista 8." ></li>
+                                    <li><input type="text" name="pista9" ftitle="Pista 9"
+                                    placeholder="Escribe aquí la pista 9." ></li>
+                                </ol>
+                            </div>
+                            <div class="col_2">
+                                <p><strong>PALABRAS</strong></p>
+                                
+                                <table class="tabla">
+                                    <tr>
+                                        <td>1.</td>
+                                        <td><input maxlength="6" type="text" name="palabra1" ftitle="Palabra 1"
+                                        placeholder="Escribe aquí la palabra 1" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td><input maxlength="6" type="text" name="palabra2" ftitle="Palabra 2"
+                                        placeholder="Escribe aquí la palabra 2" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td><input maxlength="6" type="text" name="palabra3" ftitle="Palabra 3"
+                                        placeholder="Escribe aquí la palabra 3" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td><input maxlength="6" type="text" name="palabra4" ftitle="Palabra 4"
+                                        placeholder="Escribe aquí la palabra 4" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td><input maxlength="6" type="text" name="palabra5" ftitle="Palabra 5"
+                                        placeholder="Escribe aquí la palabra 5" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td><input maxlength="6" type="text" name="palabra6" ftitle="Palabra 6"
+                                        placeholder="Escribe aquí la palabra 6" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td><input maxlength="6" type="text" name="palabra7" ftitle="Palabra 7"
+                                        placeholder="Escribe aquí la palabra 7" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.</td>
+                                        <td><input maxlength="6" type="text" name="palabra8" ftitle="Palabra 8"
+                                        placeholder="Escribe aquí la palabra 8" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.</td>
+                                        <td><input maxlength="6" type="text" name="palabra9" ftitle="Palabra 9"
+                                        placeholder="Escribe aquí la palabra 9" ></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-act2" ptitle="Actividad 2">
+
+                <div class="subpage" id="act_5">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Enunciado:</strong> la semántica es básicamente entender el significado de las palabras. Por ello, vamos a ver qué tanto las conoces en el siguiente reto.</p>
+                        <p>Selecciona los animales y arrástralos de nuevo a su habitat. Los animales domésticos deben volver a la granja del señor Joe, los salvajes a la selva para ser libres y los acuáticos al mar.</p>
+                    </div>
+                    <h3>
+                        Reto 2.
+                    </h3>
+                    <div id="arrastrar" class="jpit-activities-droppable" data-target-multi="4" data-autoalign="false" data-act-title="Actividad 2. Arrastrando los animales a su hábitat" data-act-id="5_arrastrar">
+                        <p class="instruction" type="info">Arrastra las imágenes a su hábitat correspondiente.</p>
+                        <div class="box_targets">
+                            <div class="box">
+                                <div data-target-group="1" class="target granja"></div>
+                            </div>
+                            <div class="box">
+                                <div data-target-group="2" class="target selva"></div>
+                            </div>
+                            <div class="box">
+                                <div data-target-group="3" class="target mar"></div>
+                            </div>
+                        </div>
+                        <div class="sources">
+                            <div class="box_media" data-group="4">
+                                <img src="content/arbol.png" alt="arbol" />
+                            </div>
+                            <div class="box_media" data-group="4">    
+                                <img src="content/bicicleta.png" alt="Bicicleta" />
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/caballo.png" alt="Caballo" />
+                            </div>
+                            <div class="box_media" data-group="3">
+                                <img src="content/caballodemar.png" alt="Caballo de mar" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/carro.png" alt="Carro" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/casa.png" alt="Casa" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/cuaderno.png" alt="Cuaderno" />
+                            </div>
+                            <div class="box_media" data-group="3">
+                                <img src="content/delfin.png" alt="Delfin" />
+                            </div>
+                            <div class="box_media" data-group="3">
+                                <img src="content/estrella.png" alt="Estrella" />
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/gallo.png" alt="Gallo" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/labios.png" alt="Labios" />
+                            </div>
+                            <div class="box_media" data-group="2">
+                                <img src="content/leon.png" alt="Leon" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/manzana.png" alt="Manzana" />
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/marrano.png" alt="Marrano" />
+                            </div>
+                            <div class="box_media" data-group="2">
+                                <img src="content/mico.png" alt="Mico" />
+                            </div>
+                            <div class="box_media" data-group="2">
+                                <img src="content/oso.png" alt="Oso" />
+                            </div>
+                            <div class="box_media" data-group="1">
+                                <img src="content/perro.png" alt="Perro" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/sol.png" alt="Sol" />
+                            </div>
+                            <div class="box_media" data-group="3">
+                                <img src="content/tiburon.png" alt="Tiburon" />
+                            </div>
+                            <div class="box_media" data-group="2">
+                                <img src="content/tigre.png" alt="Tigre" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/vaso.png" alt="Vaso" />
+                            </div>
+                            <div class="box_media" data-group="4">
+                                <img src="content/yoyo.png" alt="Yoyo" />
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                    </div>
+                    <h4>¿Cuánto tiempo te demoraste?</h4>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Henry Monsalve</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Valentina Pinillos Echavarría</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite><br />
+                <cite>Jorge Antonio Torres Grisales</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    Brgfx. (2019). <cite>Mono en escena de la jungla</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/mono-escena-jungla_5769801.htm#page=1&query=selva&position=48" target="_blank">https://www.freepik.es/vector-gratis[...]</a>
+                </li>
+                <li>
+                    Flat Icons. (s.f.). <cite>Icono caballito de mar</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/seahorse_1998781?term=sea%20horse&page=1&position=1" target="_blank">https://www.flaticon.com/free-icon/seahorse[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono árbol</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/tree_490091?term=arbol&page=1&position=4" target="_blank">https://www.flaticon.com/free-icon/tree[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono bicicleta</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/bicycle_706170?term=bicicleta&page=1&position=11" target="_blank">https://www.flaticon.com/free-icon/bicycle[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono caballo</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/horse_616710?term=horse&page=1&position=5" target="_blank">https://www.flaticon.com/free-icon/horse[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono cerdo</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/pig_2194807?term=pig&page=1&position=5" target="_blank">https://www.flaticon.com/free-icon/pig[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono delfín</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/dolphin_427463?term=dolphin&page=1&position=7" target="_blank">https://www.flaticon.com/free-icon/dolphin[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono estrella de mar</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/sea-star_195047" target="_blank">https://www.flaticon.com/free-icon/sea-star[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono gallo</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/animal_1746900?term=cock&page=1&position=10" target="_blank">https://www.flaticon.com/free-icon/animal[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono león</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/lion_427427" target="_blank">https://www.flaticon.com/free-icon/lion[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono manzana</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/apple_415682?term=apple&page=1&position=4" target="_blank">https://www.flaticon.com/free-icon/apple[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono mono</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/monkey_616599?term=monkey&page=1&position=14" target="_blank">https://www.flaticon.com/free-icon/monkey[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono oso</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/bear_427459?term=bear&page=1&position=14" target="_blank">https://www.flaticon.com/free-icon/bear[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono perro</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/dog_2767976?term=dog&page=1&position=2" target="_blank">https://www.flaticon.com/free-icon/dog[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono sol</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/sunny_979534?term=sun&page=1&position=2" target="_blank">https://www.flaticon.com/free-icon/sunny[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono tiburón</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/shark_2383784?term=shark&page=1&position=12" target="_blank">https://www.flaticon.com/free-icon/shark[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono tigre</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/tiger_616689?term=tiger&page=1&position=3" target="_blank">https://www.flaticon.com/free-icon/tiger[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono vaso</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/vase_602764?term=vase&page=1&position=9" target="_blank">https://www.flaticon.com/free-icon/vase[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Icono yoyo</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/yoyo_581780?term=yoyo&page=1&position=2" target="_blank">https://www.flaticon.com/free-icon/yoyo[...]</a>
+                </li>
+                <li>
+                    Freepik. (s.f.). <cite>Fondo bajo el agua con animales acuáticos</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/fondo-agua-animales-aquaticos_2314373.htm#page=1&query=Mar&position=19" target="_blank">https://www.freepik.es/vector-gratis[...]</a>
+                </li>
+                <li>
+                    Gstudioimagen. (2019). <cite>Dibujos animados frescos de granja.</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/dibujos-animados-frescos-granja_5605482.htm#page=1&query=granja&position=30" target="_blank">https://www.freepik.es/vector-gratis[...]</a>
+                </li>
+                <li>
+                    Smashicons. (s.f.). <cite>Icono boca</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/open-mouth_1471735" target="_blank">https://www.flaticon.com/free-icon[...]</a>
+                </li>
+                <li>
+                    Smashicons. (s.f.). <cite>Icono cuaderno</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/journal_2232505?term=notebook&page=1&position=13" target="_blank">https://www.flaticon.com/free-icon/journal[...]</a>
+                </li>
+                <li>
+                    Vectors Market. (s.f.). <cite>Icono carro</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/car_744465?term=car&page=1&position=12" target="_blank">https://www.flaticon.com/free-icon/car[...]</a>
+                </li>
+                <li>
+                    Vectors Market. (s.f.). <cite>Icono casa</cite> [Ilustración]. Flaticon. <a href="https://www.flaticon.com/free-icon/house_609803?term=home&page=1&position=4" target="_blank">https://www.flaticon.com/free-icon/house[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

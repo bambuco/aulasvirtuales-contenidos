@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icon.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Bitácoras de viaje: ¿en dónde estoy?</title>
+        <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+        <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+        <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+        <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
+        <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
+        <link href="components/pit/css/jpit_zoom.css" rel="stylesheet" type="text/css">
+        <link href="components/csscircle/circle.min.css" rel="stylesheet" type="text/css">
+
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <!--jQuery components -->
+        <script src="components/jquery-selection/src/jquery.selection.min.js"></script>
+        <script src="components/twentytwenty/js/jquery.event.move.js" type="text/javascript"></script>
+        <script src="components/twentytwenty/js/jquery.twentytwenty.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="components/twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
+
+        <script src="components/mediaelementjs/mediaelement-and-player.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="components/mediaelementjs/mediaelementplayer.css" type="text/css" />
+
+        <script src="components/maphilight/jquery.maphilight.min.js" type="text/javascript"></script>
+    <!--End jQuery components -->
+
+
+        <script src="components/interact/interact.min.js"></script>
+        <script src="components/pit/jpit_api.js"></script>
+        <script src="components/pit/utilities/jpit_utilities.js"></script>
+        <script src="components/pit/activity/jpit_activity.js"></script>
+        <script src="components/pit/resources/jpit_resource.js"></script>
+        <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+        <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+        <script src="components/pit/activity/mark/jpit_activity_mark.js"></script>
+        <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+        <script src="components/pit/activity/crossword/jpit_activity_crossword.js"></script>
+        <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+        <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+        <script src="components/pit/activity/sortable/jpit_activity_sortable.js"></script>
+        <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+        <script src="components/pit/resources/movi/jpit_resource_movi.js"></script>
+        <script src="components/pit/resources/zoom/jpit_resource_zoom.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/lang.es.js"></script>
+        <script src="js/lib.js"></script>
+        <script src="js/mobilelib.js"></script>
+        <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+        <script src="components/scorm/scorm_api.js"> </script>
+        <script src="js/customlib.js"></script>
+        <script src="js/stories.js"></script>
+
+
+        <style type='text/css'>
+
+            body {
+                background-color: rgba(242, 242, 242, 0.7);
+            }
+
+            body.loading {
+                text-align: center;
+            }
+
+            body.loading:after {
+                content: "";
+                background: url(img/loading.gif) no-repeat bottom center;
+                width: 130px;
+                height: 30px;
+                display: block;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            body.loading #body {
+                display: none;
+            }
+        </style>
+
+    </head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Bitácoras de viaje: ¿en dónde estoy?</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>                        
+                        <menuitem label="1. Teorías del universo" data-page="pag-teoria"></menuitem>
+                        <menuitem label="2. Sistema solar" data-page="pag-solar"></menuitem>                      
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+       <!--1. Teorías del universo-->
+       <section id="pag-teoria" ptitle="1. Teorías del universo">
+            <div class="subpage">
+                <div class="row">
+                    <div class="col-2">
+                        Hablar del universo, las estrellas, las constelaciones, la vida en otros planetas y todo lo que tenga que ver con el mundo exterior, es emocionante. El estudio del universo está directamente relacionado con nuestra vida cotidiana.
+                        <div class="box-text example" label="Por ejemplo">
+                            <p>
+                                Un año es el tiempo que demora la Tierra en darle una vuelta al Sol y decimos que el año se acaba el 31 de diciembre en medio de celebraciones porque es el momento en que la Tierra está más cerca del Sol.
+                            </p>
+                        </div>                            
+                    </div>
+                    <div class="col-2 conttwoo">
+                        <div class="box_media">
+                            <img src="content/img1.png" alt="universo" title="Universo" />
+                            <div class="about">
+                                Imagen de  Gerd Altmann en Pixabay
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subpage">
+                <h3>1.1 ¿Cuáles son las teorías de origen del universo?</h3>
+                <div class="box-text connection">
+                    <p>
+                        Indaguemos cómo surge este maravilloso universo. A continuación, Sol nos llevará en un recorrido por distintas culturas con el propósito de entender cómo se crearon todas esas hermosas estrellas y planetas que rodean la Tierra. Dale reproducir al video y abróchate el cinturón.
+                    </p>
+                </div>
+                <div class="videobox">
+                    <video controls >
+                        <source src="content/videos/universo.mp4" type="video/mp4">                      
+                      El reproductor de video no es soportado por el navegador
+                    </video>
+                </div>                                
+            </div>
+            <div class="subpage">
+                <h3>1.2 Juguemos </h3>
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <p>
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> identificar las características de las teorías del universo.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> ¡ayuda a Sol! Ubica los enunciados según las características que hayas evidenciado en el video anterior, así ella podrá volver a su casa sana y salva. Arrastra las características a la categoría que correspondan correctamente. 
+                        </p>                                          
+                    </p>
+                </div>
+                <div id="arrastrargrupos" class="jpit-activities-multidroppable" data-act-title="Actividad 1: Teorías científicas y mitológicas" data-act-id="1-relacionar">
+                    <p class="instruction onlymobile" type="info">
+                        Gira tu celular a modo horizontal para realizar esta actividad.
+                    </p>
+                    <h4>Diferencias entre teorías científicas y mitológicas</h4>
+                    <div class="box_targets">
+                        <div class="enunciadoone">
+                            <h5>Teorías mitológicas</h5>
+                            <div class="target" data-target-group="1"></div>
+                        </div>
+                        <div class="enunciadotwo">
+                            <h5>Teorías científicas</h5>
+                            <div class="target" data-target-group="2"></div>
+                        </div>                            
+                    </div> 
+                    <div class="sources sources1">
+                        <div class="nube" data-group="2">
+                            <p class="textone">Planteada por seres humanos (científicos, investigadores, etc.)</p> 
+                        </div>
+                        <div class="nube" data-group="2">
+                            <p class="textfour">Se basa en pruebas, demostraciones y verificaciones.</p>
+                        </div>
+                        <div class="nube" data-group="1">
+                            <p class="texttwo">Pertenecen a ciertas culturas y cambian dependiendo de la misma.</p>
+                        </div>                            
+                        <div class="nube" data-group="1">
+                            <p class="texttrhee">Está protagonizada por dioses o personajes fantásticos y súper poderosos (por ejemplo, Thor).</p>
+                        </div>
+                    </div>
+                    <div class="box_end"></div>
+                    <div class="buttons">
+                        <button class="general verify">Verificar</button>
+                        <button class="general continue" style="display: none;">Continuar intentando</button>
+                    </div>
+                    <div class="sources sources2">
+                        <div class="nube" data-group="1">
+                            <p class="textsix">Siempre tratan de explicar algo (Thor explica el porqué de los truenos y relámpagos).</p>
+                        </div>
+                        <div class="nube" data-group="2">
+                            <p class="textfive">Es el resultado de estudios, análisis, observaciones e investigaciones.</p>
+                        </div>
+                        <div class="nube" data-group="1">
+                            <p class="textseven">Su explicación no tiene coherencia lógica.</p>
+                        </div>
+                        <div class="nube" data-group="2">
+                            <p class="texteight">Su explicación tiene coherencia lógica.</p>
+                        </div>
+                    </div>                       
+                </div>
+                <div class="row sol">
+                    <div class="col-2">
+                        <div class="box_media">
+                            <img src="content/sol2.png" alt="Sol" title="Sol"/>                        
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="box-text connection">
+                            <p>
+                                Mientras Sol volvía a su casa, su celular sonó con un dato curioso que decía: 
+                            </p>
+                            <p>
+                                <blockquote>
+                                    Los nombres de los días de la semana provienen de los nombres de los planetas, la Luna y el Sol. ¡Sorpréndete!
+                                </blockquote>
+                            </p>
+                        </div>
+                    </div>
+                </div>                                     
+                <div class="vertical-menu" data-layer-height="350px">
+                    <dl>
+                        <dt>Lunes de Luna</dt>
+                        <dd>
+                            <div class="box_media luna">
+                                <img src="content/img2_1.png" alt="luna" title="Luna"/>
+                                <div class="about">
+                                    Imagen de Clker-Free-Vector-Images en Pixabay.
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Martes de Marte</dt>
+                        <dd>
+                            <div class="box_media marte">
+                                <img src="content/img2_2.png" alt="marte" title="Marte" />
+                                <div class="about">
+                                    Imagen de Clker-Free-Vector-Images en Pixabay.
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Miércoles de Mercurio</dt>
+                        <dd>
+                            <div class="box_media mercurio">
+                                <img src="content/img2_3.png" alt="mercurio" title="Mercurio" />
+                                <div class="about">
+                                    Imagen de OpenClipart-Vectors en Pixabay.
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Jueves de Júpiter</dt>
+                        <dd>
+                            <div class="box_media jupiter">
+                                <img src="content/img2_4.png" alt="jupiter" title="Júpiter"/>
+                                <div class="about">
+                                    Imagen de Clker-Free-Vector-Images en Pixabay.
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Viernes de Venus</dt>
+                        <dd>
+                            <div class="box_media venus">
+                                <img src="content/img2_5.png" alt="venus" title="Venus" />
+                                <div class="about">
+                                    Imagen de Clker-Free-Vector-Images en Pixabay.
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Sábado de Saturno</dt>
+                        <dd>
+                            <div class="box_media saturno">
+                                <img src="content/img2_6.png" alt="saturno" title="Saturno" />
+                                <div class="about">
+                                    Imagen de Clker-Free-Vector-Images en Pixabay.
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Domingo (Sunday en inglés) de Sol (Sun en inglés): Sunday de Sun</dt>
+                        <dd>
+                            <div class="box_media sol">
+                                <img src="content/sol2_1.png" alt="sol" title="Sol" />
+                                <div class="about">
+                                    Diseñado por Freepik
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="box-text connection">
+                    <p>
+                        Y ¡adivina! hacen parte de nuestro sistema solar… Pero, ¿qué es eso? Descubrámoslo juntos con ayuda de Sol.
+                    </p>
+                </div>                      
+            </div>
+        </section>           
+
+        <section id="pag-solar" ptitle="2. Sistema solar" >
+            <div class="subpage">
+                <div class="row">
+                    <div class="col-2">
+                        El sistema solar es el conjunto de cuerpos que giran alrededor de la estrella llamada Sol. El Sol es la única estrella de nuestro sistema solar y alrededor de él giran ocho planetas. Uno de estos planetas es la Tierra junto con sus lunas; los planetas enanos;  los asteroides y las cometas.
+                    </div>
+                    <div class="col-2">
+                        <div class="box_media">
+                            <img src="content/img3.png" alt="sistema solar" title="El sistema solar"/>
+                            <div class="about">
+                                Imagen de WikiImages en Pixabay. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subpage">
+                <h3>2.1 ¿De qué está compuesto?</h3>
+                <div class="box-text connection">
+                    <p>
+                        Sol encontró una baraja en su casa que describía cada uno de sus componentes. Obsérvala y léela detenidamente.
+                    </p>
+                </div>
+                <div class="box_media">
+                    <iframe src="content/el_sistema_solar/genially.html" class="interactivo" >
+                        Contenido interactivo
+                    </iframe>                                                               
+                </div>
+                <div class="box-text connection">
+                    <p>
+                        Sol devolvió las fichas a su lugar, pero se quedó con una, su favorita: “El Sol”. ¿Cuál es la tuya?
+                    </p>
+                </div>
+            </div>
+            <div class="subpage">
+                <h3>2.2 ¿Qué aprendí?</h3>
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <p>
+                        <strong>Objetivo de aprendizaje:</strong> identificar las diferentes características de nuestro sistema solar                      
+                    </p>
+                    <p>
+                        <strong>Enunciado:</strong> la mamá de Sol se enteró que la niña guardó uno de los naipes. Para que ella pueda conservarlo debe cumplir el siguiente reto. ¡Ayúdala a completar el crucigrama! Lee atentamente las afirmaciones y escribe la respuesta en las casillas del número correspondiente en el crucigrama.                            
+                    </p>
+                </div>
+                <div class="jpit-activities-crossword" data-act-id="2-identificar" data-act-title="Actividad 2: Características de nuestro sistema solar">
+                    <horizontal>
+                        <li data-row="6" data-col="7" data-term="Tierra">Planeta en el que se puede demostrar que hay vida</li>
+                        <li data-row="8" data-col="11" data-term="Sol">Es la única estrella del sistema solar.</li>
+                        <li data-row="9" data-col="0" data-term="Mercurio">Es el planeta más pequeño del sistema solar y el más cercano al Sol.</li>
+                        <li data-row="10" data-col="11" data-term="Venus">Es el planeta más caliente de todo el sistema solar y el más cercano a la Tierra.</li>
+                        <li data-row="12" data-col="2" data-term="Rotacion">jMovimiento que hacen los planetas sobre su propio eje. En la Tierra dura 24 horas. 12 de día y 12 de noche.</li>
+                        <li data-row="12" data-col="14" data-term="Marte">Planeta con nombre del dios de la guerra de la mitología romana, tiene dos lunas. </li>
+                        <li data-row="15" data-col="3" data-term="Saturno">Con un telescopio se le pueden ver los anillos a este planeta desde la Tierra. </li>                           
+                    </horizontal> 
+                    <vertical>
+                        <li data-row="0" data-col="1" data-term="Monteolimpo">Es la montaña más alta de todo el sistema solar.</li>
+                        <li data-row="1" data-col="10" data-term="Planetaenano">Cuerpo esférico que gira alrededor del Sol y NO mantiene su órbita, se desvía.</li>
+                        <li data-row="2" data-col="3" data-term="Jupiter">El planeta más grande de todo el sistema solar.</li>
+                        <li data-row="2" data-col="8" data-term="Neptuno">Este es el planeta más alejado de la Tierra. Es el último del sistema solar. </li>
+                        <li data-row="3" data-col="13" data-term="Urano">Es uno de los planetas más fríos y también tiene anillos, aunque no tan visibles como los de Saturno</li>
+                        <li data-row="6" data-col="16" data-term="Traslacion" >Movimiento que hacen los planetas alrededor del Sol. En la Tierra dura 365 días y 6 horas.</li>
+                        <li data-row="7" data-col="14" data-term="Luna">Cuerpo que gira alrededor de un planeta o planeta enano. Ganimedes es uno de ellos.</li>
+                        <li data-row="10" data-col="4" data-term="Fobos">Una de las lunas de Marte que cada vez se le acerca más. </li>
+                    </vertical>                         
+                    <feedback>
+                        <correct>Gracias por ayudar a Sol a conservar el naipe.</correct>
+                        <wrong>Aún debes completar la actividad, ¡sigue intentando!</wrong>
+                    </feedback>                      
+                </div>
+                <div class="box-text activity" label="Actividad de aprendizaje">
+                    <p>
+                      <strong>Objetivo de aprendizaje:</strong> hacer una síntesis del tema.                          
+                    </p>
+                    <p>
+                        <strong>Enunciado:</strong> Sol te recuerda, que puede hacerles preguntas a sus compañeros de viaje para conocer las diferentes versiones del origen del mundo. ¡Ayúdala!, escribe una carta a alguno de los personajes con una pregunta que te haya quedado acerca de lo vivido y cuéntale qué tal te pareció la experiencia.
+                    </p>
+                </div>
+                <div class="jpit-activities-form" data-save="true" data-print="true" data-require-all="true" data-act-id="form" data-act-title="Carta">
+                    <div class="sheet">
+                        <div class="sheet_body">
+                            <p>
+                                <textarea name="carta" ftitle="Carta:"></textarea>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Jhorman Jimenez</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Valentina Pinillos Echavarria</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chávez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Luisa Fernanda Mesa Tobón</cite><br />
+                <cite>Luisa Fernanda Arboleda Parra</cite><br />
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    Centro Autonómico de Formación e Innovación. (s.f.). <cite>Redacción de textos argumentativos. </cite> <a href="https://www.edu.xunta.gal/centros/cafi/aulavirtual2/pluginfile.php/26651/mod_resource/content/0/Unidad_6/Web_txt_arg_I/index.html" target="_blank">https://www.edu.xunta.gal[...]</a>
+                </li>
+                <li>
+                    Clker-Free-Vector-Images. (2012). <cite>Hoja de papel y lápiz </cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/lista-bala-puntos-elementos-uno-27221/" target="_blank">https://pixabay.com/es/vectors/[...]</a>
+                </li>
+                <li>
+                    Clker-Free-Vector-Images. (2012). <cite>Lista de elementos </cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/lista-bala-puntos-elementos-uno-27221/" target="_blank">https://pixabay.com/es/vectors/[...]</a>
+                </li>
+                <li>
+                    Cuadros sinópticos sobre textos comparativos. (s.f.). <a href="https://cuadrocomparativo.org/wp-content/uploads/2015/08/SBReadResourceServlet.jpg " target="_blank">https://cuadrocomparativo.org/[...]</a>
+                </li>
+                <li>
+                    10 ejemplos de textos argumentativos para secundaria. (2018). <a href="https://ortografia.com.es/ejemplos-de-textos-argumentativos/" target="_blank">https://ortografia.com.es/[...]</a>
+                </li>
+                <li>
+                    Geralt. (2014). <cite>Personas con globos de diálogo.</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/grupo-equipo-globos-nubes-239252/" target="_blank">https://pixabay.com/[...]</a>
+                </li>
+                <li>
+                    Molina, M. (2020). <cite>¡Hola soy el coronavirus! El cuento para que los niños conozcan más sobre el virus </cite> [Ilustración]. La Vanguardia. <a href="https://www.lavanguardia.com/cribeo/fast-news/20200311/474087214135/hola-soy-coronavirus-cuento-infantil-ninos-padres-manuela-molina-descarga-gratis-ayuda-prevencion.html" target="_blank">https://www.lavanguardia.com/[...]</a>
+                </li>
+                <li>
+                    OpenIcons. (2013). <cite>Hoja de papel dentro de una carpeta</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/documento-abierta-carpeta-97576/" target="_blank">https://pixabay.com/[...]</a>
+                </li>
+                <li>
+                    Paulasg14. (2012). <cite>Textos argumentativos</cite> [Mapa conceptual]. Slideshare. <a href="https://es.slideshare.net/Paulasg14/textos-argumentativo-15232268" target="_blank">https://es.slideshare.net/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

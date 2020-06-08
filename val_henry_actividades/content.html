@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Actividades</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+    <script src="components/pit/activity/sortable/jpit_activity_sortable.js"></script>
+    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Actividades</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Analogías" data-page="pag-analogias"></menuitem>
+                        <menuitem label="Expresión verbal y gramática" data-page="pag-expresion"></menuitem>
+                        <menuitem label="Expresión escrita, análisis de oraciones y gramática" data-page="pag-escrita"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-analogias" ptitle="Analogías">
+                <div class="subpage">
+                    <p>La analogía es una relación de equivalencia que se establece entre los términos de dos proposiciones dadas.</p>
+                    <div class="box-text example" label="Ejemplo:">
+                        <p><strong>MEDELLÍN: ANTIOQUIA</strong></p>
+                        <p><strong>Se lee: MEDELLÍN <em>es a</em> ANTIOQUIA <em>como</em></strong></p>
+                        <table class="datatable">
+                            <tbody>
+                                <tr class="odd">
+                                    <td>A. Atlántico: Barranquilla</td>
+                                    <td>A. Atlántico es a Barranquilla</td>
+                                </tr>
+                                <tr>
+                                    <td>B. Mocoa: Guainía</td>
+                                    <td>B. Mocoa es a Guainía</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>C. Cartagena: Santa Marta</td>
+                                    <td>C. Cartagena es a Santa Marta</td>
+                                </tr>
+                                <tr>
+                                    <td>D. Bogotá: Cundinamarca</td>
+                                    <td>D. Bogotá es a Cundinamarca</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <td colspan="2">Respuesta correcta es la D.</td>
+                            </tfoot>
+                        </table>
+                        <p><strong>(Medellín: Antioquia :: Bogotá: Cundinamarca)</strong> Se leería: Medellín <em>es a</em> Antioquia <em>como</em> Bogotá <em>es a</em> Cundinamarca. Su <u>relación</u> es de capital a departamento; que en realidad sería una relación <strong><u>PARTE – TODO</u></strong>.</p>
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje 1">
+                        <p><strong>Enunciado:</strong> resuelve ahora las siguientes ANALOGÍAS explicando la relación entre los términos y copiando el significado de las palabras desconocidas</p>
+                    </div>
+                    <div class="jpit-activities-quiz" data-act-title="Analogías" data-act-id="1_analogias">
+                        <question type="simplechoice">
+                            <description><p>Fitófago: vegetal ::</p></description>
+                            <ul>
+                                <li data-response="true">Geófago: tierra</li>
+                                <li>Coprófago: cereal</li>
+                                <li>Xilófago: cereal</li>
+                                <li>Necrófago: celulosa</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>Ignorancia: erudición ::</p></description>
+                            <ul>
+                                <li>Pueril: infantil</li>
+                                <li data-response="true">Oneroso: barato</li>
+                                <li>Dispendioso: lujoso</li>
+                                <li>Generoso: rebajado</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>Maestro: formación ::</p></description>
+                            <ul>
+                                <li>Sociólogo: disertación</li>
+                                <li>Dirigente: legislación</li>
+                                <li>Político: moción</li>
+                                <li data-response="true">Líder: orientación</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>Lusitano: Portugal ::</p></description>
+                            <ul>
+                                <li>Cosaco: Turquía</li>
+                                <li>Magiar: Polonia</li>
+                                <li data-response="true">Gaucho: Argentina</li>
+                                <li>Aymará: Ecuador</li>
+                            </ul>
+                        </question>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-expresion" ptitle="Expresión verbal y gramática">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 2">
+                        <p><strong>Objetivo:</strong> utilizar adecuadamente la conjugación de los verbos según tiempo, modo y persona.</p>
+                        <p><strong>Enunciado:</strong> elige y conjuga el verbo que se encuentra en infinitivo y ubica en la oración correspondiente de acuerdo a tiempo, modo y persona.</p>
+                    </div>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="2_expresion" data-act-title="Expresión verbal y gramática">
+                        <table class="datatable">
+                            <tbody>
+                                <ol>
+                                    <tr class="odd">
+                                        <td>
+                                            <li>
+                                                Ayer, la secretaria 
+                                                <span>
+                                                    <input type="text" data-response="desistió" />
+                                                </span>
+                                                 de ir al paseo.
+                                            </li>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <select>
+                                                    <option>ADUCIR</option>
+                                                    <option>ANDAR</option>
+                                                    <option>COCER</option>
+                                                    <option data-response="true">DESISTIR</option>
+                                                    <option>PLACER</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <li>
+                                                Ojalá te 
+                                                <span>
+                                                    <input type="text" data-response="plazca" />
+                                                </span>
+                                                 lo que te preparé.
+                                            </li>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <select>
+                                                    <option>ADUCIR</option>
+                                                    <option>ANDAR</option>
+                                                    <option>COCER</option>
+                                                    <option>DESISTIR</option>
+                                                    <option data-response="true">PLACER</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <li>
+                                                El refrán dice: “En todas partes se 
+                                                <span>
+                                                    <input type="text" data-response="cuecen" />
+                                                </span>
+                                                 habas”.
+                                            </li>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <select>
+                                                    <option>ADUCIR</option>
+                                                    <option>ANDAR</option>
+                                                    <option data-response="true">COCER</option>
+                                                    <option>DESISTIR</option>
+                                                    <option>PLACER</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <li>
+                                                En la reunión de ayer, el gerente 
+                                                <span>
+                                                    <input type="text" data-response="adujo" />
+                                                </span>
+                                                 argumentos de mucho peso.
+                                            </li>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <select>
+                                                    <option data-response="true">ADUCIR</option>
+                                                    <option>ANDAR</option>
+                                                    <option>COCER</option>
+                                                    <option>DESISTIR</option>
+                                                    <option>PLACER</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <li>
+                                                En todo el día te 
+                                                <span>
+                                                    <input type="text" data-response="anduve" />
+                                                </span>
+                                                 buscando y no te encontré.
+                                            </li>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <select>
+                                                    <option>ADUCIR</option>
+                                                    <option data-response="true">ANDAR</option>
+                                                    <option>COCER</option>
+                                                    <option>DESISTIR</option>
+                                                    <option>PLACER</option>
+                                                </select>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </ol>
+                            </tbody>
+                        </table>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje 3">
+                        <h5>Ordenamiento de párrafos</h5>
+                        <p>El siguiente texto se encuentra en desorden. Ordénalo con lógica</p>
+                    </div>
+                    <div class="jpit-activities-sortable" data-set-position="span" data-act-id="3_ordenar" data-act-title="Ordena el texto">
+                        <ul class="sortable">
+                             <li data-position="8">(<span>1</span>) Entonces el mosquito, muy satisfecho, tocó de nuevo la diana y se alejó volando.</li>
+                             <li data-position="11">(<span>2</span>) “¡Qué ironía! Soy más fuerte que la fiera más fuerte y sin embargo, muero en una despreciable telaraña”.</li>
+                             <li data-position="5">(<span>3</span>) y sin darle mucho tiempo, el mosquito tocó la diana y se lanzó a picar al león en las partes blandas y desnudas como las mejillas y la nariz. </li>
+                             <li data-position="0">(<span>4</span>) Una vez un mosquito voló hacia un león y le dijo:</li>
+                             <li data-position="1">(<span>5</span>) Yo soy más fuerte que tú y para demostrártelo ¡te propongo que hagamos una guerra!</li>
+                             <li data-position="6">(<span>6</span>) El león desesperado por el ardor, se golpeaba el rostro con las garras y sus uñas hendían su carne.</li>
+                             <li data-position="4">(<span>7</span>) Verte hacerlo es como ver a una mujer peleando con un hombre.</li>
+                             <li data-position="9">(<span>8</span>) Sin tener mucho tiempo para pensar, cayó atrapado en una telaraña y la araña hambrienta,</li>
+                             <li data-position="2">(<span>9</span>) “¿Oye, tú crees que tienes más fuerza que yo? ¡Te apuesto a que no!</li>
+                             <li data-position="7">(<span>10</span>) Y fueron tantos los golpes y tantas las heridas que el león murió desangrado.</li>
+                             <li data-position="10">(<span>11</span>) Se dispuso rápidamente a comérselo, mientras el mosquito decía para sí:</li>
+                             <li data-position="3">(<span>12</span>) ¿Qué fuerza vas a tener, si lo único que haces es arañar con las uñitas y roer con los dientecitos?</li>
+                        </ul>
+                        <p>Fábula escrita por Esopo.</p>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-escrita" ptitle="Expresión escrita, análisis de oraciones y gramática.">
+                <div class="subpage">
+                    <p><strong>Objetivo:</strong> desarrollar y aplicar la expresión escrita y reforzar los conocimientos de gramática en los estudiantes de lengua castellana.</p>
+                    <h3>I. Usos de <i>por qué</i>, <i>porque</i> y el <i>porqué</i>.</h3>
+                    <h4>Definiciones y ejemplos</h4>
+                    <p><strong>Por qué:</strong> separado y con tilde sirve para averiguar o interrogar; indica desconocimiento. Ejemplos:</p>
+                    <ul class="data_list">
+                        <li>¿Por qué no me llamas?</li>
+                        <li>No sé por qué te demoras.</li>
+                    </ul>
+                    <p><strong>Porque:</strong> unido y sin tilde indica la causa de algo. Ejemplos:</p>
+                    <ul class="data_list">
+                        <li>No voy porque no quiero.</li>
+                        <li>Porque estudié, gané el examen.</li>
+                    </ul>
+                    <p><strong>El porqué:</strong> unido y con tilde es un sustantivo que significa la razón o el motivo. Ejemplos:</p>
+                    <ul class="data_list">
+                        <li>Dime el porqué de tu partida.</li>
+                        <li>No entiendo el porqué de esa forma de actuar.</li>
+                    </ul>
+                    <h3>II. Usos de <i>si no</i> y <i>sino</i>.</h3>
+                    <p><strong>Si no:</strong> separado. Está compuesto por la conjunción si (que se diferencia del sí afirmativo) más la negación.</p>
+                    <p>Existe una fórmula para comprobar si el “si no” va separado y es poniendo o escribiendo una palabra entre ellos. Ejemplos:</p>
+                    <ul class="data_list">
+                        <li>
+                            <p>Si no te apuras, llegaremos tarde.</p>
+                            <p>(Si <em>tú</em> no te apuras, llegaremos tarde).</p>
+                        </li>
+                        <li>
+                            <p>La ceremonia no empieza si no llega el presidente.</p>
+                            <p>(La ceremonia no empieza si <em>él</em> no llega —el presidente—).</p>
+                        </li>
+                    </ul>
+                    <p><strong>Sino:</strong> una sola palabra. Es una conjunción adversativa equivalente a “más que” o a “pero sí”. Ejemplos:</p>
+                    <ul class="data_list">
+                        <li>
+                            <p>No se trata sino de un pequeño asunto.</p>
+                            <p>(No se trata más que de un pequeño asunto).</p>
+                        </li>
+                        <li>
+                            <p>No va a Bogotá, sino a Cali.</p>
+                            <p>(No va a Bogotá, pero sí a Cali).</p>
+                        </li>
+                    </ul>
+                    <h3>III. El <i>dequeísmo</i></h3>
+                    <p>Es un “vicio” idiomático que consiste en usar sin necesidad la preposición <strong>de</strong> antes de cláusulas comenzadas con <strong>que</strong>. Ejemplos:</p>
+                    <ul class="data_list">
+                        <li>
+                            <p>Espero que me llames (correcto).</p>
+                            <p>Espero de que me llames (incorrecto).</p>
+                        </li>
+                        <li>
+                            <p>Creo que me entendió (correcto).</p>
+                            <p>Creo de que me entendió (incorrecto).</p>
+                            <p>NOTA: para comprobar si se debe usar el <strong>de que</strong>, se pregunta con el <strong>de qué</strong>.</p>
+                        </li>
+                        <li>
+                            <p>Se convenció de que era verdad.</p>
+                            <p>¿De qué se convenció? De que era verdad.</p>
+                        </li>
+                    </ul>
+                    <h3>IV. El <i>antidequeísmo</i></h3>
+                    <p>Consiste en no utilizar el <strong>de que</strong> donde se debe usar. Ejemplos:</p>
+                    <ul class="data_list">
+                        <li>
+                            <p>Estoy convencido que no vendrás (incorrecto).</p>
+                            <p>Estoy convencido de que no vendrás (correcto).</p>
+                        </li>
+                    </ul>
+                    <h4>Ejercicios</h4>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="4_sino" data-act-title="Si no o sino">
+                        <p>1. Escriba si no o sino, según corresponda:</p>
+                        <ol type="a">
+                            <li>
+                                No voy a la fiesta 
+                                <span>
+                                    <input type="text" data-response="si no" />
+                                </span>
+                                 me invitan.
+                            </li>
+                            <li>
+                                Él no estudia, 
+                                <span>
+                                    <input type="text" data-response="sino" />
+                                </span>
+                                 que trabaja.
+                            </li>
+                            <li>
+                                El apartamento no es mío, 
+                                <span>
+                                    <input type="text" data-response="sino" />
+                                </span>
+                                 de mi mujer.
+                            </li>
+                            <li>
+                                <span>
+                                    <input type="text" data-response="Si no" />
+                                </span>
+                                 estudias, no pasas a la universidad.
+                            </li>
+                            <li>
+                                No hallamos 
+                                <span>
+                                    <input type="text" data-response="sino" />
+                                </span>
+                                 tristezas en el viaje.
+                            </li>
+                        </ol>
+                        <div class="box_end"></div>
+                    </div>
+                    <div class="jpit-activities-check"  data-act-id="5_f-v" data-act-title="Falso o verdadero 1">
+                        <words>
+                            <li>Sabemos de que no es cierto.</li>
+                            <li>Me olvidé que tenía que pagar.</li>
+                            <li data-val="true">Me doy cuenta de que era falso.</li>
+                            <li>Pienso de que tú me amas.</li>
+                            <li data-val="true">Se trata de que siga las reglas.</li>
+                        </words>
+                        <div class="board">
+                            <div class="check_left">
+                                <div class="play">
+                                    <p>2. Señale falso <strong>(F)</strong> o verdadero <strong>(V)</strong>:</p>
+                                    <div class="word_content"> </div>
+                                    <div class="buttons">
+                                        <button class="yes general">Verdadero</button>
+                                        <button class="not general">Falso</button>
+                                    </div>
+                                </div>
+                                <div class="box_conclution">
+                                    <h3>¡Ha finalizado!</h3>
+                                    <div class="buttons">
+                                        <button class="general reload">Vuelve a intentarlo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_right">
+                                <div class="box_result">
+                                    <div class="correct">
+                                        <div class="hits">0</div>
+                                        <div class="text">Aciertos</div>
+                                    </div>
+                                    <div class="wrong">
+                                        <div class="miss">0</div>
+                                        <div class="text">Desaciertos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jpit-activities-check"  data-act-id="6_f-v" data-act-title="Falso o verdadero 2">
+                        <words>
+                            <li data-val="true">Anunciaron que subiría el precio.</li>
+                            <li>Sabemos que no es cierto.</li>
+                            <li>Supongo de que ganaremos.</li>
+                            <li data-val="true">Me olvidé de que tenía que pagar.</li>
+                        </words>
+                        <div class="board">
+                            <div class="check_left">
+                                <div class="play">
+                                    <p>3. Señale falso <strong>(F)</strong> o verdadero <strong>(V)</strong>:</p>
+                                    <div class="word_content"> </div>
+                                    <div class="buttons">
+                                        <button class="yes general">Verdadero</button>
+                                        <button class="not general">Falso</button>
+                                    </div>
+                                </div>
+                                <div class="box_conclution">
+                                    <h3>¡Ha finalizado!</h3>
+                                    <div class="buttons">
+                                        <button class="general reload">Vuelve a intentarlo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_right">
+                                <div class="box_result">
+                                    <div class="correct">
+                                        <div class="hits">0</div>
+                                        <div class="text">Aciertos</div>
+                                    </div>
+                                    <div class="wrong">
+                                        <div class="miss">0</div>
+                                        <div class="text">Desaciertos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="7_porque" data-act-title="Por qué, porque o porqué 1">
+                        <p>4. Escriba Por qué, porque o porqué, según corresponda:</p>
+                        <ol type="a"><i>
+                            <li>
+                                No sé 
+                                <span>
+                                    <input type="text" data-response="por qué" />
+                                </span>
+                                 te demoras.
+                            </li>
+                            <li>
+                                <span>
+                                    <input type="text" data-response="Porque" />
+                                </span>
+                                 gané el examen.
+                            </li>
+                            <li>
+                                Explícame el 
+                                <span>
+                                    <input type="text" data-response="porqué" />
+                                </span>
+                                 de tu traición.
+                            </li>
+                            <li>
+                                No 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                  seas rico debes gastar tanto dinero.
+                            </li>
+                            <li>
+                                Ella se fue del país 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                 tenía miedo.
+                            </li>
+                            <li>
+                                Si no te gusta, no tienes 
+                                <span>
+                                    <input type="text" data-response="por qué" />
+                                </span>
+                                 hacerlo.
+                            </li>
+                            <li>
+                                No dijo los 
+                                <span>
+                                    <input type="text" data-response="porqués" />
+                                </span>
+                                 de su determinación.
+                            </li>
+                            <li>
+                                No voy 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                 estoy muy cansado.
+                            </li>
+                            <li>
+                                Te has callado 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                 él tenía razón.
+                            </li>
+                            <li>
+                                Ignoro 
+                                <span>
+                                    <input type="text" data-response="por qué" />
+                                </span>
+                                 se ha marchado.
+                            </li>
+                        </i></ol>
+                        <div class="box_end"></div>
+                    </div>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="8_porque" data-act-title="Por qué, porque o porqué 2">
+                        <p>5. Escriba Por qué, porque o porqué, según corresponda:</p>
+                        <ol type="a"><i>
+                            <li>
+                                Cada uno tiene un 
+                                <span>
+                                    <input type="text" data-response="porqué" />
+                                </span>
+                                 en sus actuaciones.
+                            </li>
+                            <li>
+                                No entiendo 
+                                <span>
+                                    <input type="text" data-response="por qué" />
+                                </span>
+                                 está siempre callado.
+                            </li>
+                            <li>
+                                Lo digo 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                 la razón está de mi parte.
+                            </li>
+                            <li>
+                                Quizá lo hace 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                 está disgustada.
+                            </li>
+                            <li>
+                                Se sujetó 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                 se caía de la escalera.
+                            </li>
+                            <li>
+                                ¿
+                                <span>
+                                    <input type="text" data-response="Por qué" />
+                                </span>
+                                 no has venido a la escuela?
+                            </li>
+                            <li>
+                                El profe explica la solución del problema, pero nunca el 
+                                <span>
+                                    <input type="text" data-response="porqué" />
+                                </span>
+                            </li>
+                            <li>
+                                Pregunta 
+                                <span>
+                                    <input type="text" data-response="por qué" />
+                                </span>
+                                 puerta es más rápida la entrada.
+                            </li>
+                            <li>
+                                Asómate a esa ventana 
+                                <span>
+                                    <input type="text" data-response="porque" />
+                                </span>
+                                 puedes verlo todo.
+                            </li>
+                            <li>
+                                Si ha obrado así, tendrá su 
+                                <span>
+                                    <input type="text" data-response="porqué" />
+                                </span>
+                                .
+                            </li>
+                        </i></ol>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Henry Monsalve</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Valentina Pinillos Echavarría</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>
