@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/icon.svg">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>La alimentación</title>
+        <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+        <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+        <script src="components/jquery/jquery.min.js"></script>
+        <script src="components/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+        <script src="components/interact/interact.min.js"></script>
+        <script src="components/pit/jpit_api.js"></script>
+        <script src="components/pit/utilities/jpit_utilities.js"></script>
+        <script src="components/pit/activity/jpit_activity.js"></script>
+        <script src="components/pit/resources/jpit_resource.js"></script>
+        <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+        <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/lang.es.js"></script>
+        <script src="js/lib.js"></script>
+        <script src="js/mobilelib.js"></script>
+        <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+        <script src="components/scorm/scorm_api.js"> </script>
+
+        <style type='text/css'>
+
+            body {
+                background-color: rgba(242, 242, 242, 0.7);
+            }
+
+            body.loading {
+                text-align: center;
+            }
+
+            body.loading:after {
+                content: "";
+                background: url(img/loading.gif) no-repeat bottom center;
+                width: 130px;
+                height: 30px;
+                display: block;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            body.loading #body {
+                display: none;
+            }
+        </style>
+
+    </head>
+    <body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+        <div id="body" class="not_print">
+            <div id="not_scorm_msg" style="display: none;"></div>
+
+            <nav label="Características globales" class="globals">
+                <menu>
+                    <menuitem data-global-id="return">
+                        <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                        <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                    </menuitem>
+                    <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+                </menu>
+            </nav>
+
+            <header>
+                <div>
+                    <h1>La alimentación</h1>
+                    <nav label="Principal" class="horizontal main" data-offset="true">
+                        <menu>
+                            <menuitem label="La alimentación" data-page="pag-alimenta"></menuitem>
+                            <menuitem label="¿Qué pasa con los niños?" data-page="pag-quepasa"></menuitem>
+                            <menuitem label="Aplica lo aprendido" data-page="pag-aplica"></menuitem>
+                        </menu>
+                    </nav>
+                </div>
+            </header>
+
+            <main style="display: none;">
+
+                <h2 class="page-title"></h2>
+
+                <!--1. La alimentación-->
+                <section id="pag-alimenta" ptitle="1. La alimentación"> 
+                    <div class="subpage" id="p_alimenta">
+                        <div class="box_media">
+                            <img src="content/varios.png" alt="Varios alimentos"/>
+                        </div>
+                        <p>
+                            La alimentación y el ejercicio son una combinación exitosa. Cuando queremos hablar de salud o de hábitos de vida saludable podríamos decir que son dos variables dependientes, ya que una no tendrá éxito sin la otra: se necesitan cuando se busca alcanzar un objetivo.
+                        </p>
+                        <p>
+                            Los objetivos relacionados con la alimentación pueden variar, de allí la importancia de desarrollar hábitos saludables.
+                        </p>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="box-text important" label="¿Para qué tener hábitos de alimentación saludables?">
+                                    <ul class="data_list">
+                                        <li>Aumentar masa muscular</li>
+                                        <li>Bajar de peso</li>
+                                        <li>Nutrición balanceada</li>
+                                        <li>Control de una patología como la hipertensión</li>
+                                        <li>Mantener un peso adecuado</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="box_media">
+                                    <img src="content/img_dr.png" alt="Imagen Doctor"/>
+                                    <div class="about">Imagen adaptada de “Personaje doctor posiciones” de Urrego y Moreno. Tomada de Crotalus. Ruta TIC.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-text note" label="Tenga en cuenta">
+                            Para poder llevar a cabo hábitos alimenticios sanos y apropiados debemos tener claro cómo se agrupan los alimentos, qué es un nutriente y cuáles son las necesidades alimenticias de acuerdo a la edad.
+                        </div>
+                        <div class="box-text link" label="PARA PROFUNDIZAR SOBRE EL TEMA">
+                            <p><strong>Enunciado:</strong> para ampliar los conceptos sobre salud y nutrición puedes visitar el siguiente enlace.</p>
+                            <p><strong>Enlace web:</strong> <a href="http://www.fao.org/3/am283s/am283s05.pdf" target="_blank">Nutrición y salud</a>.</p>
+                        </div>
+                        <p>
+                            En términos sencillos podríamos decir que los grupos alimenticios son seis. En la base se encuentran los carbohidratos; seguidos de los vegetales; luego, las frutas; después, las proteínas de origen animal y vegetal; a continuación, los lácteos y, por último, las grasas y dulces, estas últimas en cantidades muy pequeñas.
+                        </p>
+                        <p>
+                            Estos grupos alimenticios aportan diferentes nutrientes al organismo para desarrollar funciones que van desde el movimiento hasta la construcción de nuevos tejidos. Las necesidades de estos nutrientes varían con los años y con la cantidad de actividad física o ejercicio que realizamos.
+                        </p>
+                        <div class="box_media">
+                            <img src="content/piramide.png" alt="Piramide"/>
+                            <div class="about">Imagen tomada de Wikimedia Commons.</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <div class="box_media">
+                                    <img src="content/familia.png" alt="Familia feliz"/>
+                                    <div class="about">Imagen de Bearfotos en Freepik.</div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <p>
+                                    Los padres tienen un rol fundamental en la adquisición de estas rutinas alimenticias.  Ya, que son ellos o los cuidadores, quienes realizan las compras y la preparación de los alimentos en el hogar.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <p>
+                                    Es así, como la alimentación tiene una importancia especial en cada etapa de la vida durante los primeros años. Es fundamental educar a los niños en el consumo de todos los grupos de alimentos, especialmente de frutas y verduras para que, cuando se llegue a la adolescencia, sea mucho más fácil continuar con estos hábitos.
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                <div class="box_media">
+                                    <img src="content/madre.png" alt="Madre"/>
+                                    <div class="about">Imagen de Freepik en Freepik.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> 
+
+                <!--2. ¿Qué pasa con los niños de 2 a 5 años en Colombia?-->
+                <section id="pag-quepasa" ptitle="2. ¿Qué pasa con los niños de 2 a 5 años en Colombia? <sup class='tooltip' title='Los datos de este apartado fueron tomados con fines educativos de la noticia “Más de 560.000 niños en Colombia sufren de desnutrición crónica” publicada en Caracol Radio. Las gráficas presentadas a continuación son de elaboración propia.'>[1]</sup>"> 
+                    <div class="subpage" id="p_quepasa">
+                        <p>
+                            En el Comité de Seguridad Alimentaria de la FAO (Organización de las Naciones Unidas para la Alimentación y la Agricultura) en el 2019, se muestran los siguientes datos relacionados con la alimentación de los niños en Colombia.
+                        </p>
+                        <div class="box_media">
+                            <img src="content/niños.png" alt="Alimentación"/>
+                        </div>
+                        <div class="box-text link" label="PARA PROFUNDIZAR SOBRE EL TEMA">
+                            <p><strong>Enunciado:</strong> para conocer más sobre la importancia de la alimentación en una vida saludable, puedes visitar el siguiente enlace.</p>
+                            <p><strong>Enlace web:</strong> <a href="http://www.fao.org/3/am287s/am287s00.pdf" target="_blank">Alimentar la mente para crecer y vivir sanos</a>.</p>
+                        </div>
+                    </div>
+                </section> 
+
+                <!--3. Aplica lo aprendido-->
+                <section id="pag-aplica" ptitle="3. Aplica lo aprendido">
+                    <div class="subpage" id="p_aplica1">
+                        <h3>3.1 Grupos de alimentos</h3>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p><strong>Objetivo de aprendizaje:</strong> identificar las características de los grupos de alimentos.</p>
+                            <p><strong>Enunciado:</strong> asocia cada definición con el grupo de alimento respectivo. Para ello, arrastra a cada grupo la definición que le corresponde. Las opciones se encuentran en la parte inferior.</p>
+                        </div>
+                        <div id="act_1" class="jpit-activities-droppable" data-target-multi="1" data-act-title="Identificar las características de los grupos de alimentos" data-act-id="1_act_1">
+                            <p class="instruction" type="info">Arrastra las definiciones a su grupos de alimentos correspondiente.</p>
+                            <div class="box_targets">
+                                <div class="box_img">
+                                    <div data-target-group="1" class="target_1 grupo_1"></div>
+                                    <div data-target-group="2" class="target_2 grupo_2"></div>
+                                    <div data-target-group="3" class="target_3 grupo_3"></div>
+                                </div>
+                            </div>
+                            <div class="sources">
+                                <div class="box_1" data-group="1">
+                                    <p>
+                                        Estos alimentos dan al cuerpo las proteínas necesarias para formar o reponer diferentes tejidos, además, permiten el crecimiento y desarrollo adecuado.
+                                    </p>
+                                </div>
+                                <div class="box_2" data-group="2">    
+                                    <p>
+                                        Fuente principal de muchas vitaminas y minerales (micronutrientes), que participan en el funcionamiento y desarrollo de todas las partes del cuerpo.
+                                    </p>
+                                </div>
+                                <div class="box_3" data-group="3">
+                                    <p>
+                                        Proporcionan la energía para poder desarrollar las actividades diarias como estudiar, jugar o trabajar.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="box_end"></div>
+                        </div>
+                    </div>
+                    <div class="subpage" id="p_aplica2">
+                        <h3>3.2 Un plato equilibrado</h3>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p><strong>Objetivo de aprendizaje:</strong> identificar la porción de cada grupo de alimento que debemos consumir en una comida principal.</p>
+                            <p><strong>Enunciado:</strong> indica en qué porción se debe consumir cada grupo de alimento. Para ello, arrastra el grupo de alimento que se encuentra en la parte inferior al porcentaje que le corresponde.</p>
+                        </div>
+                        <div id="act_2" class="jpit-activities-droppable" data-act-title="Porción que se bebe consumir de cada grupo alimenticio" data-act-id="2_act_2" data-verify-type="target">
+                            <p class="instruction" type="info">
+                                <span class="onlymobile"></span>
+                                <span class="notmobile"></span>
+                                Arrastra el grupo de alimento a la porción correspondiente.</p>
+                            <div class="box_targets">
+                                <div class="box_img">
+                                    <div data-target-group="1" class="target_1 grupo_1"></div>
+                                    <div data-target-group="2" class="target_2 grupo_2"></div>
+                                    <div data-target-group="2" class="target_3 grupo_3"></div>
+                                </div>
+                            </div>
+                            <div class="sources">
+                                <div class="box_media img_ver" data-group="1">
+                                    <img src="content/50_verduras.jpg" alt="Verduras" />
+                                </div>
+                                <div class="box_media img_pas" data-group="2">
+                                    <img src="content/25_pastas.jpg" alt="Pastas" />
+                                </div>
+                                <div class="box_media img_pol" data-group="2">
+                                    <img src="content/25_pollo.jpg" alt="Pollo" />
+                                </div>
+                            </div>
+                            <div class="box_end"></div>
+                        </div>
+                    </div>
+                    <div class="subpage" id="p_aplica3">
+                        <h3>3.3 Alimentación saludable</h3>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p><strong>Objetivo de aprendizaje:</strong> reconocer la importancia de una alimentación balanceada para favorecer estilos de vida saludable.</p>
+                            <p><strong>Enunciado:</strong> elige las dos respuestas correctas para la siguiente afirmación: una alimentación saludable es aquella que…</p>
+                        </div>
+                        <div class="box-text connection">
+                        
+                        <div class="jpit-activities-selection" data-act-id="3_act_3" data-act-title="Elige las dos respuestas correctas" data-mode="multi">
+                            <ul class="salud data_list">
+                                <li data-group="1"><div class="check"></div> Tiene un 80% de frutas y verduras y un 20% de proteínas.</li>
+                                <li data-group="1" data-correct="true"><div class="check"></div> Aporta todos los nutrientes por grupos de alimentos.</li>
+                                <li data-group="1" data-correct="true"><div class="check"></div> Te ayuda a sentirte sano y con energía.</li>
+                                <li data-group="1"><div class="check"></div> Acompaña las comidas con agua evitando bebidas azucaradas.</li>
+                            </ul>
+                            <div class="box_end"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="subpage" id="p_aplica4">
+                        <h3>3.4 Análisis de lectura</h3>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p><strong>Objetivo de aprendizaje:</strong> reconocer la importancia de una alimentación balanceada para favorecer estilos de vida saludable.</p>
+                            <p><strong>Enunciado:</strong> lee el enunciado y de acuerdo a lo desarrollado, indica si es verdadero o falso.</p>
+                        </div>
+                        
+                            <div id="act_4" class="jpit-activities-check" data-act-id="4_act_4" data-act-title="Indica si es verdadero o falso">
+                                <div id="box_act_4"class="box-text activity">
+                                    <words>
+                                        <li data-val="true">Lo que comes puede influir en tu sistema inmunitario, tu estado de ánimo y tu nivel de energía</li>
+                                        <li data-val="true">El óvalo de la alimentación nos indica que diariamente se deben incluir todos los grupos de alimentos en las comidas</li>
+                                        <li data-val="true">Cuando una persona presenta ciertas patologías como cáncer o diabetes, la alimentación juega un papel importante</li>
+                                    </words>
+                                    <div class="board">
+                                        <div class="check_left">
+                                            <div class="play">
+                                                <p>Indica si el siguiente enunciado es verdadero o falso:</p>
+                                                <div class="word_content"> </div>
+                                                <div class="buttons">
+                                                    <button class="yes general">Verdadero</button>
+                                                    <button class="not general">Falso</button>
+                                                </div>
+                                            </div>
+                                            <div class="box_conclution">
+                                                <h3>¡Ha finalizado!</h3>
+                                                <div class="buttons">
+                                                    <button class="general reload">Vovler a clasificar los enunciados incorrectamente clasificados</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="check_right">
+                                            <div class="box_result">
+                                                <div class="correct">
+                                                    <div class="hits">0</div>
+                                                    <div class="text">Aciertos</div>
+                                                </div>
+                                                <div class="wrong">
+                                                    <div class="miss">0</div>
+                                                    <div class="text">Desaciertos</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="subpage" id="p_aplica5">
+                        <h3>3.5 Semáforo de alimentación</h3>
+                        <div class="box-text activity" label="Actividad de aprendizaje">
+                            <p><strong>Objetivo de aprendizaje:</strong> identificar los tipos de alimentos y la frecuencia en que se recomiendan consumir.</p>
+                            <p><strong>Enunciado:</strong> ubica en el semáforo el enunciado que corresponde con el tipo de alimento.</p>
+                        </div>
+                        <div id="act_5" class="jpit-activities-droppable" data-act-id="5_act_5" data-act-title="Ubica en el semáforo el enunciado que corresponde" data-shuffle="true">
+                            <div class="targets">
+                                <div class="box_img">
+                                    <div class="target conection_r" data-target-group="1"></div>
+                                    <div class="target conection_a" data-target-group="2"></div>
+                                    <div class="target conection_v" data-target-group="3"></div>
+                                </div>
+                            </div>
+                            <div class="sources">
+                                <div data-group="2" class="item item_1">Alimentos que se pueden comer a veces y con cierta moderación. Ejemplo: margarina, mayonesa, etc.</div>
+                                <div data-group="3" class="item item_2">Son los que se pueden comer todos los días y son los más saludables. Ejemplo: frutas, agua, etc.</div>
+                                <div data-group="1" class="item item_3">Se trata de alimentos menos saludables y que pueden producir problemas de sobrepeso o en la salud.</div>
+                            </div>
+                            <br class="clear" />
+                            <div class="box_end"></div>
+                        </div>
+                    </div>
+                </section> 
+
+            </main>
+
+            <footer class="not_print">
+                <div class="measuring-progress" data-type="horizontal"></div>
+
+                <nav label="General" class="globals2">
+                    <menu>
+                        <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                        <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                        <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                    </menu>
+                </nav>
+
+                <div id="subpages_menu">
+                    <div class="button" previous-page></div>
+                    <div id="page_number"></div>
+                    <ul class="button" subpages-menu></ul>
+                    <div class="button" next-page></div>
+                </div>
+
+
+            </footer>
+
+        </div>
+
+        <div id="results_page" style="display:none;">
+            <h2>Resumen de su avance en la lectura del documento</h2>
+            <h3>Páginas visitadas</h3>
+            <p>En verde, aquellas páginas que ya ha visitado.</p>
+            <div id="results_page_visited" class="container"></div>
+            <br class="clear" />
+            <h3>Actividades de aprendizaje</h3>
+            <div id="results_page_activities"></div>
+        </div>
+
+        <!--Créditos-->
+        <div id="credits-page" style="display:none;">
+            <div id="credits_subpage">
+                <h2>Créditos</h2>
+                <div>
+                    <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+                </div>
+                <div>
+                    <h3>Desarrollo de contenidos</h3>
+                    <cite>Paula Andrea Villa Ruiz</cite>
+                </div>
+                <div>
+                    <h3>Asesoría pedagógica y diseño instruccional</h3>
+                    <cite>Ángela María Valderrama Muñoz</cite>
+                </div>
+                <div>
+                    <h3>Corrección de estilo</h3>
+                    <cite>Paola Andrea Velandia Vega</cite>
+                </div>
+                <div>
+                    <h3>Diseño gráfico</h3>
+                    <cite>Juliana Tobón Gaviria</cite> <br/>
+                    <cite>Nicole Chávez García</cite>
+                </div>
+                <div>
+                    <h3>Integración de contenidos</h3>
+                    <cite>Jorge Antonio Torres Grisales</cite><br />
+                    <cite>Santiago Bernal García</cite>
+                </div>
+                <div>
+                    <h3>Gestión técnica y administrativa</h3>
+                    <cite>Carolina Llanos Tobón</cite><br />
+                    <cite>David Herney Bernal García</cite>
+                </div>
+
+                <div>
+                    <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                    <p class="logos">
+                        <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                    </p>
+                </div>
+
+                <div class="editions">
+                    1ª edición: abril de 2020<br />
+                </div>
+                <div>
+                    <br />
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                    <img src="img/cc.png" alt="Creative Commons" /></a><br />
+                </div>
+                <div>
+                    <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bibliografía -->
+        <div id="library-page" style="display:none;">
+            <div id="library_subpage">
+                <h2>Referencias bibliográficas</h2>
+
+                <ul class="data_list">
+                    <li>
+                        BalashMirzabey. (2020). <cite>Filete de carne de pollo crudo, muslo, alas y patas con hierbas, especias, limón y ajo sobre fondo azul oscuro</cite> [Fotografía]. Freepik. <a href="https://www.freepik.es/foto-gratis/filete-carne-pollo-crudo-muslo-alas-patas-hierbas-especias-limon-ajo-sobre-fondo-azul-oscuro-vista-superior_6891750.htm#page=2&query=Protein&position=38" target="_blank">https://www.freepik.es/foto-gratis[...]</a>
+                    </li>
+                    <li>
+                        Bearfotos. (2017). <cite>Preciosa familia feliz multigeneración</cite> [Fotografía]. Freepik. <a href="https://www.freepik.es/foto-gratis/preciosa-familia-feliz-multigeneracion-tener-cena-saludable_1329364.htm#page=1&query=eating%20people&position=29" target="_blank">https://www.freepik.es/foto-gratis/[...]</a>
+                    </li>
+                    <li>
+                        Caracol Radio. (2019). <cite>Más de 560.000 niños en Colombia sufren de desnutrición crónica.</cite> Caracol Radio. <a href="https://caracol.com.co/radio/2019/10/16/nacional/1571254544_814084.html" target="_blank">https://caracol.com.co/radio/[...]</a>
+                    </li>
+                    <li>
+                        Freepik. (2019). <cite>Decoración de pan y pasta</cite> [Fotografía]. Freepik. <a href="https://www.freepik.es/foto-gratis/decoracion-pan-pasta_1308730.htm#page=2&query=bread+and+pasta&position=13" target="_blank">https://www.freepik.es/foto-gratis/[...]</a>
+                    </li>
+                    <li>
+                        Freepik. (2019). <cite>Madre amamantando a su bebé sentado en el sillón en casa</cite> [Fotografía]. Freepik. <a href="https://www.freepik.es/foto-gratis/madre-amamantando-su-bebe-sentado-sillon-casa_4056900.htm" target="_blank">https://www.freepik.es/foto-gratis/[...]</a>
+                    </li>
+                    <li>
+                        Harvard food pyramid [Ilustración]. (2014). Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Harvard_food_pyramid_es.jpg" target="_blank">https://commons.wikimedia.org/wiki/[...]</a>
+                    </li>
+                    <li>
+                        Jcomp. (2020). <cite>Legumbres, frutas y piezas de pescado de salmón en una tabla de cortar de madera</cite> [Fotografía]. Freepik. <a href="https://www.freepik.es/foto-gratis/legumbres-frutas-piezas-pescado-salmon-tabla-cortar-madera_6446220.htm#page=1&query=vitamina&position=33#position=33&page=1&query=vitamina" target="_blank">https://www.freepik.es/foto-gratis/[...]</a>
+                    </li>
+                    <li>
+                        Macrovector. (2019). <cite>Cereals icon set</cite> [Ilustración]. Freepik. <a href="https://www.freepik.com/free-vector/cereals-icon-set_3797284.htm#page=1&query=cereal&position=5" target="_blank">https://www.freepik.com/free-vector/[...]</a>
+                    </li>
+                    <li>
+                        Rawpixel.com. (2018). <cite>Comida de verduras mixtas</cite> [Fotografía]. Freepik. <a href="https://www.freepik.es/foto-gratis/idea-receta-fotografia-comida-verduras-mixtas-sauted_2826767.htm#page=2&query=Alimentaci%C3%B3n+saludable&position=34" target="_blank">https://www.freepik.es/foto-gratis/[...]</a>
+                    </li>
+                    <li>
+                        Urrego, D y Moreno, C. (2019). <cite>Estudiante universitario ingeniería</cite> [Ilustración]. Crotalus. Ruta TIC. <a href="https://boa.udea.edu.co/api/c/ruta-tic/resources/NjJBMzk1ODItNjhFMy00RkNELUJCRUUtQUNBRTM4RkU1MzA1QGJvYS51ZGVhLmVkdS5jby9jb250ZW50L3BlcnNvbmFqZXMvcGVyc29uYWplX2VzdHVkaWFudGVfaW5nZW5pZXJpYS0wMS5wbmc=/!/.alternate/personajes/personaje_estudiante_ingenieria-01.png/small.png" target="_blank">https://boa.udea.edu.co/api/[...]</a>
+                    </li>
+                    <li>
+                        Urrego, D y Moreno, C. (2019). <cite>Personaje doctor posiciones</cite> [Ilustración]. Crotalus. Ruta TIC. <a href="https://boa.udea.edu.co/api/c/ruta-tic/resources/NUMzNURFMTctMTIxOS00QTRBLTkzMjAtNEQ0RDg5REYxQjBCQGJvYS51ZGVhLmVkdS5jby9jb250ZW50L3BlcnNvbmFqZXMvcGVyc29uYWplX2RvY3Rvcl9wb3NpY2lvbmVzX2lsdXN0cmFjaW9uZXNfcGFxdWV0ZV8yLTAxLnBuZw==/!/.alternate/personajes/personaje_doctor_posiciones_ilustraciones_paquete_2-01.png/small.png" target="_blank">https://boa.udea.edu.co/api/[...]</a>
+                    </li>
+                    <li>
+                        Urrego, D y Moreno, C. (2019). <cite>Profesora universidad</cite> [Ilustración]. Crotalus. Ruta TIC. <a href="https://boa.udea.edu.co/api/c/ruta-tic/resources/NjJBMzk1ODItNjhFMy00RkNELUJCRUUtQUNBRTM4RkU1MzA1QGJvYS51ZGVhLmVkdS5jby9jb250ZW50L3BlcnNvbmFqZXMvcGVyc29uYWplX3Byb2Zlc29yYV9pbmdlbmllcmlhLTAxLnBuZw==/!/.alternate/personajes/personaje_profesora_ingenieria-01.png/small.png" target="_blank">https://boa.udea.edu.co/api/[...]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="printent_content" style="display:none;">
+            <div class="content"></div>
+            <div class="button_container">
+                <button class="general button" onclick="window.print();">Imprimir</button>
+                <button id="printent_back" class="general button" >Volver</button>
+            </div>
+        </div>
+
+    </body>
+</html>

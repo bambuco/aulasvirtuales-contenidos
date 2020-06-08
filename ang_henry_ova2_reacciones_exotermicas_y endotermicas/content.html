@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Reacciones Endotérmicas Y Exotérmicas</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+    <script src="components/jquery-selection/src/jquery.selection.min.js"></script>
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+    <script src="js/customlib.js"></script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Reacciones Endotérmicas Y Exotérmicas</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>                      
+                            <menuitem label="Autoevaluación saberes previos" data-page="pag-previos"></menuitem>
+                            <menuitem label="Reacciones">                                
+                                <menu>
+                                    <menuitem label="Reacción química" data-page="pag-quimica"></menuitem>
+                                    <menuitem label="Reacción endotérmica" data-page="pag-endotermica"></menuitem> 
+                                    <menuitem label="Reacción exotérmica" data-page="pag-exotermica"></menuitem>
+                                </menu>
+                            </menuitem>
+                            <menuitem label="Aplica lo aprendido" data-page="pag-aprendido"></menuitem>                                
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <!--1. Autoevaluación de saberes previos-->
+            <section id="pag-previos" ptitle="1. Autoevaluación de saberes previos">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> reconocer los conocimientos que se poseen sobre fenómenos físicos y químicos, reacciones químicas, calor y temperatura, los cuales son esenciales para comprender las reacciones endotérmicas y exotérmicas.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> antes de iniciar con el estudio de reacciones endotérmicas y exotérmicas, te invito a hacer la siguiente autoevaluación:
+                        </p>
+                    </div>
+
+                    <div class="jpit-activities-selection" data-act-id="1-conocimientos" data-act-title="Conocimientos previos" data-parent-mark-selector="false" data-mode="single" data-pagination="true" data-next-page-on-selection="true" data-next-page-selection-required="true" data-auto-resolve="true">
+                        <ul id="pag-act1" class="ctrl-pagination" data-layer-height="auto" data-labelcurrent="true" data-animation="slide" data-pagination-transition-hidden=".option-group">
+                            <li>
+                                <h4>1. ¿Cuál es la diferencia entre un fenómeno físico y un fenómeno químico?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p><strong>Compara:</strong></p>
+                                    <p>
+                                        <cite><strong>Fenómeno físico:</strong> son aquellos cambios en los que las sustancias no se transforman en otras diferentes, debido a que no se altera su estructura interna. Por ejemplo, pulverizar una piedra, congelar el agua, fundir un metal o cera, mover un objeto de lugar.</cite>
+                                    </p> 
+                                    <p>
+                                        <cite><strong>Fenómeno químico:</strong> son aquellos cambios en los que las sustancias se transforman en otras diferentes, debido a que se altera su estructura interna. Por ejemplo, cuando se quema un papel, cuando se agria la  leche, la oxidación de los marcos de hierro de las ventanas, cuando se  cuecen los alimentos.</cite> (Fenómenos físicos y fenómenos químicos, s.f.)
+                                    </p>
+                                    <button class="btn-continue general">Continuar</button>
+                                </div>
+                                <div data-group="1" data-group-value="1"  data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                            <li>
+                                <h4>2. ¿Cuál sería la evidencia para determinar que una reacción química libera calor?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p><strong>Compara:</strong></p>
+                                    <p>La evidencia para determinar que una reacción química <strong>libera calor</strong> es que el recipiente donde se realiza la reacción absorbe esa energía y se calienta. En el caso contrario, la evidencia para determinar que una reacción química <strong>absorbe calor</strong>, es que el recipiente donde se realiza la reacción se enfría.</p>
+                                    <button class="btn-continue general">Continuar</button>
+                                </div>
+                                <div data-group="2" data-group-value="2" data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                            <li>
+                                <h4>3. ¿Qué diferencia existe entre calor y temperatura?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p><strong>Compara:</strong></p>
+                                    <p>La diferencia entre <strong>calor y temperatura</strong> es que el calor es una forma de energía y la temperatura es una forma de medir esa energía. <cite>Se define el <strong>calor</strong> como una cantidad de energía y es una expresión del movimiento de las moléculas que componen un cuerpo. Se define la <strong>temperatura</strong> como la medida del calor de un cuerpo (y no la cantidad de calor que este contiene o puede rendir).</cite> (Calor y temperatura, s.f.)</p>
+                                    <button class="btn-continue general">Continuar</button>
+                                </div>
+                                <div data-group="3" data-group-value="3" data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                            <li>
+                                <h4>4. ¿En qué unidades se expresa el calor y la temperatura respectivamente?</h4>
+                                <textarea class="respuesta"></textarea>
+                                <button class="btn-verify general">Verificar</button>
+                                <div class="feedback-pane hidden">
+                                    <p><strong>Compara:</strong></p>
+                                    <p>Unidades en las que se expresa el calor: el <strong>calor</strong> es una forma de energía, y sus <strong>unidades</strong> de medida son el <strong>Joule o Julios (J)</strong> y la <strong>caloría (cal)</strong> (1 cal = 4,186 Julios). (Unidades de medida del calor, s.f.)</p>
+                                    <p>Unidades en las que se expresa la temperatura: grados (°). Existen diferentes escalas para expresarla. Todas miden la misma magnitud: la temperatura. Las principales escalas de temperatura son: <strong>Celsius o centígrado (°C), Fahrenheit (°F) y kelvin (K).</strong></p>
+                                </div>
+                                <div data-group="4" data-group-value="4" data-correct="true" class="radio tooltip" style="display: none"></div>
+                            </li>
+                        </ul>
+                    </div>
+                        
+                    <div class="box-text link" label="ENLACES DE AMPLIACIÓN">
+                        <p>
+                            <strong>Enunciado:</strong> si lo deseas puedes visitar las siguientes páginas para afianzar tus conocimientos sobre los temas abordados:
+                        </p>
+                        <ul class="data_list">
+                            <li>
+                                <strong>Página web:</strong> <a href="http://201.175.23.5/cursos/cnaturales_v2/interface/main/recursos/antologia/antologia.htm" target="_blank">Ciencias naturales. Propedéutico para el bachillerato.</a>
+                            </li>
+                            <li>
+                                <strong>Página web:</strong> <a href="https://www.profesorenlinea.cl/fisica/Calor_y_Temperatura.htm" target="_blank">Calor y temperatura.</a>
+                            </li>
+                            <li>
+                                <strong>Página web:</strong>  <a href="https://www.profesorenlinea.cl/fisica/Calor_Unidades_medida.html " target="_blank">Unidades de medida del calor.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                             
+            </section>
+  
+            <!--2. Reacción Química-->
+            <section id="pag-quimica" ptitle="2. Reacción Química">
+                  <div class="subpage">
+                    <div class="row">
+                        <div class="col-2 elemntone">
+                            <blockquote>
+                                <cite>
+                                    También llamada <strong>cambio químico</strong>  o <strong>fenómeno químico</strong>, es todo proceso en el cual dos o más sustancias (llamadas reactantes o <strong>reactivos</strong>), se transforman, cambiando su estructura molecular y sus enlaces en otras sustancias llamadas <strong>productos</strong>. Los reactantes pueden ser elementos o compuestos. (Wikipedia, 2020)
+                                </cite>
+                            </blockquote>
+                        </div>                        
+                        <div class="col-2 elementwo">
+                            <div class="box_media">
+                                <iframe src="content/genially_atomos/genially.html" class="interactivo" >Contenido interactivo</iframe>
+                            </div>                            
+                        </div>
+                    </div>                   
+                    <div class="box-text example" label="Por ejemplo:">
+                        <p class="instruction" type="info">
+                            <span class="onlymobile">Toca</span>
+                            <span class="notmobile">Pasa el ratón por</span>
+                              cada sección de la operación para conocer su nombre
+                        </p>
+                        <!--Revisar porfa si esta bien estos tooltip segun el requerimiento-->
+                        <div class="box1_2">
+                            <div class="box_media">
+                                <img src="content/oxido_de_hierro.png" alt="Óxidos de hierro" title="Óxidos de hierro"/>
+                                <div class="mouse-over one" data-ref="#contenido_sobre"></div>                     
+                                <div class="contenido_one" id="contenido_sobre" style="display: none;">
+                                    <p>
+                                        Reactivos
+                                    </p>
+                                </div> 
+                                <div class="mouse-over two" data-ref="#contenido_sobre2"></div>                     
+                                <div class="contenido_two" id="contenido_sobre2" style="display: none;">
+                                    <p>
+                                        Productos
+                                    </p>
+                                </div>                                
+                            </div>                                                 
+                        </div>
+                    </div>                    
+                </div>       
+            </section>
+  
+            <!--3. Reacción endotérmica-->
+            <section id="pag-endotermica" ptitle="3. Reacción endotérmica">
+                <div class="subpage">
+                    <div class="row">
+                        <div class="col-2 elemento_1">
+                            <p class="instruction" type="info">
+                                <span class="onlymobile">Toca</span>
+                                <span class="notmobile">Pasa el ratón sobre</span>
+                                  la imagen para leer su descripción
+                            </p>
+                            <div class="view-first">
+                                <div class="box_media">
+                                    <img src="content/Aa.png" />                                   
+                                </div>                                
+                                <div class="view-content">
+                                    <blockquote>
+                                        <cite>Las reacciones endotérmicas absorben energía, como el hielo químico.</cite>(Raffino, 2020) 
+                                    </blockquote>                                    
+                                </div>
+                            </div>
+                            <div class="about">
+                                  Imagen de Shutterbug75 en Pixabay
+                            </div>                           
+                        </div>
+                        <div class="col-2 elemento_2">
+                            <p>
+                                Se definen como las reacciones que absorben energía. En las <strong>reacciones endotérmicas</strong>, la energía de los productos es mayor que la energía de los reactivos y se <strong>absorbe</strong> energía del medio. 
+                            </p>
+                            <div class="box-text example" label="Por ejemplo:">
+                                <p>
+                                    la formación de ácido yodhídrico es una reacción endotérmica. 
+                                    <div class="box_media">
+                                        <img src="content/acido yodhidrico.png" alt="acido yodhidrico" title="Ácido yodhídrico" />
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    <h4>REACCIÓN ENDOTÉRMICA</h4>
+                    <h5>Energía vs tiempo</h5>
+                    <div class="box_media">
+                        <img src="content/diagrama_endotermica.png" alt="diagrama endotermica" title="Diagrama Endotérmica" />
+                        <div class="about">
+                            Tomado de Diagrama de una reacción endotérmica [Diagrama], 2017, Químicas. 
+                        </div>
+                    </div>                                  
+                </div>            
+            </section>
+  
+            <!--4. Reacción exotérmica-->
+            <section id="pag-exotermica" ptitle="4. Reacción exotérmica">
+                <div class="subpage">
+                    <div class="row">
+                        <div class="col-2 elemento_1">
+                            <p class="instruction" type="info">
+                                <span class="onlymobile">Toca</span>
+                                <span class="notmobile">Pasa el ratón sobre</span>
+                                la imagen para leer su descripción
+                            </p>
+                            <div class="view-first">
+                                <div class="box_media">
+                                    <img src="content/fuego.png" />                                   
+                                </div>                                
+                                <div class="view-content">
+                                    <blockquote>
+                                        <cite>
+                                            Las reacciones exotérmicas liberan energía.
+                                        </cite>(Raffino, 2020)
+                                    </blockquote>                                    
+                                </div>
+                            </div>
+                            <div class="about">
+                                Imagen de David Mark en Pixabay.
+                            </div>                            
+                        </div>
+                        <div class="col-2 elemento_2">
+                            <p>
+                                Se definen como las reacciones que liberan energía. En las <strong>reacciones exotérmicas</strong>, la energía de los productos es menor que la de los reactivos y se <strong>libera</strong> calor al medio. 
+                            </p>
+                            <div class="box-text example" label="Por ejemplo:">
+                                <p>
+                                    la combustión del metano (CH4) es una reacción exotérmica.  
+                                    <div class="box_media">
+                                        <img src="content/calor_liberado.png" alt="Reacción exotérmica" title="Reacción exotérmica" />
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                    <h4>REACCIÓN EXOTÉRMICA</h4>
+                    <h5>Energía vs tiempo</h5>
+                    <div class="box_media">
+                        <img src="content/diagrama_exotermica.png" alt="diagrama exotermica" title="Diagrama Exotérmica" />
+                        <div class="about">
+                            Tomado de Diagrama de reacción exotérmica [Diagrama], 2015, Químicas
+                        </div>
+                    </div>
+                </div>  
+            </section>
+  
+            <!--5. Aplica lo aprendido-->
+            <section id="pag-aprendido" ptitle="5. Aplica lo aprendido">
+                <div class="subpage">
+                    <h3>5.1	Análisis de una reacción química</h3>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> aplicar los conocimientos aprendidos sobre reacciones endotérmicas y exotérmicas.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> observa la siguiente gráfica y luego responde las preguntas.
+                        </p> 
+                    </div>
+                    <h4>GRÁFICA DE UNA REACCIÓN QUÍMICA</h4>
+                    <h5>Energía vs tiempo</h5>
+                    <div class="box_media">
+                        <img src="content/diagramaact5.png" alt="diagrama acctividad 5" />
+                        <div class="about">
+                            Gráfica de una reacción química (2020). Elaboración propia.
+                        </div>
+                    </div>
+                    <div class="jpit-activities-quiz" data-act-title="Análisis de una reacción química" data-act-id="5-1-cuestionario" data-shuffle="false">
+                        <question type="simplechoice" data-shuffle="false">
+                            <description><p>a. La energía de activación es:</p></description>
+                            <ul class="data_list">
+                                <li data-response="true">25</li>
+                                <li>5</li>
+                                <li>30</li>
+                            </ul>
+                            <feedback>
+                                <correct>Así es, La energía de activación es: 25. La energía de activación corresponde desde el comienzo de la reacción (5) hasta el punto más alto de la gráfica (30). La diferencia entre estos dos valores es: 25.</correct>
+                                <wrong>No es correcto, La energía de activación es: 25. La energía de activación corresponde desde el comienzo de la reacción (5) hasta el punto más alto de la gráfica (30). La diferencia entre estos dos valores es: 25.</wrong>
+                            </feedback>
+                        </question>
+                        <question type="simplechoice" data-shuffle="false">
+                            <description><p>b. De acuerdo con lo observado en la gráfica, indica si la siguiente afirmación es verdadera o falsa.</p>
+                            <p>En la reacción se libera energía.</p></description>
+                            <ul class="data_list">
+                                <li data-response="true">Falso</li>
+                                <li>Verdadero</li>
+                            </ul>
+                            <feedback>
+                                <correct>Así es, El valor positivo indica que absorbió energía. Si el valor da negativo indica que liberó energía.</correct>
+                                <wrong>No es correcto, El valor positivo indica que absorbió energía. Si el valor da negativo indica que liberó energía.</wrong>
+                            </feedback>                           
+                        </question>
+                        <question type="simplechoice" data-shuffle="false">
+                            <description><p>c. ¿Cuánta energía se absorbe o se libera?</p></description>
+                            <ul class="data_list">
+                                <li>17.5</li>
+                                <li data-response="true">12.5</li>
+                                <li>5</li>
+                                <li>-12.5 </li>
+                            </ul>
+                            <feedback>
+                                <correct>Así es, Si se observa la escala vertical (energía) se ve que los productos tienen un valor de: 17,5 y los reactivos tienen un valor de: 5. Esa es la diferencia entre estos dos valores (17,5 – 5 = 12,5).</correct>
+                                <wrong>No es correcto, Si se observa la escala vertical (energía) se ve que los productos tienen un valor de: 17,5 y los reactivos tienen un valor de: 5. Esa es la diferencia entre estos dos valores (17,5 – 5 = 12,5).</wrong>
+                            </feedback>
+                        </question>
+                        <question type="simplechoice" data-shuffle="false">
+                            <description><p>d. Es una reacción</p></description>
+                            <ul class="data_list">
+                                <li data-response="true">Endotérmica</li>
+                                <li>Exotérmica</li>
+                            </ul>
+                            <feedback>
+                                <correct>Así es, La reacción absorbió energía. Por lo tanto, se concluye que la reacción es endotérmica según la definición dada en los contenidos.</correct>
+                                <wrong>No es correcto, La reacción absorbió energía. Por lo tanto, se concluye que la reacción es endotérmica según la definición dada en los contenidos.</wrong>
+                            </feedback>                           
+                        </question>  
+                        <question type="simplechoice" data-shuffle="false">
+                            <description><p>e. De acuerdo con lo observado en la gráfica, indica si la siguiente afirmación es verdadera o falsa.</p>
+                            <p>La energía de los productos es mayor que la energía de los reactivos</p></description>
+                            <ul class="data_list">
+                                <li>Falso</li>
+                                <li data-response="true">Verdadero</li>
+                            </ul>
+                            <feedback>
+                                <correct>Así es, En la gráfica se observa que los productos (17,5) tienen más energía que los reactivos (5).</correct>
+                                <wrong>No es correcto, En la gráfica se observa que los productos (17,5) tienen más energía que los reactivos (5).</wrong>
+                            </feedback>                           
+                        </question>                                         
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>5.2 ¿Qué tanto reconoces las reacciones exotérmicas y las endotérmicas?</h3>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> identificar reacciones exotérmicas y endotérmicas 
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> clasifica las siguientes reacciones como exotérmicas o endotérmicas, arrastrando cada una a su categoría correspondiente.
+                        </p> 
+                    </div>                    
+                    <div id="arrastrargrupos" class="jpit-activities-multidroppable" data-act-title="Reconocimiento de las reacciones" data-act-id="5-2-reconocimiento">
+                        <div class="box_targets">
+                            <div class="enunciado">
+                                <h5>EXOTÉRMICA</h5>
+                                <div class="target" data-target-group="1"></div>
+                            </div>
+                            <div class="enunciado">
+                                <h5>ENDOTÉRMICA</h5>
+                                <div class="target" data-target-group="2"></div>
+                            </div>
+                        </div> 
+                        <div class="box_end"></div>
+                        <div class="buttons">
+                            <button class="general verify">Verificar</button>
+                            <button class="general continue" style="display: none;">Continuar intentando</button>
+                        </div>
+                        <div class="sources">
+                            <div data-group="1">
+                                <div class="box_media">
+                                    <img src="content/formula1.png" alt="Gas ardiendo en un mechero Bunsen" />
+                                </div>
+                            </div>
+                            <div data-group="2">
+                                <div class="box_media">
+                                    <img src="content/formula2.png" alt="Dehidratación de la cal apagada" />
+                                </div>
+                            </div>                            
+                            <div data-group="1">
+                                <div class="box_media">
+                                    <img src="content/formula3.png" alt="Formación de óxido de aluminio y hierro a partir de aluminio de  hierro" />
+                                </div>
+                            </div>
+                            <div data-group="1">
+                                <div class="box_media">
+                                    <img src="content/formula4.png" alt="La combustión del propano" />
+                                </div>
+                            </div>
+                            <div data-group="1">
+                                <div class="box_media">
+                                    <img src="content/formula5.png" alt="La formación de la sal mesa" />
+                                </div>
+                            </div>
+                            <div data-group="2">  
+                                <div class="box_media">
+                                    <img src="content/formula6.png" alt="La descomposición del pentaculo de fósforo" />
+                                </div>                           
+                            </div>
+                        </div>                       
+                    </div>
+                </div> 
+            </section>          
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+            </div>
+            <div>
+                <h3>Desarrollo de Contenidos</h3>
+                <cite>Henry Moreno Parra</cite> 
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Luisa Fernanda Arboleda Parra<br />
+                Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>
+                    Calor y temperatura. (s.f). <a href="https://www.profesorenlinea.cl/fisica/Calor_y_Temperatura.htm" target="_blank">https://https://www.profesorenlinea.cl/[...]</a> 
+                </li>
+                <li>
+                    Ejemplos de Reacción Endotérmica. (2017). <a href="https://www.quimicas.net/2015/10/ejemplos-de-reaccion-endotermica.html" target="_blank">https://www.quimicas.net[...]</a>
+                </li>
+                <li>
+                    Ejemplos de Reacción Exotérmica. (2015). <a href="https://www.quimicas.net/2015/10/ejemplos-de-reaccion-exotermica.html" target="_blank">https://www.quimicas.net/[...]</a>
+                </li>   
+                <li>
+                    Fenómenos físicos y fenómenos químicos. (s.f.) <a href="http://201.175.23.5/cursos/cnaturales_v2/interface/main/recursos/antologia/antologia.htm" target="_blank">http://201.175.23.5/cursos/[...]</a>
+                </li>   
+                <li>
+                    Ruffino, M., (2020). <cite>Reacción exotérmica</cite>. Recuperado el 8 de abril del 2020 en <a href="https://concepto.de/reaccion-exotermica/#ixzz6JK35yZ3g" target="_blank">https://concepto.de/[...]</a>
+                </li>   
+                <li>
+                    Unidades de medidas del calor.  (s.f). <a href="https://www.profesorenlinea.cl/fisica/Calor_Unidades_medida.html" target="_blank">https://www.profesorenlinea.cl/[...]</a>
+                </li>
+                <li>
+                    Wikipedia (s.f.) Reacción química. Recuperado el 8 de abril del 2020 en <a href="https://es.wikipedia.org/wiki/Reacci%C3%B3n_qu%C3%ADmica" target="_blank">https://es.wikipedia.org/[...]</a>
+                </li>  
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

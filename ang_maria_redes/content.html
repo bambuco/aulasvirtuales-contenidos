@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html class="single"><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Redes informáticas</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Redes informáticas</h1>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-inicio">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>En la imagen observa un mapa conceptual en el cual se especifican todos los aspectos relacionados a las redes informáticas. En los nodos con el ícono "?" haga clic para responder las preguntas que corresponden con la información presentada.</p>
+                    </div>
+                    <div class="mapa">
+                        <button class="w-content-controler pregunta pregunta1" data-content="#pregunta1">?</button>
+                        <button class="w-content-controler pregunta pregunta2" data-content="#pregunta2">?</button>
+                        <button class="w-content-controler pregunta pregunta3" data-content="#pregunta3">?</button>
+                        <button class="w-content-controler pregunta pregunta4" data-content="#pregunta4">?</button>
+                        <button class="w-content-controler pregunta pregunta5" data-content="#pregunta5">?</button>
+                        <button class="w-content-controler pregunta pregunta6" data-content="#pregunta6">?</button>
+                        <button class="w-content-controler pregunta pregunta7" data-content="#pregunta7">?</button>
+                        <button class="w-content-controler pregunta pregunta8" data-content="#pregunta8">?</button>
+                        <button class="w-content-controler pregunta pregunta9" data-content="#pregunta9">?</button>
+                        <button class="w-content-controler pregunta pregunta10" data-content="#pregunta10">?</button>
+                        <button class="w-content-controler pregunta pregunta11" data-content="#pregunta11">?</button>
+                        <button class="w-content-controler pregunta pregunta12" data-content="#pregunta12">?</button>
+                        <button class="w-content-controler pregunta pregunta13" data-content="#pregunta13">?</button>
+                        <button class="w-content-controler pregunta pregunta14" data-content="#pregunta14">?</button>
+                        <button class="w-content-controler pregunta pregunta15" data-content="#pregunta15">?</button>
+                        <button class="w-content-controler pregunta pregunta16" data-content="#pregunta16">?</button>
+                        <button class="w-content-controler pregunta pregunta17" data-content="#pregunta17">?</button>
+                        <button class="w-content-controler pregunta pregunta18" data-content="#pregunta18">?</button>
+                        <button class="w-content-controler pregunta pregunta19" data-content="#pregunta19">?</button>
+                        <button class="w-content-controler pregunta pregunta20" data-content="#pregunta20">?</button>
+                        <button class="w-content-controler pregunta pregunta21" data-content="#pregunta21">?</button>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta1" data-act-id="pregunta1" id="pregunta1" style="display: none">
+                        <question type="simplechoice" >
+                            <description><p>¿Qué son las redes informáticas?</p></description>
+                            <ul>
+                                <li>Conjunto de computadores interconectados entre sí a través de un medio, que intercambian información y comparten recursos.</li>
+                                <li data-response="true">Conjunto de dispositivos interconectados entre sí a través de un medio, que intercambian información y comparten recursos.</li>
+                                <li>Conjunto de dispositivos interconectados con internet que intercambian información y comparten recursos.</li>
+                                <li>Conjunto de dispositivos interconectados por wifi que intercambian información y comparten recursos.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta2" data-act-id="pregunta2" id="pregunta2" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Cuáles son las características de las redes informáticas?</p></description>
+                            <ul>
+                                <li data-response="true">Velocidad, seguridad de red, confiabilidad, escalabilidad y disponibilidad.</li>
+                                <li>Velocidad, interactividad, confiabilidad, escalabilidad y disponibilidad.</li>
+                                <li>Velocidad, seguridad de red, operatividad, escalabilidad y disponibilidad.</li>
+                                <li>Velocidad, seguridad de red, confiabilidad, escalabilidad y fiabilidad.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta3" data-act-id="pregunta3" id="pregunta3" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Cuáles son los objetivos de las redes informáticas?</p></description>
+                            <ul>
+                                <li>Compartir soluciones, proporcionar alta fiabilidad y ahorro económico.</li>
+                                <li>Compartir recursos, proporcionar alta velocidad y ahorro económico.</li>
+                                <li>Compartir recursos, proporcionar alta fiabilidad y ahorro de tiempo.</li>
+                                <li data-response="true">Compartir recursos, proporcionar alta fiabilidad y ahorro económico.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta4" data-act-id="pregunta4" id="pregunta4" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Cómo surgen redes informáticas?</p></description>
+                            <ul>
+                                <li>La primera red llamada Arpanet fue creada por el Departamento de Defensa del Reino Unido y trasmitió mensajes por primera vez en 1969.</li>
+                                <li>La primera red llamada Arpanet fue creada por el Departamento de Defensa de los Estados Unidos y trasmitió mensajes por primera vez en 1979.</li>
+                                <li data-response="true">La primera red llamada Arpanet fue creada por el Departamento de Defensa de los Estados Unidos y trasmitió mensajes por primera vez en 1969.</li>
+                                <li>La primera red llamada Arpinet fue creada por el Departamento de Defensa de los Estados Unidos y trasmitió mensajes por primera vez en 1969.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta5" data-act-id="pregunta5" id="pregunta5" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Qué servicios se encuentra en una red informática?</p></description>
+                            <ul>
+                                <li data-response="true">DHCP, SNMP, SMTP, DNS, FTP, SD, NFS e impresión.</li>
+                                <li>DHCP, SNMP, SMTP, DNS, FTP, SD, NTFS e impresión.</li>
+                                <li>DHCP, SNMP, SMTP, DNS, FTP, SID, NFS e impresión.</li>
+                                <li>DHCPA, SNMP, SMTP, DNS, FTP, SD, NFS e impresión.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta6" data-act-id="pregunta6" id="pregunta6" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Qué es una topología de red?</p></description>
+                            <ul>
+                                <li>El mapa físico o lógico de una red para intercambiar mensajes. En otras palabras, es la forma en que está diseñada la red.</li>
+                                <li>El mapa físico o lógico de una red para intercambiar wifi. En otras palabras, es la forma en que está diseñada la red.</li>
+                                <li data-response="true">El mapa físico o lógico de una red para intercambiar datos. En otras palabras, es la forma en que está diseñada la red.</li>
+                                <li>El mapa físico o lógico de una red para intercambiar comunicaciones. En otras palabras, es la forma en que está diseñada la red.</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>¿Cómo se clasifican las topologías de red?</p></description>
+                            <ul>
+                                <li>Punto a punto, bus, estrella doble, estrella extendida, árbol, anillo, doble anillo, malla, mixta o híbrida y totalmente conexa.</li>
+                                <li data-response="true">Punto a punto, bus, estrella, estrella extendida, árbol, anillo, doble anillo, malla, mixta o híbrida y totalmente conexa.</li>
+                                <li>Punto a punto, bus, estrella, estrella extendida, árbol mixto, anillo, doble anillo, malla, mixta o híbrida y totalmente conexa.</li>
+                                <li>Punto a punto, bus, estrella, estrella extendida, árbol, anillo, doble anillo, malla simple, mixta o híbrida y totalmente conexa.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta7" data-act-id="pregunta7" id="pregunta7" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Cuáles son los tipos de redes informáticas?</p></description>
+                            <ul>
+                                <li>PAN, LAN, CAN, MAN, WAN, WSAN, VLAN, WLAN, WMAN y GAN.</li>
+                                <li>PAN, LAN, CAN, MAN, WAN, SAN, WVLAN, WLAN, WMAN y GAN.</li>
+                                <li>PAN, LAN, CAN, MAN, WAN, SAN, VLAN, WLAN, WMAN y WGAN.</li>
+                                <li data-response="true">PAN, LAN, CAN, MAN, WAN, SAN, VLAN, WLAN, WMAN y GAN.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta8" data-act-id="pregunta8" id="pregunta8" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Qué son los protocolos de red?</p></description>
+                            <ul>
+                                <li>Designa el conjunto de reglas que rigen el intercambio de recursos a través de una red informática.</li>
+                                <li>Designa el conjunto de reglas que rigen el intercambio de internet a través de una red informática.</li>
+                                <li data-response="true">Designa el conjunto de reglas que rigen el intercambio de información a través de una red informática.</li>
+                                <li>Designa el conjunto de reglas que rigen el intercambio de ancho de banda a través de una red informática.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta9" data-act-id="pregunta9" id="pregunta9" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Los protocolos de red se clasifican en?</p></description>
+                            <ul>
+                                <li>FTP, SMTP, TCIP, UDP, IP y ARP.</li>
+                                <li data-response="true">FTP, SMTP, TCP, UDP, IP y ARP.</li>
+                                <li>FTP, SMTP, TCP, UDP, IP y ARPS.</li>
+                                <li>FTPA, SMTP, TCP, UDP, IP y ARP.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta10" data-act-id="pregunta10" id="pregunta10" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Qué son las direcciones IP?</p></description>
+                            <ul>
+                                <li data-response="true">Es un conjunto de direcciones numéricas que identifica a cada uno de los dispositivos que están conectados dentro de una red informática y permite establecer las comunicaciones entre ellos.</li>
+                                <li>Es un conjunto de símbolos que identifica a cada uno de los dispositivos que están conectados dentro de una red informática y permite establecer las comunicaciones entre ellos.</li>
+                                <li>Es un conjunto de nombres que identifica a cada uno de los dispositivos que están conectados dentro de una red informática y permite establecer las comunicaciones entre ellos.</li>
+                                <li>Es un conjunto de direcciones alfanuméricas que identifica a cada uno de los dispositivos que están conectados dentro de una red informática y permite establecer las comunicaciones entre ellos.</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>¿Cómo funciona la dirección IP?</p></description>
+                            <ul>
+                                <li>Asigna un nombre único e irrepetible a cada dispositivo que trata de comunicarse en internet.</li>
+                                <li>Asigna una dirección alfanumérica única e irrepetible a cada dispositivo que trata de comunicarse en internet.</li>
+                                <li>Asigna una dirección con símbolos únicos e irrepetibles a cada dispositivo que trata de comunicarse en internet.</li>
+                                <li data-response="true">Asigna una dirección numérica única e irrepetible a cada dispositivo que trata de comunicarse en internet.</li>
+                            </ul>
+                        </question>
+                        <question type="simplechoice">
+                            <description><p>¿Cómo se clasifican las direcciones IP?</p></description>
+                            <ul>
+                                <li>Pública (clase A, clase B, clase C) y privada (dinámica y estática).</li>
+                                <li data-response="true">Privada (clase A, clase B, clase C) y pública (dinámica y estática).</li>
+                                <li>Subred (clase A, clase B, clase C) y máscara de red (dinámica y estática).</li>
+                                <li>Máscara de red (clase A, clase B, clase C) y subred (dinámica y estática).</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta11" data-act-id="pregunta11" id="pregunta11" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Qué es un software de red?</p></description>
+                            <ul>
+                                <li>Es un software que permite la comunicación de dispositivos para poder acceder a los servicios y recursos de la red informática.</li>
+                                <li>Es un software que permite disponibilidad de dispositivos para poder acceder a los servicios y recursos de la red informática.</li>
+                                <li>Es un software que permite la interacción de dispositivos para poder acceder a los servicios y recursos de la red informática.</li>
+                                <li data-response="true">Es un software que permite la interconexión de dispositivos para poder acceder a los servicios y recursos de la red informática.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta12" data-act-id="pregunta12" id="pregunta12" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Cuáles son las clases de software de red?</p></description>
+                            <ul>
+                                <li data-response="true">Sistema operativo de red y software de aplicaciones de red.</li>
+                                <li>Sistema operativo de red y software de aplicaciones locales.</li>
+                                <li>Sistema operativo de red y software de aplicaciones.</li>
+                                <li>Sistema operativo de red integrado y software de aplicaciones.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta13" data-act-id="pregunta13" id="pregunta13" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Qué es un hardware de red?</p></description>
+                            <ul>
+                                <li>Son aquellos componentes lógicos que permiten transmitir datos entre dispositivos electrónicos de una red informática.</li>
+                                <li data-response="true">Son aquellos componentes físicos que permiten transmitir datos entre dispositivos electrónicos de una red informática.</li>
+                                <li>Son aquellos componentes de cableado que permiten transmitir datos entre dispositivos electrónicos de una red informática.</li>
+                                <li>Son aquellos componentes estandarizados que permiten transmitir datos entre dispositivos electrónicos de una red informática.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta14" data-act-id="pregunta14" id="pregunta14" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>Los medios de transmisión alámbricos se clasifican en:</p></description>
+                            <ul>
+                                <li data-response="true">Cable de par trenzado, cable coaxial y fibra óptica.</li>
+                                <li>Cable de par trenzado, cable semidúplex y fibra óptica.</li>
+                                <li>Cable de par trenzado, cable simplex y fibra óptica.</li>
+                                <li>Cable de par trenzado, cable dúplex y fibra óptica.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta15" data-act-id="pregunta15" id="pregunta15" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>Las ventajas y desventajas de los medios de transmisión alámbricos son:</p></description>
+                            <ul>
+                                <li>Ventajas: ofrece el mayor rendimiento posible y más seguridad. Desventajas: dificultades para la expansión, los costos pueden ser altos y menor velocidad.</li>
+                                <li>Ventajas: ofrece el mayor rendimiento posible, mayor velocidad y los costos pueden ser bajos. Desventajas: dificultades para la expansión y menor seguridad.</li>
+                                <li data-response="true">Ventajas: ofrece el mayor rendimiento posible, mayor velocidad y más seguridad. Desventajas: dificultades para la expansión y los costos pueden ser altos.</li>
+                                <li>Ventajas: mayor velocidad y más seguridad. Desventajas: dificultades para la expansión, los costos pueden ser altos y ofrece el menor rendimiento posible.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta16" data-act-id="pregunta16" id="pregunta16" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>Los medios de transmisión inalámbricos se clasifican en:</p></description>
+                            <ul>
+                                <li>Síncrono, microondas y asíncrono.</li>
+                                <li>Radiofrecuencias, microondas y eléctricos.</li>
+                                <li>Digital, microondas y analógica.</li>
+                                <li data-response="true">Radiofrecuencias, microondas e infrarrojos.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta17" data-act-id="pregunta17" id="pregunta17" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>Las ventajas y desventajas de los medios de transmisión inalámbricos son:</p></description>
+                            <ul>
+                                <li>Ventajas: mayor cobertura y facilidad para la instalación y expansión. Desventajas: menor seguridad, menor velocidad, interferencias en la transmisión y mayor costo de instalación.</li>
+                                <li data-response="true">Ventajas: mayor cobertura, menor costo de instalación y facilidad para la instalación y expansión. Desventajas: menor seguridad, menor velocidad e interferencias en la transmisión.</li>
+                                <li>Ventajas: mayor cobertura, menor costo de instalación, mayor seguridad y facilidad para la instalación y expansión. Desventajas: menor velocidad e interferencias en la transmisión.</li>
+                                <li>Ventajas: menor costo de instalación y facilidad para la expansión e instalación.  Desventajas: menor seguridad, menor velocidad, interferencias en la transmisión y menor cobertura.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta18" data-act-id="pregunta18" id="pregunta18" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>¿Qué son los dispositivos de red?</p></description>
+                            <ul>
+                                <li>Son cables que permiten conectividad entre los equipos de la red.</li>
+                                <li>Son interfaces que permiten conectividad entre los equipos de la red.</li>
+                                <li>Son puertos que permiten conectividad entre los equipos de la red.</li>
+                                <li data-response="true">Son elementos que permiten conectividad entre los equipos de la red.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta19" data-act-id="pregunta19" id="pregunta19" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>Los dispositivos de red se clasifican en:</p></description>
+                            <ul>
+                                <li>Tarjeta de red, servidores, <cite>firewall</cite> y conexiones.</li>
+                                <li data-response="true">Tarjeta de red, servidores, <cite>firewall</cite> y adaptadores.</li>
+                                <li>Tarjeta de red, servidores, cableado y adaptadores.</li>
+                                <li>Tarjeta de red, servidores, controladores y adaptadores.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta20" data-act-id="pregunta20" id="pregunta20" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>Las ventajas y desventajas de los dispositivos de red son:</p></description>
+                            <ul>
+                                <li>Ventajas: cada dispositivo tiene su particularidad y uso. Desventajas: no hay dispositivos multipropósito, los precios pueden variar demasiado y existen dispositivos que son más complejos de instalar.</li>
+                                <li>Ventajas: los precios pueden son estandarizados, existen dispositivos multipropósito y cada dispositivo tiene su particularidad y uso. Desventajas: unos dispositivos son más complejos de instalar.</li>
+                                <li data-response="true">Ventajas: existen dispositivos multipropósito y cada dispositivo tiene su particularidad y uso. Desventajas: los precios pueden variar demasiado y hay dispositivos que son más complejos de instalar.</li>
+                                <li>Ventajas: todos los dispositivos son fáciles de instalar, hay dispositivos multipropósito y cada dispositivo tiene su particularidad y uso. Desventajas: los precios pueden variar demasiado.</li>
+                            </ul>
+                        </question>
+                    </div>
+                    <div class="jpit-activities-quiz w-content" data-act-title="Pregunta21" data-act-id="pregunta21" id="pregunta21" style="display: none">
+                        <question type="simplechoice">
+                            <description><p>El futuro próximo de las redes informáticas es usar:</p></description>
+                            <ul>
+                                <li>Tecnología 5G para redes inalámbricas ultrarrápidas, aumento del cableado, y tecnologías de inteligencia artificial.</li>
+                                <li>Tecnología 5G para redes alámbricas ultrarrápidas, abolición del cableado y tecnologías de inteligencia artificial.</li>
+                                <li data-response="true">Tecnología 5G para redes inalámbricas ultrarrápidas, abolición del cableado y tecnologías de inteligencia artificial.</li>
+                                <li>Tecnología 5G para redes inalámbricas ultrarrápidas, abolición del cableado y articulación con las tecnologías de robótica.</li>
+                            </ul>
+                        </question>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>María Cristina Marín  Marín</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Juan Fernando Bernal</cite><br />
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

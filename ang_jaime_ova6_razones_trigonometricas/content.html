@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Aplicación de las razones trigonométricas</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="100" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Aplicación de las razones trigonométricas</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="1. Preconceptos" data-page="pag-preconceptos"></menuitem>
+                        <menuitem label="2. Trigonometría en triángulos rectángulos" data-page="pag-trigonometria"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-preconceptos" ptitle="1. Preconceptos">
+                <div class="subpage">
+                    <h3>1.1. Tipos de ángulos</h3>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar los tipos de ángulos según el valor de su medida.</p>
+                        <p><strong>Enunciado:</strong> relaciona el ángulo presentado en la imagen con su respectiva medida. Arrastra el tipo de ángulo que se encuentra en la parte inferior a la imagen que lo representa.</p>
+                    </div>
+                    <div class="jpit-activities-droppable" data-verify-type="target" data-act-id="1-arrastrar" data-act-title="Relacionar ángulos">
+                        <span class="onlymobile"><div class="instruction" type="info">Presiona durante dos segundos sobre cada línea para ver la lista de posibles respuestas. Elije la correcta de acuerdo a cada ángulo.</div></span>
+                        <div class="contenedor">
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/agudo.png" alt="" /></div>
+                                <div class="receptor" data-target-group="1"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/recto.png" alt="" /></div>
+                                <div class="receptor" data-target-group="2"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/obtuso.png" alt="" /></div>
+                                <div class="receptor" data-target-group="3"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/convexo.png" alt="" /></div>
+                                <div class="receptor" data-target-group="4"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/llano.png" alt="" /></div>
+                                <div class="receptor" data-target-group="5"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/concavo.png" alt="" /></div>
+                                <div class="receptor" data-target-group="6"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/completo.png" alt="" /></div>
+                                <div class="receptor" data-target-group="7"></div>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                        <div class="sources">
+                            <div class="tipo" data-group="6">Cóncavo > 180°</div>
+                            <div class="tipo" data-group="2">Recto = 90°</div>
+                            <div class="tipo" data-group="5">Llano = 180°</div>
+                            <div class="tipo" data-group="3">Obtuso > 90°</div>
+                            <div class="tipo" data-group="4">Convexo < 180°</div>
+                            <div class="tipo" data-group="7">Completo = 360°</div>
+                            <div class="tipo" data-group="1">Agudo < 90°</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>1.2 Ángulos entre paralelas</h3>
+                    <p>Cuando dos <strong>rectas paralelas</strong> (r y s en la imagen de la derecha) <strong>son cortadas por una transversal</strong> (t) <strong>se forman</strong> ocho ángulos que se clasifican según las propiedades que cumplen. Además, se establecen diferentes relaciones que facilitan el estudio y solución de diversos problemas geométricos y del mundo real.</p>
+                    <div class="box_media">
+                        <div><img src="content/angulos_paralelas.png" alt="Ángulos entre paralelas" /></div>
+                        <img class="formula" src="content/formula1.png" alt="Ángulos alternos internos" />
+                        <img class="formula" src="content/formula2.png" alt="Ángulos alternos externos" />
+                        <img class="formula" src="content/formula3.png" alt="Ángulos conjugados internos" />
+                        <img class="formula" src="content/formula4.png" alt="Ángulos conjugados externos" />
+                        <img class="formula" src="content/formula5.png" alt="Ángulos correspondientes" />
+                        <div class="about">
+                            Figura 1. Ángulos entre paralelas
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>1.3 Tipos de triángulos</h3>
+                    <h4>1.3.1 Tipos de triángulos según la longitud de sus lados</h4>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar los diferentes tipos de triángulos según la longitud de sus lados.</p>
+                        <p><strong>Enunciado:</strong> relaciona el triángulo presentado en el costado izquierdo, con su respectiva definición de acuerdo a las longitudes de sus lados. Arrastra el enunciado que se encuentra en la parte inferior a la imagen del triángulo que corresponde.</p>
+                    </div>
+                    <div class="jpit-activities-droppable" data-verify-type="target" data-act-id="2-arrastrar" data-act-title="Relacionar triángulos por lados">
+                        <span class="onlymobile"><div class="instruction" type="info">Presiona durante dos segundos sobre cada línea para ver la lista de posibles respuestas. Elije la correcta de acuerdo a cada triángulo.</div></span>
+                        <div class="contenedor">
+                            <div class="triangulo">
+                                <div class="imagen"><img src="content/equilatero.png" alt="" /></div>
+                                <div class="nombre">Equilátero</div>
+                                <div class="receptor" data-target-group="1"></div>
+                            </div>
+                            <div class="triangulo">
+                                <div class="imagen"><img src="content/isoseles.png" alt="" /></div>
+                                <div class="nombre">Isósceles</div>
+                                <div class="receptor" data-target-group="2"></div>
+                            </div>
+                            <div class="triangulo">
+                                <div class="imagen"><img src="content/escaleno.png" alt="" /></div>
+                                <div class="nombre">Escaleno</div>
+                                <div class="receptor" data-target-group="3"></div>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                        <div class="sources">
+                            <div class="tipo" data-group="2">2 lados iguales</div>
+                            <div class="tipo" data-group="1">3 lados iguales</div>
+                            <div class="tipo" data-group="3">Ningún lado igual</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h4>1.3.2 Tipos de triángulos según sus ángulos</h4>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar los tipos de triángulos según la medida de sus ángulos.</p>
+                        <p><strong>Enunciado:</strong> relaciona el triángulo presentado en el costado izquierdo con su respectivo tipo de ángulo, teniendo en cuenta sus medidas. Arrastra el enunciado que se encuentra en la parte inferior a la imagen del triángulo que corresponde.</p>
+                    </div>
+                    <div class="jpit-activities-droppable" data-verify-type="target" data-act-id="3-arrastrar" data-act-title="Relacionar triángulos por ángulos">
+                        <span class="onlymobile"><div class="instruction" type="info">Presiona durante dos segundos sobre cada línea para ver la lista de posibles respuestas. Elije la correcta de acuerdo a cada triángulo.</div></span>
+                        <div class="contenedor">
+                            <div class="triangulo">
+                                <div class="imagen"><img src="content/rectangulo.png" alt="" /></div>
+                                <div class="nombre">Rectángulo</div>
+                                <div class="receptor" data-target-group="1"></div>
+                            </div>
+                            <div class="triangulo">
+                                <div class="imagen"><img src="content/acutangulo.png" alt="" /></div>
+                                <div class="nombre">Acutángulo</div>
+                                <div class="receptor" data-target-group="2"></div>
+                            </div>
+                            <div class="triangulo">
+                                <div class="imagen"><img src="content/obtusangulo.png" alt="" /></div>
+                                <div class="nombre">Obtusángulo</div>
+                                <div class="receptor" data-target-group="3"></div>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                        <div class="sources">
+                            <div class="tipo" data-group="1">1 ángulo recto</div>
+                            <div class="tipo" data-group="3">1 ángulo obtuso</div>
+                            <div class="tipo" data-group="2">3 ángulos agudos</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-trigonometria" ptitle="2. Trigonometría en triángulos rectángulos">
+                <div class="subpage">
+                    <h3>2.1 Introducción a la trigonometría</h3>
+                    <p><cite>La trigonometría se desarrolló a partir de los esfuerzos realizados en la antigüedad para impulsar el estudio de la astronomía y pronosticar la trayectoria y posición de los cuerpos celestes, así como para mejorar la precisión en la navegación y el cálculo del tiempo y los calendarios.</cite></p>
+                    <p><cite>Una gran parte del trabajo matemático realizado en el siglo XVIII fue producto de la necesidad de describir ciertos fenómenos físicos. Por ejemplo, ¿qué forma tiene una vela bajo la presión del viento? ¿qué forma tiene una cuerda elástica que vibra, por ejemplo, una cuerda de violín o guitarra, pero está fija en ambos extremos? Las respuestas a estas preguntas con frecuencia requieren el uso de funciones trigonométricas.</cite> (Zill y Dewar, 2012)</p>
+                    <div class="box-text link" label="PARA PROFUNDIZAR SOBRE EL TEMA">
+                        <p>
+                            <strong>Contenido educativo:</strong> <a href="https://www.cimat.mx/ciencia_para_jovenes/bachillerato/libros/Zill-Dewar/%5BZill,Dewar%5DAlgebra_trigonometria_y_geometria_analitica(cap10).pdf" target="_blank">Aplicaciones de trigonometría.</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>2.2 Razones trigonométricas</h3>
+                    <p>Es importante recordar que, en todo triángulo rectángulo, <strong>la hipotenusa</strong> es el lado opuesto al ángulo de 90° y los otros dos lados reciben el nombre de <strong>catetos</strong>. Si el cateto forma uno de los lados del ángulo recibe el nombre de <strong>cateto adyacente</strong>, en caso contrario recibe el nombre de <strong>cateto opuesto</strong>. Así:</p>
+                    <div class="box_media">
+                        <div class="leyenda">
+                            <ul class="data_list">
+                                <li>a = Cateto opuesto</li>
+                                <li>b = Cateto adyacente</li>
+                                <li>c = Hipotenusa</li>
+                            </ul>
+                        </div>
+                        <div class="about">Figura 2. Triángulo rectángulo</div>
+                    </div>
+                    <p>Ahora bien, se define una razón trigonométrica como la relación entre la medida de uno de los ángulos agudos y la medida de los lados de un triángulo rectángulo.</p>
+                    <div class="box_media">
+                        <img src="content/razones_trigonometricas.png" alt="Razones trigonométricas" />
+                        <div class="about">Figura 3. Razones trigonométricas<br />
+                            Imagen de fondo tomada de Messala Ciulla en Pexels
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>2.3. Aplicación de las razones trigonométricas</h3>
+                    <p>Diversas son las aplicaciones que se tienen de las razones trigonométricas, una de las más conocidas es la de <strong>resolver un triángulo rectángulo.</strong> Consiste en hallar la medida de sus tres lados y sus tres ángulos en alguno de los siguientes casos:</p>
+                    <ul class="data_list">
+                        <li>Cuando se conocen las medidas de un lado y de un ángulo agudo.</li>
+                        <li>Cuando se conocen las medidas de sus lados.</li>
+                    </ul>
+                    <p>Sin embargo, su mayor aplicación se da cuando se desea calcular distancias sin necesidad de recorrerlas. Por ejemplo, la altura de un árbol o la distancia a la que se encuentra un barco con respecto a un faro. A continuación, se muestra un ejemplo.</p>
+                    <div class="box-text note" label="Nota">
+                        <p>Para aplicar las razones trigonométricas es necesario identificar en cada situación un triángulo rectángulo.</p>
+                    </div>
+                    <div class="box-text example" label="Ejemplo">
+                        <p>Calcula la altura de la torre si el personaje está a 7 m de la base de la torre, el ángulo con que está observando la cúspide es de 60° y sostiene el artilugio a una altura de 1.5 m.</p>
+                        <h5>Solución:</h5>
+                        <ol>
+                            <li>Realizar una representación gráfica que aclare la situación con los datos conocidos.</li>
+                            <div class="box_media">
+                                <img src="content/imagen_faro.png" alt="Representación gráfica" />
+                            </div>
+                            <li>Nombrar los lados del triángulo rectángulo para identificar el lado que se requiere encontrar.</li>
+                            <div class="box_media">
+                                <img src="content/traingulorectangulo.png" alt="Triángulo rectángulo" />
+                            </div>
+                            <li>Definir cuál razón trigonométrica se debe utilizar en la resolución del ejercicio.</li>
+                        </ol>
+                    </div>
+                    <p>Dado que se necesita hallar el cateto opuesto al ángulo de 60° y que se conoce el valor del cateto adyacente, la razón que relaciona ambos catetos es tangente. Luego, tenemos lo siguiente:</p>
+                    <div class="box_media">
+                        <img src="content/formula_torre.png" alt="Fórmula" />
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Jaime Andrés García Vásquez</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>Zill, D. y Dewar, J. (2012). <cite>Álgebra, trigonométria y geometría analítica.</cite> (3ª ed.). McGraw- Hill/Interamericana Editores, S.A.</li>
+                <li>
+                    Ciulla, M. (s.f.). <cite>Libreta abierta en mesa </cite> [Fotografía]. Pexels. <a href="https://www.pexels.com/photo/notebook-with-blank-pages-942872/" target="_blank">https://www.pexels.com/[...]</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

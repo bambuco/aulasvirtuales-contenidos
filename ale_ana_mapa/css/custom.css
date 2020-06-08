@@ -1,0 +1,130 @@
+.jpit-activities-droppable {
+	max-width: 900px;
+	margin:	auto;
+}
+
+.mapa {
+	background: url(../content/fondo.png) no-repeat;
+	background-size: 100%;
+	width: 100%;
+    padding-top: 63%;
+    position: relative;
+}
+
+.receptor {
+	position: absolute;
+	padding: 0 !important;
+}
+
+.receptor.linea1 {
+	width: 9.6%;
+    height: 9%;
+    top: 41.8%;
+}
+
+.receptor.mamiferos {left: 16.2%;}
+
+.receptor.plumas,
+.receptor.aves {left: 45%;}
+
+.receptor.reptan,
+.receptor.reptiles {left: 58.9%;}
+
+.receptor.linea2 {
+	width: 9.5%;
+    height: 12.9%;
+    top: 58.8%;
+}
+
+.receptor.escamas {left: 30.7%;}
+
+.receptor.linea3 {
+	width: 5.8%;
+    height: 15.3%;
+    top: 73.9%;
+}
+
+.receptor.lobo {
+	left: 14.8%;
+    width: 12.6%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+}
+
+.receptor.vaca {left: 21.6%;}
+.receptor.tiburon {left: 35.9%;}
+.receptor.canario {left: 43.4%;}
+.receptor.aguila {left: 50.2%;}
+
+.receptor.tortuga {
+	left: 57.4%;
+	width: 12.6%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+}
+.receptor.cocodrilo {left: 64.2%;}
+.receptor.lagartija {left: 78.4%;}
+
+.opcion {
+	display: flex;
+	align-items: center;
+	width: 96%;
+	height: 98%;
+	max-width: 90px;
+    justify-content: center;
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;
+	font-size: 11px;
+	letter-spacing: 0.75px;
+	color: #231F20;
+	line-height: 10px;
+}
+
+.receptor .opcion {
+	background-color: transparent;
+	border: none;	
+	color: #000;
+	margin: 0;
+	font-size: 9px;
+}
+
+.receptor.linea1 .opcion {
+	font-size: 12px;
+    font-weight: bold;
+}
+
+.receptor.linea2 .opcion {
+	line-height: 8px;
+	font-weight: bold;
+}
+
+.sources {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.jpit-activities-droppable .draggable {
+	padding: 1% 2%;
+}
+
+.sources .opcion {
+	padding: 10px;
+}
+
+.receptor img {
+	width: 100%;
+}
+
+.box_end {
+	margin: auto;
+}
+
+.receptor.tortuga .opcion,
+.receptor.lobo .opcion {
+	width: 50%;
+}
+

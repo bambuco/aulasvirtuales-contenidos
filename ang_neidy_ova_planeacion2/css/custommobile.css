@@ -1,0 +1,136 @@
+.videobox {
+    padding-top: 30px;
+}
+/********************************************************************************/
+/* ACTIVIDAD ANGULOS
+/********************************************************************************/
+.box_media div img {
+    max-width: 500px;
+}
+.box_media .formula {
+    width: 300px;
+    margin: 5px;
+}
+
+.jpit-activities-droppable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sources,
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contenedor {
+    margin-bottom: 40px;
+    background-color: #fff;
+}
+
+.contenedor .angulo {
+    width: 200px;
+    height: 242px;
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.angulo .imagen img {
+    width: 100%;
+}
+
+.angulo .receptor {
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid #22b573;
+    padding: 0;
+}
+
+.sources .tipo {
+    width: 200px;
+    height: 30px;
+    padding: 0;
+    margin: 5px;
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+    background-color: transparent;
+    color: #003543;
+    border: none;
+}
+
+.jpit-activities-droppable .draggable.wrong, .jpit-activities-droppable .droppable.wrong {
+    background-color: #ffffff;
+    color: #D60C1B !important;
+}
+
+.box_end .correct {
+    max-width: 600px;
+    text-align: left;
+}
+
+/********************************************************************************/
+/* FALSO Y VERDADERO
+/********************************************************************************/
+.jpit-activities-check {
+    height: 300px;
+}
+
+.jpit-activities-check .check_left .word_content {
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 3px 3px 3px #dadbdc;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.jpit-activities-check .check_right {
+    margin-top: 20px;
+}
+
+.jpit-activities-check .buttons {
+    text-align: center;
+}
+
+.jpit-activities-check .buttons button.yes,
+.jpit-activities-check .buttons button.not {
+    font-size: 30px;
+}
+
+.jpit-activities-check .box_result {
+    float: left;
+    font-size: 20px;
+    text-align: center;
+}
+
+.jpit-activities-check .box_result > div {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px #cbcccc;
+    padding: 10px;
+    width: 110px;
+    float: left;
+    margin: 0 10px;
+}
+
+.jpit-activities-check .box_result .correct {
+    color: #8bc541;
+}
+.jpit-activities-check .box_result .hits {
+    font-size:30px;
+}
+
+.jpit-activities-check .box_result .wrong {
+    color: #d60c1b;
+}
+.jpit-activities-check .box_result .miss {
+    font-size:30px;
+}

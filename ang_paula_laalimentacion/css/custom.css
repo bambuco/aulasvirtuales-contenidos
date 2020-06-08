@@ -1,0 +1,377 @@
+.box_media img {
+    max-width: 100%;
+}
+
+.row .col-2 {
+    padding-right: 15px;
+    padding-left: 15px; 
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+/********************************************************************************/
+/* Actividad 1
+/********************************************************************************/
+#act_1 .box_img { 
+    background: url(../content/alimentos.png) no-repeat; 
+    background-size: 100%;
+    width: 960px; 
+    height: 400px;
+    position: relative; 
+}
+
+#act_1 .sources {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#act_1 .box_targets {
+    width: 980px;
+    margin: auto;
+    overflow: auto;
+}
+
+#act_1 .target_1 {
+    position: absolute;
+    height: 158px;
+    width: 180px;
+    left: 195px;
+    top: 200px;
+    border: none;
+}
+
+#act_1 .target_2 {
+    position: absolute;
+    height: 158px;
+    width: 180px;
+    left: 405px;
+    top: 200px;
+    border: none;
+}
+
+#act_1 .target_3 {
+    position: absolute;
+    height: 158px;
+    width: 180px;
+    left: 614px;
+    top: 200px;
+    border: none;
+}
+
+#act_1.jpit-activities-droppable .droppable {
+    border: 0px solid #7c8f8c;
+    text-align: center;
+    padding: 0px;
+    padding-bottom: 0px;
+}
+
+#act_1.jpit-activities-droppable .draggable {
+    width: 160px;
+    height: 146px;
+    margin: 5px;
+    padding: 3px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 5%;
+}
+
+#act_1.jpit-activities-droppable .draggable p {
+    line-height: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.75px;
+}
+
+.jpit-activities-droppable .droppable.wrong {
+    background-color: transparent;
+    border-color: #D60C1B;
+    color: #D60C1B;
+}
+
+/********************************************************************************/
+/* Actividad 2
+/********************************************************************************/
+#act_2 .box_img { 
+    background: url(../content/plato.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 52%;
+    position: relative;
+}
+
+#act_2 .sources {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#act_2 .box_targets {
+    max-width: 900px;
+    margin: auto;
+    overflow: auto;
+}
+
+#act_2.jpit-activities-droppable .droppable {
+    border: 0px solid #7c8f8c;
+    text-align: center;
+    padding: 0px;
+}
+
+#act_2 .img_pas {
+    width: 220px;
+    height: 220px;
+    margin: 2px;
+    padding: 2px;
+    background-color: transparent;
+    border: 0px solid;
+}
+
+#act_2 .img_pol {
+    width: 220px;
+    height: 220px;
+    margin: 2px;
+    padding: 2px;
+    background-color: transparent;
+    border: 0px solid;
+}
+
+#act_2 .img_ver {
+    width: 220px;
+    height: 220px;
+    margin: 2px;
+    padding: 2px;
+    background-color: transparent;
+    border: 0px solid;
+}
+
+#act_2 .img_pol img,
+#act_2 .img_ver img {
+    margin-top: 36px;
+}
+
+#act_2.jpit-activities-droppable .draggable p {
+    line-height: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.75px;
+    color: #231F20;
+}
+
+.jpit-activities-droppable .droppable.wrong {
+    background-color: transparent;
+    border-color: #D60C1B;
+    color: #D60C1B;
+}
+
+#act_2 .target_1 .box_media,
+#act_2 .target_1 {
+    position: absolute;
+    height: 80%;
+    width: 41.6%;
+    left: 29.2%;
+    top: 13.6%;
+    border-radius: 100%;
+    border: none;
+    margin: 0;
+}
+
+#act_2 .target_2 .box_media,
+#act_2 .target_2 {
+    position: absolute;
+    height: 40%;
+    width: 20.9%;
+    left: 50%;
+    top: 13.6%;
+    border-top-right-radius: 100%;
+    border: none;
+    margin: 0;
+}
+
+#act_2 .target_3 .box_media,
+#act_2 .target_3 {
+    position: absolute;
+    height: 40%;
+    width: 20.9%;
+    left: 50%;
+    top: 53.7%;
+    border-bottom-right-radius: 100%;
+    border: none;
+    margin: 0;
+}
+
+#act_2 .target_1 .box_media,
+#act_2 .target_2 .box_media,
+#act_2 .target_3 .box_media {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#act_2 .target_2 .box_media img,
+#act_2 .target_3 .box_media img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#act_2 .target_1 .box_media img {
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin: 0;
+}
+
+/********************************************************************************/
+/* Actividad 4
+/********************************************************************************/
+
+.jpit-activities-check .check_left {
+    float: left;
+    width: 50%;
+}
+
+.jpit-activities-check .check_left .word_content {
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 3px 3px 3px #dadbdc;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.jpit-activities-check .check_right {
+    float: right;
+}
+
+.jpit-activities-check .buttons {
+    text-align: center;
+}
+
+.jpit-activities-check .buttons button.yes,
+.jpit-activities-check .buttons button.not {
+    font-size: 30px;
+}
+
+.jpit-activities-check .box_result {
+    float: left;
+    font-size: 20px;
+    text-align: center;
+}
+
+.jpit-activities-check .box_result > div {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 3px #cbcccc;
+    padding: 10px;
+    width: 110px;
+    float: left;
+    margin: 0 10px;
+}
+
+.jpit-activities-check .box_result .correct {
+    color: #8bc541;
+}
+.jpit-activities-check .box_result .hits {
+    font-size:30px;
+}
+
+.jpit-activities-check .box_result .wrong {
+    color: #d60c1b;
+}
+.jpit-activities-check .box_result .miss {
+    font-size:30px;
+}
+
+/********************************************************************************/
+/* Actividad 5
+/********************************************************************************/
+#act_5 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#act_5 .chalkboard_content {
+    height: auto;
+}
+
+#act_5 .box_img { 
+    background: url(../content/semaforo.png) no-repeat left; 
+    background-size: 100%;
+    width: 50%;
+    padding-top: 64%;
+    position: relative;
+}
+
+#act_5 .targets {
+    width: 60%;
+    min-height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#act_5 .sources {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#act_5 .target {
+    position: absolute;
+    width: 65%;
+    height: 25%;
+    border: 1px solid #000;
+    padding: 0;
+    left: 95%;
+}
+
+#act_5 .conection_r {
+    top:9%;
+}
+
+#act_5.jpit-activities-droppable .droppable.conection_a {
+    top: 39%;
+}
+
+#act_5.jpit-activities-droppable .droppable.conection_v {
+    top: 67%;
+}
+
+#act_5.jpit-activities-droppable .item {
+    width: 300px;
+    color: #000;
+    margin: 2px;
+}
+
+#act_5.jpit-activities-droppable .draggable.jpit_activities_jpitdroppable_dropped {
+    background-color: #7bcadd;
+    margin: auto;
+    color: #fff;
+}
+
+#act_5.jpit-activities-droppable .target .item {
+    width: 98%;
+    height: 94%;
+    color: #000;
+    padding: 1%;
+    line-height: 18px;
+}
+
+#act_5 .box_end {
+    width: 100%;
+}

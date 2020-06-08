@@ -1,0 +1,122 @@
+/********************************************************************************/
+/* VERTEBRADOS
+/********************************************************************************/
+#pag-vertebrados .animales {max-width: 800px;margin: auto;}
+
+#pag-vertebrados .grupos {
+	background: url(../content/grupos_animales.png) no-repeat;
+	background-size: 100%;
+	width: 100%;
+	padding-top: 85%;
+	position: relative;
+}
+
+#pag-vertebrados .wf-content-controler {
+	width: 32.6%;
+    height: 30%;
+    position: absolute;
+    border-radius: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#pag-vertebrados .wf-content-controler.mamiferos {
+	top: 26%;
+    left: 2.9%;
+}
+
+#pag-vertebrados .wf-content-controler.aves {
+	top: 3.4%;
+    left: 33%;
+}
+
+#pag-vertebrados .wf-content-controler.reptiles {
+	top: 24.8%;
+    left: 65.3%;
+}
+
+#pag-vertebrados .wf-content-controler.peces {
+	top: 64.3%;
+    left: 16.2%;
+}
+
+#pag-vertebrados .wf-content-controler.anfibios {
+	top: 64.3%;
+    left: 53.7%;
+}
+
+#pag-vertebrados .wf-content {
+	text-align: left;
+	overflow: auto;
+}
+/********************************************************************************/
+/* ACTIVIDADES - QUIZ
+/********************************************************************************/
+#pag-actividades .jpit-activities-quiz {
+	background-color: #fff;
+    padding: 10px 30px;
+    border: 2px solid #22b573;
+    border-radius: 15px;
+}
+
+#pag-actividades .jpit-activities-quiz .box_content {
+	padding-bottom: 60px;
+}
+
+#pag-actividades .jpit-activities-quiz ul {
+	display: flex;
+	align-items: baseline;
+}
+
+#pag-actividades .jpit-activities-quiz li img {
+	width: 75%;
+}
+/********************************************************************************/
+/* ACTIVIDADES - CLOZE
+/********************************************************************************/
+#pag-actividades .jpit-activities-cloze select {
+	width: 90%;
+}
+/********************************************************************************/
+/* ACTIVIDADES - DROPPABLE
+/********************************************************************************/
+#vertebrados {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#vertebrados .target {
+	min-width: 350px;
+	min-height: 300px;
+    padding: 0;
+    border: 2px solid #22b573;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#vertebrados .sources {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#vertebrados .opcion {
+    width: 100px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+}
+
+#vertebrados .opcion img {
+	width: 100%;
+}
+
+#vertebrados .draggable {
+    display: inline-block;
+}

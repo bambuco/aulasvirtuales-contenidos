@@ -1,0 +1,112 @@
+/********************************************************************************/
+/* ACTIVIDAD ANGULOS
+/********************************************************************************/
+.sources,
+.contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 900px;
+}
+
+.contenedor .angulo {
+	width: 200px;
+	height: 160px;
+	text-align: center;
+	margin: 10px;
+	padding: 0;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.angulo .imagen img {
+	width: 100%;
+}
+
+.angulo .receptor {
+	height: 30px;
+	border: none;
+	border-bottom: 3px solid #22b573;
+	padding: 0;
+}
+
+.sources .tipo {
+	width: 200px;
+	height: 30px;
+	padding: 0;
+	margin: 5px;
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+	background-color: transparent;
+    color: #003543;
+    border: none;
+}
+
+/********************************************************************************/
+/* ACTIVIDADES TRIANGULOS
+/********************************************************************************/
+.sources,
+.contenedor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.contenedor .triangulo {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	margin: 10px;
+	padding: 0;
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.triangulo .imagen img {
+	width: 100%;
+}
+
+.triangulo .receptor {
+	height: 40px;
+	border: none;
+	border-bottom: 3px solid #22b573;
+	padding: 0;
+}
+
+.sources .tipo {
+	width: 200px;
+	height: 30px;
+	padding: 0;
+	margin: 5px;
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+	background-color: transparent;
+    color: #003543;
+    border: none;
+}
+
+.jpit-activities-droppable .draggable.wrong, .jpit-activities-droppable .droppable.wrong {
+	color: #D60C1B !important;
+}
+
+/********************************************************************************/
+/* RAZONES TRIGONOMETRICAS
+/********************************************************************************/
+.box_media .leyenda {
+	position: relative;
+	height: 250px;
+	background: url(../content/razones_fig2.png) no-repeat;
+	background-size: 100%;
+	text-align: left;
+}
+
+.box_media .leyenda ul {
+	position: absolute;
+	top: -30px;
+	right: 0;
+}

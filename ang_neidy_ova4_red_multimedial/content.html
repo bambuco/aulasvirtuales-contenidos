@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Introducción a la geometría analítica</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Introducción a la geometría analítica</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="1. Conceptos previos" data-page="pag-previos"></menuitem>
+                        <menuitem label="2. Historia y aplicaciones" data-page="pag-historia"></menuitem>
+                        <menuitem label="3. Distancia" data-page="pag-distancia"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-previos" ptitle="1. Conceptos previos">
+                <div class="subpage">
+
+                    <div class="instruction" type="info"><span class="onlymobile">Toca </span><span class="notmobile">Haz clic </span>en cada tema para leer la información.</div>
+                    
+                    <div class="previos">
+                        <button class="w-content-controler general" data-content="#sis_coo_uni">
+                            Sistema coordenado unidimensional
+                        </button>
+                        <button class="w-content-controler general" data-content="#sis_coo_bi">
+                            Sistema coordenado bidimensional
+                        </button>
+                        <button class="w-content-controler general" data-content="#diferencian">
+                            ¿En qué se diferencian estos dos sistemas?
+                        </button>
+                        <div id="sis_coo_uni" class="w-content">
+                            <p>Un <strong>sistema coordenado unidimensional</strong> es el ordenamiento de los números reales en una línea conocida como recta numérica, en donde a cada número real le corresponde uno y solo de los puntos ubicados sobre esa recta. Se basa en un punto inicial llamado origen. Hacia la derecha se ubican los números reales positivos y hacia la izquierda del cero, los reales negativos.</p>
+                        </div>
+                        <div id="sis_coo_bi" class="w-content">
+                            <p>Un <strong>sistema coordenado bidimensional</strong> es el sistema formado por dos líneas rectas perpendiculares entre sí (los ejes coordenados “x” y “y”) que se cortan en un punto llamado origen (O). La recta horizontal o “eje x”, recibe el nombre de eje de abscisas y la recta vertical o “eje y”, el nombre de ordenadas. Los ejes de coordenadas dividen el plano en cuatro regiones llamadas “cuadrantes”, numeradas en el sentido contrario al de las agujas del reloj.</p>
+                        </div>
+                        <div id="diferencian" class="w-content">
+                            <p><strong>Se diferencian</strong> en que en el sistema unidimensional identifica o ubica un punto con una sola coordenada, mientras que en el sistema bidimensional un punto se identifica con dos coordenadas (x, y).</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Actividad 1. ¿Utilizamos álgebra o geometría para resolver este problema?</h3>
+
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> identificar algunas situaciones problema que se resuelven mediante el álgebra, la geometría o ambas.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> indica para el problema enunciado si es necesario utilizar geometría, álgebra, ambas o alguna de las dos para resolverlo. Para ello, arrastra el problema a la opción que consideres correcta.
+                        </p>
+                    </div>
+
+                    <div id="arrastrargrupos" class="jpit-activities-multidroppable" data-act-title="Situaciones problema" data-act-id="1_situaciones_problema">
+                        <div class="box_targets">
+                            <div class="box_target"><p>Álgebra</p><div data-target-group="1" class="target"></div></div>
+                            <div class="box_target"><p>Geometría</p><div data-target-group="2" class="target"></div></div>
+                            <div class="box_target"><p>Geometría y álgebra</p><div data-target-group="3" class="target"></div></div>
+                            <div class="box_target"><p>Geometría o álgebra</p><div data-target-group="4" class="target"></div></div>
+                        </div>
+                        <div class="buttons">
+                            <button class="general verify">Verificar</button>
+                            <button class="general continue" style="display: none;">Continuar intentando</button>
+                        </div>
+                        <div class="box_end"></div>
+                        <div class="sources">
+                            <div data-group="2">Dado un trapecio determinar si es isósceles.</div>
+                            <div data-group="1">Calcular el valor de x, si 41+5x-21=0.</div>
+                            <div data-group="3">Hallar la distancia de un punto a una recta.</div>
+                            <div data-group="2">Determinar si un polígono es un polígono regular.</div>
+                            <div data-group="3">Dada una recta en el plano, determinar su ecuación.</div>
+                            <div data-group="2">Encontrar las raíces de una ecuación de segundo grado.</div>
+                            <div data-group="4">Hallar los interceptos con el eje x, de una función cuadrática.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> ubicar puntos en el plano cartesiano.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> ubica los siguientes puntos en el plano cartesiano.
+                        </p>
+                    </div>
+                    <div id="arrastrar" class="jpit-activities-droppable" data-verify-type="target" data-act-title="Plano cartesiano" data-act-id="2_plano_cartesiano" data-shuffle="false">
+                        
+                        <span class="onlymobile"><div class="instruction" type="info">Presiona durante dos segundos cada punto del plano cartesiano para ver la lista de posibles respuestas. Elije la correcta de acuerdo a sus coordenadas.</div></span>
+                        
+                        <div class="formulas"> 
+                            <div class="titulo"><h3>Puntos</h3></div>
+                            <div class="opcion">A. (-2.5, 5)<div data-group="1" class="item_1 item">A</div></div>
+                            <div class="opcion">B. (3, -4.5)<div data-group="2" class="item_2 item">B</div></div>
+                            <div class="opcion">C. (1.3, 7/2)<div data-group="3" class="item_3 item">C</div></div>
+                            <div class="opcion">D. (0,3)<div data-group="4" class="item_4 item">D</div></div>
+                            <div class="opcion">E. (-4.5, 0)<div data-group="5" class="item_5 item">E</div></div>
+                            <div class="opcion">F. (-2.1,-1.37)<div data-group="6" class="item_6 item">F</div></div>
+                        </div>
+                        <div class="plano">
+                            <div data-target-group="1" class="receptor receptor1"></div>
+                            <div data-target-group="2" class="receptor receptor2"></div>
+                            <div data-target-group="3" class="receptor receptor3"></div>
+                            <div data-target-group="4" class="receptor receptor4"></div>
+                            <div data-target-group="5" class="receptor receptor5"></div>
+                            <div data-target-group="6" class="receptor receptor6"></div>
+                        </div>
+                        <br class="clear" />
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="pag-historia" ptitle="2. Historia y aplicaciones de la geometría analítica">
+                <div class="subpage">
+                    <p>En el siguiente video podrás conocer cómo surgió la geometría analítica.</p>
+                    <div class="box_media">
+                        <div class="videobox">
+                          <video controls>
+                            <source src="https://contenidosparaaprender.colombiaaprende.edu.co/G_10/M/M_G10_U04_L01/video/VS_M_G10_U03_L04_01_01_Carlos.mp4" type="video/mp4">
+                            El reproductor de video no es soportado por el navegador
+                          </video>
+                        </div>
+                        <div class="about">
+                            Video 1. Historia de la geometría analítica. (Colombia Aprende, s.f.)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-distancia" ptitle="3. Distancia entre dos puntos">
+                <div class="subpage">
+                    <div class="box_media">
+                        <img src="content/distanciaentrepuntos.png" alt="Distancia entre puntos" />
+                    </div>
+                    <p>La distancia entre dos puntos cualesquiera P (x1, y1) y Q (x2, y2) del plano d (P, Q), se determina mediante la fórmula:</p>
+                    <div class="box_media">
+                        <img class="formula" src="content/formula_dos_puntos.jpg" alt="Fórmula, distancia entre dos puntos" />
+                    </div>
+                    <div class="box_media">
+                        <div class="videobox">
+                          <video controls>
+                            <source src="http://boa.nuestroscursos.net/api/c/bbco/resources/NzAxMjBBRDMtMUI2OS00QUQ0LTk0REQtNzYwREJBQTg5M0VDQGJvYS51ZGVhLmVkdS5jby9jb250ZW50L2Rpc3RhbmNpYV9lbnRyZV8yX3B1bnRvcy5tcDQ=/!/.alternate/distancia_entre_2_puntos.mp4/small.mp4" type="video/mp4">
+                            El reproductor de video no es soportado por el navegador
+                          </video>
+                        </div>
+                        <div class="about">
+                            Video 2. Distancia entre dos puntos.
+                        </div>
+                    </div>
+                    <h3>Punto medio de un segmento</h3>
+                    <p>
+                        Dado un segmento de extremos P (x1, y1) y Q (x2, y2), las coordenadas de su <strong>punto medio (M) vienen dadas por las semisumas de las coordenadas de los extremos, así:</strong>
+                    </p>
+                    <div class="box_media">
+                        <img class="formula" src="content/formula_punto_medio.jpg" alt="Fórmula, punto medio" />
+                    </div>
+                    <div class="box_media">
+                        <img src="content/puntomedio.png" alt="Gráfica de punto medio" />
+                    </div>
+                    <p>
+                        En siguiente video se explican algunos ejercicios donde se calcula el punto medio de un segmento:
+                    </p>
+                    <div class="box_media">
+                        <div class="videobox">
+                          <video controls>
+                            <source src="http://boa.nuestroscursos.net/api/c/bbco/resources/NzAxMjBBRDMtMUI2OS00QUQ0LTk0REQtNzYwREJBQTg5M0VDQGJvYS51ZGVhLmVkdS5jby9jb250ZW50L3B1bnRvX21lZGlvX3NlZ21lbnRvX2dlb21ldHJpYS5tcDQ=/!/.alternate/punto_medio_segmento_geometria.mp4/small.mp4" type="video/mp4">
+                            El reproductor de video no es soportado por el navegador
+                          </video>
+                        </div>
+                        <div class="about">
+                            Video 3. Punto medio de un segmento.
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Neidy Bibiana Álvarez Giraldo</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria<br />
+                Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón<br />
+                David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>Nota: Si desea usar este recurso con fines comerciales, debe prescindir del video realizado por Colombia Aprende llamado “Historia de la geometría analítica” del contenido final.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>Aishah Lucía. (2015, 6 de noviembre).<cite> Historia de la Geometría Analítica</cite> [video]. YouTube. <a href="https://www.youtube.com/watch?v=n0-QrYCyqEs" target="_blank">https://www.youtube.com/[...]</a></li>
+                <li>Colombia Aprende. (s.f.). <cite>Historia de la geometría analítica.</cite> [video]. Colombia Aprende. <a href="https://contenidosparaaprender.colombiaaprende.edu.co/G_10/M/M_G10_U04_L01/M_G10_U04_L01_04_01_01.html" target="_blank">https://contenidosparaaprender.colombiaaprende.edu.co/[...]</a></li>
+                <li>Martínez, C. (s.f.). <cite>Geometría analítica: qué estudia, historia, aplicaciones. </cite>Lifeder. <a href="https://www.lifeder.com/que-estudia-geometria-analitica/" target="_blank">https://www.lifeder.com/[...]</a></li>
+                <li>Matemáticas profe Alex. (2016, 24 de junio). <cite>Punto medio entre dos puntos | Ejemplo 1 </cite>[video]. YouTube. <a href="https://www.youtube.com/watch?v=qzRxsVoUaMo" target="_blank">https://www.youtube.com/[...]</a></li>
+                <li>Matemáticas profe Alex. (2019, 12 de noviembre). <cite>Distancia entre dos puntos | Introducción </cite>[video]. YouTube. <a href="https://www.youtube.com/watch?v=dRv6f7Y2l6U" target="_blank">https://www.youtube.com/[...]</a></li>
+                <li>Ministerio de Educación Nacional. (2017). <cite>Matemáticas 10. </cite>Ediciones S.M.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

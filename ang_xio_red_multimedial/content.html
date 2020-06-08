@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>El cine como instrumento de crítica social</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+<!--jQuery components -->
+    
+<!--End jQuery components -->
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+    <script src="components/pit/activity/wordpuzzle/jpit_activity_wordpuzzle.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+    <script src="js/customlib.js"></script>
+
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="90" data-activities-percentaje="70" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>El cine como instrumento de crítica social</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Inicio" data-page="pag-inicio"></menuitem>
+                        <menuitem label="La imagen cinematográfica" data-page="pag-cinematografica"></menuitem>
+                        <menuitem label="El encuadre y el plano" data-page="pag-encuadre"></menuitem>
+                        <menuitem label="Actividad de afianzamiento" data-page="pag-actividad"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <!--Inicio-->
+            <section id="pag-inicio" ptitle="1. Inicio <sup class='tooltip' title='1. El contenido que se presenta en este objeto de aprendizaje, fue tomado del libro suministrado por el Ministerio de Educación Nacional llamado “Vamos a aprender lenguaje. Libro del estudiante 10”. Para conocer más datos sobre el recurso original puede consultar la lista de referencias.'>[1]</sup>">
+                
+                <div class="subpage">
+                    <div class="box_media one">
+                        <img src="content/vectores.png" />
+                        <div class="about">
+                            Imagen tomada de Freepik 
+                        </div>
+                    </div>
+                      <p>
+                        El arte vanguardista busca generar conciencia en el público sobre la sociedad. Es una forma de fomentar un espíritu crítico que provoque cambios en su estructura. El cine, como séptimo arte, no ha estado ajeno a esta práctica. 
+                    </p>
+                    <p>
+                        La dictadura franquista se obsesionó con controlar la información que recibían los españoles. Cualquier mensaje que pudiera entenderse como contrario a los valores encuadrados en la ideología nacional-católica era prohibido. La cultura fue sometida a una férrea censura en la que ninguna publicación podía contravenir las normas políticas y morales vigentes.
+                    </p>
+                    <p>
+                        
+                        Al igual que el resto de medios de comunicación, el cine también fue objeto de censura. Los funcionarios encargados de “proteger” a los españoles de mensajes inapropiados se emplearon a fondo en esta tarea. Se suprimían escenas, se manipulaban diálogos en los doblajes o simplemente se impedía la reproducción de la cinta.
+                        
+                    </p>
+                    <p>
+                        
+                        Los censores parecían más ocupados en evitar imágenes o diálogos con contenido erótico que en restringir otras propuestas que, de forma más o menos implícita suponían una crítica a la España de la época.
+                        Esta circunstancia permitió rodar durante aquellos años algunas de las grandes obras maestras de la filmología española. Una de ellas Calle Mayor, dirigida por Juan Antonio Bardem. 
+                    </p>
+
+                    <div class="row">
+                        <div class="col-2 elemento_1">
+                            <div class="box_media">
+                                <img src="content/poster_Calle-Mayor.png" alt="poster"/>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <p>
+                                <strong>Sinopsis:</strong> un grupo de jóvenes que habitan en una aburrida ciudad de provincia, planean burlarse de una mujer soltera llevando a cabo un cortejo que tendrá consecuencias funestas.
+                            </p>
+                            <p>
+                                <strong>Información cinematográfica:</strong> el guion es una adaptación de <cite>La señorita de Trevélez,</cite> de Carlos Arniches. 
+                            </p>
+                            <p>
+                                Fue premiada en el Festival de Cine de Venecia y estuvo a punto de ser galardonada con el León de Oro. Además, fue elegida para representar a España en la selección de los premios Oscar de la Academia.
+                            </p>
+                            <p>
+                                <strong>Simbología</strong>
+                                <ul class="data_list">
+                                    <li>
+                                        La crueldad e impunidad con la que actúan los señoritos de la ciudad. 
+                                    </li>
+                                    <li>
+                                        Mosaico social de la España de la época a través de una galería de personajes más o menos estereotipados.
+                                    </li>
+                                    <li>
+                                        El aburrimiento que atenaza la cotidianidad denuncia el inmovilismo propio de la España de Franco. 
+                                    </li>
+                                    <li>
+                                        Las apariencias y la intromisión en la vida de los otros como valores comunes de una sociedad sin esperanza.
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>                  
+                </div>       
+            </section>
+
+            <!--La imagen cinematográficao-->
+            <section id="pag-cinematografica" ptitle="2. La imagen cinematográfica">
+                <div class="subpage">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="box_media">
+                                <img src="content/cine-vintage.jpg" alt="imagen cinematográfica" title="La imagen cinematográfica"/>
+                                <div class="about">
+                                    Imagen tomada de Freepik 
+                                </div>                               
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <p>
+                                Una película de cine es un texto constituido con imágenes en movimiento, parlamento y toda clase de signos visuales y auditivos que transmiten un mensaje. Aunque parece un elemento simple, la imagen constituye uno de los factores más complejos del lenguaje cinematográfico. Al analizar la imagen, el espectador debe tener en cuenta diversos aspectos, uno de los cuales es el plano.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>                
+           </section>
+
+            <!--El encuadre y el plano-->
+            <section id="pag-encuadre" ptitle="3. El encuadre y el plano">
+                <div class="subpage">
+                    <div class="row">
+                        <div class="col_2">
+                            <div class="box_media">
+                                <img src="content/ilustracion-cinematografica.jpg" alt="El encuadre y el plano" title="El encuadre y el plano" />
+                                <div class="about">
+                                    Imagen tomada de Freepik
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col_2">
+                            <div class="box-text connection">
+                                <p>
+                                    Constantemente se confunden los términos encuadre y plano. El encuadre es la parte de la realidad que se toma con la cámara, mientras que el plano consiste en la distancia y el ángulo de la cámara con respecto a lo filmado. 
+                                </p>
+                                <p>
+                                    Se dice que el plano es la unidad visual del cine. Al igual que en la fotografía, existen tres grandes clases de planos: 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <h3>Los primeros planos.</h3>
+                        <div>Permiten resaltar los gestos de los actores. En los filmes psicológicos funcionan para estudiar la personalidad y actitud de los personajes.</div>
+                        <h3>Los planos medios.</h3>
+                        <div> Se utiliza con frecuencia en comedias y telenovelas. Muestran las actitudes de los personajes sin entrar en un estudio muy profundo de su individualidad.</div>
+                        <h3>Los planos generales.</h3>
+                        <div>Permiten ubicar a los personajes dentro de una geografía. Presentan el lugar que ocupan allí y la forma como contrastan o se asimilan en ella. </div>
+                    </div>                   
+                    <p>
+                        Existen planos muchos más cortos llamados <cite>close-up</cite>. Se utilizan fundamentalmente en las tomas de cosas muy pequeñas casi siempre en los filmes científicos. Estos planos son muy atractivos porque muestran detalles y realidades que nuestro ojo no es capaz de apreciar en condiciones normales.
+                    </p>
+                </div>                
+            </section>
+
+            <section id="pag-actividad" ptitle="4. Actividad de afianzamiento">               
+                <div class="subpage">
+                    <h3>4.1 La imagen en la cinematografía</h3>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                           <strong>Objetivo de aprendizaje:</strong> comprender la importancia de las imágenes en la cinematografía.
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> responde la siguiente pregunta en el espacio que encuentras a continuación. 
+                        </p>
+                    </div>
+
+                    <div id="act4"  class="box-text note">
+                        <h4>¿Cómo puede al análisis de la imagen cinematográfica, ayudarnos a comprender una película en general o detalles de algunas escenas en particular?</h4>
+                        <textarea class="respuesta"></textarea>
+                        <div class="boton_conclusion">
+                            <button class="jpit-activities-view btn-verify general" data-act-id="1-analisis" data-act-title="Actividad 1: Análisis imagen cinematográfica">Verificar</button>
+                        </div>
+                        <div class="feedback-pane hidden">
+                            <p>Mediante los signos visuales y auditivos la imagen cinematográfica se capta con mayor precisión, por eso debes tener en cuenta los diversos aspectos que la imagen te presenta y el mensaje que esta quiere proyectar. </p> 
+                            <p>
+                                <cite>Analizar solo una escena de una película puede ser divertido y revelador, ya que, al enfocarte en una pequeña parte de la película, podrás profundizar más en los detalles y comprender mejor las decisiones del director. Antes de elegir la escena, debes ver la película en su totalidad para así tener la certeza de que la hayas comprendido.</cite> (wikiHow, s.f.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>4.2 La imagen en la cinematografía</h3>
+
+                    <!--Pendiente imagen de fotograma realizado por Nicol -->
+                    <div class="box-text connection">
+                        <p>
+                            <strong>Objetivo de aprendizaje:</strong> identificar el tipo de plano y encuadre utilizado en algunos fotogramas de la película <cite>El bueno, el feo y el malo.</cite> 
+                        </p>
+                        <p>
+                            <strong>Enunciado:</strong> <cite>El bueno, el feo y el malo</cite> (1996) es un <cite>spaghetti western</cite> dirigido por Sergio Leone y protagonizada por Clint Eastwood. La cinta fue rodada en el desierto de Tabernas en la provincia de Almería, España. Observa los siguientes fotogramas y realiza las actividades propuestas.
+                        </p>
+                    </div>
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Enunciado:</strong>  indica el tipo de plano que corresponde a cada uno de los fotogramas, es posible que varios fotogramas utilicen el mismo plano. Para ello arrastra el tipo de plano al fotograma que corresponde.
+                        </p>
+                    </div>
+                    <div  id="arrastrar" class="jpit-activities-droppable" data-target-multi="1" data-autoalign="false" data-act-title="Actividad 2: Fotogramas" data-act-id="4-1-relacione">
+                        <h4>¿A qué tipo de plano corresponden las imágenes respectivamente?</h4>
+                        <div class="fondoact4_1">
+                            <div class="enunciadoone">
+                                <div data-target-group="1"></div>
+                                <div class="about">Imagen de Emilio del Prado en Wikimedia Commons CC BY-SA 2.0</div>
+                            </div>
+                            <div class="enunciadotwo">
+                                <div data-target-group="2"></div>
+                                <div class="about">Imagen tomada de Distopía</div>
+                            </div>
+                            <div class="enunciadotrhee">
+                                <div data-target-group="3"></div>
+                                <div class="about">Imagen tomada de Hoy Cinema</div>
+                            </div>
+                        </div>
+                        <div class="sources">
+                            <div class="opcion" data-group="1"><span>Plano general</span></div>
+                            <div class="opcion" data-group="2"><span>Primer plano</span> </div> 
+                            <div class="opcion" data-group="3"><span>Plano medio</span></div>
+                            <br class="clear" />
+                        </div>
+                        <feedback>
+                            <correct>
+                                <p>
+                                    En el primer fotograma se observa un plano general que muestra un pequeño pueblo. En este caso se trata de Almería, ubicado en el desierto de Tabernas, España.
+                                </p>
+                                <p>
+                                    Los fotogramas dos y tres corresponden al primer plano y al plano medio, respectivamente. Por medio de ellos, se resaltan los gestos en los actores, los rasgos de su personalidad y se evidencia qué papel representa cada uno en la película.
+                                </p>
+                            </correct>
+                        </feedback>  
+                        <feedback>
+                            <wrong>
+                                <p>
+                                    En el primer fotograma se observa un plano general que muestra un pequeño pueblo. En este caso se trata de Almería, ubicado en el desierto de Tabernas, España.
+                                </p>
+                                <p>
+                                    Los fotogramas dos y tres corresponden al primer plano y al plano medio, respectivamente. Por medio de ellos, se resaltan los gestos en los actores, los rasgos de su personalidad y se evidencia qué papel representa cada uno en la película.
+                                </p>
+                            </wrong>
+                        </feedback>                         
+                        <div class="box_end"></div>                                      
+                    </div>
+                    
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Enunciado:</strong>  lee el enunciado e indica si es verdadero o falso.
+                        </p>
+                    </div>
+                    <h4>De acuerdo al encuadre que se da en cada fotograma, indica si los siguientes enunciados son verdaderos o falsos.</h4>
+                    <div class="jpit-activities-quiz" data-act-title="Actividad 3: Verdadero o Falso" data-act-id="4-3-Seleccionar" data-layer-height="auto">
+                        <question type="simplechoice">
+                            <description><p>En el primer fotograma su encuadre logra centrar la realidad del lugar donde se desarrolla la historia.</p></description>
+                            <ul>
+                                <li data-response="true">Verdadero</li>
+                                <li>Falso</li>
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                            </feedback>
+                            <feedback>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question> 
+                        <question type="simplechoice">
+                            <description><p>Los fotogramas dos y tres logran definir rasgos de la personalidad de los protagonistas.</p></description>
+                            <ul>
+                                <li data-response="true">Verdadero</li>
+                                <li>Falso</li>                                
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                            </feedback>
+                            <feedback>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question> 
+                        <question type="simplechoice">
+                            <description><p>En el primer fotograma los elementos que destacan por el plano y encuadre son el desierto, la ubicación del pueblo rodeado de montañas, los caballos, carruajes y los personajes en la plaza principal.</p></description>
+                            <ul>
+                                <li data-response="true">Verdadero</li>
+                                <li>Falso</li>                                
+                            </ul>
+                            <feedback>
+                                <correct>La respuesta es correcta.</correct>
+                            </feedback>
+                            <feedback>
+                                <wrong>La respuesta es incorrecta.</wrong>
+                            </feedback>
+                        </question>
+                        <div class="box_end"></div>
+                    </div> 
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p>
+                            <strong>Enunciado:</strong> busca en la sopa de letras cinco elementos de la simbología de las películas de vaqueros que aparece en cada una de los fotogramas
+                        </p>
+                    </div> 
+                    <div class="jpit-activities-wordpuzzle" data-act-id="4-4-encontrar" data-act-title="Actividad 4: Simbología de las películas" >
+                        <letters>
+                            <row>C,O,M,M,O,N,S,L,L,B,U,U,P</row>
+                            <row>O,A,V,E,S,T,U,A,R,I,O,A,E</row>
+                            <row>M,W,B,N,I,S,B,I,R,X,A,V,R</row>
+                            <row>M,U,D,A,N,C,O,Ñ,I,A,M,A,S</row>
+                            <row>O,R,Y,T,L,U,D,L,S,J,R,D,O</row>
+                            <row>N,E,T,U,X,L,N,I,B,I,L,K,N</row>
+                            <row>S,A,O,X,A,P,O,F,E,E,G,P,A</row>
+                            <row>O,P,O,N,Z,P,O,S,R,A,U,L,J</row>
+                            <row>C,A,R,R,U,A,J,E,S,A,E,P,E</row>
+                            <row>C,A,L,U,U,N,A,E,S,A,E,L,S</row>
+                        </letters>
+                        <div class="words">
+                            <h5>Busca y aprende</h5>
+                            <ul>
+                                <li data-term="pueblo">Pueblo</li>
+                                <li data-term="personajes">Personajes</li>
+                                <li data-term="caballos">Caballos</li>
+                                <li data-term="carruajes">Carruajes</li>
+                                <li data-term="vestuario">Vestuario</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>                
+            </section>   
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+            </div>
+            <div>
+                <h3>Desarrollo de Contenidos</h3>
+                <cite>Xiomara Luz Narváez Cabrales</cite> 
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Luisa Fernanda Arboleda Parra</cite><br />
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias</h2>
+
+            <ul class="data_list">
+                <li>
+                    Corredera, C. (2014). <cite>Un feo pero que muy bueno</cite>  [Fotografía]. Distopía. <a href="http://revistadistopia.com/bueno-feo-malo/" target="_blank">http://revistadistopia.com/[...]</a> 
+                </li>
+                <li>
+                    Del Prado, E. (2007). <cite>Town square in Mini Hollywood</cite> [Fotografía]. Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Town_square_in_Mini_Hollywood.jpg" target="_blank">https://commons.wikimedia.org/[...]</a>
+                </li>
+                <li>
+                    Hoy Cinema. (2016). <cite>La crítica de ABC de El "bueno, el feo y el malo"  medio siglo después</cite> [Fotografía]. Hoy Cinema <a href="http://hoycinema.abc.es/noticias/20160726/abci-bueno-malo-critica1968-201607222056.html" target="_blank">http://hoycinema.abc.es/[...]</a>
+                </li>   
+                <li>
+                    Macrovector. (2019). <cite>Ilustración cinematográfica</cite> [Ilustración]. Freepik. <a href="https://www.freepik.es/vector-gratis/ilustracion-cinematografica-isometrica_5971914.htm#page=1&query=cinematogr%C3%A1fica%20&position=11" target="_blank">https://www.freepik.es/[...]</a>
+                </li>  
+                <li>
+                    Ministerio de Educación Nacional. (2018). Vamos a aprender lenguaje. Libro del estudiante 10. pp 232 - 233.
+                </li> 
+                <li>
+                    WikiHow. (s.f.). <cite>Cómo analizar una escena de una película.</cite>.  <a href="https://es.wikihow.com/analizar-una-escena-de-una-pel%C3%ADcula" target="_blank">https://es.wikihow.com/[...]</a>
+                </li>   
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+h4 {
+    text-align: center;
+}
+
+.box_media img {
+    max-width: 528px;
+}
+
+.boton_conclusion {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/********************************************************************************/
+/*Imgagen de vector*
+/********************************************************************************/
+#pag-inicio .box_media.one {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+#pag-inicio .box_media.one img {
+    max-width: 200px;
+}
+
+/********************************************************************************/
+/*view-first*
+/********************************************************************************/
+#pag-inicio .col-2.elemento_1 .view-first, #pag-inicio .col-2.elemento_1 .box_media img {
+    width: 300px;  
+    position: relative;
+    margin: auto;
+    transition: all 0.2s linear;
+}
+
+#pag-inicio .col-2.elemento_1 .view-content, #pag-exotermica .col-2.elemento_1 .view-content {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+
+/********************************************************************************/
+/*Pagina 3
+/********************************************************************************/
+#pag-encuadre .col_2 {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+/********************************************************************************/
+/* Actividad 4-1
+/********************************************************************************/
+#act4 .respuesta {
+    width: 450px;
+    height: 150px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#act4 .box_body {
+    text-align: center;
+}
+
+/********************************************************************************/
+/* Actividad 4-2 -1
+/********************************************************************************/
+#arrastrar {
+    overflow: auto;
+    max-width: 900px;
+    margin: auto;
+}
+
+#arrastrar .fondoact4_1 {
+    background: url(../content/fotogramas.png) no-repeat center;
+    width: 100%;
+    position: relative;
+    padding-top: 36%;
+    background-size: 100%;
+}
+
+#arrastrar .droppable {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+}
+
+#arrastrar .enunciadotwo, 
+#arrastrar .enunciadoone, 
+#arrastrar .enunciadotrhee {
+    position: absolute;
+    width: 29%;
+    height: 46%;
+    top: 27%;
+}
+  
+#arrastrar .enunciadoone {
+    left: 3%;
+}
+  
+#arrastrar .enunciadotwo {
+    left: 35.6%;
+}
+
+#arrastrar .enunciadotrhee {
+    left: 68%;
+}
+
+#arrastrar.jpit-activities-droppable {
+    text-align: center;
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+}
+  
+#arrastrar.jpit-activities-droppable .sources div {
+    width: 150px;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 6px;
+    margin: 5px;
+    border-radius: 159px;
+    border: none;
+    color: #fff;
+    background: #000;
+}
+
+#arrastrar.jpit-activities-droppable .draggable {
+    max-height: 260px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+#arrastrar .fondoact4_1 .draggable.disabled {   
+    cursor: default;
+}
+
+#arrastrar .fondoact4_1 .about {
+    color: #fff;
+    line-height: 15px;
+}
+
+#arrastrar .fondoact4_1 .opcion {
+    font-size: 30px;
+}
+
+#arrastrar.jpit-activities-droppable .buttons {
+    text-align: center;
+    padding: 5px 0;
+    clear: both;
+}
+
+#arrastrar.jpit-activities-droppable .draggable.wrong,  
+#arrastrar.jpit-activities-droppable .droppable.wrong {
+    background-color: transparent;
+    color: #D60C1B !important;
+}
+
+#arrastrar.jpit-activities-droppable .draggable.correct,
+#arrastrar.jpit-activities-droppable .droppable.correct {
+    color: #22b573 !important;
+}
+
+/********************************************************************************/
+/* Actividad 4-2 -2
+/********************************************************************************/
+#pag-actividad .jpit-activities-quiz .box_content {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 5px 10px 0 20px;
+    min-height: 190px;
+}

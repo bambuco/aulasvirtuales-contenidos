@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Características de los animales vertebrados</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="75" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Características de los animales vertebrados</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Animales vertebrados" data-page="pag-vertebrados"></menuitem>
+                        <menuitem label="Actividades de aprendizaje" data-page="pag-actividades"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-vertebrados" ptitle="Animales vertebrados">
+
+                <div class="subpage">
+                    <p>Los animales vertebrados son un grupo que tiene columna vertebral, formada por una serie de piezas articuladas o vértebras, que permiten algunos movimientos y les dan cierta flexibilidad. Su cuerpo está dividido en cabeza, tronco y extremidades. La reproducción de la mayoría de los vertebrados es sexual, es decir, se necesita del apareamiento de un macho y una hembra para dar origen a un nuevo individuo. En el grupo de animales vertebrados existen muy pocas especies con reproducción asexual y se presenta en algunos reptiles, anfibios e incluso algunas aves muy extrañas.<sup class="tooltip" title='Contenido adaptado con fines educativos de la página web Portal Educativo.net. El enlace al contenido original puede ser consultado en la lista de referencias.'>[1]</sup></p>
+                    <h3>Los animales vertebrados se clasifican en cinco grupos:</h3>
+                    <p class="instruction" type="info">
+                        <span class="onlymobile">Toca </span>
+                        <span class="notmobile">Haz clic </span>
+                        en cada imagen para ampliar la información.
+                    </p>
+                    <div class="box_media animales">
+                        <div class="grupos">
+                            <button class="wf-content-controler mamiferos" data-content="#mamiferos"></button>
+                            <button class="wf-content-controler aves" data-content="#aves"></button>
+                            <button class="wf-content-controler reptiles" data-content="#reptiles"></button>
+                            <button class="wf-content-controler peces" data-content="#peces"></button>
+                            <button class="wf-content-controler anfibios" data-content="#anfibios"></button>
+                            <div id="mamiferos" class="wf-content autox autoy">
+                                <h5>Mamíferos</h5>
+                                <ul class="data_list">
+                                    <li>Tienen el cuerpo cubierto de pelos.</li>
+                                    <li>Los mamíferos acuáticos tienen piel lisa.</li>
+                                    <li>Alimentan a sus crías con leche.</li>
+                                    <li>Respiran a través de pulmones.</li>
+                                </ul>
+                                <p><strong>Características:</strong> cuerpo cubierto de pelo, respiración pulmonar, se desplazan por la tierra y la reproducción es <strong>vivípara</strong>. A este grupo pertenece el único mamífero volador que es el <strong>murciélago</strong>. <strong>También hace parte de los mamíferos el ser humano</strong>. Su hábitat es la tierra.</p>
+                                <p><strong>Ejemplos de mamíferos:</strong></p>
+                                <ul class="data_list">
+                                    <li>Ballena</li>
+                                    <li>Caballo</li>
+                                    <li>Murciélago</li>
+                                    <li>Delfín</li>
+                                    <li>Perro</li>
+                                </ul>
+                            </div>
+                            <div id="aves" class="wf-content autox autoy">
+                                <h5>Aves</h5>
+                                <ul class="data_list">
+                                    <li>Tienen el cuerpo cubierto de plumas.</li>
+                                    <li>Poseen dos patas y dos alas.</li>
+                                    <li>La mayoría de las aves vuelan, pero también hay otras que nadan, caminan y corren.</li>
+                                    <li>Respiran por pulmones.</li>
+                                </ul>
+                                <p><strong>Características:</strong>  cuerpo cubierto de plumas, respiración pulmonar, se desplazan por el aire, reproducción <strong>ovípara</strong>, sus extremidades son alas y patas. Su hábitat es la tierra.</p>
+                                <p><strong>Ejemplos de aves:</strong></p>
+                                <ul class="data_list">
+                                    <li>Loro</li>
+                                    <li>Avestruz</li>
+                                    <li>Pingüino</li>
+                                    <li>Cóndor</li>
+                                    <li>Águila</li>
+                                </ul>
+                            </div>
+                            <div id="peces" class="wf-content autox autoy">
+                                <h5>Peces</h5>
+                                <ul class="data_list">
+                                    <li>Tienen el cuerpo cubierto de escamas.</li>
+                                    <li>Tienen aletas con las cuales puede nadar.</li>
+                                    <li>Respiran por branquias.</li>
+                                    <li>Pueden vivir en agua dulce o salada.</li>
+                                </ul>
+                                <p><strong>Características:</strong> cuerpo con escamas, lisos o con concha; respiración bronquial; se desplazan nadando; reproducción <strong>ovípara</strong>; fecundación externa en la mayoría;  sus extremidades son las aletas y su hábitat es el agua.</p>
+                                <p>En esta especie existe un escaso grupo de animales con reproducción vivíparo, como el caso de algunos tiburones y <strong>ovovivíparos</strong> como es el caso de la mantarraya o el tiburón blanco.</p>
+                                <p><strong>Ejemplos de peces:</strong></p>
+                                <ul class="data_list">
+                                    <li>Salmón</li>
+                                    <li>Tiburón</li>
+                                    <li>Pez espada</li>
+                                    <li>Anguila</li>
+                                    <li>Atún</li>
+                                    <li>Trucha</li>
+                                    <li>Bagre</li>
+                                </ul>
+                            </div>
+                            <div id="anfibios" class="wf-content autox autoy">
+                                <h5>Anfibios</h5>
+                                <ul class="data_list">
+                                    <li>Tienen el cuerpo cubierto por una piel húmeda, por lo que necesita vivir cerca de agua.</li>
+                                    <li>Tienen patas musculosas que les permite saltar o nadar.</li>
+                                </ul>
+                                <p><strong>Características:</strong> cuerpo húmedo, respiración pulmonar, se desplazan nadando o saltando, sus extremidades son patas, su hábitat es la tierra y el agua, la fecundación es externa —a excepción de algunas pocas especies de salamandras que tienen fertilización interna—. La reproducción es <strong>ovípara</strong>.</p>
+                                <p><strong>Ejemplos de anfibios:</strong></p>
+                                <ul class="data_list">
+                                    <li>Sapo</li>
+                                    <li>Rana</li>
+                                    <li>Salamandra</li>
+                                    <li>Gallipato</li>
+                                    <li>Tritón</li>
+                                </ul>
+                            </div>
+                            <div id="reptiles" class="wf-content autox autoy">
+                                <h5>Reptiles</h5>
+                                <ul class="data_list">
+                                    <li>Tiene el cuerpo cubierto por una escama dura y áspera.</li>
+                                    <li>Hay reptiles con caparazón.</li>
+                                    <li>Poseen patas cortas y algunos no tienen patas.</li>
+                                </ul>
+                                <p><strong>Características:</strong> cuerpo escamoso; respiración pulmonar; se desplazan, reptan o caminan; sus extremidades son patas o sin ellas; su hábitat es la tierra y el agua; reproducción <strong>ovípara</strong> con fertilización interna. En el grupo de los reptiles existen unos pocos animales con reproducción <strong>ovovivíparos</strong>, es decir, se desarrollan dentro del vientre de la mamá hasta el momento del nacimiento, son ejemplo de este grupo la boa constrictora, la anaconda y el camaleón.</p>
+                                <p><strong>Ejemplos de reptiles:</strong></p>
+                                <ul class="data_list">
+                                    <li>Cocodrilo</li>
+                                    <li>Tortuga</li>
+                                    <li>Serpiente</li>
+                                    <li>Lagartija</li>
+                                    <li>Iguana</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-text link" label="Extendiendo el saber">
+                        <p><strong>Video:</strong> <a href="https://juegosinfantiles.bosquedefantasias.com/ciencias-naturales/seres-vivos/animales-vertebrados" target="_blank">Animales vertebrados</a></p>
+                        <p><strong>Duración:</strong> 5 intentos</p>
+                        <p><strong>Enunciado:</strong> los animales ovovivíparos son aquellos que se desarrollan y crecen dentro de un huevo que la madre mantiene dentro de su cuerpo y cuida hasta que eclosiona como pasa con el camaleón o la mantarraya. En este enlace encontrarás una serie de actividades donde podrás poner a prueba tus conocimientos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-actividades" ptitle="Actividades de aprendizaje">
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> reconocer los grupos de animales y sus características.</p>
+                        <p><strong>Enunciado:</strong> elige las respuestas correctas para cada ejercicio.</p>
+                    </div>
+                    <div class="jpit-activities-quiz" data-act-title="Selección múltiple" data-act-id="1_cuestionario">
+                        <question type="multichoice">
+                            <description><p>Selecciona el o los animales mamíferos.</p></description>
+                            <ul>
+                                <li><img src="content/flamenco.png" alt="Flamenco" /></li>
+                                <li><img src="content/pollo.png" alt="Pollo" /></li>
+                                <li><img src="content/arana.png" alt="Araña" /></li>
+                                <li data-response="true"><img src="content/elefante.png" alt="Elefante" /></li>
+                            </ul>
+                        </question>
+                        <question type="multichoice">
+                            <description><p>Selecciona el o los animales vertebrados.</p></description>
+                            <ul>
+                                <li><img src="content/mosca.png" alt="Mosca" /></li>
+                                <li><img src="content/hormiga.png" alt="Hormiga" /></li>
+                                <li data-response="true"><img src="content/pez.png" alt="Pez" /></li>
+                                <li data-response="true"><img src="content/elefante.png" alt="Elefante" /></li>
+                            </ul>
+                        </question>
+                        <question type="multichoice">
+                            <description><p>Selecciona el o los animales vivíparos.</p></description>
+                            <ul>
+                                <li data-response="true"><img src="content/jirafa.png" alt="Jirafa" /></li>
+                                <li><img src="content/pez2.png" alt="Pez" /></li>
+                                <li data-response="true"><img src="content/nino.png" alt="Niño" /></li>
+                                <li data-response="true"><img src="content/camello.png" alt="Camello" /></li>
+                            </ul>
+                        </question>
+                        <question type="multichoice">
+                            <description><p>Selecciona el o los animales ovíparos.</p></description>
+                            <ul>
+                                <li><img src="content/raton.png" alt="Ratón" /></li>
+                                <li><img src="content/murcielago.png" alt="Murciélago" /></li>
+                                <li data-response="true"><img src="content/gallinas.png" alt="Gallinas" /></li>
+                                <li data-response="true"><img src="content/pajaro.png" alt="Pájaro" /></li>
+                            </ul>
+                        </question>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> reconocer las características de los animales vertebrados.</p>
+                        <p><strong>Enunciado:</strong> identifica a qué grupo de animales pertenecen las características presentadas. Selecciona una de las dos opciones.</p>
+                    </div>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-title="Identificar grupo de animales" data-act-id="2_cloze">
+                        <table class="datatable">
+                            <thead>
+                                <th>Características</th>
+                                <th>Opciones</th>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td>Pelo, pulmonar, vivípara, tierra.</td>
+                                    <td>
+                                        <span>
+                                            <select>
+                                                <option data-response="true">Mamíferos</option>
+                                                <option>Peces</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Escamas, aletas, ovíparo, nadan.</td>
+                                    <td>
+                                        <span>
+                                            <select>
+                                                <option>Reptil</option>
+                                                <option data-response="true">Peces</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>Patas o sin ellas, agua o tierra, pulmonar, ovíparo.</td>
+                                    <td>
+                                        <span>
+                                            <select>
+                                                <option data-response="true">Reptil</option>
+                                                <option>Aves</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ovípara, aire, plumas, alas y patas.</td>
+                                    <td>
+                                        <span>
+                                            <select>
+                                                <option>Peces</option>
+                                                <option data-response="true">Aves</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>Saltan o nadan, tierra o agua, piel húmeda, nacen de huevo.</td>
+                                    <td>
+                                        <span>
+                                            <select>
+                                                <option data-response="true">Anfibios</option>
+                                                <option>Peces</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="box-text activity" label="Actividad de aprendizaje">
+                        <p><strong>Objetivo de aprendizaje:</strong> reconocer los animales vertebrados.</p>
+                        <p><strong>Enunciado:</strong> arrastra al grupo de los vertebrados aquellos animales que lo componen.</p>
+                    </div>
+                    <div id="vertebrados" class="jpit-activities-droppable" data-act-title="Arrastrar vertebrados" data-act-id="3_droppable" data-autoalign="false" data-target-multi="7">
+                        <div>
+                            <h3>Vertebrados</h3>
+                            <div class="target" data-target-group="1">
+                            </div>
+                        </div>
+                        <div class="sources">
+                            <div class="opcion" data-group="1"><img src="content/gato.png" alt="Gato" /></div>
+                            <div class="opcion" data-group="1"><img src="content/rana.jpg" alt="Rana" /></div>
+                            <div class="opcion" data-group="1"><img src="content/cocodrilo.jpg" alt="Cocodrilo" /></div>
+                            <div class="opcion" data-group="1"><img src="content/pez.jpg" alt="Pez" /></div>
+                            <div class="opcion" data-group="1"><img src="content/loro.jpg" alt="Loro" /></div>
+                            <div class="opcion" data-group="1"><img src="content/cangrejo.png" alt="Cangrejo" /></div>
+                            <div class="opcion" data-group="1"><img src="content/tortuga.jpg" alt="Tortuga" /></div>
+                            
+                            <div class="opcion" data-group="2"><img src="content/arana.png" alt="Araña" /></div>
+                            <div class="opcion" data-group="2"><img src="content/mosca.png" alt="Mosca" /></div>
+                            <div class="opcion" data-group="2"><img src="content/hormiga.png" alt="Hormiga" /></div>
+                        </div>
+                        <div class="box_end"></div>
+                    </div>
+                    <div class="box-text link" label="Extendiendo el saber">
+                        <p><strong>Video:</strong> <a href="https://www.youtube.com/watch?v=5Tg0J59MYII" target="_blank">Animales vertebrados para niños - mamíferos, aves, reptiles, peces y anfibios</a></p>
+                        <p><strong>Duración:</strong> 8:47</p>
+                        <p><strong>Enunciado:</strong> observa este video en compañía de un familiar y crea en tu cuaderno una fábula donde los personajes sean los animales que conforman el grupo de los vertebrados.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"/></a>
+            </div>
+            <div>
+                <h3>Desarrollo de Contenidos</h3>
+                <cite>Ana Helia Asprilla</cite> 
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Alexandra Gómez Marín</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>OVA producido en <a href="http://tepuy.bambuco.co/" target="_blank">Tepuy - Plantilla para contenido interactivo</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>Animales vertebrados. (s.f.). <a href="https://www.portaleducativo.net/segundo-basico/603/Animales-vertebrados" target="_blank">https://www.portaleducativo.net/[...]</a></li>
+                <li>Buntysmum. (2017). <cite>Cangrejo</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/cangrejo-corte-hacia-fuera-2525186/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Congerdesign. (2016). <cite>Pez payaso</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/pez-de-an%C3%A9mona-pez-payaso-acuario-1496866/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Couleur. (2016). <cite>Rana</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/rana-pr%C3%ADncipe-rana-pr%C3%ADncipe-figura-2240764/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>12019. (2007). <cite>Rana red</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/rana-red-eyed-anfibios-naturaleza-69813/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Domben. (2017). <cite>Gallina</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/gallina-polla-animales-granja-2141564/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Free-Photos. (2015). <cite>Tortuga</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/tortuga-nadar-tortuga-de-mar-863336/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>GDJ. (2016). <cite>Murciélago</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/animales-murci%C3%A9lago-la-sangre-1817643/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Grafikacesky. (2015). <cite>Pájaro</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/p%C3%A1jaro-rama-lindo-vector-azul-982861/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>GraphicMama-team. (2016). <cite>Flamenco</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/flamenco-animales-zool%C3%B3gico-1424943/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Jackie. (s.f.). <cite>Loro</cite> [Fotografía]. Pexels <a href="https://www.pexels.com/es-es/foto/animal-arbol-aviar-exotico-775615/" target="_blank">https://www.pexels.com/es-es/[...]</a></li>
+                <li>Jambulboy. (2017). <cite>Jirafa</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/jirafa-mascota-icono-2521453/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Jambulboy. (2017). <cite>Niño con cometa</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/cometa-ni%C3%B1o-ni%C3%B1os-jugar-que-vuelan-2521627/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Jambulboy. (2017). <cite>Pollo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/pollo-lindo-mascota-punk-diversi%C3%B3n-2521141/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Jo-B. (2016). <cite>Elefante</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/illustrations/elefante-mascota-lindo-infantil-1650653/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Araña</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/ara%C3%B1a-tela-de-ara%C3%B1a-spiderweb-155449/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Hormiga</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/hormiga-insectos-escarabajo-insecto-162000/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Mosca</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/housefly-mosca-dom%C3%A9stica-mosca-155460/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2013). <cite>Ratón con queso</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/rata-del-rat%C3%B3n-queso-animales-152162/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2016). <cite>Camello</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/animales-camello-bactriano-camel-1295337/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>OpenClipart-Vectors. (2017). <cite>Pez globo</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/pez-globo-dibujos-animados-peces-2027755/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Pixabay. (s.f.). <cite>León</cite> [Fotografía]. Pexels. <a href="https://www.pexels.com/es-es/foto/animal-animal-salvaje-carnivoro-crin-247502/" target="_blank">https://www.pexels.com/es-es/[...]</a></li>
+                <li>Samyoung_pyun. (2016). <cite>Pez payaso</cite> [Ilustración]. Pixabay. <a href="https://pixabay.com/es/vectors/peces-peces-tropicales-mar-nemo-1331816/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Schwoaze. (2018). <cite>Loro</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/la-naturaleza-aves-loro-3367817/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Vovka. (2015). <cite>Cocodrilo</cite> [Fotografía]. Pixabay. <a href="https://pixabay.com/es/photos/juguete-cocodrilo-para-los-ni%C3%B1os-649393/" target="_blank">https://pixabay.com/es/[...]</a></li>
+                <li>Yavas, V. (s.f.). <cite>Pez amarillo</cite> [Fotografía]. Pexels. <a href="https://www.pexels.com/es-es/foto/acuario-acuatico-agua-al-aire-libre-1112007/" target="_blank">https://www.pexels.com/es-es/[...]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>

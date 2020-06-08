@@ -1,0 +1,240 @@
+.box_media img {
+  max-width: 600px;
+}
+
+.hidden {
+    display: none;
+}
+
+/********************************************************************************/
+/* Actividad 1
+/********************************************************************************/
+#pag-previos .jpit-activities-selection {
+    background: url(../img/bg_papel.png) repeat-x left top;
+    margin: auto;
+    padding-top: 20px;
+}
+
+#pag-previos .ctrl-pagination {
+    background-color: #f6f5f2;
+    padding: 20px;
+    box-shadow: 3px 3px 0px #cbcccc;
+    border: none;
+}
+
+#pag-previos .btn-continue:hover,
+#pag-previos .btn-verify:hover {
+    background-position: left bottom
+}
+
+#pag-previos .feedback-pane {
+    text-align: center;
+}
+
+#pag-previos .respuesta {
+    width: 450px;
+    height: 150px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border: 2px dotted #aaaaaa;
+}
+
+#pag-act1.ctrl-pagination li.layer {
+    text-align: center;
+}
+
+#pag-act1.ctrl-pagination ul.layers {
+    overflow: unset;
+}
+
+/********************************************************************************/
+/*Encabezado h4 h5*
+/********************************************************************************/
+#pag-endotermica h4, #pag-endotermica h5, #pag-exotermica h4, #pag-exotermica h5,
+#pag-aprendido h4, #pag-aprendido h5 {
+  text-align: center;
+}
+
+/********************************************************************************/
+/*Genially*
+/********************************************************************************/
+iframe.interactivo {
+  border: none;
+  width: 100%;
+  height: calc(100vw * 56 / 100);
+  max-height: 300px;
+}
+
+/********************************************************************************/
+/*Nombres de los elementos químicos
+/********************************************************************************/
+#pag-quimica .box1_2 {
+  width: 975px;
+}
+
+#pag-quimica .box1_2 .box_media {
+  position: relative;
+  width: 662px;
+}
+
+#pag-quimica .box1_2 .box_media .mouse-over.one {
+  left: 15%;
+  top: -10%;
+  position: absolute;
+}
+#pag-quimica .box1_2 .box_media .contenido_one {
+  left: 25%;
+  top: 67%;
+  position: absolute;
+  color: #000;
+}
+
+#pag-quimica .box1_2 .box_media .mouse-over.two {
+  left: 59%;
+  top: -10%;
+  position: absolute;
+}
+
+#pag-quimica .box1_2 .box_media .contenido_two {
+  left: 67%;
+  top: 67%;
+  position: absolute;
+  color: #000;
+}
+
+#pag-quimica .mouse-over {
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
+  padding: 29px;
+  width: 149px;
+}
+
+#pag-quimica .contenido_sobre {
+  padding: 10px;
+  text-align: justify;
+  box-shadow: 7px 7px 5px #cccccc;
+  background: #FFFFFF;
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/********************************************************************************/
+/*view-first*
+/********************************************************************************/
+#pag-endotermica .view-first cite, #pag-exotermica .view-first cite {
+  color: #fff;
+}
+
+#pag-endotermica .col-2.elemento_1 .view-first, #pag-endotermica .col-2.elemento_1 .box_media img {
+  width: 231px;  
+  position: relative;
+  margin: auto;
+  transition: all 0.2s linear;
+}
+  
+#pag-endotermica .col-2.elemento_2 .box_media img, #pag-exotermica .col-2.elemento_2 .box_media img  {
+  position: relative;
+  width: 410px;
+  margin: auto;
+}
+  
+#pag-exotermica .col-2.elemento_1 .view-first, #pag-exotermica .col-2.elemento_1 .box_media img{
+  width: 426px;
+  position: relative;
+  transition: all 0.2s linear;
+  margin: auto;
+}
+  
+#pag-endotermica .col-2.elemento_1 .view-content, #pag-exotermica .col-2.elemento_1 .view-content {
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+}
+
+/********************************************************************************/
+/*Actividad 5.1
+/********************************************************************************/
+#pag-aprendido .jpit_activities_quiz_question_answers {
+  height: 150px; 
+  overflow: auto; 
+}
+
+#pag-aprendido .jpit_activities_quiz_board {
+  height: 220px;
+}
+
+#pag-aprendido .jpit-activities-quiz {
+  max-width: 700px;
+  background: #fff;
+  padding: 5px 20px;
+  margin: auto;
+}
+
+#pag-aprendido .box_end .correct,
+#pag-aprendido .box_end .wrong {
+  margin: 35px auto 10px;
+}
+
+.jpit_activities_quiz_question_feedback_true, .jpit_activities_quiz_question_feedback_false {width: 80%;}
+
+/********************************************************************************/
+/*Actividad 5.2
+/********************************************************************************/
+#arrastrargrupos.jpit-activities-multidroppable {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .enunciado {
+  display: inline-table;
+  align-items: center;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .target {
+  min-height: 150px;
+  width: 320px;
+  overflow: auto;
+ }
+
+#arrastrargrupos.jpit-activities-multidroppable .sources {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .sources div {
+  text-align: center;
+  display: inline-block;
+
+  padding-bottom: 6px;
+  margin: 1px;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .draggable, #arrastrargrupos.jpit-activities-multidroppable img {
+  width: 305px;
+  height: 46px;
+  margin: 0 1px 5px;
+}
+
+#arrastrargrupos .box_targets .draggable.disabled {
+  cursor: default;
+}
+
+#arrastrargrupos.jpit-activities-multidroppable .buttons {
+  text-align: center;
+  padding: 5px 0;
+  clear: both;
+}

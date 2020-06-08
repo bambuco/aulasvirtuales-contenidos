@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html><!-- class="single"-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Resolución de triángulos</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/mobilelib.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
+
+    <style type='text/css'>
+
+        body {
+            background-color: rgba(242, 242, 242, 0.7);
+        }
+
+        body.loading {
+            text-align: center;
+        }
+
+        body.loading:after {
+            content: "";
+            background: url(img/loading.gif) no-repeat bottom center;
+            width: 130px;
+            height: 30px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        body.loading #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="not_print">
+        <div id="not_scorm_msg" style="display: none;"></div>
+
+        <nav label="Características globales" class="globals">
+            <menu>
+                <menuitem data-global-id="return">
+                    <i title="Maximizar" class="fas fa-expand-arrows-alt maximize"></i>
+                    <i title="Minimizar" class="fas fa-compress-arrows-alt minimize"></i>
+                </menuitem>
+                <menuitem data-global-id="close_all"><i title="Regresar" class="fas fa-times-circle"></i></menuitem>
+            </menu>
+        </nav>
+
+        <header>
+            <div>
+                <h1>Resolución de triángulos</h1>
+                <nav label="Principal" class="horizontal main" data-offset="true">
+                    <menu>
+                        <menuitem label="Introducción" data-page="pag-intro"></menuitem>
+                        <menuitem label="Razones trigonométricas, leyes del seno y coseno" data-page="pag-razones"></menuitem>
+                        <menuitem label="Aplica lo aprendido" data-page="pag-aplica"></menuitem>
+                    </menu>
+                </nav>
+            </div>
+        </header>
+
+        <main style="display: none;">
+
+            <h2 class="page-title"></h2>
+
+            <section id="pag-intro" ptitle="1. Introducción">
+                <div class="subpage">
+                    <p>En el siguiente video podrás ver cómo aplicar las razones trigonométricas en situaciones de tu entorno.</p>
+                    <div class="box_media">
+                        <div class="videobox">
+                          <video controls>
+                                <source src="https://contenidosparaaprender.colombiaaprende.edu.co/G_10/M/M_G10_U03_L02/video/AN_M_G10_U03_L02_01_01.mp4" type="video/mp4">
+                                El reproductor de video no es soportado por el navegador
+                            </video>
+                        </div>
+                        <div class="about">Video 1. Aplicar las razones trigonométricas en situaciones de su entorno. (Colombia Aprende, s.f.)</div>
+                    </div>
+                    <h3>Actividad 1. Clasificación de triángulos</h3>
+                    <div class="box-text activity" label="ACTIVIDAD DE APRENDIZAJE">
+                        <p><strong>Objetivo de aprendizaje:</strong> identificar y diferenciar triángulos según la medida de sus lados y sus ángulos.</p>
+                        <p><strong>Enunciado:</strong> clasifique cada uno de los siguientes triángulos de acuerdo con la medida de sus lados y de sus ángulos. Para ello, arrastre el nombre del triángulo a la gráfica que le corresponda.</p>
+                    </div>
+                    <div class="jpit-activities-droppable" data-verify-type="target" data-act-id="1-arrastrar" data-act-title="Clasificar triángulos">
+                        <span class="onlymobile"><div class="instruction" type="info">Presiona durante dos segundos sobre cada línea para ver la lista de posibles respuestas. Elije la correcta de acuerdo a cada triángulo.</div></span>
+                        <div class="contenedor">
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/escaleno_obtuso.png" alt="" /></div>
+                                <div class="receptor" data-target-group="1"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/isosceles_recto.png" alt="" /></div>
+                                <div class="receptor" data-target-group="2"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/escaleno_acutangulo.png" alt="" /></div>
+                                <div class="receptor" data-target-group="3"></div>
+                            </div>
+                            <div class="angulo">
+                                <div class="imagen"><img src="content/equilatero_acutangulo.png" alt="" /></div>
+                                <div class="receptor" data-target-group="4"></div>
+                            </div>
+                        </div>
+                        <div class="box_end"></div>
+                        <feedback>
+                            <correct>
+                                <p>De esta manera, todo triángulo recibe dos nombres. Uno de ellos, por su clasificación. Por lo tanto, se pueden tener los siguientes triángulos:</p>
+                                <p>Las medidas de los tres ángulos interiores de un triángulo determinan la clasificación:</p>
+                                <ul class="data_list">
+                                    <li><strong>Acutángulo:</strong> cuando los tres ángulos interiores son agudos.</li>
+                                    <li><strong>Rectángulo:</strong> cuando un ángulo es recto.</li>
+                                    <li><strong>Obtusángulo:</strong> cuando un ángulo es obtuso.</li>
+                                </ul>
+                                <p>La relación de las medidas de los lados del triángulo, determina la clasificación en:</p>
+                                <ul class="data_list">
+                                    <li><strong>Equilátero:</strong> las medidas de sus tres lados son iguales, es decir, los tres lados son congruentes.</li>
+                                    <li><strong>Isósceles:</strong> las medidas de dos lados son iguales, es decir, dos lados son congruentes.</li>
+                                    <li><strong>Escaleno:</strong> todas las medidas de sus lados son diferentes, es decir, no tiene lados congruentes.</li>
+                                </ul>
+                            </correct>
+                        </feedback>
+                        <div class="sources">
+                            <div class="tipo" data-group="2">Isósceles, rectángulo</div>
+                            <div class="tipo" data-group="3">Escaleno, acutángulo</div>
+                            <div class="tipo" data-group="4">Equilátero, acutángulo</div>
+                            <div class="tipo" data-group="1">Escaleno, obtusángulo</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-razones" ptitle="2. Razones trigonométricas, leyes del seno y del coseno">
+                <div class="subpage">
+                    <p>En los siguientes videos podrá comprender los conceptos básicos sobre triángulos rectángulos y oblicuángulos, y sus soluciones.</p>
+                    <div class="box_media">
+                        <div class="videobox">
+                          <video controls>
+                                <source src="https://contenidosparaaprender.colombiaaprende.edu.co/G_10/M/M_G10_U03_L04/video/AN_M_G10_U03_L04_01_01.mp4" type="video/mp4">
+                                El reproductor de video no es soportado por el navegador
+                            </video>
+                        </div>
+                        <div class="about">Video 2. Resolución de problemas que involucren la utilización de triángulos oblicuos. (Colombia Aprende, s.f.)</div>
+                    </div>
+                    <div class="box_media">
+                        <div class="videobox">
+                          <video controls>
+                                <source src="content/video/triangulos.mp4" type="video/mp4">
+                                El reproductor de video no es soportado por el navegador
+                            </video>
+                        </div>
+                        <div class="about">Video 3.</div>
+                    </div>
+                    <h3>Actividad 2. Teoría sobre razones trigonométricas, leyes del seno y del coseno </h3>
+                    <div class="box-text activity" label="ACTIVIDAD DE APRENDIZAJE">
+                        <p><strong>Objetivo de aprendizaje:</strong>  identificar cuándo se aplican las razones trigonométricas y la ley del seno o la ley del coseno.</p>
+                        <p><strong>Enunciado:</strong> de acuerdo con la teoría trabajada anteriormente, complete las oraciones de manera correcta.</p>
+                    </div>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="2-cloze" data-act-title="Completar oraciones">
+                        <ul class="data_list">
+                            <li>
+                                Las leyes del 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option>lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option data-response="true">seno</option>
+                                    </select>
+                                </span>
+                                 y del 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option data-response="true">coseno</option>
+                                        <option>lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                                 se utilizan para solucionar situaciones que involucran triángulos 
+                                <span>
+                                    <select>
+                                        <option data-response="true">acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option>lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                                 y 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option>lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option data-response="true">obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>  
+                                , es decir, 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option>lados</option>
+                                        <option data-response="true">oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                            </li>
+                            <li>
+                                Los triángulos 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option>lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option data-response="true">rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                                 son aquellos que tienen un ángulo de 90°.
+                            </li>
+                            <li>
+                                La ley del coseno se puede aplicar en situaciones donde se conocen dos 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option data-response="true">lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                                 de un triángulo y el 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option data-response="true">ángulo</option>
+                                        <option>coseno</option>
+                                        <option>lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                                 comprendido entre ellos.
+                            </li>
+                            <li>
+                                La ley del seno se puede aplicar cuando se conoce dos 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option data-response="true">lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option>opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                                 y el ángulo 
+                                <span>
+                                    <select>
+                                        <option>acutángulos</option>
+                                        <option>ángulo</option>
+                                        <option>coseno</option>
+                                        <option>lados</option>
+                                        <option>oblicuángulos</option>
+                                        <option>obtusángulos</option>
+                                        <option data-response="true">opuesto</option>
+                                        <option>rectángulos</option>
+                                        <option>seno</option>
+                                    </select>
+                                </span>
+                                 a uno de dichos lados.
+                            </li>
+                        </ul>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag-aplica" ptitle="3. Aplica lo aprendido">
+                <div class="subpage">
+                    <h3>3.1 Resolución de triángulos</h3>
+                    <p>Ahora pon a prueba lo aprendido resolviendo las siguientes actividades.</p>
+                    <div class="box-text activity" label="ACTIVIDAD DE APRENDIZAJE">
+                        <p><strong>Objetivo de aprendizaje:</strong> resolver situaciones problemas y triángulos mediante las razones trigonométricas y las leyes del seno y el coseno.</p>
+                        <p><strong>Enunciado:</strong> observe la gráfica y responda si la afirmación es verdadera o falsa.</p>
+                    </div>
+                    <div class="box_media">
+                        <img src="content/grafica1.png" alt="Gráfica 1" />
+                    </div>
+                    <div class="jpit-activities-check" data-act-id="3-falso-verdadero" data-act-title="Falso y verdadero 1">
+                        <words>
+                            <li>El triángulo es rectángulo</li>
+                            <li data-val="true">El triángulo es escaleno</li>
+                            <li>Para resolverlo se debe aplicar el teorema del seno</li>
+                            <li>El triángulo se resuelve mediante razones trigonométricas</li>
+                            <li data-val="true">El valor del lado b es de aproximadamente 8,4 u</li>
+                        </words>
+                        <div class="board">
+                            <div class="check_left">
+                                <div class="play">
+                                    <p>¿La siguiente afirmación es verdadera o falsa?</p>
+                                    <div class="word_content"> </div>
+                                    <div class="buttons">
+                                        <button class="yes general">Verdadero</button>
+                                        <button class="not general">Falso</button>
+                                    </div>
+                                </div>
+                                <div class="box_conclution">
+                                    <h3>¡Ha finalizado!</h3>
+                                    <div class="buttons">
+                                        <button class="general reload">Vuelve a intentarlo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_right">
+                                <div class="box_result">
+                                    <div class="correct">
+                                        <div class="hits">0</div>
+                                        <div class="text">Aciertos</div>
+                                    </div>
+                                    <div class="wrong">
+                                        <div class="miss">0</div>
+                                        <div class="text">Desaciertos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subpage">
+                    <div class="box-text activity" label="ACTIVIDAD DE APRENDIZAJE">
+                        <p><strong>Objetivo de aprendizaje:</strong> resolver situaciones problemas y triángulos mediante las razones trigonométricas y las leyes del seno y el coseno.</p>
+                        <p><strong>Enunciado:</strong> observe la gráfica y responda si la afirmación es verdadera o falsa.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 box_media">
+                            <img src="content/grafica2.png" alt="Gráfica 2" />
+                        </div>
+                        <div class="col-2">
+                            <p>Una torre está inclinada 15 grados con respecto a la vertical, el sol emite una sombra de 80 metros sobre el suelo, cuando el ángulo de elevación del sol es 20 grados. Si debes hallar la distancia del piso a la parte superior del muro.</p>  
+                        </div>
+                    </div>                    
+                    <div class="jpit-activities-check" data-act-id="4-falso-verdadero" data-act-title="Falso y verdadero 2">
+                        <words>
+                            <li>El problema se soluciona con las razones trigonométricas</li>
+                            <li data-val="true">El triángulo formado es oblicuángulo</li>
+                            <li data-val="true">El problema se resuelve con ley del seno</li>
+                            <li>El valor del ángulo B es de 145°</li>
+                            <li data-val="true">La distancia del piso a la parte superior del muro es de 48 metros aproximadamente</li>
+                        </words>
+                        <div class="board">
+                            <div class="check_left">
+                                <div class="play">
+                                    <p>¿La siguiente afirmación es verdadera o falsa?</p>
+                                    <div class="word_content"> </div>
+                                    <div class="buttons">
+                                        <button class="yes general">Verdadero</button>
+                                        <button class="not general">Falso</button>
+                                    </div>
+                                </div>
+                                <div class="box_conclution">
+                                    <h3>¡Ha finalizado!</h3>
+                                    <div class="buttons">
+                                        <button class="general reload">Vuelve a intentarlo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_right">
+                                <div class="box_result">
+                                    <div class="correct">
+                                        <div class="hits">0</div>
+                                        <div class="text">Aciertos</div>
+                                    </div>
+                                    <div class="wrong">
+                                        <div class="miss">0</div>
+                                        <div class="text">Desaciertos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subpage">
+                    <div class="box-text activity" label="ACTIVIDAD DE APRENDIZAJE">
+                        <p><strong>Objetivo de aprendizaje:</strong> resolver situaciones problemas y triángulos mediante las razones trigonométricas y las leyes del seno y el coseno.</p>
+                        <p><strong>Enunciado:</strong> lea la situación problema y responda si la afirmación es verdadera o falsa.</p>
+                    </div>
+                    <div class="jpit-activities-check" data-act-id="5-falso-verdadero" data-act-title="Falso y verdadero 3">
+                        <words>
+                            <li>La situación se puede representar mediante un triángulo oblicuángulo</li>
+                            <li data-val="true">El triángulo que modela la situación tiene un ángulo de 60°</li>
+                            <li>La razón trigonométrica que permite hallar la altura del hombre es coseno</li>
+                            <li data-val="true">La altura del hombre es de 1,93 metros aproximadamente</li>
+                            <li>El valor de la hipotenusa del triángulo resultante es de aproximadamente 3 metros</li>
+                        </words>
+                        <div class="board">
+                            <div class="check_left">
+                                <div class="play">
+                                    <p>Encontrar la altura de un hombre que proyecta una sombra de 3,34 metros cuando el sol forma un ángulo de elevación de 30°</p>
+                                    <div class="word_content"> </div>
+                                    <div class="buttons">
+                                        <button class="yes general">Verdadero</button>
+                                        <button class="not general">Falso</button>
+                                    </div>
+                                </div>
+                                <div class="box_conclution">
+                                    <h3>¡Ha finalizado!</h3>
+                                    <div class="buttons">
+                                        <button class="general reload">Vuelve a intentarlo</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_right">
+                                <div class="box_result">
+                                    <div class="correct">
+                                        <div class="hits">0</div>
+                                        <div class="text">Aciertos</div>
+                                    </div>
+                                    <div class="wrong">
+                                        <div class="miss">0</div>
+                                        <div class="text">Desaciertos</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="not_print">
+            <div class="measuring-progress" data-type="horizontal"></div>
+
+            <nav label="General" class="globals2">
+                <menu>
+                    <menuitem data-global-id="results"><span><i class="far fa-progress" data-position-at="right top"></i> <br /><label id="labelprogress">Progreso</label></span></menuitem>
+                    <menuitem data-global-id="credits"><span><i class="far fa-credits" data-position-at="right top"></i> <br /><label id="labelprogress">Créditos</label></span></menuitem>
+                    <menuitem data-global-id="library"><span><i class="far fa-references" data-position-at="right top"></i> <br /><label id="labelprogress">Bibliografía</label></span></menuitem>
+                </menu>
+            </nav>
+
+            <div id="subpages_menu">
+                <div class="button" previous-page></div>
+                <div id="page_number"></div>
+                <ul class="button" subpages-menu></ul>
+                <div class="button" next-page></div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <div id="results_page" style="display:none;">
+        <h2>Resumen de su avance en la lectura del documento</h2>
+        <h3>Páginas visitadas</h3>
+        <p>En verde, aquellas páginas que ya ha visitado.</p>
+        <div id="results_page_visited" class="container"></div>
+        <br class="clear" />
+        <h3>Actividades de aprendizaje</h3>
+        <div id="results_page_activities"></div>
+    </div>
+
+    <!--Créditos-->
+    <div id="credits-page" style="display:none;">
+        <div id="credits_subpage">
+            <h2>Créditos</h2>
+            <div>
+                <a href="#"><img src="img/logo_aulasvirtuales.png" alt="AulasVirtuales"  /></a>
+            </div>
+            <div>
+                <h3>Desarrollo de contenidos</h3>
+                <cite>Neidy Bibiana Álvarez Giraldo</cite>
+            </div>
+            <div>
+                <h3>Asesoría pedagógica y diseño instruccional</h3>
+                <cite>Ángela Valderrama Muñoz</cite>
+            </div>
+            <div>
+                <h3>Corrección de estilo</h3>
+                <cite>Paola Andrea Velandia Vega</cite>
+            </div>
+            <div>
+                <h3>Diseño gráfico</h3>
+                <cite>Juliana Tobón Gaviria</cite><br />
+                <cite>Nicole Chavez García</cite>
+            </div>
+            <div>
+                <h3>Integración de contenidos</h3>
+                <cite>Santiago Bernal García</cite>
+            </div>
+            <div>
+                <h3>Gestión técnica y administrativa</h3>
+                <cite>Carolina Llanos Tobón</cite><br />
+                <cite>David Herney Bernal García</cite>
+            </div>
+
+            <div>
+                <h3>Una iniciativa de BambuCo S.A.S.</h3>
+                <p class="logos">
+                    <a href="https://bambuco.co/" target="_blank"><img src="img/logo_bambuco.png" alt="Logo BambuColectivo" /></a>
+                </p>
+            </div>
+
+            <div class="editions">
+                1ª edición: abril de 2020<br />
+            </div>
+            <div>
+                <br />
+                <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Contenido publicado bajo licencia:<br />Creative Commons Atribución-Compartir Igual 4.0 Internacional<br /><br />
+                <img src="img/cc.png" alt="Creative Commons" /></a><br />
+            </div>
+            <div>
+                <p>Nota: Si desea usar este recurso con fines comerciales, debe prescindir de los videos realizados por Colombia Aprende llamados “Aplicar las razones trigonométricas en situaciones de su entorno” y “Resolución de problemas que involucren la utilización de triángulos oblicuos” del contenido final.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bibliografía -->
+    <div id="library-page" style="display:none;">
+        <div id="library_subpage">
+            <h2>Referencias bibliográficas</h2>
+
+            <ul class="data_list">
+                <li>Colombia Aprende. (s.f.). <cite>Aplicar las razones trigonométricas en situaciones de su entorno</cite> [Video]. <a href="https://contenidosparaaprender.colombiaaprende.edu.co/G_10/M/M_G10_U03_L02/M_G10_U03_L02_01_01_01.html" target="_blank">https://contenidosparaaprender.colombiaaprende.edu.co/[...]</a></li>
+                <li>Colombia Aprende. (s.f.). <cite>Resolución de problemas que involucren la utilización de triángulos oblicuos</cite> [Video]. <a href="https://contenidosparaaprender.colombiaaprende.edu.co/G_10/M/M_G10_U03_L04/M_G10_U03_L04_01_01_01.html" target="_blank">https://contenidosparaaprender.colombiaaprende.edu.co/[...]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="printent_content" style="display:none;">
+        <div class="content"></div>
+        <div class="button_container">
+            <button class="general button" onclick="window.print();">Imprimir</button>
+            <button id="printent_back" class="general button" >Volver</button>
+        </div>
+    </div>
+
+</body>
+</html>
